@@ -1,0 +1,79 @@
+{
+  "retries": [
+    {
+      "url": "https://varishpartners.com/about-us/",
+      "status": "ok",
+      "timestamp": "20250728052415",
+      "file": "pages\\about-us.html",
+      "bytes": 119035
+    },
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/pages/1451",
+      "status": "fail",
+      "error": "Unexpected token '<', \"<html><bod\"... is not valid JSON"
+    }
+  ],
+  "newPosts": [
+    {
+      "url": "https://varishpartners.com/tds-on-rent-sec-194i-of-income-tax-act-1961/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/indexation-in-capital-gains-budget-2024-amendments-and-their-impact/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/claiming-relief-under-section-891-on-salary-arrears-with-example/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/understanding-section-192-tds-on-salary/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/a-step-by-step-guide-for-casual-taxable-persons-ctp-under-gst/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/understanding-gst-a-comprehensive-guide/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/gst-simplified-step-by-step-guide-to-vertical-registrations-uins-and-deemed-registration/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/complete-guide-to-non-resident-taxable-persons-nrtp-under-gst-registration-compliance-and-reverse-charge-mechanism/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/filing-tds-returns/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/this-is-tds/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/startup-due-diligence-red-flags-key-areas/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/gst-invoice-management-system-guide/",
+      "status": "fail",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://varishpartners.com/input-tax-credit-demo-vehicles-gst-clarification/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/igst-refund-on-export/",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/income-tax-on-buyback-of-shares-and-changes-in-buyback-taxation-as-per-budget-2024/",
+      "status": "missing"
+    }
+  ]
+}

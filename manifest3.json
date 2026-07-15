@@ -1,0 +1,271 @@
+{
+  "theme": [
+    {
+      "url": "https://varishpartners.com/wp-content/themes/hello-elementor/theme.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\theme.min.css",
+      "bytes": 5146
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/themes/hello-elementor/style.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\style.min.css",
+      "bytes": 5501
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/themes/hello-elementor/header-footer.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\header-footer.min.css",
+      "bytes": 7212
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/frontend.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\frontend.min.css",
+      "bytes": 60705
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/frontend-lite.min.css",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-counter.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-counter.min.css",
+      "bytes": 793
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-heading.min.css",
+      "bytes": 600
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-icon-box.min.css",
+      "bytes": 10094
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-icon-list.min.css",
+      "bytes": 9929
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-image-box.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-image-box.min.css",
+      "bytes": 1409
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-image.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-image.min.css",
+      "bytes": 254
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-social-icons.min.css",
+      "bytes": 4875
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-spacer.min.css",
+      "status": "fail",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-tabs.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-tabs.min.css",
+      "bytes": 4160
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-text-editor.min.css",
+      "bytes": 704
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\animations.min.css",
+      "bytes": 18468
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\swiper.min.css",
+      "bytes": 16471
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\frontend.min.css",
+      "bytes": 9316
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css",
+      "status": "missing"
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor-pro/assets/css/widget-form.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-form.min.css",
+      "bytes": 6781
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor-pro/assets/css/widget-forms.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-forms.min.css",
+      "bytes": 6879
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-nav-menu.min.css",
+      "bytes": 26793
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor-pro/assets/css/widget-nested-carousel.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-nested-carousel.min.css",
+      "bytes": 9046
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor-pro/assets/css/widget-theme-elements.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\widget-theme-elements.min.css",
+      "bytes": 10024
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css",
+      "status": "ok",
+      "file": "assets\\theme\\sticky.min.css",
+      "bytes": 162
+    }
+  ],
+  "pageCss": [
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-3.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-3.css",
+      "bytes": 204
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-6.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-6.css",
+      "bytes": 1438
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-9.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-9.css",
+      "bytes": 90009
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-41.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-41.css",
+      "bytes": 8646
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-51.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-51.css",
+      "bytes": 20076
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-54.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-54.css",
+      "bytes": 56951
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-55.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-55.css",
+      "bytes": 39085
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-68.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-68.css",
+      "bytes": 28393
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-413.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-413.css",
+      "bytes": 2424
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-416.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-416.css",
+      "bytes": 2424
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-422.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-422.css",
+      "bytes": 2424
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-426.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-426.css",
+      "bytes": 2424
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-430.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-430.css",
+      "bytes": 2424
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-434.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-434.css",
+      "bytes": 2424
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-444.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-444.css",
+      "bytes": 20679
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-493.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-493.css",
+      "bytes": 9894
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-717.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-717.css",
+      "bytes": 2424
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-1282.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-1282.css",
+      "bytes": 36712
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-1451.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-1451.css",
+      "bytes": 210
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/elementor/css/post-1556.css",
+      "status": "ok",
+      "file": "assets\\page-css\\post-1556.css",
+      "bytes": 2443
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "assets": [
+    {
+      "relPath": "wp-content/themes/hello-elementor/theme.min.css",
+      "status": "ok",
+      "bytes": 5146
+    },
+    {
+      "relPath": "wp-content/themes/hello-elementor/style.min.css",
+      "status": "ok",
+      "bytes": 5501
+    },
+    {
+      "relPath": "wp-content/themes/hello-elementor/header-footer.min.css",
+      "status": "ok",
+      "bytes": 7212
+    },
+    {
+      "relPath": "wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js",
+      "status": "ok",
+      "bytes": 2749
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/frontend.min.css",
+      "status": "ok",
+      "bytes": 60705
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-counter.min.css",
+      "status": "ok",
+      "bytes": 793
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-heading.min.css",
+      "status": "ok",
+      "bytes": 600
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-icon-box.min.css",
+      "status": "ok",
+      "bytes": 10094
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-icon-list.min.css",
+      "status": "ok",
+      "bytes": 9929
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-image-box.min.css",
+      "status": "ok",
+      "bytes": 1409
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-image.min.css",
+      "status": "ok",
+      "bytes": 254
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-social-icons.min.css",
+      "status": "ok",
+      "bytes": 4875
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-spacer.min.css",
+      "status": "ok",
+      "bytes": 1364
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-tabs.min.css",
+      "status": "ok",
+      "bytes": 4160
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/widget-text-editor.min.css",
+      "status": "ok",
+      "bytes": 704
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css",
+      "status": "ok",
+      "bytes": 7025
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css",
+      "status": "ok",
+      "bytes": 10260
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/animations/animations.min.css",
+      "status": "ok",
+      "bytes": 18468
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-float.min.css",
+      "status": "ok",
+      "bytes": 244
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-shrink.min.css",
+      "status": "ok",
+      "bytes": 205
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css",
+      "status": "ok",
+      "bytes": 77
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css",
+      "status": "ok",
+      "bytes": 137
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/animations/styles/fadeInLeft.min.css",
+      "status": "ok",
+      "bytes": 137
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/animations/styles/fadeInRight.min.css",
+      "status": "ok",
+      "bytes": 139
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css",
+      "status": "ok",
+      "bytes": 130
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.min.css",
+      "status": "ok",
+      "bytes": 16167
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css",
+      "status": "ok",
+      "bytes": 16471
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js",
+      "status": "ok",
+      "bytes": 1801
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js",
+      "status": "ok",
+      "bytes": 12198
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/js/frontend-modules.min.js",
+      "status": "ok",
+      "bytes": 73568
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/js/frontend.min.js",
+      "status": "ok",
+      "bytes": 41172
+    },
+    {
+      "relPath": "wp-content/plugins/elementor/assets/js/webpack.runtime.min.js",
+      "status": "ok",
+      "bytes": 4997
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/frontend.min.css",
+      "status": "ok",
+      "bytes": 9316
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/widget-form.min.css",
+      "status": "ok",
+      "bytes": 6781
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/widget-forms.min.css",
+      "status": "ok",
+      "bytes": 6879
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css",
+      "status": "ok",
+      "bytes": 26793
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/widget-nested-carousel.min.css",
+      "status": "ok",
+      "bytes": 9046
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/widget-theme-elements.min.css",
+      "status": "ok",
+      "bytes": 10024
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/widget-loop-builder.min.css",
+      "status": "ok",
+      "bytes": 20117
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css",
+      "status": "ok",
+      "bytes": 974
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css",
+      "status": "ok",
+      "bytes": 162
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js",
+      "status": "ok",
+      "bytes": 42791
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js",
+      "status": "ok",
+      "bytes": 6060
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js",
+      "status": "ok",
+      "bytes": 24109
+    },
+    {
+      "relPath": "wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js",
+      "status": "ok",
+      "bytes": 3721
+    },
+    {
+      "relPath": "wp-includes/js/jquery/jquery.min.js",
+      "status": "ok",
+      "bytes": 87553
+    },
+    {
+      "relPath": "wp-includes/js/jquery/jquery-migrate.min.js",
+      "status": "ok",
+      "bytes": 13577
+    },
+    {
+      "relPath": "wp-includes/js/jquery/ui/core.min.js",
+      "status": "ok",
+      "bytes": 21464
+    },
+    {
+      "relPath": "wp-includes/js/imagesloaded.min.js",
+      "status": "ok",
+      "bytes": 5520
+    },
+    {
+      "relPath": "wp-includes/js/dist/hooks.min.js",
+      "status": "ok",
+      "bytes": 4307
+    },
+    {
+      "relPath": "wp-includes/js/dist/i18n.min.js",
+      "status": "ok",
+      "bytes": 9141
+    }
+  ]
+}

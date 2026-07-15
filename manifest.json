@@ -1,0 +1,243 @@
+{
+  "pages": [
+    {
+      "url": "https://varishpartners.com/",
+      "status": "ok",
+      "timestamp": "20250728045852",
+      "file": "pages\\home.html",
+      "bytes": 153150
+    },
+    {
+      "url": "https://varishpartners.com/about-us/",
+      "status": "fail",
+      "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+    },
+    {
+      "url": "https://varishpartners.com/careers-page/",
+      "status": "ok",
+      "timestamp": "20250728035938",
+      "file": "pages\\careers-page.html",
+      "bytes": 116831
+    },
+    {
+      "url": "https://varishpartners.com/contact-us/",
+      "status": "ok",
+      "timestamp": "20250728042743",
+      "file": "pages\\contact-us.html",
+      "bytes": 92406
+    },
+    {
+      "url": "https://varishpartners.com/privacy-policy/",
+      "status": "ok",
+      "timestamp": "20250728042552",
+      "file": "pages\\privacy-policy.html",
+      "bytes": 81432
+    },
+    {
+      "url": "https://varishpartners.com/privacy-policy-2/",
+      "status": "ok",
+      "timestamp": "20250728041058",
+      "file": "pages\\privacy-policy-2.html",
+      "bytes": 76175
+    },
+    {
+      "url": "https://varishpartners.com/mastering-cash-flow-essential-strategies-to-keep-your-business-thriving/",
+      "status": "ok",
+      "timestamp": "20241004144419",
+      "file": "pages\\blog-mastering-cash-flow.html",
+      "bytes": 129648
+    },
+    {
+      "url": "https://varishpartners.com/optimizing-pricing-strategy-for-a-wholesaler/",
+      "status": "ok",
+      "timestamp": "20240831154737",
+      "file": "pages\\blog-optimizing-pricing-strategy.html",
+      "bytes": 135746
+    }
+  ],
+  "wpjson": [
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/pages/1282",
+      "status": "ok",
+      "timestamp": "20240831201639",
+      "file": "wp-json\\wp_v2_pages_1282.json",
+      "bytes": 63526
+    },
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/pages/1451",
+      "status": "fail",
+      "error": "Unexpected token '<', \"<html><bod\"... is not valid JSON"
+    },
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/pages/3",
+      "status": "ok",
+      "timestamp": "20240914154125",
+      "file": "wp-json\\wp_v2_pages_3.json",
+      "bytes": 12648
+    },
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/pages/54",
+      "status": "ok",
+      "timestamp": "20240901014647",
+      "file": "wp-json\\wp_v2_pages_54.json",
+      "bytes": 79982
+    },
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/pages/55",
+      "status": "ok",
+      "timestamp": "20240925000225",
+      "file": "wp-json\\wp_v2_pages_55.json",
+      "bytes": 52727
+    },
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/pages/68",
+      "status": "ok",
+      "timestamp": "20241004144648",
+      "file": "wp-json\\wp_v2_pages_68.json",
+      "bytes": 25693
+    },
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/pages/9",
+      "status": "ok",
+      "timestamp": "20240925181103",
+      "file": "wp-json\\wp_v2_pages_9.json",
+      "bytes": 88189
+    },
+    {
+      "url": "https://varishpartners.com/wp-json/wp/v2/posts/1313",
+      "status": "ok",
+      "timestamp": "20241028024023",
+      "file": "wp-json\\wp_v2_posts_1313.json",
+      "bytes": 8094
+    }
+  ],
+  "images": [
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/Add-a-heading-1500-x-500-px.svg",
+      "status": "ok",
+      "timestamp": "20240831171318",
+      "file": "assets\\images\\Add-a-heading-1500-x-500-px.svg",
+      "bytes": 17853
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/DALL%C2%B7E-2024-08-30-15.57.45-A-white-man-standing-in-a-queue-for-registration-at-a-counter-in-an-Indian-government-setup.-The-scene-includes-a-typical-Indian-government-office-set.webp",
+      "status": "ok",
+      "timestamp": "20241004144533",
+      "file": "assets\\images\\DALL·E-2024-08-30-15.57.45-A-white-man-standing-in-a-queue-for-registration-at-a-counter-in-an-Indian-government-setup.-The-scene-includes-a-typical-Indian-government-office-set.webp",
+      "bytes": 388618
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/Logo-Ipsum-1.png",
+      "status": "ok",
+      "timestamp": "20240901020603",
+      "file": "assets\\images\\Logo-Ipsum-1.png",
+      "bytes": 793
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/Logo-Ipsum-2.png",
+      "status": "ok",
+      "timestamp": "20240923162607",
+      "file": "assets\\images\\Logo-Ipsum-2.png",
+      "bytes": 766
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/Logo-Ipsum-3.png",
+      "status": "ok",
+      "timestamp": "20240901045753",
+      "file": "assets\\images\\Logo-Ipsum-3.png",
+      "bytes": 877
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/Logo-Ipsum-4.png",
+      "status": "ok",
+      "timestamp": "20240901015106",
+      "file": "assets\\images\\Logo-Ipsum-4.png",
+      "bytes": 838
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/VS_Professional.png",
+      "status": "fail",
+      "error": "Unexpected token '<', \"<html><bod\"... is not valid JSON"
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/cropped-Varish-Partners-Logo-HD1-1-192x192.png",
+      "status": "fail",
+      "error": "Unexpected token '<', \"<html><bod\"... is not valid JSON"
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/icons8-combo-chart-100.png",
+      "status": "fail",
+      "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/icons8-council-tax-100.png",
+      "status": "ok",
+      "timestamp": "20240901030959",
+      "file": "assets\\images\\icons8-council-tax-100.png",
+      "bytes": 2027
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/08/rupee.png",
+      "status": "ok",
+      "timestamp": "20240923223717",
+      "file": "assets\\images\\rupee.png",
+      "bytes": 12417
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/09/7da0e9e5-65ee-4aea-8d1e-3c72ad2d8eb6.jpeg",
+      "status": "ok",
+      "timestamp": "20241004144524",
+      "file": "assets\\images\\7da0e9e5-65ee-4aea-8d1e-3c72ad2d8eb6.jpeg",
+      "bytes": 169777
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/09/DALL%C2%B7E-2024-09-04-17.52.55-A-professional-featured-image-for-a-blog-about-due-diligence-in-startup-investments.-The-image-should-depict-key-elements-of-due-diligence-such-as-fi.webp",
+      "status": "ok",
+      "timestamp": "20241004144634",
+      "file": "assets\\images\\DALL·E-2024-09-04-17.52.55-A-professional-featured-image-for-a-blog-about-due-diligence-in-startup-investments.-The-image-should-depict-key-elements-of-due-diligence-such-as-fi.webp",
+      "bytes": 395996
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/09/DALL%C2%B7E-2024-09-13-15.39.14-A-car-dealership-showroom-in-India-where-a-car-dealer-is-selling-a-car-to-an-Indian-customer.-The-scene-includes-a-couple-of-demo-cars-displayed-in-th.webp",
+      "status": "ok",
+      "timestamp": "20241004144444",
+      "file": "assets\\images\\DALL·E-2024-09-13-15.39.14-A-car-dealership-showroom-in-India-where-a-car-dealer-is-selling-a-car-to-an-Indian-customer.-The-scene-includes-a-couple-of-demo-cars-displayed-in-th.webp",
+      "bytes": 316058
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/09/DALL%C2%B7E-2024-09-25-17.41.58-A-detailed-image-depicting-a-big-Indian-corporate-company-in-the-background-symbolizing-wealth-and-power-with-the-concept-of-Buyback-of-Shares-sub.webp",
+      "status": "ok",
+      "timestamp": "20241004144455",
+      "file": "assets\\images\\DALL·E-2024-09-25-17.41.58-A-detailed-image-depicting-a-big-Indian-corporate-company-in-the-background-symbolizing-wealth-and-power-with-the-concept-of-Buyback-of-Shares-sub.webp",
+      "bytes": 531830
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/09/Designer-6.png",
+      "status": "ok",
+      "timestamp": "20241004144557",
+      "file": "assets\\images\\Designer-6.png",
+      "bytes": 1536965
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/09/Designer-7.png",
+      "status": "ok",
+      "timestamp": "20241004144628",
+      "file": "assets\\images\\Designer-7.png",
+      "bytes": 1664692
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/09/Designer-8.png",
+      "status": "ok",
+      "timestamp": "20241004144502",
+      "file": "assets\\images\\Designer-8.png",
+      "bytes": 1381226
+    },
+    {
+      "url": "https://varishpartners.com/wp-content/uploads/2024/09/Designer-9.png",
+      "status": "ok",
+      "timestamp": "20241004144509",
+      "file": "assets\\images\\Designer-9.png",
+      "bytes": 1135376
+    }
+  ]
+}
