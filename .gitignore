@@ -1,6 +1,6 @@
-assets/
-pages/
-wp-json/
+/assets/
+/pages/
+/wp-json/
 build-site.js
 build-placeholders.js
 recover.js
