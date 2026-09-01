@@ -1,0 +1,46 @@
+/* Site-wide padding reduction pass (2026-09-01) — flattens Elementor's
+   default section/container spacing across every page. Targets structural
+   row/section/column wrappers only; widget-internal padding (buttons,
+   icon boxes, forms, cards) is left alone so components don't collapse. */
+
+.elementor-section.elementor-top-section,
+.elementor-container,
+.e-con.e-parent,
+.e-con.e-child,
+.e-con-inner {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* On stacked (tablet/mobile) layouts, full-width photos butt straight up
+   against the screen edge while text still reads better with a gutter.
+   Give every top-level row the same side gutter so photo and text edges
+   line up instead of the photo bleeding wider than the copy above/below it. */
+@media (max-width: 1024px) {
+  .elementor-section.elementor-top-section > .elementor-container,
+  .e-con.e-parent {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* This recovered site is missing the Elementor webpack chunks that would
+   normally remove .elementor-invisible (visibility:hidden) once a scroll
+   entrance animation plays. With that JS broken/unreliable, elements can
+   get stuck permanently invisible instead of just skipping the fade-in.
+   Force everything visible outright so content never silently disappears. */
+.elementor-invisible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Footer carried a 72px spacer widget (plus a 20px margin) between the
+   link columns and the copyright row, leaving a large empty band. */
+.elementor-location-footer .elementor-element-c6a7e1c {
+  margin-bottom: 0 !important;
+}
+.elementor-location-footer .elementor-element-c6a7e1c .elementor-spacer-inner {
+  height: 8px !important;
+}

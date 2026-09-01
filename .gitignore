@@ -24,3 +24,5 @@ tpl-tail.html
 site-header-block.html
 site-footer-block.html
 server.js
+server.log
+.claude/
