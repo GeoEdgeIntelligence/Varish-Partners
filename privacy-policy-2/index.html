@@ -131,7 +131,65 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=3" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=15" media="all" />
+<style id="vp-legal-page">
+/* Legal pages (Privacy Policy, Terms of Use). Same tokens as the rest of the
+   site: Merriweather headings, Poppins copy, brand brown on a light brown band. */
+.vpl-main{max-width:none !important;width:100% !important;margin:0 !important;padding:0 !important;background:#F1E8DC;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:#1F1F1F;}
+.vpl-main *{box-sizing:border-box;}
+.vpl-wrap{max-width:1188px;width:100%;margin:0 auto;padding:0 24px;}
+.vpl-hero{padding:44px 0 28px;}
+.vpl-eyebrow{margin:0 0 8px;font-size:16px;font-weight:600;line-height:22px;color:#6B4D37;}
+.vpl-h1{margin:0 0 14px;font-family:"Merriweather",Georgia,serif;font-size:40px;line-height:1.18;font-weight:700;color:#1F1F1F;}
+.vpl-intro{max-width:820px;}
+.vpl-intro p{margin:0 0 10px;font-size:15.5px;line-height:1.7;color:#5f5f5f;}
+.vpl-intro p:last-child{margin-bottom:0;}
+.vpl-main a{color:#6B4D37;text-decoration:underline;text-underline-offset:3px;}
+.vpl-main a:hover{color:#5a3f2d;}
+
+.vpl-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start;padding-bottom:56px;}
+.vpl-toc{position:sticky;top:calc(var(--vpl-header,104px) + 20px);background:#fff;border-radius:20px;padding:18px 14px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 8px 22px rgba(107,77,55,.10);}
+.vpl-toc p{margin:0 8px 8px;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#9a8a7c;}
+.vpl-toc ol{margin:0;padding:0;list-style:none;counter-reset:toc;}
+.vpl-toc li{margin:0;}
+.vpl-toc a{display:flex;gap:10px;padding:7px 8px;border-radius:10px;font-size:13.5px;line-height:1.4;color:#3f3f3f !important;text-decoration:none !important;transition:background-color .25s ease,color .25s ease;}
+.vpl-toc a::before{counter-increment:toc;content:counter(toc, decimal-leading-zero);font-family:"Merriweather",Georgia,serif;font-size:12px;font-weight:700;color:#D6BC97;padding-top:1px;}
+.vpl-toc a:hover{background:#F7F1EA;color:#6B4D37 !important;}
+.vpl-toc a.is-current{background:#6B4D37;color:#fff !important;}
+.vpl-toc a.is-current::before{color:#e6d6bd;}
+
+.vpl-card{position:relative;background:#fff;border-radius:26px;padding:36px 40px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 18px 48px rgba(107,77,55,.12);overflow:hidden;}
+.vpl-card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:#6B4D37;}
+.vpl-section{scroll-margin-top:calc(var(--vpl-header,104px) + 20px);padding:0 0 26px;margin:0 0 26px;border-bottom:1px solid #efe6db;}
+.vpl-section:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0;}
+.vpl-h2{display:flex;align-items:baseline;gap:12px;margin:0 0 12px;font-family:"Merriweather",Georgia,serif;font-size:22px;line-height:1.3;font-weight:700;color:#1F1F1F;}
+.vpl-h2 span{font-size:14px;color:#D6BC97;letter-spacing:.04em;}
+.vpl-section p{margin:0 0 12px;font-size:15.5px;line-height:1.75;color:#4a4a4a;}
+.vpl-section p:last-child{margin-bottom:0;}
+.vpl-list{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:10px;}
+.vpl-list li{position:relative;margin:0;padding:12px 16px 12px 18px;background:#fcfaf7;border-radius:12px;border-left:3px solid #D6BC97;font-size:15px;line-height:1.7;color:#4a4a4a;}
+.vpl-list strong{color:#1F1F1F;font-weight:600;}
+.vpl-contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+.vpl-contact a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-size:14.5px;font-weight:500;text-decoration:none !important;color:#6B4D37 !important;box-shadow:inset 0 0 0 1.5px #6B4D37;transition:background-color .3s ease,color .3s ease;}
+.vpl-contact a:hover,.vpl-contact a:focus{background:#6B4D37;color:#fff !important;}
+.vpl-contact svg{width:16px;height:16px;fill:currentColor;}
+.vpl-contact strong{flex-basis:100%;font-size:15px;color:#1F1F1F;}
+.vpl-main a:focus-visible{outline:2px solid #6B4D37;outline-offset:3px;}
+
+@media (max-width:1024px){
+  .vpl-layout{grid-template-columns:minmax(0,1fr);}
+  .vpl-toc{position:static;}
+  .vpl-toc ol{display:flex;flex-wrap:wrap;gap:4px;}
+  .vpl-toc a{padding:6px 10px;background:#F7F1EA;}
+}
+@media (max-width:600px){
+  .vpl-wrap{padding:0 16px;}
+  .vpl-hero{padding:28px 0 20px;}
+  .vpl-h1{font-size:30px;}
+  .vpl-card{padding:26px 20px;border-radius:22px;}
+  .vpl-h2{font-size:19px;}
+}
+</style>
 </head>
 <body class="wp-singular page-template-default page page-id-1451 wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page elementor-page-1451">
 
@@ -190,22 +248,7 @@ gtag("config", "GT-TX9689S5");
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-4084d746 elementor-hidden-tablet elementor-hidden-mobile" data-id="4084d746" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2e2a46f2 elementor-align-center elementor-widget elementor-widget-button" data-id="2e2a46f2" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQ5MyIsInRvZ2dsZSI6ZmFsc2V9">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Book a consultation</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
+									</div>
 		</section>
 					</div>
 		</div>
@@ -213,27 +256,75 @@ gtag("config", "GT-TX9689S5");
 		</section>
 				</div>
 		
-<main id="content" class="site-main post-1451 page type-page status-publish hentry">
-
-			<div class="page-header">
-			<h1 class="entry-title">Terms of Use</h1>		</div>
-	
-	<div class="page-content">
-				<div data-elementor-type="wp-page" data-elementor-id="1451" class="elementor elementor-1451" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-2a1c137c e-flex e-con-boxed e-con e-parent" data-id="2a1c137c" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-23fdf180 elementor-widget elementor-widget-text-editor" data-id="23fdf180" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<h2><span style="color: inherit; font-family: inherit; font-size: 1.75rem; text-align: var(--text-align);">1. Acceptance of Terms</span></h2><p>Welcome to Varish Partners! By accessing or using our website <a href="" target="_new" rel="noopener">varishpartners.com</a> (the &#8220;Site&#8221;), you agree to comply with and be bound by these Terms of Use (&#8220;Terms&#8221;). If you do not agree to these Terms, please do not use the Site.</p><h3>2. Changes to Terms</h3><p>We reserve the right to modify these Terms at any time. Any changes will be effective immediately upon posting on this page. Your continued use of the Site after any such changes constitutes your acceptance of the new Terms. We encourage you to review this page periodically.</p><h3>3. Use of the Site</h3><p>You agree to use the Site in accordance with all applicable laws and regulations. You may not use the Site for any unlawful purpose or in any manner that could damage, disable, overburden, or impair the Site.</p><h3>4. Account Registration</h3><p>Certain features of the Site may require you to create an account. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security.</p><h3>5. Intellectual Property</h3><p>All content on the Site, including text, graphics, logos, images, and software, is the property of Varish Partners or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works from any content on the Site without our express written permission.</p><h3>6. User Content</h3><p>By submitting any content to the Site, such as comments, reviews, or other materials, you grant us a non-exclusive, royalty-free, perpetual, and worldwide license to use, copy, modify, and display such content. You represent and warrant that you have the rights to grant this license and that your content does not infringe any third-party rights.</p><h3>7. Third-Party Links</h3><p>The Site may contain links to third-party websites or services. We do not endorse or assume any responsibility for any third-party websites or services. Your use of third-party websites is at your own risk, and you should review their terms and privacy policies.</p><h3>8. Disclaimers</h3><p>The Site and all content are provided on an &#8220;as is&#8221; and &#8220;as available&#8221; basis. We make no warranties or representations about the accuracy or completeness of the content or the Site&#8217;s availability. We disclaim all warranties to the fullest extent permitted by law.</p><h3>9. Limitation of Liability</h3><p>To the maximum extent permitted by law, Varish Partners will not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of the Site, even if we have been advised of the possibility of such damages. Our total liability for any claim arising out of or related to your use of the Site will not exceed the amount you paid, if any, for accessing the Site.</p><h3>10. Indemnification</h3><p>You agree to indemnify and hold harmless Varish Partners, its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys&#8217; fees) arising out of or related to your use of the Site or violation of these Terms.</p><h3>11. Termination</h3><p>We may terminate or suspend your access to the Site, without prior notice or liability, for any reason, including if you breach these Terms. Upon termination, your right to use the Site will immediately cease.</p><h3>12. Governing Law</h3><p>These Terms are governed by and construed in accordance with the laws prevailing in India, without regard to its conflict of laws principles. Any disputes arising under these Terms shall be resolved exclusively in the courts located in Jurisdiction of Mangalore, Dakshina Kannada in the state of Karnataka.</p><h3>13. Contact Us</h3><p>If you have any questions about these Terms, please contact us at:</p><p><strong>Varish Partners</strong><br /><a href="mailto:support@varishpartners.com">support@varishpartners.com</a></p><p>+91 87480 20569</p>						</div>
-				</div>
-					</div>
-				</div>
-				</div>
-		
-		
-			</div>
-
-	
+<main id="content" class="site-main page type-page status-publish hentry vpl-main">
+	<header class="vpl-hero">
+		<div class="vpl-wrap">
+			<p class="vpl-eyebrow">Legal</p>
+			<h1 class="vpl-h1">Terms of Use</h1>
+			
+		</div>
+	</header>
+	<div class="vpl-wrap vpl-layout">
+		<nav class="vpl-toc" aria-label="On this page">
+			<p>On this page</p>
+			<ol><li><a href="#acceptance-of-terms">Acceptance of Terms</a></li><li><a href="#changes-to-terms">Changes to Terms</a></li><li><a href="#use-of-the-site">Use of the Site</a></li><li><a href="#account-registration">Account Registration</a></li><li><a href="#intellectual-property">Intellectual Property</a></li><li><a href="#user-content">User Content</a></li><li><a href="#third-party-links">Third-Party Links</a></li><li><a href="#disclaimers">Disclaimers</a></li><li><a href="#limitation-of-liability">Limitation of Liability</a></li><li><a href="#indemnification">Indemnification</a></li><li><a href="#termination">Termination</a></li><li><a href="#governing-law">Governing Law</a></li><li><a href="#contact-us">Contact Us</a></li></ol>
+		</nav>
+		<article class="vpl-card">
+			<section class="vpl-section" id="acceptance-of-terms">
+				<h2 class="vpl-h2"><span>01</span>Acceptance of Terms</h2>
+				<p>Welcome to Varish Partners! By accessing or using our website varishpartners.com (the “Site”), you agree to comply with and be bound by these Terms of Use (“Terms”). If you do not agree to these Terms, please do not use the Site.</p>
+			</section>
+			<section class="vpl-section" id="changes-to-terms">
+				<h2 class="vpl-h2"><span>02</span>Changes to Terms</h2>
+				<p>We reserve the right to modify these Terms at any time. Any changes will be effective immediately upon posting on this page. Your continued use of the Site after any such changes constitutes your acceptance of the new Terms. We encourage you to review this page periodically.</p>
+			</section>
+			<section class="vpl-section" id="use-of-the-site">
+				<h2 class="vpl-h2"><span>03</span>Use of the Site</h2>
+				<p>You agree to use the Site in accordance with all applicable laws and regulations. You may not use the Site for any unlawful purpose or in any manner that could damage, disable, overburden, or impair the Site.</p>
+			</section>
+			<section class="vpl-section" id="account-registration">
+				<h2 class="vpl-h2"><span>04</span>Account Registration</h2>
+				<p>Certain features of the Site may require you to create an account. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security.</p>
+			</section>
+			<section class="vpl-section" id="intellectual-property">
+				<h2 class="vpl-h2"><span>05</span>Intellectual Property</h2>
+				<p>All content on the Site, including text, graphics, logos, images, and software, is the property of Varish Partners or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works from any content on the Site without our express written permission.</p>
+			</section>
+			<section class="vpl-section" id="user-content">
+				<h2 class="vpl-h2"><span>06</span>User Content</h2>
+				<p>By submitting any content to the Site, such as comments, reviews, or other materials, you grant us a non-exclusive, royalty-free, perpetual, and worldwide license to use, copy, modify, and display such content. You represent and warrant that you have the rights to grant this license and that your content does not infringe any third-party rights.</p>
+			</section>
+			<section class="vpl-section" id="third-party-links">
+				<h2 class="vpl-h2"><span>07</span>Third-Party Links</h2>
+				<p>The Site may contain links to third-party websites or services. We do not endorse or assume any responsibility for any third-party websites or services. Your use of third-party websites is at your own risk, and you should review their terms and privacy policies.</p>
+			</section>
+			<section class="vpl-section" id="disclaimers">
+				<h2 class="vpl-h2"><span>08</span>Disclaimers</h2>
+				<p>The Site and all content are provided on an “as is” and “as available” basis. We make no warranties or representations about the accuracy or completeness of the content or the Site’s availability. We disclaim all warranties to the fullest extent permitted by law.</p>
+			</section>
+			<section class="vpl-section" id="limitation-of-liability">
+				<h2 class="vpl-h2"><span>09</span>Limitation of Liability</h2>
+				<p>To the maximum extent permitted by law, Varish Partners will not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of the Site, even if we have been advised of the possibility of such damages. Our total liability for any claim arising out of or related to your use of the Site will not exceed the amount you paid, if any, for accessing the Site.</p>
+			</section>
+			<section class="vpl-section" id="indemnification">
+				<h2 class="vpl-h2"><span>10</span>Indemnification</h2>
+				<p>You agree to indemnify and hold harmless Varish Partners, its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising out of or related to your use of the Site or violation of these Terms.</p>
+			</section>
+			<section class="vpl-section" id="termination">
+				<h2 class="vpl-h2"><span>11</span>Termination</h2>
+				<p>We may terminate or suspend your access to the Site, without prior notice or liability, for any reason, including if you breach these Terms. Upon termination, your right to use the Site will immediately cease.</p>
+			</section>
+			<section class="vpl-section" id="governing-law">
+				<h2 class="vpl-h2"><span>12</span>Governing Law</h2>
+				<p>These Terms are governed by and construed in accordance with the laws prevailing in India, without regard to its conflict of laws principles. Any disputes arising under these Terms shall be resolved exclusively in the courts located in Jurisdiction of Mangalore, Dakshina Kannada in the state of Karnataka.</p>
+			</section>
+			<section class="vpl-section" id="contact-us">
+				<h2 class="vpl-h2"><span>13</span>Contact Us</h2>
+				<p>If you have any questions about these Terms, please contact us at:</p>
+				<div class="vpl-contact"><strong>Varish Partners</strong><a href="mailto:support@varishpartners.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>support@varishpartners.com</a><a href="tel:+918748020569"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>+91 87480 20569</a></div>
+			</section>
+		</article>
+	</div>
 </main>
 
 			<div data-elementor-type="footer" data-elementor-id="51" class="elementor elementor-51 elementor-location-footer" data-elementor-post-type="elementor_library">
@@ -424,7 +515,7 @@ gtag("config", "GT-TX9689S5");
 
 									<p class="elementor-icon-box-title">
 						<span  >
-							Shivashree, Vadiraja Nagar Cross Road, Alake, Mannagudda, Mangaluru 575 003						</span>
+							908 Maurishka Park, MG Road, Near Canara Bank, Kodialbail, Mangaluru 575003						</span>
 					</p>
 				
 				
@@ -450,7 +541,7 @@ gtag("config", "GT-TX9689S5");
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-16e00871 elementor-widget elementor-widget-heading" data-id="16e00871" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"> © 2024 Varish Partners</p>		</div>
+			<p class="elementor-heading-title elementor-size-default"> © 2026 Varish Partners</p>		</div>
 				</div>
 					</div>
 		</div>
@@ -619,6 +710,31 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="vp-legal-page-js">
+(function () {
+  'use strict';
+  // Keep anchor jumps clear of the sticky header, and highlight the section
+  // being read in the contents list.
+  var header = document.querySelector('.elementor-location-header');
+  function sync() { if (header) document.documentElement.style.setProperty('--vpl-header', header.getBoundingClientRect().height + 'px'); }
+  sync();
+  window.addEventListener('resize', sync);
+  var links = Array.prototype.slice.call(document.querySelectorAll('.vpl-toc a'));
+  var sections = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  function mark() {
+    var line = (header ? header.getBoundingClientRect().height : 0) + 40, cur = 0;
+    sections.forEach(function (s, i) { if (s && s.getBoundingClientRect().top <= line) cur = i; });
+    if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 2) {
+      var last = sections.length - 1;
+      if (sections[last] && sections[last].getBoundingClientRect().top < window.innerHeight) cur = last;
+    }
+    links.forEach(function (a, i) { a.classList.toggle('is-current', i === cur); });
+  }
+  window.addEventListener('scroll', mark, { passive: true });
+  mark();
+})();
+</script>
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 

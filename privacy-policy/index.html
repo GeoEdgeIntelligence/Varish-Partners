@@ -132,7 +132,65 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=3" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=15" media="all" />
+<style id="vp-legal-page">
+/* Legal pages (Privacy Policy, Terms of Use). Same tokens as the rest of the
+   site: Merriweather headings, Poppins copy, brand brown on a light brown band. */
+.vpl-main{max-width:none !important;width:100% !important;margin:0 !important;padding:0 !important;background:#F1E8DC;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:#1F1F1F;}
+.vpl-main *{box-sizing:border-box;}
+.vpl-wrap{max-width:1188px;width:100%;margin:0 auto;padding:0 24px;}
+.vpl-hero{padding:44px 0 28px;}
+.vpl-eyebrow{margin:0 0 8px;font-size:16px;font-weight:600;line-height:22px;color:#6B4D37;}
+.vpl-h1{margin:0 0 14px;font-family:"Merriweather",Georgia,serif;font-size:40px;line-height:1.18;font-weight:700;color:#1F1F1F;}
+.vpl-intro{max-width:820px;}
+.vpl-intro p{margin:0 0 10px;font-size:15.5px;line-height:1.7;color:#5f5f5f;}
+.vpl-intro p:last-child{margin-bottom:0;}
+.vpl-main a{color:#6B4D37;text-decoration:underline;text-underline-offset:3px;}
+.vpl-main a:hover{color:#5a3f2d;}
+
+.vpl-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start;padding-bottom:56px;}
+.vpl-toc{position:sticky;top:calc(var(--vpl-header,104px) + 20px);background:#fff;border-radius:20px;padding:18px 14px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 8px 22px rgba(107,77,55,.10);}
+.vpl-toc p{margin:0 8px 8px;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#9a8a7c;}
+.vpl-toc ol{margin:0;padding:0;list-style:none;counter-reset:toc;}
+.vpl-toc li{margin:0;}
+.vpl-toc a{display:flex;gap:10px;padding:7px 8px;border-radius:10px;font-size:13.5px;line-height:1.4;color:#3f3f3f !important;text-decoration:none !important;transition:background-color .25s ease,color .25s ease;}
+.vpl-toc a::before{counter-increment:toc;content:counter(toc, decimal-leading-zero);font-family:"Merriweather",Georgia,serif;font-size:12px;font-weight:700;color:#D6BC97;padding-top:1px;}
+.vpl-toc a:hover{background:#F7F1EA;color:#6B4D37 !important;}
+.vpl-toc a.is-current{background:#6B4D37;color:#fff !important;}
+.vpl-toc a.is-current::before{color:#e6d6bd;}
+
+.vpl-card{position:relative;background:#fff;border-radius:26px;padding:36px 40px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 18px 48px rgba(107,77,55,.12);overflow:hidden;}
+.vpl-card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:#6B4D37;}
+.vpl-section{scroll-margin-top:calc(var(--vpl-header,104px) + 20px);padding:0 0 26px;margin:0 0 26px;border-bottom:1px solid #efe6db;}
+.vpl-section:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0;}
+.vpl-h2{display:flex;align-items:baseline;gap:12px;margin:0 0 12px;font-family:"Merriweather",Georgia,serif;font-size:22px;line-height:1.3;font-weight:700;color:#1F1F1F;}
+.vpl-h2 span{font-size:14px;color:#D6BC97;letter-spacing:.04em;}
+.vpl-section p{margin:0 0 12px;font-size:15.5px;line-height:1.75;color:#4a4a4a;}
+.vpl-section p:last-child{margin-bottom:0;}
+.vpl-list{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:10px;}
+.vpl-list li{position:relative;margin:0;padding:12px 16px 12px 18px;background:#fcfaf7;border-radius:12px;border-left:3px solid #D6BC97;font-size:15px;line-height:1.7;color:#4a4a4a;}
+.vpl-list strong{color:#1F1F1F;font-weight:600;}
+.vpl-contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+.vpl-contact a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-size:14.5px;font-weight:500;text-decoration:none !important;color:#6B4D37 !important;box-shadow:inset 0 0 0 1.5px #6B4D37;transition:background-color .3s ease,color .3s ease;}
+.vpl-contact a:hover,.vpl-contact a:focus{background:#6B4D37;color:#fff !important;}
+.vpl-contact svg{width:16px;height:16px;fill:currentColor;}
+.vpl-contact strong{flex-basis:100%;font-size:15px;color:#1F1F1F;}
+.vpl-main a:focus-visible{outline:2px solid #6B4D37;outline-offset:3px;}
+
+@media (max-width:1024px){
+  .vpl-layout{grid-template-columns:minmax(0,1fr);}
+  .vpl-toc{position:static;}
+  .vpl-toc ol{display:flex;flex-wrap:wrap;gap:4px;}
+  .vpl-toc a{padding:6px 10px;background:#F7F1EA;}
+}
+@media (max-width:600px){
+  .vpl-wrap{padding:0 16px;}
+  .vpl-hero{padding:28px 0 20px;}
+  .vpl-h1{font-size:30px;}
+  .vpl-card{padding:26px 20px;border-radius:22px;}
+  .vpl-h2{font-size:19px;}
+}
+</style>
 </head>
 <body class="privacy-policy wp-singular page-template-default page page-id-3 wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page elementor-page-3">
 
@@ -191,22 +249,7 @@ gtag("config", "GT-TX9689S5");
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-4084d746 elementor-hidden-tablet elementor-hidden-mobile" data-id="4084d746" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2e2a46f2 elementor-align-center elementor-widget elementor-widget-button" data-id="2e2a46f2" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQ5MyIsInRvZ2dsZSI6ZmFsc2V9">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Book a consultation</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
+									</div>
 		</section>
 					</div>
 		</div>
@@ -214,184 +257,62 @@ gtag("config", "GT-TX9689S5");
 		</section>
 				</div>
 		
-<main id="content" class="site-main post-3 page type-page status-publish hentry">
-
-			<div class="page-header">
-			<h1 class="entry-title">Privacy Policy</h1>		</div>
-	
-	<div class="page-content">
-				<div data-elementor-type="wp-page" data-elementor-id="3" class="elementor elementor-3" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-2a1c137c e-flex e-con-boxed e-con e-parent" data-id="2a1c137c" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-23fdf180 elementor-widget elementor-widget-text-editor" data-id="23fdf180" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><span style="text-align: var(--text-align); font-size: 1rem;">At </span><a style="text-align: var(--text-align); background-color: #ffffff; font-size: 1rem;" href="http://www.varishpartners.com" target="_blank" rel="noreferrer noopener">www.varishpartners.com</a><span style="text-align: var(--text-align); font-size: 1rem;">, safeguarding the privacy of our visitors is a top priority. This Privacy Policy outlines the types of information we collect, how we use it, and how we protect it.</span></h2>
-<p><!-- /wp:paragraph --><!-- wp:paragraph --></p>
-<p>If you have any questions or need further information about our Privacy Policy, please feel free to contact us at <a href="mailto:support@varishpartners.com"><b>support@varishpartners.com</b></a></p>
-<p><!-- /wp:paragraph --><!-- wp:paragraph --></p>
-<p>Please note that this Privacy Policy applies solely to our online activities and pertains specifically to visitors to our website. It addresses the information shared and/or collected through <a href="http://www.varishpartners.com" target="_blank" rel="noreferrer noopener">www.varishpartners.com</a>. This policy does not apply to information collected offline or through other channels outside of this website.</p>
-<p> </p>
-<p><!-- /wp:paragraph --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong> </strong></h2>
-<h2 class="wp-block-heading"><strong>1. Introduction</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p>Welcome to Varish Partners. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.varishpartners.com (the &#8220;Site&#8221;).</p>
-<p> </p>
-<p><!-- /wp:paragraph --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong>2. Information We Collect</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p><strong>Personal Information:</strong> We may collect personal information that you provide to us directly, such as your name, email address, phone number, and any other information you choose to provide when you contact us or sign up for our services.</p>
-<p><!-- /wp:paragraph --><!-- wp:paragraph --></p>
-<p><strong>Usage Data:</strong> We collect information about how you use and interact with our Site. This may include your IP address, browser type, operating system, referring URLs, and other usage details.</p>
-<p><!-- /wp:paragraph --><!-- wp:paragraph --></p>
-<p><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar tracking technologies to enhance your experience on our Site. Cookies are small files placed on your device that help us understand your preferences and improve our services. You can manage your cookie preferences through your browser settings.</p>
-<p> </p>
-<p><!-- /wp:paragraph --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong>3. How We Use Your Information</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p>We use your information for the following purposes:</p>
-<p><!-- /wp:paragraph --><!-- wp:list --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list"><!-- wp:list-item --></ul>
-</li>
-</ul>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>To Provide and Improve Our Services:</strong> We use your information to deliver the services you request, improve our Site, and communicate with you about updates, promotions, and other relevant information.</li>
-</ul>
-</li>
-</ul>
-<p><!-- /wp:list-item --><!-- wp:list-item --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>To Respond to Inquiries:</strong> We may use your contact information to respond to your questions, comments, or other requests.</li>
-</ul>
-</li>
-</ul>
-<p><!-- /wp:list-item --><!-- wp:list-item --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>To Analyze Usage:</strong> We analyze usage data to understand how our Site is used and to make improvements.</li>
-</ul>
-</li>
-</ul>
-<p><!-- /wp:list-item --><!-- wp:list-item --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>For Legal Compliance:</strong> We may use your information to comply with applicable laws, regulations, or legal processes.</li>
-</ul>
-</li>
-</ul>
-<div> </div>
-<p><!-- /wp:list-item --></p>
-<p><!-- /wp:list --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong>4. Sharing Your Information</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p>We do not sell or rent your personal information to third parties. However, we may share your information in the following circumstances:</p>
-<p><!-- /wp:paragraph --><!-- wp:list --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list"><!-- wp:list-item --></ul>
-</li>
-</ul>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>Service Providers:</strong> We may share your information with third-party service providers who perform services on our behalf, such as hosting services, email communication, or analytics.</li>
-</ul>
-</li>
-</ul>
-<p><!-- /wp:list-item --><!-- wp:list-item --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a subpoena or court order).</li>
-</ul>
-</li>
-</ul>
-<p><!-- /wp:list-item --><!-- wp:list-item --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.</li>
-</ul>
-</li>
-</ul>
-<div> </div>
-<p><!-- /wp:list-item --></p>
-<p><!-- /wp:list --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong>5. Data Security</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the Internet or electronic storage is completely secure. While we strive to protect your information, we cannot guarantee its absolute security.</p>
-<p> </p>
-<p><!-- /wp:paragraph --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong>6. Your Rights and Choices</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p>You have the following rights regarding your personal information:</p>
-<p><!-- /wp:paragraph --><!-- wp:list --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list"><!-- wp:list-item --></ul>
-</li>
-</ul>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>Access and Correction:</strong> You may request access to or correction of your personal information that we hold.</li>
-</ul>
-</li>
-</ul>
-<p><!-- /wp:list-item --><!-- wp:list-item --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>Opt-Out:</strong> You may opt out of receiving marketing communications from us by following the unsubscribe instructions provided in those communications.</li>
-</ul>
-</li>
-</ul>
-<p><!-- /wp:list-item --><!-- wp:list-item --></p>
-<ul class="wp-block-list">
-<li style="list-style-type: none;">
-<ul class="wp-block-list">
-<li><strong>Cookies:</strong> You can manage your cookie preferences through your browser settings. Note that disabling cookies may affect your ability to use certain features of our Site.</li>
-</ul>
-</li>
-</ul>
-<div> </div>
-<p><!-- /wp:list-item --></p>
-<p><!-- /wp:list --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong>7. Third-Party Links</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p>Our Site may contain links to third-party websites. We are not responsible for the privacy practices or content of those third parties. We encourage you to review the privacy policies of any third-party sites you visit.</p>
-<p> </p>
-<p><!-- /wp:paragraph --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong>8. Changes to This Privacy Policy</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our Site and updating the effective date. Your continued use of the Site after any changes indicates your acceptance of the updated policy.</p>
-<p> </p>
-<p><!-- /wp:paragraph --><!-- wp:heading --></p>
-<h2 class="wp-block-heading"><strong>9. Contact Us</strong></h2>
-<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-<p>If you have any questions or concerns about this Privacy Policy or our practices, please contact us at:</p>
-<p><!-- /wp:paragraph --><!-- wp:paragraph --></p>
-<p><strong>Varish Partners</strong><br /><a href="mailto:support@varishpartners.com">support@varishpartners.com</a> </p>
-<p><span style="color: var( --e-global-color-secondary ); text-align: var(--text-align); font-size: 1rem;">+91 87480 20569</span></p>
-<p><!-- /wp:paragraph --></p>						</div>
-				</div>
-					</div>
-				</div>
-				</div>
-		
-		
-			</div>
-
-	
+<main id="content" class="site-main page type-page status-publish hentry vpl-main">
+	<header class="vpl-hero">
+		<div class="vpl-wrap">
+			<p class="vpl-eyebrow">Legal</p>
+			<h1 class="vpl-h1">Privacy Policy</h1>
+			<div class="vpl-intro"><p>At www.varishpartners.com, safeguarding the privacy of our visitors is a top priority. This Privacy Policy outlines the types of information we collect, how we use it, and how we protect it.</p><p>If you have any questions or need further information about our Privacy Policy, please feel free to contact us at <a href="mailto:support@varishpartners.com">support@varishpartners.com</a>.</p><p>Please note that this Privacy Policy applies solely to our online activities and pertains specifically to visitors to our website. It addresses the information shared and/or collected through www.varishpartners.com. This policy does not apply to information collected offline or through other channels outside of this website.</p></div>
+		</div>
+	</header>
+	<div class="vpl-wrap vpl-layout">
+		<nav class="vpl-toc" aria-label="On this page">
+			<p>On this page</p>
+			<ol><li><a href="#introduction">Introduction</a></li><li><a href="#information-we-collect">Information We Collect</a></li><li><a href="#how-we-use-your-information">How We Use Your Information</a></li><li><a href="#sharing-your-information">Sharing Your Information</a></li><li><a href="#data-security">Data Security</a></li><li><a href="#your-rights-and-choices">Your Rights and Choices</a></li><li><a href="#third-party-links">Third-Party Links</a></li><li><a href="#changes-to-this-privacy-policy">Changes to This Privacy Policy</a></li><li><a href="#contact-us">Contact Us</a></li></ol>
+		</nav>
+		<article class="vpl-card">
+			<section class="vpl-section" id="introduction">
+				<h2 class="vpl-h2"><span>01</span>Introduction</h2>
+				<p>Welcome to Varish Partners. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.varishpartners.com (the “Site”).</p>
+			</section>
+			<section class="vpl-section" id="information-we-collect">
+				<h2 class="vpl-h2"><span>02</span>Information We Collect</h2>
+				<ul class="vpl-list"><li><strong>Personal Information:</strong> We may collect personal information that you provide to us directly, such as your name, email address, phone number, and any other information you choose to provide when you contact us or sign up for our services.</li><li><strong>Usage Data:</strong> We collect information about how you use and interact with our Site. This may include your IP address, browser type, operating system, referring URLs, and other usage details.</li><li><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar tracking technologies to enhance your experience on our Site. Cookies are small files placed on your device that help us understand your preferences and improve our services. You can manage your cookie preferences through your browser settings.</li></ul>
+			</section>
+			<section class="vpl-section" id="how-we-use-your-information">
+				<h2 class="vpl-h2"><span>03</span>How We Use Your Information</h2>
+				<p>We use your information for the following purposes:</p>
+				<ul class="vpl-list"><li><strong>To Provide and Improve Our Services:</strong> We use your information to deliver the services you request, improve our Site, and communicate with you about updates, promotions, and other relevant information.</li><li><strong>To Respond to Inquiries:</strong> We may use your contact information to respond to your questions, comments, or other requests.</li><li><strong>To Analyze Usage:</strong> We analyze usage data to understand how our Site is used and to make improvements.</li><li><strong>For Legal Compliance:</strong> We may use your information to comply with applicable laws, regulations, or legal processes.</li></ul>
+			</section>
+			<section class="vpl-section" id="sharing-your-information">
+				<h2 class="vpl-h2"><span>04</span>Sharing Your Information</h2>
+				<p>We do not sell or rent your personal information to third parties. However, we may share your information in the following circumstances:</p>
+				<ul class="vpl-list"><li><strong>Service Providers:</strong> We may share your information with third-party service providers who perform services on our behalf, such as hosting services, email communication, or analytics.</li><li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a subpoena or court order).</li><li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.</li></ul>
+			</section>
+			<section class="vpl-section" id="data-security">
+				<h2 class="vpl-h2"><span>05</span>Data Security</h2>
+				<p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the Internet or electronic storage is completely secure. While we strive to protect your information, we cannot guarantee its absolute security.</p>
+			</section>
+			<section class="vpl-section" id="your-rights-and-choices">
+				<h2 class="vpl-h2"><span>06</span>Your Rights and Choices</h2>
+				<p>You have the following rights regarding your personal information:</p>
+				<ul class="vpl-list"><li><strong>Access and Correction:</strong> You may request access to or correction of your personal information that we hold.</li><li><strong>Opt-Out:</strong> You may opt out of receiving marketing communications from us by following the unsubscribe instructions provided in those communications.</li><li><strong>Cookies:</strong> You can manage your cookie preferences through your browser settings. Note that disabling cookies may affect your ability to use certain features of our Site.</li></ul>
+			</section>
+			<section class="vpl-section" id="third-party-links">
+				<h2 class="vpl-h2"><span>07</span>Third-Party Links</h2>
+				<p>Our Site may contain links to third-party websites. We are not responsible for the privacy practices or content of those third parties. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+			</section>
+			<section class="vpl-section" id="changes-to-this-privacy-policy">
+				<h2 class="vpl-h2"><span>08</span>Changes to This Privacy Policy</h2>
+				<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our Site and updating the effective date. Your continued use of the Site after any changes indicates your acceptance of the updated policy.</p>
+			</section>
+			<section class="vpl-section" id="contact-us">
+				<h2 class="vpl-h2"><span>09</span>Contact Us</h2>
+				<p>If you have any questions or concerns about this Privacy Policy or our practices, please contact us at:</p>
+				<div class="vpl-contact"><strong>Varish Partners</strong><a href="mailto:support@varishpartners.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>support@varishpartners.com</a><a href="tel:+918748020569"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>+91 87480 20569</a></div>
+			</section>
+		</article>
+	</div>
 </main>
 
 			<div data-elementor-type="footer" data-elementor-id="51" class="elementor elementor-51 elementor-location-footer" data-elementor-post-type="elementor_library">
@@ -582,7 +503,7 @@ gtag("config", "GT-TX9689S5");
 
 									<p class="elementor-icon-box-title">
 						<span  >
-							Shivashree, Vadiraja Nagar Cross Road, Alake, Mannagudda, Mangaluru 575 003						</span>
+							908 Maurishka Park, MG Road, Near Canara Bank, Kodialbail, Mangaluru 575003						</span>
 					</p>
 				
 				
@@ -608,7 +529,7 @@ gtag("config", "GT-TX9689S5");
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-16e00871 elementor-widget elementor-widget-heading" data-id="16e00871" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"> © 2024 Varish Partners</p>		</div>
+			<p class="elementor-heading-title elementor-size-default"> © 2026 Varish Partners</p>		</div>
 				</div>
 					</div>
 		</div>
@@ -777,6 +698,31 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="vp-legal-page-js">
+(function () {
+  'use strict';
+  // Keep anchor jumps clear of the sticky header, and highlight the section
+  // being read in the contents list.
+  var header = document.querySelector('.elementor-location-header');
+  function sync() { if (header) document.documentElement.style.setProperty('--vpl-header', header.getBoundingClientRect().height + 'px'); }
+  sync();
+  window.addEventListener('resize', sync);
+  var links = Array.prototype.slice.call(document.querySelectorAll('.vpl-toc a'));
+  var sections = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  function mark() {
+    var line = (header ? header.getBoundingClientRect().height : 0) + 40, cur = 0;
+    sections.forEach(function (s, i) { if (s && s.getBoundingClientRect().top <= line) cur = i; });
+    if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 2) {
+      var last = sections.length - 1;
+      if (sections[last] && sections[last].getBoundingClientRect().top < window.innerHeight) cur = last;
+    }
+    links.forEach(function (a, i) { a.classList.toggle('is-current', i === cur); });
+  }
+  window.addEventListener('scroll', mark, { passive: true });
+  mark();
+})();
+</script>
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 

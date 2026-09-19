@@ -137,7 +137,141 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=3" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=15" media="all" />
+<style id="vp-about-page">
+/* About Us — laid out like the homepage: three snap screens on desktop
+   (1 story, 2 vision/mission/values, 3 leadership + footer), brown and white
+   bands, white cards with the hover lift. Merriweather headings, Poppins copy,
+   brand brown (#6B4D37). */
+:root{
+  --vpa-ink:#1F1F1F;
+  --vpa-muted:#5f5f5f;
+  --vpa-brand:#6B4D37;
+  --vpa-brand-dark:#5a3f2d;
+  --vpa-accent:#D6BC97;
+  --vpa-light:#F1E8DC;
+  --vpa-chip:#F7F1EA;
+  --vpa-serif:"Merriweather",Georgia,serif;
+  --vpa-sans:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --vpa-ease:cubic-bezier(.22,.61,.36,1);
+}
+body{background:#fff;}
+.vpa-main{max-width:none !important;width:100% !important;margin:0 !important;padding:0 !important;font-family:var(--vpa-sans);color:var(--vpa-ink);}
+.vpa-main *{box-sizing:border-box;}
+.vpa-wrap{max-width:1188px;margin:0 auto;padding:0 24px;width:100%;}
+.vpa-screen{display:flex;flex-direction:column;justify-content:center;padding:28px 0;}
+
+/* Shared type */
+.vpa-eyebrow{margin:0 0 8px;font-size:16px;font-weight:600;line-height:22px;color:var(--vpa-brand);}
+.vpa-eyebrow--light{color:#fff;}
+.vpa-h1{margin:0 0 14px;font-family:var(--vpa-serif);font-size:38px;line-height:1.18;font-weight:700;color:var(--vpa-ink);}
+.vpa-h2{margin:0;font-family:var(--vpa-serif);font-size:32px;line-height:1.2;font-weight:700;color:var(--vpa-ink);}
+.vpa-h2--light{color:#fff;}
+.vpa-h3{margin:0;font-family:var(--vpa-serif);font-size:19px;line-height:1.3;font-weight:700;color:var(--vpa-ink);}
+.vpa-body p{margin:0 0 12px;font-size:15px;line-height:1.7;color:var(--vpa-muted);}
+.vpa-body p:first-child{font-size:16px;color:#3f3f3f;}
+.vpa-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin:0 0 20px;}
+.vpa-head p{margin:0;max-width:460px;font-size:15px;line-height:1.65;color:var(--vpa-muted);}
+.vpa-head--light p{color:rgba(255,255,255,.82);}
+
+/* Buttons (same as the service pages) */
+.vpa-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.vpa-btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;border-radius:999px;font-size:15px;font-weight:500;line-height:1.2;text-decoration:none;transition:transform .35s var(--vpa-ease),background-color .35s ease,color .35s ease;}
+.vpa-btn:hover{transform:translateY(-2px);}
+.vpa-btn--ghost{background:#fff;color:var(--vpa-brand);box-shadow:inset 0 0 0 1.5px var(--vpa-brand);}
+.vpa-btn--ghost:hover,.vpa-btn--ghost:focus{background:var(--vpa-brand);color:#fff;}
+.vpa-btn--dark{background:var(--vpa-brand);color:#fff;box-shadow:0 12px 26px rgba(107,77,55,.28);}
+.vpa-btn--dark:hover,.vpa-btn--dark:focus{background:var(--vpa-brand-dark);color:#fff;}
+.vpa-btn:focus-visible,.vpa-link:focus-visible,.vpa-readmore:focus-visible{outline:2px solid var(--vpa-brand);outline-offset:3px;}
+
+/* Cards: white, soft shadow; on hover they lift and a brown bar grows along the top */
+.vpa-card{position:relative;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 1px 2px rgba(107,77,55,.06),0 12px 32px rgba(0,0,0,.12);transition:transform .45s var(--vpa-ease),box-shadow .45s var(--vpa-ease);}
+.vpa-card::before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:var(--vpa-brand);z-index:2;transition:width .5s var(--vpa-ease);}
+.vpa-card:hover,.vpa-card:focus-within{transform:translateY(-6px);box-shadow:0 26px 56px rgba(0,0,0,.22),0 2px 6px rgba(0,0,0,.08);}
+.vpa-card:hover::before,.vpa-card:focus-within::before{width:100%;}
+.vpa-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 8px;}
+.vpa-glyph{position:relative;display:inline-block;width:26px;height:20px;flex:0 0 auto;}
+.vpa-glyph::before,.vpa-glyph::after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;}
+.vpa-glyph::before{left:8px;top:0;background:#e6d6bd;}
+.vpa-glyph::after{left:0;bottom:0;background:var(--vpa-accent);box-shadow:15px 0 0 var(--vpa-brand);}
+.vpa-num{font-family:var(--vpa-serif);font-size:14px;font-weight:700;color:var(--vpa-accent);letter-spacing:.04em;}
+
+/* 1) Our story: text beside a photo that runs the full height of the text */
+.vpa-hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:44px;align-items:stretch;}
+.vpa-hero-text{display:flex;flex-direction:column;justify-content:center;}
+.vpa-hero-media{position:relative;min-height:320px;border-radius:24px;overflow:hidden;box-shadow:0 18px 44px rgba(20,20,20,.12);background:var(--vpa-light);}
+.vpa-hero-media img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center;}
+
+/* 2) Vision, mission and core values on brown */
+.vpa-values{background:var(--vpa-brand);}
+.vpa-vm{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px;margin:0 0 22px;}
+.vpa-vm .vpa-card{padding:20px 24px;}
+.vpa-vm p,.vpa-value p{margin:0;font-size:14.5px;line-height:1.65;color:var(--vpa-muted);}
+.vpa-sublabel{display:flex;align-items:center;gap:14px;margin:0 0 14px;}
+.vpa-sublabel::after{content:"";flex:1 1 auto;height:1px;background:rgba(255,255,255,.25);}
+.vpa-values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.vpa-value{padding:18px 22px 20px;}
+.vpa-value .vpa-card-top{margin-bottom:6px;}
+
+/* 3) Leadership (light brown) then the footer, sharing one screen */
+.vpa-team{background:var(--vpa-light);}
+.vpa-team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.vpa-person{display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;padding:20px;align-items:start;}
+.vpa-photo{border-radius:16px;overflow:hidden;background:var(--vpa-chip);aspect-ratio:4 / 5;}
+.vpa-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;}
+.vpa-role{margin:2px 0 2px;font-size:14px;font-weight:600;color:var(--vpa-brand);}
+.vpa-mail{display:inline-block;margin:0 0 8px;font-size:13.5px;color:var(--vpa-muted);text-decoration:none;word-break:break-all;}
+.vpa-mail:hover{color:var(--vpa-brand);text-decoration:underline;}
+.vpa-bio{position:relative;max-height:calc(1.6em * 3);overflow:hidden;font-size:14px;line-height:1.6;color:var(--vpa-muted);-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent);}
+.vpa-bio p{margin:0 0 8px;}
+.vpa-person.is-open .vpa-bio{max-height:calc(1.6em * 8);overflow-y:auto;-webkit-mask-image:none;mask-image:none;padding-right:6px;}
+.vpa-person-actions{display:flex;align-items:center;gap:16px;margin-top:10px;flex-wrap:wrap;}
+.vpa-readmore{padding:0;border:0;background:none;font-family:var(--vpa-sans);font-size:14px;font-weight:600;color:var(--vpa-brand);text-decoration:underline;text-underline-offset:4px;cursor:pointer;}
+.vpa-readmore:hover,.vpa-readmore:focus{background:none;color:var(--vpa-brand-dark);}
+.vpa-link{display:inline-flex;align-items:center;gap:6px;padding:7px 15px;border-radius:999px;font-size:13.5px;font-weight:500;color:var(--vpa-brand);text-decoration:none;box-shadow:inset 0 0 0 1.5px var(--vpa-brand);transition:background-color .35s ease,color .35s ease;}
+.vpa-link:hover,.vpa-link:focus{background:var(--vpa-brand);color:#fff;}
+.vpa-link svg{width:14px;height:14px;fill:currentColor;}
+
+/* Footer: tighter spacing so it shares the last screen with Leadership (desktop). */
+@media (min-width:1025px) and (min-height:600px){
+  .vpa-main ~ .elementor-location-footer .elementor-element-18a4e857{padding-top:24px !important;padding-bottom:4px !important;}
+  .vpa-main ~ .elementor-location-footer .elementor-widget:not(:last-child){margin-bottom:8px !important;}
+  .vpa-main ~ .elementor-location-footer .elementor-nav-menu a{padding-top:3px !important;padding-bottom:3px !important;}
+  .vpa-main ~ .elementor-location-footer .elementor-element-6ebf325a img{max-height:64px;width:auto;}
+  .vpa-main ~ .elementor-location-footer .elementor-element-c6a7e1c{margin-bottom:0 !important;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .vpa-card,.vpa-card::before,.vpa-btn{transition:none;}
+  .vpa-card:hover,.vpa-card:focus-within{transform:none;}
+}
+
+/* Responsive */
+@media (max-width:1180px){
+  .vpa-h1{font-size:34px;}
+  .vpa-h2{font-size:28px;}
+  .vpa-person{grid-template-columns:120px minmax(0,1fr);gap:16px;}
+}
+@media (max-width:1024px){
+  .vpa-wrap{padding:0 20px;}
+  .vpa-screen{padding:32px 0;}
+  .vpa-hero-grid{grid-template-columns:minmax(0,1fr);gap:24px;}
+  .vpa-hero-media{min-height:0;aspect-ratio:16 / 10;}
+  .vpa-head{flex-direction:column;align-items:flex-start;gap:10px;}
+  .vpa-vm{grid-template-columns:minmax(0,1fr);}
+  .vpa-values-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .vpa-team-grid{grid-template-columns:minmax(0,1fr);}
+}
+@media (max-width:600px){
+  .vpa-wrap{padding:0 16px;}
+  .vpa-h1{font-size:28px;}
+  .vpa-h2{font-size:25px;}
+  .vpa-values-grid{grid-template-columns:minmax(0,1fr);gap:12px;}
+  .vpa-person{grid-template-columns:minmax(0,1fr);}
+  .vpa-photo{max-width:200px;}
+  .vpa-btn{flex:1 1 auto;}
+}
+</style>
 </head>
 <body class="wp-singular page-template-default page page-id-54 wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page elementor-page-54">
 
@@ -196,22 +330,7 @@ gtag("config", "GT-TX9689S5");
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-4084d746 elementor-hidden-tablet elementor-hidden-mobile" data-id="4084d746" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2e2a46f2 elementor-align-center elementor-widget elementor-widget-button" data-id="2e2a46f2" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQ5MyIsInRvZ2dsZSI6ZmFsc2V9">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Book a consultation</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
+									</div>
 		</section>
 					</div>
 		</div>
@@ -219,531 +338,115 @@ gtag("config", "GT-TX9689S5");
 		</section>
 				</div>
 		
-<main id="content" class="site-main post-54 page type-page status-publish hentry">
+<main id="content" class="site-main page type-page status-publish hentry vpa-main">
 
-	
-	<div class="page-content">
-				<div data-elementor-type="wp-page" data-elementor-id="54" class="elementor elementor-54" data-elementor-post-type="page">
-						<section class="elementor-section elementor-top-section elementor-element elementor-element-656b96cb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="656b96cb" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-611c7dcb" data-id="611c7dcb" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-background-overlay"></div>
-						<div class="elementor-element elementor-element-2eda57d6 elementor-invisible elementor-widget elementor-widget-heading" data-id="2eda57d6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h1 class="elementor-heading-title elementor-size-default">About Us</h1>		</div>
+	<section class="vpa-screen vpa-hero" aria-label="About Varish Partners">
+		<div class="vpa-wrap vpa-hero-grid">
+			<div class="vpa-hero-text">
+				<p class="vpa-eyebrow">About Us · Our Firm</p>
+				<h1 class="vpa-h1">20+ Years of Expertise in Comprehensive Financial Solutions</h1>
+				<div class="vpa-body">
+					<p>Varish Partners was founded with a vision to deliver unparalleled service, earning the trust and confidence of our clients. Specializing in comprehensive tax and corporate consultancy services, Varish Partners is dedicated to maximizing business potential. From initial business setup to strategic transaction advisory, clients are guided through every stage of growth with precision and expertise.</p>
+					<p>Our team consists of seasoned professionals with extensive experience across diverse industries, ensuring tailored solutions that meet your specific requirements. Whether navigating regulatory landscapes as a startup or enhancing operational efficiency as an established entity, Varish Partners provides meticulous insights and proactive strategies to drive success.</p>
+					<p>Driven by a commitment to excellence and integrity, the firm prioritizes building long-term client partnerships based on trust and tangible results. Our services encompass a wide spectrum, including tax planning, compliance, transaction advisory, and financial advisory, all aimed at fostering sustainable success for your enterprise.</p>
 				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-1967b06d animated-slow elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="1967b06d" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7595c889" data-id="7595c889" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-19e04528 elementor-widget elementor-widget-heading" data-id="19e04528" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"><a href="">Home</a></p>		</div>
+				<div class="vpa-actions">
+					<a class="vpa-btn vpa-btn--ghost" href="/services/">Explore services</a>
+					<a class="vpa-btn vpa-btn--dark" href="/contact-us/">Schedule a call</a>
 				</div>
-					</div>
+			</div>
+			<div class="vpa-hero-media"><img src="/wp-content/uploads/2024/09/corporate-teamworking-colleagues-in-modern-office-KTXS67W-qtbbg1pdno3lztht28865njbv8ffced9l5g1s0l3dk.jpg" alt="The Varish Partners team working together in the office" loading="eager"></div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-141216ca" data-id="141216ca" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-28126cd7 elementor-widget elementor-widget-heading" data-id="28126cd7" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">&gt;</p>		</div>
+	</section>
+
+	<section class="vpa-screen vpa-values" aria-label="Vision, mission and core values">
+		<div class="vpa-wrap">
+			<div class="vpa-head vpa-head--light">
+				<div>
+					<p class="vpa-eyebrow vpa-eyebrow--light">Unlocking Growth with Expert Guidance</p>
+					<h2 class="vpa-h2 vpa-h2--light">Revolutionizing Financial Consultancy for Sustainable Growth</h2>
 				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-d93416c" data-id="d93416c" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-39a60b98 elementor-widget elementor-widget-heading" data-id="39a60b98" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"><a href="#">About</a></p>		</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-1df79fe9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1df79fe9" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7b723e79" data-id="7b723e79" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-26ba3e3 elementor-widget elementor-widget-heading" data-id="26ba3e3" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">About Us</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-43f56d19 elementor-invisible elementor-widget elementor-widget-heading" data-id="43f56d19" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">20+ Years of Expertise in Comprehensive Financial Solutions</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-501da689 elementor-widget elementor-widget-spacer" data-id="501da689" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-2853210f animated-slow elementor-invisible elementor-widget elementor-widget-image" data-id="2853210f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" src="/wp-content/uploads/elementor/thumbs/legal-advisor-is-explaining-the-offense-under-the-ZV8KUQ4-qtbbg1phb8e2iv9kmlfducwd20tay84i93qe3fdw94.jpg" title="legal-advisor-is-explaining-the-offense-under-the-ZV8KUQ4.jpg" alt="legal-advisor-is-explaining-the-offense-under-the-ZV8KUQ4.jpg" loading="lazy" />													</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-724401d5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="724401d5" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-417ef91a" data-id="417ef91a" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-bd78c38 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bd78c38" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-12781cc1" data-id="12781cc1" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-268a39f6 elementor-widget elementor-widget-heading" data-id="268a39f6" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Our Firm
-</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-aed9625 elementor-invisible elementor-widget elementor-widget-heading" data-id="aed9625" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Your Trusted Partner in Everyday Finance and Beyond</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-1e83b610 elementor-widget elementor-widget-text-editor" data-id="1e83b610" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>Varish Partners was founded with a vision to deliver unparalleled service, earning the trust and confidence of our clients. Specializing in comprehensive tax and corporate consultancy services, Varish Partners is dedicated to maximizing business potential. From initial business setup to strategic transaction advisory, clients are guided through every stage of growth with precision and expertise.<br /><br />Our team consists of seasoned professionals with extensive experience across diverse industries, ensuring tailored solutions that meet your specific requirements. Whether navigating regulatory landscapes as a startup or enhancing operational efficiency as an established entity, Varish Partners provides meticulous insights and proactive strategies to drive success.<br /><br />Driven by a commitment to excellence and integrity, the firm prioritizes building long-term client partnerships based on trust and tangible results. Our services encompass a wide spectrum, including tax planning, compliance, transaction advisory, and financial advisory, all aimed at fostering sustainable success for your enterprise.</p>						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4e809614 elementor-invisible" data-id="4e809614" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-5b7e3bdb elementor-widget elementor-widget-spacer" data-id="5b7e3bdb" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-ea6855d elementor-reverse-mobile elementor-reverse-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea6855d" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4577c23" data-id="4577c23" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-d6d870f elementor-widget elementor-widget-spacer" data-id="d6d870f" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-a40c726 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="a40c726" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:&quot;100&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-a5623ba" data-id="a5623ba" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-478b908 elementor-view-default elementor-widget elementor-widget-icon" data-id="478b908" data-element_type="widget" data-widget_type="icon.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-wrapper">
-			<div class="elementor-icon">
-			<svg aria-hidden="true" class="e-font-icon-svg e-fas-star" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>			</div>
-		</div>
-				</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-ed7ce01" data-id="ed7ce01" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-c21e2ed elementor-widget__width-auto elementor-widget elementor-widget-counter" data-id="c21e2ed" data-element_type="widget" data-widget_type="counter.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-counter">
-						<div class="elementor-counter-number-wrapper">
-				<span class="elementor-counter-number-prefix"></span>
-				<span class="elementor-counter-number" data-duration="2000" data-to-value="4.8" data-from-value="0" data-delimiter=",">0</span>
-				<span class="elementor-counter-number-suffix"></span>
+			</div>
+			<div class="vpa-vm">
+				<article class="vpa-card">
+					<div class="vpa-card-top"><h3 class="vpa-h3">Vision</h3><i class="vpa-glyph" aria-hidden="true"></i></div>
+					<p>Unlocking business potential through financial clarity, expertise, and partnership.</p>
+				</article>
+				<article class="vpa-card">
+					<div class="vpa-card-top"><h3 class="vpa-h3">Mission</h3><i class="vpa-glyph" aria-hidden="true"></i></div>
+					<p>Our mission is to revolutionize financial and corporate consultancy by delivering forward-thinking solutions, precision guidance, and expert insights that propel businesses forward. We craft tailored strategies that ignite growth, drive innovation, and fuel success. Through collaborative partnerships, we foster a culture of sustainable growth, empowering our clients to thrive in an ever-changing landscape.</p>
+				</article>
+			</div>
+			<p class="vpa-eyebrow vpa-eyebrow--light vpa-sublabel">Core Values That Drive Our Success</p>
+			<div class="vpa-values-grid">
+				<article class="vpa-card vpa-value">
+					<div class="vpa-card-top"><h3 class="vpa-h3">Keep It 100</h3><span class="vpa-num">01</span></div>
+					<p>We uphold the highest standards of honesty and transparency in all our dealings, ensuring that trust is the cornerstone of our client relationships.</p>
+				</article>
+				<article class="vpa-card vpa-value">
+					<div class="vpa-card-top"><h3 class="vpa-h3">Level Up</h3><span class="vpa-num">02</span></div>
+					<p>We are committed to delivering the highest quality service, continuously striving for improvement and innovation in everything we do.</p>
+				</article>
+				<article class="vpa-card vpa-value">
+					<div class="vpa-card-top"><h3 class="vpa-h3">You First, Always</h3><span class="vpa-num">03</span></div>
+					<p>Our clients' success is our success. We prioritize understanding their needs and delivering solutions that drive their growth and prosperity.</p>
+				</article>
+				<article class="vpa-card vpa-value">
+					<div class="vpa-card-top"><h3 class="vpa-h3">Thought Leadership</h3><span class="vpa-num">04</span></div>
+					<p>We continuously acquire and share subject expertise, fostering a culture of learning and collaboration to benefit our clients and team.</p>
+				</article>
+				<article class="vpa-card vpa-value">
+					<div class="vpa-card-top"><h3 class="vpa-h3">Squad Goals</h3><span class="vpa-num">05</span></div>
+					<p>We believe in the power of teamwork, both within our firm and with our clients, to achieve the best possible outcomes.</p>
+				</article>
+				<article class="vpa-card vpa-value">
+					<div class="vpa-card-top"><h3 class="vpa-h3">Flex and Adapt</h3><span class="vpa-num">06</span></div>
+					<p>In a dynamic business environment, we stay agile and responsive, always ready to meet the evolving needs of our clients with innovative and effective solutions.</p>
+				</article>
 			</div>
 		</div>
-				</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2a21be0" data-id="2a21be0" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-896f0cc elementor-widget elementor-widget-heading" data-id="896f0cc" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h5 class="elementor-heading-title elementor-size-default">Google Review</h5>		</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ccc05ed" data-id="ccc05ed" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-3d1350f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3d1350f" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-44f6b36" data-id="44f6b36" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-3a44328 elementor-widget elementor-widget-heading" data-id="3a44328" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Unlocking Growth with Expert Guidance</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-7ddc3e0 elementor-invisible elementor-widget elementor-widget-heading" data-id="7ddc3e0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Revolutionizing Financial Consultancy for Sustainable Growth</h2>		</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<div class="elementor-element elementor-element-f099d16 elementor-tabs-alignment-stretch elementor-tabs-view-horizontal elementor-widget elementor-widget-tabs" data-id="f099d16" data-element_type="widget" data-widget_type="tabs.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-tabs">
-			<div class="elementor-tabs-wrapper" role="tablist" >
-									<div id="elementor-tab-title-2521" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="true" data-tab="1" role="tab" tabindex="0" aria-controls="elementor-tab-content-2521" aria-expanded="false">Vision Statement</div>
-									<div id="elementor-tab-title-2522" class="elementor-tab-title elementor-tab-desktop-title" aria-selected="false" data-tab="2" role="tab" tabindex="-1" aria-controls="elementor-tab-content-2522" aria-expanded="false">Mission Statement</div>
-							</div>
-			<div class="elementor-tabs-content-wrapper" role="tablist" aria-orientation="vertical">
-									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="true" data-tab="1" role="tab" tabindex="0" aria-controls="elementor-tab-content-2521" aria-expanded="false">Vision Statement</div>
-					<div id="elementor-tab-content-2521" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-2521" tabindex="0" hidden="false"><p>Unlocking business potential through financial clarity, expertise, and partnership.</p></div>
-									<div class="elementor-tab-title elementor-tab-mobile-title" aria-selected="false" data-tab="2" role="tab" tabindex="-1" aria-controls="elementor-tab-content-2522" aria-expanded="false">Mission Statement</div>
-					<div id="elementor-tab-content-2522" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-2522" tabindex="0" hidden="hidden"><p>Our mission is to revolutionize financial and corporate consultancy by delivering forward-thinking solutions, precision guidance, and expert insights that propel businesses forward. We craft tailored strategies that ignite growth, drive innovation, and fuel success. Through collaborative partnerships, we foster a culture of sustainable growth, empowering our clients to thrive in an ever-changing landscape.</p></div>
-							</div>
-		</div>
-				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-1dc18f7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1dc18f7" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e83967d" data-id="e83967d" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-18334fd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="18334fd" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-894f5cf" data-id="894f5cf" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-8f430c3 elementor-widget elementor-widget-heading" data-id="8f430c3" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Integrity, Innovation, and Client-Centered Excellence</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-efe993d elementor-invisible elementor-widget elementor-widget-heading" data-id="efe993d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Core Values That Drive Our Success</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-795ffde elementor-widget elementor-widget-image" data-id="795ffde" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" src="/wp-content/uploads/elementor/thumbs/corporate-teamworking-colleagues-in-modern-office-KTXS67W-qtbbg1pdno3lztht28865njbv8ffced9l5g1s0l3dk.jpg" title="corporate-teamworking-colleagues-in-modern-office-KTXS67W.jpg" alt="corporate-teamworking-colleagues-in-modern-office-KTXS67W.jpg" loading="lazy" />													</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-98b4e90 elementor-invisible" data-id="98b4e90" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-0ba687d elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="0ba687d" data-element_type="widget" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-box-wrapper">
+	</section>
 
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon elementor-animation-">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>				</span>
+	<section class="vpa-screen vpa-team" aria-label="Leadership">
+		<div class="vpa-wrap">
+			<div class="vpa-head">
+				<div>
+					<p class="vpa-eyebrow">Our Team</p>
+					<h2 class="vpa-h2">Meet Our Leadership</h2>
+				</div>
+				<p>Meet our dedicated professionals, committed to providing top-notch financial consultancy, tax compliance, and business advisory services tailored to your needs.</p>
 			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<h5 class="elementor-icon-box-title">
-						<span  >
-							Keep It 100						</span>
-					</h5>
-				
-									<p class="elementor-icon-box-description">
-						We uphold the highest standards of honesty and transparency in all our dealings, ensuring that trust is the cornerstone of our client relationships.
-					</p>
-				
-			</div>
-			
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-0d00f13 elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="0d00f13" data-element_type="widget" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-box-wrapper">
-
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon elementor-animation-">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<h5 class="elementor-icon-box-title">
-						<span  >
-							Level Up						</span>
-					</h5>
-				
-									<p class="elementor-icon-box-description">
-						We are committed to delivering the highest quality service, continuously striving for improvement and innovation in everything we do.
-					</p>
-				
-			</div>
-			
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-13e7f02 elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="13e7f02" data-element_type="widget" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-box-wrapper">
-
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon elementor-animation-">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<h5 class="elementor-icon-box-title">
-						<span  >
-							You First, Always						</span>
-					</h5>
-				
-									<p class="elementor-icon-box-description">
-						Our clients' success is our success. We prioritize understanding their needs and delivering solutions that drive their growth and prosperity.
-					</p>
-				
-			</div>
-			
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-e8223be elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="e8223be" data-element_type="widget" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-box-wrapper">
-
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon elementor-animation-">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<h5 class="elementor-icon-box-title">
-						<span  >
-							Thought Leadership						</span>
-					</h5>
-				
-									<p class="elementor-icon-box-description">
-						We continuously acquire and share subject expertise, fostering a culture of learning and collaboration to benefit our clients and team.
-					</p>
-				
-			</div>
-			
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-4f01828 elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="4f01828" data-element_type="widget" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-box-wrapper">
-
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon elementor-animation-">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<h5 class="elementor-icon-box-title">
-						<span  >
-							Squad Goals						</span>
-					</h5>
-				
-									<p class="elementor-icon-box-description">
-						We believe in the power of teamwork, both within our firm and with our clients, to achieve the best possible outcomes.
-					</p>
-				
-			</div>
-			
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-68e32c2 elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="68e32c2" data-element_type="widget" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-box-wrapper">
-
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon elementor-animation-">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<h5 class="elementor-icon-box-title">
-						<span  >
-							Flex and Adapt						</span>
-					</h5>
-				
-									<p class="elementor-icon-box-description">
-						In a dynamic business environment, we stay agile and responsive, always ready to meet the evolving needs of our clients with innovative and effective solutions.
-					</p>
-				
-			</div>
-			
-		</div>
-				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-672d989 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="672d989" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c14a83b" data-id="c14a83b" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-be42323 elementor-widget elementor-widget-heading" data-id="be42323" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Our Team</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-102e10d elementor-invisible elementor-widget elementor-widget-heading" data-id="102e10d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">MEET OUR LEADERSHIP</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-98a004e elementor-widget elementor-widget-text-editor" data-id="98a004e" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>Meet our dedicated professionals, committed to providing top-notch financial consultancy, tax compliance, and business advisory services tailored to your needs.</p>						</div>
-				</div>
-				<div class="elementor-element elementor-element-bd3da42 elementor-widget elementor-widget-spacer" data-id="bd3da42" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-896d8e4 animated-slow elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="896d8e4" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9748254" data-id="9748254" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-f57c17d elementor-widget elementor-widget-image" data-id="f57c17d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" src="/wp-content/uploads/elementor/thumbs/VS_Professional-qtbbg1p63rnbangntz5sxv1iihz37zz4dsdxblw8i8.png" title="VS_Professional" alt="VS_Professional" class="elementor-animation-float" loading="lazy" />													</div>
-				</div>
-				<div class="elementor-element elementor-element-59aa4a7 elementor-widget elementor-widget-heading" data-id="59aa4a7" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h5 class="elementor-heading-title elementor-size-default"><a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQyMiIsInRvZ2dsZSI6ZmFsc2V9">Varun Shenoy</a></h5>		</div>
-				</div>
-				<div class="elementor-element elementor-element-6e0bcf8 elementor-widget elementor-widget-heading" data-id="6e0bcf8" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">Managing Partner</p>		</div>
-				</div>
-				<div class="elementor-element elementor-element-269ce42 elementor-shape-square elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="269ce42" data-element_type="widget" data-widget_type="social-icons.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-social-icons-wrapper elementor-grid">
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-efe6ac5" href="https://www.linkedin.com/in/varun-shenoy-bb9058154/" target="_blank">
-						<span class="elementor-screen-only">Linkedin</span>
-						<svg class="e-font-icon-svg e-fab-linkedin" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>					</a>
-				</span>
-					</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-433fbd6 elementor-align-center elementor-widget elementor-widget-button" data-id="433fbd6" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm" href="/author/varun-shenoy/">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Learn More</span>
-					</span>
-					</a>
-				</div>
+			<div class="vpa-team-grid">
+				<article class="vpa-card vpa-person">
+					<div class="vpa-photo"><img src="/wp-content/uploads/2024/09/VS_Professional-qtbbg1p63rnbangntz5sxv1iihz37zz4dsdxblw8i8.png" alt="Varun Shenoy, Managing Partner" loading="lazy"></div>
+					<div>
+						<h3 class="vpa-h3">Varun Shenoy</h3>
+						<p class="vpa-role">Managing Partner</p>
+						<a class="vpa-mail" href="mailto:vshenoy@varishpartners.com">vshenoy@varishpartners.com</a>
+						<div class="vpa-bio"><p>Varun Shenoy is a consultant and CA Final candidate, specialising in startup advisory with expertise in startups and entrepreneurship, finance and taxation, economic laws and capital markets. Previously, he co-founded Health-E, a health-tech platform, in 2020, demonstrating his entrepreneurial acumen.</p><p>Varun’s astute insights have been recognised at prestigious events like the i5 Summit (IIM Indore), Anveeksha (AIMIT) and national conferences hosted by ICAI, where he shared expertise on entrepreneurship, economics, tax and corporate laws, and finance.</p><p>With a diverse professional background, Varun has worked with esteemed clients across various sectors, including technology, e-commerce, real estate, construction, consumer goods, and retail, honing his professional acumen. At Varish Partners, he spearheads client relations, business strategy, finance and overall management.</p></div>
+						<div class="vpa-person-actions">
+							<button class="vpa-readmore" type="button" aria-expanded="false">Read bio</button>
+							<a class="vpa-link" href="https://www.linkedin.com/in/varun-shenoy-bb9058154/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg>LinkedIn</a>
 						</div>
-				</div>
 					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-213fc3c" data-id="213fc3c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-f034fac elementor-widget elementor-widget-image" data-id="f034fac" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" src="/wp-content/uploads/elementor/thumbs/2_-removebg-preview-qtbbg1p63rnbangntz5sxv1iihz37zz4dsdxblw8i8.png" title="2_-removebg-preview" alt="2_-removebg-preview" class="elementor-animation-float" loading="lazy" />													</div>
-				</div>
-				<div class="elementor-element elementor-element-f3b3584 elementor-widget elementor-widget-heading" data-id="f3b3584" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h5 class="elementor-heading-title elementor-size-default"><a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQzNCIsInRvZ2dsZSI6ZmFsc2V9">Vishwanath Prabhu</a></h5>		</div>
-				</div>
-				<div class="elementor-element elementor-element-037c260 elementor-widget elementor-widget-heading" data-id="037c260" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">Partner</p>		</div>
-				</div>
-				<div class="elementor-element elementor-element-fafc8ce elementor-shape-square elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="fafc8ce" data-element_type="widget" data-widget_type="social-icons.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-social-icons-wrapper elementor-grid">
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-efe6ac5" href="https://www.linkedin.com/in/vishwanath-prabhu-357201148/" target="_blank">
-						<span class="elementor-screen-only">Linkedin</span>
-						<svg class="e-font-icon-svg e-fab-linkedin" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>					</a>
-				</span>
-					</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-db6e562 elementor-align-center elementor-widget elementor-widget-button" data-id="db6e562" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm" href="/author/vishwanath-prabhu/">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Learn More</span>
-					</span>
-					</a>
-				</div>
+				</article>
+				<article class="vpa-card vpa-person">
+					<div class="vpa-photo"><img src="/wp-content/uploads/2024/09/2_-removebg-preview-qtbbg1p63rnbangntz5sxv1iihz37zz4dsdxblw8i8.png" alt="Vishwanath Prabhu, Partner" loading="lazy"></div>
+					<div>
+						<h3 class="vpa-h3">Vishwanath Prabhu</h3>
+						<p class="vpa-role">Partner</p>
+						<a class="vpa-mail" href="mailto:Vishwanath@varishpartners.com">Vishwanath@varishpartners.com</a>
+						<div class="vpa-bio"><p>Vishwanath is a dedicated and experienced Chartered Accountant aspirant with a robust background in financial regulations. With over five years of experience, Vishwanath has developed a specialization in concurrent and statutory bank audits, GST compliance, and reporting, making him a sought-after expert in his field.</p><p>Vishwanath’s impressive repertoire includes consulting and conducting GST audits for nationalized banks, effectively representing clients before GST authorities, and providing intricate advisory services related to GST. His extensive experience has equipped him with a deep understanding of the complexities of Indian tax laws, enabling him to deliver precise and effective solutions to businesses navigating these challenges.</p><p>With a strong foundation in financial regulations and a passion for helping businesses thrive, Vishwanath is committed to making a positive impact in the world of finance.</p></div>
+						<div class="vpa-person-actions">
+							<button class="vpa-readmore" type="button" aria-expanded="false">Read bio</button>
+							<a class="vpa-link" href="https://www.linkedin.com/in/vishwanath-prabhu-357201148/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg>LinkedIn</a>
 						</div>
-				</div>
 					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-91e2383 animated-slow elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="91e2383" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-84262c0" data-id="84262c0" data-element_type="column">
-			<div class="elementor-widget-wrap">
-							</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-06d22b8 animated-slow elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="06d22b8" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d828d49" data-id="d828d49" data-element_type="column">
-			<div class="elementor-widget-wrap">
-							</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-61ba40a" data-id="61ba40a" data-element_type="column">
-			<div class="elementor-widget-wrap">
-							</div>
-		</div>
-					</div>
-		</section>
-				<div class="elementor-element elementor-element-7f18126 elementor-widget elementor-widget-spacer" data-id="7f18126" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				</div>
-		
-		
+				</article>
 			</div>
+		</div>
+	</section>
 
-	
 </main>
 
 			<div data-elementor-type="footer" data-elementor-id="51" class="elementor elementor-51 elementor-location-footer" data-elementor-post-type="elementor_library">
@@ -934,7 +637,7 @@ gtag("config", "GT-TX9689S5");
 
 									<p class="elementor-icon-box-title">
 						<span  >
-							Shivashree, Vadiraja Nagar Cross Road, Alake, Mannagudda, Mangaluru 575 003						</span>
+							908 Maurishka Park, MG Road, Near Canara Bank, Kodialbail, Mangaluru 575003						</span>
 					</p>
 				
 				
@@ -960,7 +663,7 @@ gtag("config", "GT-TX9689S5");
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-16e00871 elementor-widget elementor-widget-heading" data-id="16e00871" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"> © 2024 Varish Partners</p>		</div>
+			<p class="elementor-heading-title elementor-size-default"> © 2026 Varish Partners</p>		</div>
 				</div>
 					</div>
 		</div>
@@ -1171,6 +874,157 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="vp-about-page-js">
+(function () {
+  'use strict';
+  // About Us as three full screens on desktop, like the homepage:
+  // 1) our story  2) vision, mission and values  3) leadership + footer.
+  // Each screen is sized to the window (scaled down, never below 75%, when a
+  // short window can't fit it) and the wheel snaps between them.
+  var desktop = window.matchMedia('(min-width:1025px) and (min-height:600px)');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var header = document.querySelector('.elementor-location-header');
+  var footer = document.querySelector('.elementor-location-footer');
+  // Each screen is a group of elements; the first one absorbs any spare height.
+  var screens = Array.prototype.map.call(document.querySelectorAll('.vpa-screen'), function (s) { return [s]; });
+  if (footer && screens.length) screens[screens.length - 1].push(footer);
+  var all = screens.reduce(function (a, g) { return a.concat(g); }, []);
+
+  function headerH() { return header ? header.getBoundingClientRect().height : 0; }
+  function maxScroll() { return Math.max(0, document.documentElement.scrollHeight - window.innerHeight); }
+  function height(group) { return group.reduce(function (s, n) { return s + n.getBoundingClientRect().height; }, 0); }
+
+  function layout() {
+    all.forEach(function (n) { n.style.zoom = ''; n.style.minHeight = ''; });
+    if (!desktop.matches) return;
+    var avail = window.innerHeight - headerH();
+    screens.forEach(function (group) {
+      var h = height(group);
+      var z = h > avail ? Math.max(0.75, Math.floor(avail / h * 1000) / 1000) : 1;
+      if (z < 1) group.forEach(function (n) { n.style.zoom = z; });
+      var extra = avail - height(group);
+      if (extra > 0) group[0].style.minHeight = ((group[0].getBoundingClientRect().height + extra) / z) + 'px';
+    });
+  }
+
+  /* ----- Leadership bios: "Read bio" opens the full bio inside the card ----- */
+  Array.prototype.forEach.call(document.querySelectorAll('.vpa-person'), function (card) {
+    var btn = card.querySelector('.vpa-readmore');
+    var bio = card.querySelector('.vpa-bio');
+    if (!btn || !bio) return;
+    btn.addEventListener('click', function () {
+      var open = !card.classList.contains('is-open');
+      card.classList.toggle('is-open', open);
+      btn.textContent = open ? 'Close bio' : 'Read bio';
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      bio.scrollTop = 0;
+    });
+  });
+
+  // A wheel over something that can still scroll that way (an open bio)
+  // scrolls it instead of moving to the next screen.
+  function innerScrollable(target, dy) {
+    for (var el = target; el && el !== document.body; el = el.parentElement) {
+      if (el.scrollHeight > el.clientHeight + 1) {
+        var oy = getComputedStyle(el).overflowY;
+        if (oy === 'auto' || oy === 'scroll') {
+          if (dy > 0 && el.scrollTop + el.clientHeight < el.scrollHeight - 1) return true;
+          if (dy < 0 && el.scrollTop > 0) return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  function stops() {
+    var hh = headerH(), max = maxScroll();
+    var s = screens.map(function (group, i) {
+      return i === 0 ? 0 : Math.min(max, Math.round(group[0].getBoundingClientRect().top + window.pageYOffset - hh));
+    });
+    s.push(max);
+    return s.filter(function (v, i, a) { return a.indexOf(v) === i; }).sort(function (a, b) { return a - b; });
+  }
+
+  var animating = false, lockUntil = 0;
+  function glideTo(targetY) {
+    var startY = window.pageYOffset, dist = targetY - startY;
+    if (Math.abs(dist) < 1) return;
+    if (reduceMotion.matches) { window.scrollTo(0, targetY); return; }
+    var duration = Math.min(800, Math.max(450, Math.abs(dist) * 0.8));
+    var t0 = null;
+    animating = true;
+    // Ease-out: moves the moment the wheel turns, then settles gently.
+    function ease(t) { return 1 - Math.pow(1 - t, 4); }
+    function finish() {
+      if (!animating) return;
+      clearTimeout(safety);
+      window.scrollTo(0, targetY);
+      animating = false;
+      lockUntil = Date.now() + 250;
+    }
+    // requestAnimationFrame pauses when the window is hidden; land the move anyway.
+    var safety = setTimeout(finish, duration + 400);
+    function step(now) {
+      if (!animating) return;
+      if (document.hidden) { finish(); return; }
+      if (t0 === null) t0 = now;
+      var p = Math.min(1, (now - t0) / duration);
+      if (p >= 1) { finish(); return; }
+      window.scrollTo(0, startY + dist * ease(p));
+      window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+  }
+
+  // Move one screen; a screen still taller than the window is stepped through.
+  function go(dir) {
+    var y = window.pageYOffset, s = stops();
+    var view = window.innerHeight - headerH(), target;
+    if (dir > 0) {
+      target = s.filter(function (v) { return v > y + 2; })[0];
+      if (target === undefined) return;
+      if (target - y > view + 2) target = y + view * 0.85;
+    } else {
+      var prev = s.filter(function (v) { return v < y - 2; });
+      target = prev[prev.length - 1];
+      if (target === undefined) return;
+      if (y - target > view + 2) target = y - view * 0.85;
+    }
+    glideTo(Math.round(target));
+  }
+
+  window.addEventListener('wheel', function (e) {
+    if (!desktop.matches || e.ctrlKey || Math.abs(e.deltaY) < 2) return;
+    if (innerScrollable(e.target, e.deltaY)) return;
+    var dir = e.deltaY > 0 ? 1 : -1, y = window.pageYOffset;
+    if ((dir > 0 && y >= maxScroll() - 1) || (dir < 0 && y <= 1)) return;
+    e.preventDefault();
+    if (animating || Date.now() < lockUntil) return; // swallow trackpad inertia
+    go(dir);
+  }, { passive: false });
+
+  window.addEventListener('keydown', function (e) {
+    if (!desktop.matches || e.altKey || e.ctrlKey || e.metaKey) return;
+    var a = document.activeElement, tag = (a && a.tagName) || '';
+    if (/^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(tag) || (a && a.isContentEditable)) return;
+    var dir = 0;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey)) dir = 1;
+    else if (e.key === 'ArrowUp' || e.key === 'PageUp' || (e.key === ' ' && e.shiftKey)) dir = -1;
+    else if (e.key === 'Home') { e.preventDefault(); glideTo(0); return; }
+    else if (e.key === 'End') { e.preventDefault(); glideTo(maxScroll()); return; }
+    if (!dir) return;
+    e.preventDefault();
+    if (!animating) go(dir);
+  });
+
+  var timer;
+  window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(layout, 60); });
+  window.addEventListener('load', layout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+  layout();
+})();
+</script>
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 

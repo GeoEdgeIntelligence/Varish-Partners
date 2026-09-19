@@ -132,7 +132,75 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=3" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=15" media="all" />
+<style id="vp-careers-page">
+/* Single-screen pages with a form (Contact Us, Careers). One screen on desktop,
+   sized to the window under the sticky header and scaled down on short windows
+   so nothing needs scrolling. Same tokens as the other pages: Merriweather
+   headings, Poppins copy, brand brown. */
+.vpc-main{max-width:none !important;width:100% !important;margin:0 !important;padding:0 !important;background:#F1E8DC;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:#1F1F1F;}
+.vpc-main *{box-sizing:border-box;}
+.vpc-screen{display:flex;flex-direction:column;justify-content:center;padding:28px 0;}
+.vpc-wrap{max-width:1188px;width:100%;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:44px;align-items:center;}
+.vpc-eyebrow{margin:0 0 8px;font-size:16px;font-weight:600;line-height:22px;color:#6B4D37;}
+.vpc-h1{margin:0 0 16px;font-family:"Merriweather",Georgia,serif;font-size:42px;line-height:1.18;font-weight:700;color:#1F1F1F;}
+.vpc-lead{margin:0 0 26px;font-size:16px;line-height:1.7;color:#5f5f5f;}
+.vpc-info{display:grid;gap:14px;margin:0;padding:0;list-style:none;}
+.vpc-info li{margin:0;}
+.vpc-item{position:relative;display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:#fff;border-radius:18px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 8px 22px rgba(107,77,55,.10);overflow:hidden;transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s cubic-bezier(.22,.61,.36,1);}
+.vpc-item::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:#6B4D37;transition:width .5s cubic-bezier(.22,.61,.36,1);}
+.vpc-item:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(107,77,55,.18);}
+.vpc-item:hover::before{width:100%;}
+.vpc-icon{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#F7F1EA;color:#6B4D37;}
+.vpc-icon svg{width:19px;height:19px;fill:currentColor;}
+.vpc-label{display:block;margin:0 0 2px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#9a8a7c;}
+.vpc-value,.vpc-value a{font-size:15px;line-height:1.55;color:#1F1F1F;text-decoration:none;}
+.vpc-value a:hover{color:#6B4D37;text-decoration:underline;text-underline-offset:3px;}
+.vpc-sep{color:#c9b8a6;margin:0 6px;}
+.vpc-body p{margin:0 0 12px;font-size:15px;line-height:1.7;color:#5f5f5f;}
+.vpc-body{margin:0 0 18px;}
+.vpc-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none;}
+.vpc-chips li{margin:0;padding:7px 14px;border-radius:999px;background:#fff;font-size:13px;font-weight:500;line-height:1.2;color:#6B4D37;box-shadow:inset 0 0 0 1px rgba(107,77,55,.16);}
+.vpc-info--row{grid-template-columns:1fr 1fr;}
+
+/* Form card */
+.vpc-card{position:relative;background:#fff;border-radius:26px;padding:34px 34px 34px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 18px 48px rgba(107,77,55,.14);overflow:hidden;}
+.vpc-card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:#6B4D37;}
+.vpc-card h2{margin:0 0 6px;font-family:"Merriweather",Georgia,serif;font-size:24px;line-height:1.3;font-weight:700;color:#1F1F1F;}
+.vpc-card > p{margin:0 0 22px;font-size:14px;line-height:1.6;color:#5f5f5f;}
+.vpc-form{display:grid;grid-template-columns:1fr 1fr;gap:16px 16px;}
+.vpc-field{display:flex;flex-direction:column;gap:6px;min-width:0;}
+.vpc-field--full{grid-column:1 / -1;}
+.vpc-field label{font-size:13px;font-weight:600;color:#3f3f3f;}
+.vpc-field label span{color:#6B4D37;}
+.vpc-field input,.vpc-field select,.vpc-field textarea{width:100%;padding:13px 15px;border:1.5px solid #e4d9cc;border-radius:12px;background:#fcfaf7;font-family:inherit;font-size:14.5px;line-height:1.4;color:#1F1F1F;transition:border-color .25s ease,box-shadow .25s ease,background-color .25s ease;}
+.vpc-field textarea{min-height:130px;resize:vertical;}
+.vpc-field select{appearance:none;-webkit-appearance:none;padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%236B4D37' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;}
+.vpc-field input:focus,.vpc-field select:focus,.vpc-field textarea:focus{outline:none;border-color:#6B4D37;background:#fff;box-shadow:0 0 0 3px rgba(107,77,55,.14);}
+.vpc-field input[aria-invalid="true"],.vpc-field textarea[aria-invalid="true"]{border-color:#b3261e;}
+.vpc-actions{grid-column:1 / -1;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:4px;}
+.vpc-note{margin:0;font-size:12.5px;line-height:1.5;color:#8a7d72;max-width:300px;}
+.vpc-note.is-alert{color:#b3261e;font-weight:500;}
+.vpc-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 30px;border:0;border-radius:999px;background:#6B4D37;color:#fff;font-family:inherit;font-size:15px;font-weight:500;line-height:1.2;cursor:pointer;box-shadow:0 12px 26px rgba(107,77,55,.28);transition:transform .35s cubic-bezier(.22,.61,.36,1),background-color .35s ease;}
+.vpc-btn:hover,.vpc-btn:focus{background:#5a3f2d;color:#fff;transform:translateY(-2px);}
+.vpc-btn:focus-visible{outline:2px solid #6B4D37;outline-offset:3px;}
+.vpc-btn svg{width:16px;height:16px;}
+
+@media (prefers-reduced-motion:reduce){.vpc-item,.vpc-item::before,.vpc-btn{transition:none;}.vpc-item:hover{transform:none;}}
+@media (max-width:1024px){
+  .vpc-wrap{grid-template-columns:minmax(0,1fr);gap:24px;padding:0 20px;}
+  .vpc-info--row{grid-template-columns:minmax(0,1fr);}
+  .vpc-screen{padding:32px 0;}
+}
+@media (max-width:600px){
+  .vpc-wrap{padding:0 16px;}
+  .vpc-h1{font-size:28px;}
+  .vpc-card{padding:24px 18px 22px;border-radius:22px;}
+  .vpc-form{grid-template-columns:minmax(0,1fr);}
+  .vpc-field input,.vpc-field select,.vpc-field textarea{font-size:16px;} /* stops iOS zooming into fields */
+  .vpc-btn{width:100%;}
+}
+</style>
 </head>
 <body class="wp-singular page-template-default page page-id-55 wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page elementor-page-55">
 
@@ -191,22 +259,7 @@ gtag("config", "GT-TX9689S5");
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-4084d746 elementor-hidden-tablet elementor-hidden-mobile" data-id="4084d746" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2e2a46f2 elementor-align-center elementor-widget elementor-widget-button" data-id="2e2a46f2" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQ5MyIsInRvZ2dsZSI6ZmFsc2V9">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Book a consultation</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
+									</div>
 		</section>
 					</div>
 		</div>
@@ -214,563 +267,40 @@ gtag("config", "GT-TX9689S5");
 		</section>
 				</div>
 		
-<main id="content" class="site-main post-55 page type-page status-publish hentry">
-
-	
-	<div class="page-content">
-				<div data-elementor-type="wp-page" data-elementor-id="55" class="elementor elementor-55" data-elementor-post-type="page">
-						<section class="elementor-section elementor-top-section elementor-element elementor-element-21eedef elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="21eedef" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-503c5b8" data-id="503c5b8" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-background-overlay"></div>
-						<div class="elementor-element elementor-element-cc94137 elementor-invisible elementor-widget elementor-widget-heading" data-id="cc94137" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h1 class="elementor-heading-title elementor-size-default">Careers</h1>		</div>
+<main id="content" class="site-main page type-page status-publish hentry vpc-main">
+	<section class="vpc-screen" aria-label="Careers at Varish Partners">
+		<div class="vpc-wrap">
+			<div>
+				<p class="vpc-eyebrow">Our Work Culture</p>
+				<h1 class="vpc-h1">Thriving Together with Creativity and Integrity</h1>
+				<div class="vpc-body">
+					<p>We believe that together, we’re unstoppable, fostering a sense of belonging through our open-door policy and inclusive environment that encourages everyone to share ideas. We embrace creativity and experimentation, empowering our team to think outside the box and push boundaries. Operating with transparency, honesty, and ethics, we build trust with our colleagues, clients, and community.</p>
+					<p>We prioritize learning, development, and continuous improvement, helping our team members grow both personally and professionally. And, of course, we believe that work should be enjoyable! Our social events, team-building activities, and celebrations bring us closer together and create unforgettable memories.</p>
 				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-3830314 animated-slow elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="3830314" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-b0c21c8" data-id="b0c21c8" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-8c2afc0 elementor-widget elementor-widget-heading" data-id="8c2afc0" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"><a href="">Home</a></p>		</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-eb7505a" data-id="eb7505a" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2018888 elementor-widget elementor-widget-heading" data-id="2018888" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default">&gt;</p>		</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-06c2a79" data-id="06c2a79" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-9093bb6 elementor-widget elementor-widget-heading" data-id="9093bb6" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"><a href="#">Careers</a></p>		</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-2526d6c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2526d6c" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3857d54" data-id="3857d54" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-f71009d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f71009d" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7d2cef6" data-id="7d2cef6" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-c179429 elementor-widget elementor-widget-heading" data-id="c179429" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Our Work Culture</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-de1194c elementor-invisible elementor-widget elementor-widget-heading" data-id="de1194c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Thriving Together with Creativity and Integrity</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-835e593 elementor-widget elementor-widget-text-editor" data-id="835e593" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>We believe that together, we’re unstoppable, fostering a sense of belonging through our open-door policy and inclusive environment that encourages everyone to share ideas. We embrace creativity and experimentation, empowering our team to think outside the box and push boundaries. Operating with transparency, honesty, and ethics, we build trust with our colleagues, clients, and community. We prioritize learning, development, and continuous improvement, helping our team members grow both personally and professionally. And, of course, we believe that work should be enjoyable! Our social events, team-building activities, and celebrations bring us closer together and create unforgettable memories. We’re excited to have you on board and can’t wait to see the amazing things we’ll achieve together!</p>						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e9ae116 elementor-invisible" data-id="e9ae116" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInDown&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-f72fc93 elementor-widget elementor-widget-image" data-id="f72fc93" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" src="/wp-content/uploads/elementor/thumbs/confirming-deal-4WLR4N5-qtbbg1p6cjfumr8u94fg4pn7kfenrayv9te70ecmeo.jpg" title="confirming-deal-4WLR4N5.jpg" alt="confirming-deal-4WLR4N5.jpg" loading="lazy" />													</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-ec2b23e elementor-invisible" data-id="ec2b23e" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-15c1da1 elementor-widget elementor-widget-image" data-id="15c1da1" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" src="/wp-content/uploads/elementor/thumbs/corporate-teamworking-colleagues-in-modern-office-YXAS2LN-qtbbg1p6cjfumr8u94fg4pn7kfenrayv9te70ecmeo.jpg" title="corporate-teamworking-colleagues-in-modern-office-YXAS2LN.jpg" alt="corporate-teamworking-colleagues-in-modern-office-YXAS2LN.jpg" loading="lazy" />													</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-7c99237a elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7c99237a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6b81acf1" data-id="6b81acf1" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-7ad803b3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7ad803b3" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-71ec2ec5" data-id="71ec2ec5" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-53224972 elementor-widget elementor-widget-heading" data-id="53224972" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Opening </h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-16d07de8 elementor-invisible elementor-widget elementor-widget-heading" data-id="16d07de8" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Current Openings</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-7c57ca7c elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-text-editor" data-id="7c57ca7c" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>						</div>
-				</div>
-		<div class="elementor-element elementor-element-c68982a e-flex e-con-boxed e-con e-parent" data-id="c68982a" data-element_type="container">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-d2d4258 e-con-full e-flex e-con e-child" data-id="d2d4258" data-element_type="container">
-				<div class="elementor-element elementor-element-c792b38 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="c792b38" data-element_type="widget" data-widget_type="icon-list.default">
-				<div class="elementor-widget-container">
-					<ul class="elementor-icon-list-items">
-							<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">List Item #1</span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">List Item #1</span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">List Item #1</span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">List Item #1</span>
-									</li>
-						</ul>
-				</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-b5ea5ff e-con-full e-flex e-con e-child" data-id="b5ea5ff" data-element_type="container">
-				<div class="elementor-element elementor-element-4702232 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="4702232" data-element_type="widget" data-widget_type="icon-list.default">
-				<div class="elementor-widget-container">
-					<ul class="elementor-icon-list-items">
-							<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">List Item #1</span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">List Item #1</span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">List Item #1</span>
-									</li>
-								<li class="elementor-icon-list-item">
-											<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">List Item #1</span>
-									</li>
-						</ul>
-				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<div class="elementor-element elementor-element-7a46d561 elementor-widget elementor-widget-spacer" data-id="7a46d561" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-527e660 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="527e660" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-79cf53e" data-id="79cf53e" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-645ec89 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="645ec89" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4215ccb" data-id="4215ccb" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-0de31a5 elementor-widget elementor-widget-heading" data-id="0de31a5" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Our Projects</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-4747c21 elementor-invisible elementor-widget elementor-widget-heading" data-id="4747c21" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">See Our Project We Have Done</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-7b043a6 elementor-widget elementor-widget-text-editor" data-id="7b043a6" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<div class="elementor-element elementor-element-21d3537 elementor-widget elementor-widget-spacer" data-id="21d3537" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-cc88b01 elementor-section-full_width animated-slow elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="cc88b01" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-601beb1" data-id="601beb1" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-background-overlay"></div>
-						<div class="elementor-element elementor-element-427349d elementor-widget elementor-widget-spacer" data-id="427349d" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-0e5f585 animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="0e5f585" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Jennifer's Family Documents</h4>		</div>
-				</div>
-				<div class="elementor-element elementor-element-9d9e97a elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="9d9e97a" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>			</span>
-									<span class="elementor-button-text">view detail</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a633106" data-id="a633106" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-background-overlay"></div>
-						<div class="elementor-element elementor-element-ecc3c3a elementor-widget elementor-widget-spacer" data-id="ecc3c3a" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-1a4aa0a animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="1a4aa0a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h3 class="elementor-heading-title elementor-size-default">George's Medical Documents</h3>		</div>
-				</div>
-				<div class="elementor-element elementor-element-b39ad08 elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="b39ad08" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>			</span>
-									<span class="elementor-button-text">view detail</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-52159bf elementor-section-full_width animated-slow elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="52159bf" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b0f894a" data-id="b0f894a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-background-overlay"></div>
-						<div class="elementor-element elementor-element-59aabf7 elementor-widget elementor-widget-spacer" data-id="59aabf7" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-f5887c3 animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="f5887c3" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Jennifer's Family Documents</h4>		</div>
-				</div>
-				<div class="elementor-element elementor-element-a9a0a00 elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="a9a0a00" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>			</span>
-									<span class="elementor-button-text">view detail</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d3ab331" data-id="d3ab331" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-background-overlay"></div>
-						<div class="elementor-element elementor-element-c37af57 elementor-widget elementor-widget-spacer" data-id="c37af57" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-c4bec7a animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="c4bec7a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h3 class="elementor-heading-title elementor-size-default">George's Medical Documents</h3>		</div>
-				</div>
-				<div class="elementor-element elementor-element-bdd1397 elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="bdd1397" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>			</span>
-									<span class="elementor-button-text">view detail</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-0ac41d9 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0ac41d9" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a6c5fbc" data-id="a6c5fbc" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2500a11 elementor-widget elementor-widget-heading" data-id="2500a11" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Client</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-54643da elementor-invisible elementor-widget elementor-widget-heading" data-id="54643da" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Trusted by world's companies.</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-1dba92d elementor-widget elementor-widget-spacer" data-id="1dba92d" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-5a31ae2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a31ae2" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-222372c" data-id="222372c" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-a346bdb elementor-invisible elementor-widget elementor-widget-image" data-id="a346bdb" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" width="119" height="28" src="/wp-content/uploads/2024/08/Logo-Ipsum-3.png" class="attachment-full size-full wp-image-33" alt="" />													</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-0ac8511" data-id="0ac8511" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-dce428e elementor-invisible elementor-widget elementor-widget-image" data-id="dce428e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" width="130" height="30" src="/wp-content/uploads/2024/08/Logo-Ipsum-2.png" class="attachment-full size-full wp-image-34" alt="" />													</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-9e3fee9" data-id="9e3fee9" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-43613a0 elementor-invisible elementor-widget elementor-widget-image" data-id="43613a0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="127" height="30" src="/wp-content/uploads/2024/08/Logo-Ipsum-1.png" class="attachment-full size-full wp-image-35" alt="" />													</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-4e50372" data-id="4e50372" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-7bdbb6e elementor-invisible elementor-widget elementor-widget-image" data-id="7bdbb6e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="131" height="27" src="/wp-content/uploads/2024/08/Logo-Ipsum-4.png" class="attachment-full size-full wp-image-36" alt="" />													</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-e9fcd9b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e9fcd9b" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-58e41d9" data-id="58e41d9" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-709ccb8 elementor-invisible elementor-widget elementor-widget-image" data-id="709ccb8" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="127" height="30" src="/wp-content/uploads/2024/08/Logo-Ipsum-1.png" class="attachment-full size-full wp-image-35" alt="" />													</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-3c917a2" data-id="3c917a2" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-cc06ff0 elementor-invisible elementor-widget elementor-widget-image" data-id="cc06ff0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="131" height="27" src="/wp-content/uploads/2024/08/Logo-Ipsum-4.png" class="attachment-full size-full wp-image-36" alt="" />													</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-d141a64" data-id="d141a64" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-c3bba5b elementor-invisible elementor-widget elementor-widget-image" data-id="c3bba5b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" width="119" height="28" src="/wp-content/uploads/2024/08/Logo-Ipsum-3.png" class="attachment-full size-full wp-image-33" alt="" />													</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-dab1bb9" data-id="dab1bb9" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-935a811 elementor-invisible elementor-widget elementor-widget-image" data-id="935a811" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" width="130" height="30" src="/wp-content/uploads/2024/08/Logo-Ipsum-2.png" class="attachment-full size-full wp-image-34" alt="" />													</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-d585399 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d585399" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c2f3713" data-id="c2f3713" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-231c346 elementor-widget elementor-widget-heading" data-id="231c346" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Work With Us</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-14d531e elementor-invisible elementor-widget elementor-widget-heading" data-id="14d531e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Apply for a role</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-8a2058c elementor-position-left elementor-vertical-align-middle elementor-widget-tablet__width-auto elementor-widget-mobile__width-inherit elementor-view-default elementor-mobile-position-top elementor-invisible elementor-widget elementor-widget-icon-box" data-id="8a2058c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-box-wrapper">
-
-						<div class="elementor-icon-box-icon">
-				<a href="tel:+91%2087925%2067919" class="elementor-icon elementor-animation-" tabindex="-1">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-alt" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>				</a>
+				<ul class="vpc-chips" aria-label="What it is like to work here"><li>Open-door culture</li><li>Creativity &amp; experimentation</li><li>Transparency &amp; ethics</li><li>Learning &amp; growth</li><li>Team events</li></ul>
+				<ul class="vpc-info vpc-info--row">
+					<li class="vpc-item"><span class="vpc-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><div><span class="vpc-label">Call us</span><div class="vpc-value"><a href="tel:+918748020569">+91 87480 20569</a></div></div></li>
+					<li class="vpc-item"><span class="vpc-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg></span><div><span class="vpc-label">Careers email</span><div class="vpc-value"><a href="mailto:careers@varishpartners.com">careers@varishpartners.com</a></div></div></li>
+				</ul>
 			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<h6 class="elementor-icon-box-title">
-						<a href="tel:+91%2087925%2067919" >
-							+91 87480 20569						</a>
-					</h6>
-				
-				
-			</div>
-			
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-efa24f3 elementor-position-left elementor-vertical-align-middle elementor-widget-tablet__width-auto elementor-widget-mobile__width-inherit elementor-view-default elementor-mobile-position-top elementor-invisible elementor-widget elementor-widget-icon-box" data-id="efa24f3" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-icon-box-wrapper">
-
-						<div class="elementor-icon-box-icon">
-				<a href="mailto:careers@varishpartners.com" class="elementor-icon elementor-animation-" tabindex="-1">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-envelope" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>				</a>
-			</div>
-			
-						<div class="elementor-icon-box-content">
-
-									<p class="elementor-icon-box-title">
-						<a href="mailto:careers@varishpartners.com" >
-							careers@varishpartners.com						</a>
-					</p>
-				
-				
-			</div>
-			
-		</div>
-				</div>
-				</div>
+			<div class="vpc-card">
+				<h2>Apply for a role</h2>
+				<p>We’re excited to have you on board and can’t wait to see the amazing things we’ll achieve together.</p>
+				<form class="vpc-form" novalidate data-to="careers@varishpartners.com" data-subject="Job application - {name}" data-invalid="Please add your name and a valid email address." data-sent="Opening your email app with your application. Remember to attach your résumé.">
+					<div class="vpc-field"><label for="vpc-name">Name <span>*</span></label><input id="vpc-name" name="name" type="text" autocomplete="name" required></div>
+					<div class="vpc-field"><label for="vpc-phone">Phone Number</label><input id="vpc-phone" name="phone" type="tel" autocomplete="tel"></div>
+					<div class="vpc-field"><label for="vpc-email">Email <span>*</span></label><input id="vpc-email" name="email" type="email" autocomplete="email" required></div>
+					<div class="vpc-field"><label for="vpc-qual">Educational Qualifications</label><input id="vpc-qual" name="qualification" type="text"></div>
+					<div class="vpc-field vpc-field--full"><label for="vpc-role">Role you’re interested in</label><input id="vpc-role" name="role" type="text" placeholder="e.g. Tax associate, GST executive, Intern"></div>
+					<div class="vpc-field vpc-field--full"><label for="vpc-about">About you</label><textarea id="vpc-about" name="about" rows="3" placeholder="A few lines about your experience and what you are looking for"></textarea></div>
+					<div class="vpc-actions">
+						<p class="vpc-note" role="status" aria-live="polite">Sending opens your email app with this application. Attach your résumé (PDF) before you send.</p>
+						<button class="vpc-btn" type="submit">Send application <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-48781e5" data-id="48781e5" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-f66ce0a elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="f66ce0a" data-element_type="widget" data-settings="{&quot;button_width&quot;:&quot;40&quot;,&quot;button_width_tablet&quot;:&quot;60&quot;,&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
-				<div class="elementor-widget-container">
-					<form class="elementor-form" method="post" name="New Form">
-			<input type="hidden" name="post_id" value="55"/>
-			<input type="hidden" name="form_id" value="f66ce0a"/>
-			<input type="hidden" name="referer_title" value="Careers" />
-
-							<input type="hidden" name="queried_id" value="55"/>
-			
-			<div class="elementor-form-fields-wrapper elementor-labels-">
-								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100">
-												<label for="form-field-name" class="elementor-field-label elementor-screen-only">
-								Name							</label>
-														<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-lg  elementor-field-textual" placeholder="Name">
-											</div>
-								<div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_9a8f48c elementor-col-100">
-												<label for="form-field-field_9a8f48c" class="elementor-field-label elementor-screen-only">
-								Phone Number							</label>
-								<input size="1" type="tel" name="form_fields[field_9a8f48c]" id="form-field-field_9a8f48c" class="elementor-field elementor-size-lg  elementor-field-textual" placeholder="Phone Number" pattern="[0-9()#&amp;+*-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted.">
-
-						</div>
-								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
-												<label for="form-field-email" class="elementor-field-label elementor-screen-only">
-								Email							</label>
-														<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-lg  elementor-field-textual" placeholder="Your Email" required="required" aria-required="true">
-											</div>
-								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_513e9ee elementor-col-100 elementor-field-required">
-												<label for="form-field-field_513e9ee" class="elementor-field-label elementor-screen-only">
-								Educational Qualifications 							</label>
-														<input size="1" type="text" name="form_fields[field_513e9ee]" id="form-field-field_513e9ee" class="elementor-field elementor-size-lg  elementor-field-textual" placeholder="Educational Qualifications " required="required" aria-required="true">
-											</div>
-								<div class="elementor-field-type-upload elementor-field-group elementor-column elementor-field-group-field_6749cb5 elementor-col-100">
-												<label for="form-field-field_6749cb5" class="elementor-field-label elementor-screen-only">
-								Resume							</label>
-								<input type="file" name="form_fields[field_6749cb5]" id="form-field-field_6749cb5" class="elementor-field elementor-size-lg  elementor-upload-field">
-
-						</div>
-								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-40 e-form__buttons elementor-md-60">
-					<button class="elementor-button elementor-size-sm" type="submit">
-						<span class="elementor-button-content-wrapper">
-																						<span class="elementor-button-text">Send Message</span>
-													</span>
-					</button>
-				</div>
+				</form>
 			</div>
-		</form>
-				</div>
-				</div>
-					</div>
 		</div>
-					</div>
-		</section>
-				</div>
-		
-		
-			</div>
-
-	
+	</section>
 </main>
 
 			<div data-elementor-type="footer" data-elementor-id="51" class="elementor elementor-51 elementor-location-footer" data-elementor-post-type="elementor_library">
@@ -961,7 +491,7 @@ gtag("config", "GT-TX9689S5");
 
 									<p class="elementor-icon-box-title">
 						<span  >
-							Shivashree, Vadiraja Nagar Cross Road, Alake, Mannagudda, Mangaluru 575 003						</span>
+							908 Maurishka Park, MG Road, Near Canara Bank, Kodialbail, Mangaluru 575003						</span>
 					</p>
 				
 				
@@ -987,7 +517,7 @@ gtag("config", "GT-TX9689S5");
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-16e00871 elementor-widget elementor-widget-heading" data-id="16e00871" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"> © 2024 Varish Partners</p>		</div>
+			<p class="elementor-heading-title elementor-size-default"> © 2026 Varish Partners</p>		</div>
 				</div>
 					</div>
 		</div>
@@ -1156,6 +686,83 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="vp-careers-page-js">
+(function () {
+  'use strict';
+  var desktop = window.matchMedia('(min-width:1025px) and (min-height:600px)');
+  var header = document.querySelector('.elementor-location-header');
+  var screen = document.querySelector('.vpc-screen');
+
+  // One screen: fill the window under the header; shrink (never below 75%)
+  // if a short window can't fit it, so the page needs no scrolling.
+  function layout() {
+    if (!screen) return;
+    screen.style.zoom = '';
+    screen.style.minHeight = '';
+    if (!desktop.matches) return;
+    var avail = window.innerHeight - (header ? header.getBoundingClientRect().height : 0);
+    var h = screen.getBoundingClientRect().height;
+    var z = h > avail ? Math.max(0.75, Math.floor(avail / h * 1000) / 1000) : 1;
+    if (z < 1) screen.style.zoom = z;
+    screen.style.minHeight = (avail / z) + 'px';
+  }
+  var t;
+  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(layout, 60); });
+  window.addEventListener('load', layout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+  layout();
+
+  // The site is static, so the form hands the message to the visitor's email
+  // app, addressed to data-to with every filled field in the body.
+  // data-subject may reference fields by name, e.g. "Enquiry: {service} - {name}".
+  var form = document.querySelector('.vpc-form');
+  if (!form) return;
+  // Messages replace the note beside the button, so the screen never grows.
+  var status = form.querySelector('.vpc-note');
+  var to = form.getAttribute('data-to');
+  var fields = Array.prototype.filter.call(form.elements, function (f) { return f.name && f.type !== 'submit'; });
+  function val(f) { return (f.value || '').trim(); }
+  function label(f) {
+    var l = form.querySelector('label[for="' + f.id + '"]');
+    return l ? l.firstChild.textContent.trim() : f.name;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var first = null;
+    fields.forEach(function (f) {
+      var bad = (f.required && !val(f)) ||
+        (f.type === 'email' && val(f) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val(f)));
+      f.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      if (bad && !first) first = f;
+    });
+    if (first) {
+      status.textContent = form.getAttribute('data-invalid') || 'Please fill in the required fields.';
+      status.classList.add('is-alert');
+      first.focus();
+      return;
+    }
+    var lines = [], long = [];
+    fields.forEach(function (f) {
+      if (!val(f)) return;
+      if (f.tagName === 'TEXTAREA') long.push(val(f));
+      else lines.push(label(f) + ': ' + val(f));
+    });
+    var body = lines.join('\n') + (long.length ? '\n\n' + long.join('\n\n') : '');
+    var subject = (form.getAttribute('data-subject') || 'Website enquiry').replace(/\{(\w+)\}/g, function (_, n) {
+      return form.elements[n] ? val(form.elements[n]) : '';
+    });
+    status.classList.remove('is-alert');
+    status.textContent = (form.getAttribute('data-sent') || 'Opening your email app with your message.') +
+      ' If nothing opens, email us at ' + to + '.';
+    window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+  form.addEventListener('input', function (e) {
+    if (e.target.getAttribute('aria-invalid') === 'true') e.target.setAttribute('aria-invalid', 'false');
+  });
+})();
+</script>
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 

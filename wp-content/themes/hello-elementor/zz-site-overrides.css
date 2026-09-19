@@ -44,3 +44,146 @@
 .elementor-location-footer .elementor-element-c6a7e1c .elementor-spacer-inner {
   height: 8px !important;
 }
+
+/* Homepage "Clients Feedback" section: colours inverted. The section is solid
+   brand brown with white headings; the testimonial card is white with black
+   review text. !important is needed to beat the inline white text on slide 1. */
+.elementor-element-581e20b3,
+.elementor-element-581e20b3:not(.elementor-motion-effects-element-type-background) {
+  background: #6B4D37 !important;
+  padding-top: 40px !important;
+  padding-bottom: 56px !important;
+}
+.elementor-element-581e20b3 > .elementor-background-overlay {
+  display: none !important;
+}
+.elementor-element-16f69862 .elementor-heading-title,
+.elementor-element-2c2a6daa .elementor-heading-title {
+  color: #fff !important;
+}
+.elementor-element-5e16521f:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap,
+.elementor-element-5e16521f > .elementor-widget-wrap {
+  background: #fff !important;
+  border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .18);
+}
+.elementor-element-03e44b8 .elementor-widget-text-editor,
+.elementor-element-03e44b8 .elementor-widget-text-editor p,
+.elementor-element-03e44b8 .elementor-widget-text-editor span,
+.elementor-element-03e44b8 .elementor-image-box-title {
+  color: #1F1F1F !important;
+}
+.elementor-element-03e44b8 .elementor-image-box-description {
+  color: #5f5f5f !important;
+}
+.elementor-element-03e44b8 .elementor-icon-wrapper,
+.elementor-element-03e44b8 .elementor-icon,
+.elementor-element-03e44b8 .elementor-icon svg {
+  color: #D6BC97 !important;
+  fill: #D6BC97 !important;
+}
+
+/* Homepage "Our Services" section: same treatment as Clients Feedback —
+   solid brand brown with white headings, service cards white with black text. */
+.elementor-element-475a9772 {
+  background: #6B4D37 !important;
+  padding-top: 40px !important;
+  padding-bottom: 56px !important;
+}
+.elementor-element-475a9772 > .elementor-background-overlay {
+  display: none !important;
+}
+.elementor-element-27fb1ff6 .elementor-heading-title,
+.elementor-element-7716e755 .elementor-heading-title {
+  color: #fff !important;
+}
+.elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap {
+  background: #fff !important;
+  border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .18);
+}
+.elementor-element-475a9772 .elementor-inner-column h4.elementor-heading-title,
+.elementor-element-475a9772 .elementor-inner-column .elementor-widget-text-editor,
+.elementor-element-475a9772 .elementor-inner-column .elementor-widget-text-editor p {
+  color: #1F1F1F !important;
+}
+
+/* Header: the "Book a consultation" button column was removed, so the menu
+   column takes the freed third of the row (desktop layout only). */
+@media (min-width:1025px){
+  .elementor-location-header .elementor-element-65ee4d20{flex:1 1 auto;width:auto !important;}
+}
+
+/* Header: hold the logo and menu to the same 1140px content column as the page
+   body (1160 = 1140 + the columns' 10px inner padding each side), so the logo
+   starts where page content starts and the menu ends where it ends. */
+@media (min-width:1025px){
+  .elementor-location-header .elementor-element-73b35f69 > .elementor-container{max-width:1160px !important;margin-left:auto !important;margin-right:auto !important;}
+}
+
+/* ===================== Phones and tablets (≤1024px) =====================
+   Mobile menu panel (opened by zz-site-mobile.js; Elementor's own dropdown JS
+   is missing from this recovered site), tighter footer, and a fixed
+   "Free Consultation / WhatsApp" bar on phones. */
+@media (max-width:1024px){
+  .elementor-location-header .elementor-menu-toggle{position:relative;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;cursor:pointer;}
+  .elementor-location-header .elementor-menu-toggle .vp-menu-close{display:none;width:24px;height:24px;}
+  .elementor-location-header .vp-menu-open .elementor-menu-toggle .elementor-menu-toggle__icon--open{display:none !important;}
+  .elementor-location-header .vp-menu-open .elementor-menu-toggle .vp-menu-close{display:block;}
+  .elementor-location-header .elementor-nav-menu--dropdown.elementor-nav-menu__container{
+    position:fixed !important;left:0 !important;right:0 !important;top:var(--vp-hdr,64px) !important;width:auto !important;
+    margin:0 !important;transform:none !important;transform-origin:top;max-height:0 !important;overflow:hidden !important;
+    background:#fff !important;box-shadow:0 18px 40px rgba(20,20,20,.18);border-top:1px solid #efe6db;z-index:998;
+    transition:max-height .35s cubic-bezier(.22,.61,.36,1);
+  }
+  .elementor-location-header .elementor-element.elementor-element-16d00f68 nav.elementor-nav-menu--dropdown.elementor-nav-menu__container.elementor-nav-menu__container{margin:0 !important;} /* beats Elementor's 18-20px offset */
+  .elementor-location-header .vp-menu-open .elementor-nav-menu--dropdown.elementor-nav-menu__container{max-height:calc(100vh - var(--vp-hdr,64px)) !important;overflow-y:auto !important;}
+  .elementor-location-header .elementor-nav-menu--dropdown .elementor-nav-menu{display:block !important;padding:8px 0 14px;}
+  .elementor-location-header .elementor-nav-menu--dropdown li{display:block !important;margin:0;border:0 !important;}
+  .elementor-location-header .elementor-nav-menu--dropdown a.elementor-item,
+  .elementor-location-header .elementor-nav-menu--dropdown a.elementor-sub-item{
+    display:flex !important;align-items:center;min-height:48px;padding:12px 24px !important;border:0 !important;border-left:3px solid transparent !important;
+    background:transparent !important;font-family:"Poppins",sans-serif !important;font-size:16px !important;font-weight:500 !important;line-height:1.3 !important;color:#1F1F1F !important;text-decoration:none !important;
+  }
+  .elementor-location-header .elementor-nav-menu--dropdown a.elementor-sub-item{padding-left:44px !important;font-size:15px !important;color:#5f5f5f !important;min-height:42px;}
+  .elementor-location-header .elementor-nav-menu--dropdown a.elementor-item-active,
+  .elementor-location-header .elementor-nav-menu--dropdown a[aria-current="page"]{color:#6B4D37 !important;font-weight:600 !important;border-left-color:#6B4D37 !important;background:#F7F1EA !important;}
+  .elementor-location-header .elementor-nav-menu--dropdown a:hover,.elementor-location-header .elementor-nav-menu--dropdown a:focus{background:#F7F1EA !important;color:#6B4D37 !important;}
+  .elementor-location-header .elementor-nav-menu--dropdown .sub-menu{display:block !important;position:static !important;width:auto !important;box-shadow:none !important;border:0 !important;margin:0 !important;padding:0 !important;background:transparent !important;}
+  .elementor-location-header .elementor-nav-menu--dropdown .sub-arrow{display:none !important;}
+  html.vp-menu-lock,html.vp-menu-lock body{overflow:hidden;}
+
+  /* Footer: tighter on small screens */
+  .elementor-location-footer .elementor-element-18a4e857{padding-top:32px !important;padding-bottom:8px !important;}
+  .elementor-location-footer .elementor-widget:not(:last-child){margin-bottom:10px !important;}
+  .elementor-location-footer .elementor-element-6ebf325a img{max-height:60px;width:auto;}
+  .elementor-location-footer .elementor-element-8f60519{font-size:14px !important;line-height:1.6 !important;}
+  .elementor-location-footer .elementor-heading-title{font-size:17px !important;line-height:1.3 !important;}
+  .elementor-location-footer .elementor-nav-menu a{padding-top:5px !important;padding-bottom:5px !important;font-size:14px !important;line-height:1.4 !important;}
+  .elementor-location-footer .elementor-icon-box-title,.elementor-location-footer .elementor-icon-box-title span{font-size:14px !important;line-height:1.5 !important;}
+  .elementor-location-footer .elementor-column{margin-bottom:6px;}
+  .elementor-location-footer .elementor-column > .elementor-widget-wrap{padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;}
+  .elementor-location-footer .elementor-widget-heading .elementor-widget-container{margin-bottom:6px !important;}
+  .elementor-location-footer .elementor-element-69d9972d,.elementor-location-footer .elementor-element-6188e5f6,.elementor-location-footer .elementor-element-58001a9e{margin-top:14px;}
+  .elementor-location-footer .elementor-icon-box-wrapper{display:flex !important;align-items:flex-start;gap:10px;text-align:left !important;}
+  .elementor-location-footer .elementor-icon-box-icon{margin:2px 0 0 !important;flex:0 0 auto;}
+  .elementor-location-footer .elementor-icon-box-icon .elementor-icon{font-size:16px !important;}
+  .elementor-location-footer .elementor-icon-box-content{flex:1 1 auto;}
+}
+/* The empty container after the homepage contact section. */
+.elementor-element-04da43f{display:none !important;}
+@media (max-width:767px){
+  /* Fixed call-to-action bar (it sits inside the footer markup; hidden on larger screens). */
+  .elementor-element-0b2227a{position:fixed !important;left:0;right:0;bottom:0;z-index:990;margin:0 !important;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom)) !important;background:#fff;box-shadow:0 -8px 24px rgba(20,20,20,.14);}
+  .elementor-element-0b2227a > .e-con-inner{display:flex !important;flex-direction:row !important;gap:10px !important;padding:0 !important;max-width:none !important;}
+  .elementor-element-0b2227a .elementor-widget{flex:1 1 0;margin:0 !important;width:auto !important;}
+  .elementor-element-0b2227a .elementor-button{display:flex !important;justify-content:center;width:100%;padding:13px 10px !important;border-radius:999px !important;font-size:15px !important;}
+  body{padding-bottom:72px;}
+}
+@media (max-width:767px){
+  /* Recovered Elementor pages (blog posts, Our Story): cap laptop-sized headings on phones. */
+  body:not(.home) main h1.elementor-heading-title{font-size:30px !important;line-height:1.2 !important;}
+  body:not(.home) main h2.elementor-heading-title{font-size:25px !important;line-height:1.25 !important;}
+  body:not(.home) main h3.elementor-heading-title{font-size:21px !important;line-height:1.3 !important;}
+}

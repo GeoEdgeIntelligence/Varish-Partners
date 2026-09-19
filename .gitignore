@@ -26,3 +26,19 @@ site-footer-block.html
 server.js
 server.log
 .claude/
+
+# Service-page generator (tooling, not part of the deployed site)
+build-service-pages.js
+service-pages-data.js
+service-page.css
+service-page.js
+services-hub.css
+services-hub.js
+build-about.js
+about-page.css
+about-page.js
+build-contact.js
+build-careers.js
+contact-screen.css
+contact-screen.js
+build-legal.js

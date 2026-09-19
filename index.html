@@ -136,7 +136,217 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=3" media="all" />
+<style id="vp-home-screens">
+/* Reviews: one text style, one name style, name pinned to the card bottom. */
+.home .elementor-element-03e44b8 .elementor-widget-text-editor .elementor-widget-container,
+.home .elementor-element-03e44b8 .elementor-widget-text-editor p,
+.home .elementor-element-03e44b8 .elementor-widget-text-editor span{font-family:"Times New Roman",Times,serif !important;font-size:15px !important;line-height:1.6 !important;text-align:left !important;letter-spacing:normal !important;}
+.home .elementor-element-03e44b8 .elementor-widget-text-editor p{margin:0 0 6px !important;}
+.home .elementor-element-03e44b8 .elementor-image-box-wrapper{text-align:left !important;}
+.home .elementor-element-03e44b8 .elementor-image-box-title{font-family:"Merriweather",Georgia,serif !important;font-size:19px !important;font-weight:700 !important;line-height:1.3 !important;margin:0 !important;color:#1F1F1F !important;}
+.home .elementor-element-03e44b8 .elementor-image-box-description{font-family:"Poppins",sans-serif !important;font-size:13.5px !important;line-height:1.4 !important;margin:2px 0 0 !important;}
+.home .elementor-element-03e44b8 .e-n-carousel.swiper .swiper-wrapper{display:flex !important;flex-direction:column;}
+.home .elementor-element-03e44b8 .e-n-carousel.swiper .swiper-wrapper > .swiper-slide.vp-active{display:flex !important;flex-direction:column;flex:1 1 auto;width:100% !important;}
+.home .elementor-element-03e44b8 .swiper-slide > .e-con,
+.home .elementor-element-03e44b8 .swiper-slide .e-con-inner,
+.home .elementor-element-03e44b8 .elementor-element-b6c2219{display:flex !important;flex-direction:column !important;flex:1 1 auto !important;width:100%;}
+.home .elementor-element-03e44b8 .elementor-widget-image-box{margin-top:auto !important;padding-top:10px;}
+/* Arrow buttons: icon centred in the circle; focus ring only for keyboard use. */
+.home .vp-carousel-nav button{display:inline-flex;align-items:center;justify-content:center;padding:0 !important;border:0 !important;line-height:1;}
+.home .vp-carousel-nav button svg{width:18px;height:18px;display:block;}
+.home .vp-carousel-nav button:focus{outline:none;box-shadow:none;}
+.home .vp-carousel-nav button:focus-visible{outline:2px solid #6B4D37;outline-offset:3px;}
+/* Hover lift, as on the /services/ cards: card rises, shadow deepens and a
+   brown bar grows across the top. Colours and fonts are left as they are. */
+.home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap,
+.home .elementor-element-5e16521f > .elementor-widget-wrap{position:relative;overflow:hidden;transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s cubic-bezier(.22,.61,.36,1);}
+.home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap::before,
+.home .elementor-element-5e16521f > .elementor-widget-wrap::before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:#6B4D37;z-index:4;transition:width .5s cubic-bezier(.22,.61,.36,1);}
+.home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap:hover,
+.home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap:focus-within,
+.home .elementor-element-5e16521f > .elementor-widget-wrap:hover{transform:translateY(-6px);box-shadow:0 26px 56px rgba(0,0,0,.28),0 2px 6px rgba(0,0,0,.08);}
+.home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap:hover::before,
+.home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap:focus-within::before,
+.home .elementor-element-5e16521f > .elementor-widget-wrap:hover::before{width:100%;}
+.home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap{cursor:pointer;}
+/* Button keeps its own look; only its arrow nudges on card hover. */
+.home .elementor-element-475a9772 .elementor-button-icon svg{transition:transform .4s cubic-bezier(.22,.61,.36,1);}
+.home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap:hover .elementor-button-icon svg{transform:translateX(4px);}
+@media (prefers-reduced-motion:reduce){
+  .home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap,
+  .home .elementor-element-5e16521f > .elementor-widget-wrap{transition:none;}
+  .home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap:hover,
+  .home .elementor-element-5e16521f > .elementor-widget-wrap:hover{transform:none;}
+}
+/* "More Service" button: white with brown text on hover / focus / press
+   (Elementor's default hover was white text on tan, which is hard to read). */
+.home .elementor-element-266305 .elementor-button{transition:background-color .3s ease,color .3s ease,box-shadow .3s ease;}
+.home .elementor-element-266305 .elementor-button:hover,
+.home .elementor-element-266305 .elementor-button:focus,
+.home .elementor-element-266305 .elementor-button:active{background-color:#fff !important;color:#6B4D37 !important;fill:#6B4D37 !important;box-shadow:inset 0 0 0 1.5px #6B4D37;}
+.home .elementor-element-266305 .elementor-button:hover svg,
+.home .elementor-element-266305 .elementor-button:focus svg,
+.home .elementor-element-266305 .elementor-button:active svg{fill:#6B4D37 !important;}
+/* Long reviews are clamped with a "Read more" toggle (all screen sizes). */
+.home .elementor-element-03e44b8 .elementor-widget-text-editor .elementor-widget-container{max-height:calc(1.6em * 7);overflow:hidden;position:relative;}
+.home .elementor-element-03e44b8 .swiper-slide[data-long] .elementor-widget-text-editor .elementor-widget-container{-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent);}
+.home .elementor-element-03e44b8 .swiper-slide[data-fits] .elementor-widget-text-editor .elementor-widget-container,
+.home .elementor-element-03e44b8.is-expanded .swiper-slide[data-long] .elementor-widget-text-editor .elementor-widget-container,
+.home .elementor-element-03e44b8.is-expanded .elementor-widget-text-editor .elementor-widget-container{max-height:none;-webkit-mask-image:none;mask-image:none;}
+.home .vp-readmore{display:none;margin:2px 0 6px;padding:0;border:0;background:none;font-family:"Poppins",sans-serif;font-size:14px;font-weight:600;color:#6B4D37;text-decoration:underline;text-underline-offset:4px;cursor:pointer;}
+.home .vp-readmore:hover,.home .vp-readmore:focus{background:none;color:#5a3f2d;}
+.home .swiper-slide[data-long] .vp-readmore{display:inline-block;}
+/* Why Choose Us photo removed to keep that section compact. */
+.home .elementor-element-59051521{display:none !important;}
+/* Homepage as four full screens on desktop (same idea as the service pages):
+   1) hero + Who We Are  2) Our Services  3) Why Choose Us + Clients Feedback
+   4) Get in Touch + footer. Spacing is tightened so each group fits one screen;
+   the script at the end of <body> sizes each group and snaps between them. */
+@media (min-width:1025px) and (min-height:600px){
+  .home .elementor-element-04da43f{display:none !important;}
+
+  /* 1) Hero + Who We Are: photos are capped to a share of the window height
+     (--vp-header is set by the script) so the first screen fits any window. */
+  .home .elementor-element-746da61 img[src*="businessman-presenting-to-boardroom"]{height:min(422px, calc((100vh - var(--vp-header,104px)) * 0.44)) !important;width:100%;object-fit:cover;}
+  .home .elementor-element-5b7e454c img[src*="financial-advisors-in-office"]{height:min(307px, calc((100vh - var(--vp-header,104px)) * 0.36)) !important;width:100%;object-fit:cover;}
+  .home .elementor-element-5b7e454c .elementor-element-f7da20e{margin-bottom:10px !important;}
+
+  /* 2) Our Services */
+  .home .elementor-element-475a9772{padding-top:24px !important;padding-bottom:28px !important;}
+  .home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap{padding:28px 26px !important;}
+  .home .elementor-element-475a9772 .elementor-widget-image img{max-height:64px;width:auto;}
+  .home .elementor-element-475a9772 .elementor-inner-column .elementor-widget:not(:last-child){margin-bottom:12px !important;}
+
+  /* 3) Why Choose Us (white, left) beside Clients Feedback (brown, right) */
+  .home .vp-duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;}
+  .home .vp-duo > .elementor-section{display:flex;flex-direction:column;justify-content:center;min-width:0;}
+  .home .vp-duo > .elementor-section > .elementor-container{width:100%;}
+  /* Extra .vp-duo in the selector: the site-wide "no section padding" rule loads later. */
+  .home .vp-duo > .elementor-element-786b4f7f{padding:32px 44px 32px max(24px, calc(100% - 570px)) !important;}
+  .home .vp-duo > .elementor-element-581e20b3{padding:32px max(24px, calc(100% - 570px)) 32px 44px !important;}
+  .home .vp-duo :is(.elementor-element-14cc0f3,.elementor-element-719f1da4,.elementor-element-1970c687,.elementor-element-5738e17d) > .elementor-widget-wrap.elementor-element-populated{padding:0 !important;}
+  /* Both columns: same eyebrow, same heading, both left-aligned on the same line. */
+  .home .vp-duo .elementor-section .elementor-widget:is(.elementor-element-7df8e4cf,.elementor-element-16f69862,.elementor-element-2c2a6daa,.elementor-element-6554decb){text-align:left !important;margin-bottom:10px !important;}
+  .home .elementor-element-7df8e4cf .elementor-heading-title,
+  .home .elementor-element-16f69862 .elementor-heading-title{font-family:"Poppins",sans-serif !important;font-size:16px !important;font-weight:600 !important;line-height:22px !important;margin:0 !important;letter-spacing:0 !important;}
+  .home .elementor-element-7df8e4cf .elementor-heading-title{color:#6B4D37 !important;}
+  .home .elementor-element-6554decb .elementor-heading-title,
+  .home .elementor-element-2c2a6daa .elementor-heading-title{font-family:"Merriweather",Georgia,serif !important;font-size:34px !important;font-weight:700 !important;line-height:1.2 !important;margin:0 !important;}
+  /* The points column stretches to the card's height (script sets the height)
+     and spreads the four points so the last one ends level with the card. */
+  .home .elementor-element-1970c687{flex:1 1 auto;display:flex;}
+  .home .elementor-element-1970c687 > .elementor-widget-wrap{flex-direction:column !important;flex-wrap:nowrap !important;justify-content:space-between !important;align-content:stretch !important;width:100%;}
+  .home .elementor-element-1970c687 .elementor-widget{margin-bottom:0 !important;}
+  .home .elementor-element-786b4f7f .elementor-inner-section > .elementor-container{flex-direction:column;}
+  .home .elementor-element-786b4f7f .elementor-inner-section .elementor-column{width:100% !important;}
+  .home .elementor-element-786b4f7f .elementor-widget:not(:last-child){margin-bottom:10px !important;}
+  .home .elementor-element-40a82348{margin-bottom:22px !important;}
+  .home .elementor-element-40a82348 p{margin:0;}
+  .home .elementor-element-786b4f7f .elementor-icon-box-title{margin:0 0 2px !important;}
+  .home .elementor-element-786b4f7f .elementor-icon-box-title,
+  .home .elementor-element-786b4f7f .elementor-icon-box-title *{font-size:21px !important;line-height:1.3 !important;}
+  .home .elementor-element-786b4f7f .elementor-icon-box-description{margin:0 !important;line-height:1.5 !important;}
+  .home .elementor-element-1970c687 > .elementor-widget-wrap{padding:0 !important;margin:0 !important;}
+  .home .elementor-element-786b4f7f .elementor-widget-icon-box{width:100% !important;max-width:none !important;margin-left:0 !important;padding-left:0 !important;border-left:0 !important;}
+
+  /* Clients Feedback: dots (centred) and arrows (right) get their own row at the card bottom */
+  .home .elementor-element-581e20b3 .elementor-widget:not(:last-child){margin-bottom:6px !important;}
+  .home .elementor-element-aa5cc6c{display:none;}
+  .home .elementor-element-5e16521f > .elementor-element-populated{position:relative;padding:22px 30px 76px !important;margin:12px 0 0 !important;--e-column-margin-right:0px;}
+  .home .elementor-element-03e44b8 .elementor-widget-icon{margin:0 0 4px !important;opacity:.55;}
+  .home .elementor-element-03e44b8 .elementor-widget-icon .elementor-icon-wrapper{text-align:left;line-height:1;}
+  .home .elementor-element-03e44b8 .elementor-icon{font-size:26px !important;}
+  .home .elementor-element-03e44b8 .elementor-widget-text-editor{margin-bottom:4px !important;}
+  /* z-index: the swiper (z-index:1) otherwise sits on top and swallows clicks. */
+  /* Anchor the controls to the card, not the carousel widget (Elementor makes widgets position:relative). */
+  .home .elementor-element-03e44b8,.home .elementor-element-03e44b8 > .elementor-widget-container{position:static !important;}
+  .home .elementor-element-5e16521f .vp-carousel-nav{position:absolute;right:30px;bottom:18px;margin:0;z-index:3;}
+  .home .elementor-element-5e16521f .vp-carousel-dots{position:absolute;left:50%;transform:translateX(-50%);bottom:34px;margin:0;z-index:3;}
+  .home .vp-duo{transition:grid-template-columns .6s cubic-bezier(.22,.61,.36,1);}
+  .home .vp-duo > .elementor-section{transition:padding .6s cubic-bezier(.22,.61,.36,1),opacity .4s ease;}
+  .home .vp-duo.is-expanded{grid-template-columns:minmax(0,0fr) minmax(0,1fr);}
+  .home .vp-duo.is-expanded > .elementor-element-786b4f7f{padding-left:0 !important;padding-right:0 !important;opacity:0;overflow:hidden;align-self:start;height:0;min-height:0 !important;}
+  .home .vp-duo.is-expanded > .elementor-element-581e20b3{padding-left:max(24px, calc(100% - 570px)) !important;}
+  .home .vp-duo.is-expanded .elementor-element-03e44b8 .swiper-wrapper{min-height:0 !important;}
+
+  /* 4) Get in Touch + footer */
+  .home .elementor-element-753833f7 .elementor-widget:not(:last-child){margin-bottom:10px !important;}
+  .home .elementor-element-1d80da06 .elementor-heading-title{font-size:34px !important;line-height:1.2 !important;}
+  .home .elementor-element-38e1260d{font-size:15px;line-height:1.6;}
+  .home .elementor-element-38e1260d p{margin:0;}
+  .home .elementor-element-41012fc .elementor-field-group{margin-bottom:8px !important;}
+  .home .elementor-element-41012fc textarea{height:80px;}
+  .home .elementor-location-footer .elementor-widget:not(:last-child){margin-bottom:8px !important;}
+  .home .elementor-location-footer .elementor-nav-menu a{padding-top:3px !important;padding-bottom:3px !important;}
+  .home .elementor-location-footer .elementor-element-6ebf325a img{max-height:64px;width:auto;}
+}
+
+/* ---------- Tablets (768–1024px): scale the laptop layout down ---------- */
+@media (min-width:768px) and (max-width:1024px){
+  .home .elementor-element-165c3e3 .elementor-heading-title{font-size:38px !important;line-height:1.15 !important;}
+  .home .elementor-element-7716e755 .elementor-heading-title,
+  .home .elementor-element-6554decb .elementor-heading-title,
+  .home .elementor-element-2c2a6daa .elementor-heading-title,
+  .home .elementor-element-1d80da06 .elementor-heading-title{font-size:32px !important;line-height:1.2 !important;}
+  .home .elementor-element-475a9772 .elementor-inner-column h4.elementor-heading-title{font-size:22px !important;line-height:1.3 !important;}
+  .home .elementor-element-475a9772 .elementor-inner-column .elementor-widget-text-editor{font-size:15px !important;line-height:1.65 !important;}
+  .home .elementor-element-753833f7 .elementor-icon-box-title,.home .elementor-element-753833f7 .elementor-icon-box-title *{font-size:20px !important;line-height:1.4 !important;}
+}
+
+/* ---------- Phones (≤767px) ---------- */
+@media (max-width:767px){
+  /* Hero */
+  .home .elementor-element-746da61{padding-top:20px !important;padding-bottom:12px !important;}
+  .home .elementor-element-165c3e3 .elementor-heading-title{font-size:30px !important;line-height:1.18 !important;letter-spacing:0 !important;}
+  .home .elementor-element-165c3e3{margin-bottom:14px !important;}
+  .home .elementor-element-51261f2,.home .elementor-element-51261f2 p{font-size:16px !important;line-height:1.6 !important;}
+  .home .elementor-element-51261f2{margin-bottom:16px !important;}
+  .home .elementor-element-e2b93f4 .elementor-button-wrapper{text-align:left !important;}
+  .home .elementor-element-e2b93f4 .elementor-button{padding:14px 26px !important;font-size:16px !important;}
+  .home .elementor-element-746da61 img{border-radius:18px;}
+
+  /* Who we are */
+  .home .elementor-element-5b7e454c{padding-top:12px !important;padding-bottom:28px !important;}
+  .home .elementor-element-f7da20e .elementor-heading-title{white-space:normal !important;line-height:1.15 !important;}
+  .home .elementor-element-f7da20e .elementor-heading-title span:first-child{font-size:44px !important;}
+  .home .elementor-element-f7da20e .elementor-heading-title span:last-child{font-size:22px !important;}
+  .home .elementor-element-7ae5f873,.home .elementor-element-7ae5f873 p,.home .elementor-element-7ae5f873 li{font-size:15.5px !important;line-height:1.65 !important;}
+
+  /* Our Services */
+  .home .elementor-element-475a9772{padding-top:36px !important;padding-bottom:40px !important;}
+  .home .elementor-element-7716e755 .elementor-heading-title{font-size:28px !important;line-height:1.2 !important;}
+  .home .elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap{padding:24px 22px !important;margin:0 0 16px !important;}
+  .home .elementor-element-475a9772 .elementor-inner-column{margin:0 !important;}
+  .home .elementor-element-475a9772 .elementor-widget-image img{max-height:52px;width:auto;}
+  .home .elementor-element-475a9772 .elementor-inner-column .elementor-widget:not(:last-child){margin-bottom:10px !important;}
+  .home .elementor-element-475a9772 .elementor-inner-column h4.elementor-heading-title{font-size:21px !important;line-height:1.3 !important;}
+  .home .elementor-element-475a9772 .elementor-inner-column .elementor-widget-text-editor,
+  .home .elementor-element-475a9772 .elementor-inner-column .elementor-widget-text-editor p{font-size:15px !important;line-height:1.6 !important;}
+  .home .elementor-element-475a9772 .elementor-inner-column .elementor-button{font-size:16px !important;}
+
+  /* Why Clients Trust Us + Clients Feedback (stacked) */
+  .home .vp-duo > .elementor-element-786b4f7f{padding:36px 20px 28px !important;}
+  .home .vp-duo > .elementor-element-581e20b3{padding:36px 20px 40px !important;}
+  .home .elementor-element-6554decb .elementor-heading-title,
+  .home .elementor-element-2c2a6daa .elementor-heading-title{font-size:27px !important;line-height:1.2 !important;}
+  .home .elementor-element-40a82348,.home .elementor-element-40a82348 p{font-size:15.5px !important;line-height:1.6 !important;}
+  .home .elementor-element-786b4f7f .elementor-icon-box-title,.home .elementor-element-786b4f7f .elementor-icon-box-title *{font-size:20px !important;line-height:1.3 !important;}
+  .home .elementor-element-786b4f7f .elementor-icon-box-description{font-size:15px !important;line-height:1.55 !important;}
+  .home .elementor-element-786b4f7f .elementor-widget-icon-box{margin-bottom:14px !important;}
+  .home .elementor-element-aa5cc6c{display:none;}
+  .home .elementor-element-5e16521f > .elementor-element-populated{padding:20px 18px 18px !important;margin:14px 0 0 !important;}
+  .home .elementor-element-03e44b8 .elementor-image-box-title{font-size:18px !important;}
+
+  /* Get in touch */
+  .home .elementor-element-753833f7{padding-top:36px !important;padding-bottom:28px !important;}
+  .home .elementor-element-1d80da06 .elementor-heading-title{font-size:28px !important;line-height:1.2 !important;}
+  .home .elementor-element-38e1260d,.home .elementor-element-38e1260d p{font-size:15.5px !important;line-height:1.6 !important;}
+  .home .elementor-element-753833f7 .elementor-icon-box-title,.home .elementor-element-753833f7 .elementor-icon-box-title *{font-size:17px !important;line-height:1.4 !important;}
+  .home .elementor-element-753833f7 .elementor-widget-icon-box{margin-bottom:10px !important;}
+  .home .elementor-element-41012fc input,.home .elementor-element-41012fc select,.home .elementor-element-41012fc textarea{font-size:16px !important;}
+}
+</style>
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=15" media="all" />
 </head>
 <body class="home wp-singular page-template-default page page-id-9 wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page elementor-page-9">
 
@@ -195,22 +405,7 @@ gtag("config", "GT-TX9689S5");
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-4084d746 elementor-hidden-tablet elementor-hidden-mobile" data-id="4084d746" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2e2a46f2 elementor-align-center elementor-widget elementor-widget-button" data-id="2e2a46f2" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQ5MyIsInRvZ2dsZSI6ZmFsc2V9">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Book a consultation</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
+									</div>
 		</section>
 					</div>
 		</div>
@@ -562,7 +757,8 @@ Vehicle Documents</h4>		</div>
 		</div>
 					</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-786b4f7f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="786b4f7f" data-element_type="section">
+				<div class="vp-duo">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-786b4f7f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="786b4f7f" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-14cc0f3" data-id="14cc0f3" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
@@ -808,6 +1004,7 @@ Vehicle Documents</h4>		</div>
 		</div>
 					</div>
 		</section>
+</div><!-- /.vp-duo -->
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-6a0b6d55 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6a0b6d55" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-24a9371c" data-id="24a9371c" data-element_type="column">
@@ -1228,7 +1425,7 @@ Vehicle Documents</h4>		</div>
 
 									<p class="elementor-icon-box-title">
 						<span  >
-							Shivashree, Vadiraja Nagar Cross Road, Alake, Mannagudda, Mangaluru 575 003						</span>
+							908 Maurishka Park, MG Road, Near Canara Bank, Kodialbail, Mangaluru 575003						</span>
 					</p>
 				
 				
@@ -1254,7 +1451,7 @@ Vehicle Documents</h4>		</div>
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-16e00871 elementor-widget elementor-widget-heading" data-id="16e00871" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<p class="elementor-heading-title elementor-size-default"> © 2024 Varish Partners</p>		</div>
+			<p class="elementor-heading-title elementor-size-default"> © 2026 Varish Partners</p>		</div>
 				</div>
 					</div>
 		</div>
@@ -1482,6 +1679,268 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   } else {
     init();
   }
+})();
+</script>
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
+<script id="vp-home-screens-js">
+(function () {
+  'use strict';
+  // Each screen is a group of top-level sections. On desktop every group is
+  // padded out to exactly one window height and the wheel snaps between them.
+  var SCREENS = [
+    ['746da61', '5b7e454c'],
+    ['475a9772'],
+    ['.vp-duo'],
+    ['753833f7', 'footer']
+  ];
+  // The section in each group that absorbs spare height. The side-by-side
+  // pair grows as a whole (min-height) so both halves stay full height.
+  var FILL = ['5b7e454c', '475a9772', '.vp-duo', '753833f7'];
+  var desktop = window.matchMedia('(min-width:1025px) and (min-height:600px)');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var header = document.querySelector('.elementor-location-header');
+
+  function el(id) {
+    if (id === 'footer') return document.querySelector('.elementor-location-footer');
+    return document.querySelector(id.charAt(0) === '.' ? id : '.elementor-element-' + id);
+  }
+  function headerH() { return header ? header.getBoundingClientRect().height : 0; }
+  function docTop(node) { return node.getBoundingClientRect().top + window.pageYOffset; }
+
+  // Reviews differ in length. Size the carousel to the longest one so the
+  // feedback screen keeps one height whichever slide is showing.
+  // Also flags reviews that are cut off by the clamp, so they get "Read more".
+  function equalizeSlides() {
+    var wrap = document.querySelector('.elementor-element-03e44b8 .swiper-wrapper');
+    if (!wrap) return;
+    wrap.style.minHeight = '';
+    var slides = Array.prototype.slice.call(wrap.children);
+    var active = slides.filter(function (s) { return s.classList.contains('vp-active'); })[0];
+    var tallest = 0;
+    slides.forEach(function (s) {
+      slides.forEach(function (o) { o.classList.toggle('vp-active', o === s); });
+      var box = s.querySelector('.elementor-widget-text-editor .elementor-widget-container');
+      if (box && !isExpanded()) {
+        // Only clamp when it hides a real chunk; a line or two just shows in full.
+        s.removeAttribute('data-fits');
+        var hidden = box.scrollHeight - box.clientHeight;
+        var line = parseFloat(getComputedStyle(box).lineHeight) || 24;
+        s.toggleAttribute('data-fits', hidden > 0 && hidden <= line * 2.5);
+        s.toggleAttribute('data-long', hidden > line * 2.5);
+      }
+      tallest = Math.max(tallest, s.getBoundingClientRect().height);
+    });
+    slides.forEach(function (o) { o.classList.toggle('vp-active', o === active); });
+    if (desktop.matches) wrap.style.minHeight = Math.ceil(tallest) + 'px';
+  }
+
+  /* ----- Read more: a long review takes over the whole row (the Why Choose
+     Us half slides away); the next scroll puts it back. ----- */
+  var carousel = document.querySelector('.elementor-element-03e44b8');
+  var duo = document.querySelector('.vp-duo');
+  function isExpanded() { return !!carousel && carousel.classList.contains('is-expanded'); }
+  function setExpanded(on) {
+    if (!carousel || on === isExpanded()) return;
+    carousel.classList.toggle('is-expanded', on);
+    if (duo) duo.classList.toggle('is-expanded', on && desktop.matches);
+    Array.prototype.forEach.call(carousel.querySelectorAll('.vp-readmore'), function (b) {
+      b.textContent = on ? 'Show less' : 'Read more';
+      b.setAttribute('aria-expanded', on ? 'true' : 'false');
+    });
+    // Collapsing needs no re-measure: the window hasn't changed, so the clamp
+    // flags and heights taken in the side-by-side layout still hold. (Measuring
+    // mid-animation, while the card is still wide, made long reviews look short.)
+    // Only if the window was resized while expanded, re-measure once settled.
+    if (!on && staleWhileExpanded) {
+      staleWhileExpanded = false;
+      setTimeout(layout, 1000);
+    }
+  }
+  var staleWhileExpanded = false;
+  if (carousel) {
+    // Swap the text arrows for SVG so they sit dead centre in the circles.
+    var ARROW = '<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    // The carousel script builds its buttons on DOMContentLoaded, after this runs.
+    var swapArrows = function () {
+      Array.prototype.forEach.call(document.querySelectorAll('.vp-carousel-nav button'), function (btn, i) {
+        btn.innerHTML = i === 0 ? ARROW.replace('<path', '<path transform="rotate(180 10 10)"') : ARROW;
+      });
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', swapArrows);
+    else swapArrows();
+    Array.prototype.forEach.call(carousel.querySelectorAll('.swiper-slide .elementor-widget-text-editor'), function (w) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'vp-readmore';
+      b.textContent = 'Read more';
+      b.setAttribute('aria-expanded', 'false');
+      b.addEventListener('click', function () { setExpanded(!isExpanded()); });
+      w.appendChild(b);
+    });
+  }
+
+  // Side by side, make the left column's content exactly as tall as the right
+  // (heading + review card) so tops and bottoms line up across the screen.
+  function alignDuo() {
+    var points = document.querySelector('.elementor-element-4136dcd5 > .elementor-container');
+    var left = document.querySelector('.elementor-element-786b4f7f > .elementor-container');
+    var right = document.querySelector('.elementor-element-581e20b3 > .elementor-container');
+    if (!points || !left || !right) return;
+    points.style.minHeight = '';
+    if (!desktop.matches) return;
+    var diff = right.getBoundingClientRect().height - left.getBoundingClientRect().height;
+    if (diff > 0) points.style.minHeight = (points.getBoundingClientRect().height + diff) + 'px';
+    // Left taller: grow the review card instead (the name stays pinned to its bottom).
+    var slides = document.querySelector('.elementor-element-03e44b8 .swiper-wrapper');
+    if (diff < 0 && slides) slides.style.minHeight = (slides.getBoundingClientRect().height - diff) + 'px';
+  }
+
+  function layout() {
+    if (isExpanded()) { staleWhileExpanded = true; return; }
+    equalizeSlides();
+    FILL.forEach(function (id) {
+      var n = el(id);
+      if (!n) return;
+      n.style.removeProperty('padding-top');
+      n.style.removeProperty('padding-bottom');
+      n.style.removeProperty('min-height');
+    });
+    SCREENS.forEach(function (ids) { ids.map(el).forEach(function (n) { if (n) n.style.zoom = ''; }); });
+    alignDuo();
+    if (!desktop.matches) return;
+    document.documentElement.style.setProperty('--vp-header', headerH() + 'px');
+    var avail = window.innerHeight - headerH();
+    SCREENS.forEach(function (ids, i) {
+      var nodes = ids.map(el).filter(Boolean);
+      var h = nodes.reduce(function (s, n) { return s + n.getBoundingClientRect().height; }, 0);
+      var extra = Math.floor(avail - h);
+      // Short windows: scale the whole screen down (never below 75%) rather
+      // than let it spill past the fold.
+      if (extra < 0) {
+        var z = Math.max(0.75, Math.floor(avail / h * 1000) / 1000);
+        nodes.forEach(function (n) { n.style.zoom = z; });
+        h = nodes.reduce(function (s, n) { return s + n.getBoundingClientRect().height; }, 0);
+        extra = Math.floor(avail - h);
+        if (extra > 0 && FILL[i].charAt(0) === '.') el(FILL[i]).style.minHeight = (avail / z) + 'px';
+        else if (extra > 0) {
+          var f = el(FILL[i]);
+          var fcs = getComputedStyle(f);
+          f.style.setProperty('padding-bottom', ((parseFloat(fcs.paddingBottom) || 0) + extra / z) + 'px', 'important');
+        }
+        return;
+      }
+      var fill = el(FILL[i]);
+      if (extra <= 0 || !fill) return;
+      if (FILL[i].charAt(0) === '.') { fill.style.minHeight = avail + 'px'; return; }
+      var cs = getComputedStyle(fill);
+      var pt = parseFloat(cs.paddingTop) || 0, pb = parseFloat(cs.paddingBottom) || 0;
+      fill.style.setProperty('padding-top', (pt + Math.floor(extra / 2)) + 'px', 'important');
+      fill.style.setProperty('padding-bottom', (pb + Math.ceil(extra / 2)) + 'px', 'important');
+    });
+  }
+
+  function maxScroll() { return Math.max(0, document.documentElement.scrollHeight - window.innerHeight); }
+  function stops() {
+    var hh = headerH(), max = maxScroll();
+    var s = SCREENS.map(function (ids, i) {
+      var n = el(ids[0]);
+      return i === 0 || !n ? 0 : Math.min(max, Math.round(docTop(n) - hh));
+    });
+    s.push(max);
+    return s.filter(function (v, i, a) { return a.indexOf(v) === i; }).sort(function (a, b) { return a - b; });
+  }
+
+  var animating = false, lockUntil = 0;
+  function glideTo(targetY) {
+    var startY = window.pageYOffset, dist = targetY - startY;
+    if (Math.abs(dist) < 1) return;
+    if (reduceMotion.matches) { window.scrollTo(0, targetY); return; }
+    var duration = Math.min(800, Math.max(450, Math.abs(dist) * 0.8));
+    var t0 = null;
+    animating = true;
+    // Ease-out: moves the moment the wheel turns, then settles gently.
+    function ease(t) { return 1 - Math.pow(1 - t, 4); }
+    function finish() {
+      if (!animating) return;
+      clearTimeout(safety);
+      window.scrollTo(0, targetY);
+      animating = false;
+      lockUntil = Date.now() + 250;
+    }
+    // requestAnimationFrame pauses when the window is hidden; land the move anyway.
+    var safety = setTimeout(finish, duration + 400);
+    function step(now) {
+      if (!animating) return;
+      if (document.hidden) { finish(); return; }
+      if (t0 === null) t0 = now;
+      var p = Math.min(1, (now - t0) / duration);
+      if (p >= 1) { finish(); return; }
+      window.scrollTo(0, startY + dist * ease(p));
+      window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+  }
+
+  // Move one screen. A screen taller than the window (short or zoomed-in
+  // windows) is stepped through a page at a time so nothing is skipped.
+  function go(dir) {
+    var y = window.pageYOffset, s = stops();
+    var view = window.innerHeight - headerH(), target;
+    if (dir > 0) {
+      target = s.filter(function (v) { return v > y + 2; })[0];
+      if (target === undefined) return;
+      if (target - y > view + 2) target = y + view * 0.85;
+    } else {
+      var prev = s.filter(function (v) { return v < y - 2; });
+      target = prev[prev.length - 1];
+      if (target === undefined) return;
+      if (y - target > view + 2) target = y - view * 0.85;
+    }
+    glideTo(Math.round(target));
+  }
+
+  window.addEventListener('wheel', function (e) {
+    if (!desktop.matches || e.ctrlKey || Math.abs(e.deltaY) < 2) return;
+    setExpanded(false);
+    var dir = e.deltaY > 0 ? 1 : -1, y = window.pageYOffset;
+    if ((dir > 0 && y >= maxScroll() - 1) || (dir < 0 && y <= 1)) return;
+    e.preventDefault();
+    if (animating || Date.now() < lockUntil) return; // swallow trackpad inertia
+    go(dir);
+  }, { passive: false });
+
+  window.addEventListener('keydown', function (e) {
+    if (!desktop.matches || e.altKey || e.ctrlKey || e.metaKey) return;
+    var a = document.activeElement, tag = (a && a.tagName) || '';
+    if (/^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(tag) || (a && a.isContentEditable)) return;
+    var dir = 0;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey)) dir = 1;
+    else if (e.key === 'ArrowUp' || e.key === 'PageUp' || (e.key === ' ' && e.shiftKey)) dir = -1;
+    else if (e.key === 'Home') { e.preventDefault(); glideTo(0); return; }
+    else if (e.key === 'End') { e.preventDefault(); glideTo(maxScroll()); return; }
+    if (!dir) return;
+    e.preventDefault();
+    setExpanded(false);
+    if (!animating) go(dir);
+  });
+
+  // Service cards: the whole card opens its page, like the /services/ cards.
+  Array.prototype.forEach.call(document.querySelectorAll('.elementor-element-475a9772 .elementor-inner-column > .elementor-widget-wrap'), function (card) {
+    var link = card.querySelector('a.elementor-button[href]');
+    if (!link) return;
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      if (e.ctrlKey || e.metaKey) window.open(link.href, '_blank');
+      else window.location.href = link.href;
+    });
+  });
+
+  var timer;
+  function relayout() { clearTimeout(timer); timer = setTimeout(layout, 60); }
+  window.addEventListener('resize', relayout);
+  window.addEventListener('load', layout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+  layout();
 })();
 </script>
 </body>
