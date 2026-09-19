@@ -207,6 +207,7 @@ body{background:#fff;}
 .vpt-panel.is-active{display:block;animation:vptFade .6s var(--vpt-ease) both;}
 @keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
 .vpt-media{border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
+.vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
 .vpt-h2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px;font-family:var(--vpt-serif);font-size:26px;line-height:1.3;font-weight:700;color:var(--vpt-ink);}
@@ -383,42 +384,42 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="expansion" data-group="growth">
-					<div class="vpt-media"><img src="/images/financial-advisors-in-office.jpeg" alt="Varish Partners advisors at work in the office" loading="eager"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-expansion.webp" type="image/webp"><img src="/images/services/jpeg/ba-expansion.jpg" alt="Varish Partners advisors at work in the office" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Growth &amp; <em>Expansion Strategy</em></h2>
 						<p>Market entry planning, expansion financing structuring, and geographic or product diversification advisory.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="cost" data-group="growth">
-					<div class="vpt-media"><img src="/images/professionals-reviewing-financials.jpeg" alt="Financial documents and reports under review" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-cost.webp" type="image/webp"><img src="/images/services/jpeg/ba-cost.jpg" alt="Financial documents and reports under review" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Cost Optimization &amp; <em>Operational Efficiency</em></h2>
 						<p>Cost structure review, process re-engineering, and margin improvement plans.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="valuation" data-group="transactions">
-					<div class="vpt-media"><img src="/images/professionals-reviewing-financials.jpeg" alt="Financial documents and reports under review" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/jpeg/ba-valuation.jpg" alt="Financial documents and reports under review" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business <em>Valuation</em></h2>
 						<p>Valuation for fundraising, transactions, ESOP pricing, and regulatory or dispute purposes.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="diligence" data-group="transactions">
-					<div class="vpt-media"><img src="/images/businessman-presenting-to-boardroom.jpeg" alt="An advisor presenting to a boardroom" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/jpeg/ba-diligence.jpg" alt="An advisor presenting to a boardroom" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial &amp; Commercial <em>Due Diligence</em></h2>
 						<p>Financial, tax, and commercial due diligence for mergers, acquisitions, and investments.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="structuring" data-group="execution">
-					<div class="vpt-media"><img src="/images/businessman-presenting-to-boardroom.jpeg" alt="An advisor presenting to a boardroom" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/jpeg/ba-structuring.jpg" alt="An advisor presenting to a boardroom" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Deal Structuring &amp; <em>Transaction Advisory</em></h2>
 						<p>Transaction structuring, negotiation support, and coordination of regulatory approvals.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="integration" data-group="execution">
-					<div class="vpt-media"><img src="/images/financial-advisors-in-office.jpeg" alt="Varish Partners advisors at work in the office" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-integration.webp" type="image/webp"><img src="/images/services/jpeg/ba-integration.jpg" alt="Varish Partners advisors at work in the office" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Post-Transaction <em>Integration</em></h2>
 						<p>Financial and operational integration support following a deal close.</p>
@@ -825,6 +826,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 <script id="vp-tax-page-js">
 (function () {
   'use strict';
@@ -1004,7 +1006,6 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncSliders);
 })();
 </script>
-<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 

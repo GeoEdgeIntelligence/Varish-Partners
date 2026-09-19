@@ -42,3 +42,5 @@ build-careers.js
 contact-screen.css
 contact-screen.js
 build-legal.js
+service-photos.py
+service-photos-state.json

@@ -170,6 +170,10 @@ body{background:#fff;}
 .vpa-h3{margin:0;font-family:var(--vpa-serif);font-size:19px;line-height:1.3;font-weight:700;color:var(--vpa-ink);}
 .vpa-body p{margin:0 0 12px;font-size:15px;line-height:1.7;color:var(--vpa-muted);}
 .vpa-body p:first-child{font-size:16px;color:#3f3f3f;}
+.vpa-caps-label{margin:4px 0 8px !important;font-size:13px !important;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--vpa-brand) !important;}
+.vpa-caps{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 16px;padding:0;list-style:none;}
+.vpa-caps li{position:relative;margin:0;padding:12px 14px 12px 38px;background:var(--vpa-chip);border-radius:14px;font-size:14.5px;line-height:1.45;color:#3f3f3f;box-shadow:inset 0 0 0 1px rgba(107,77,55,.12);}
+.vpa-caps li::before{content:"";position:absolute;left:14px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--vpa-brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/10px no-repeat;}
 .vpa-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin:0 0 20px;}
 .vpa-head p{margin:0;max-width:460px;font-size:15px;line-height:1.65;color:var(--vpa-muted);}
 .vpa-head--light p{color:rgba(255,255,255,.82);}
@@ -200,7 +204,8 @@ body{background:#fff;}
 .vpa-hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:44px;align-items:stretch;}
 .vpa-hero-text{display:flex;flex-direction:column;justify-content:center;}
 .vpa-hero-media{position:relative;min-height:320px;border-radius:24px;overflow:hidden;box-shadow:0 18px 44px rgba(20,20,20,.12);background:var(--vpa-light);}
-.vpa-hero-media img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center;}
+.vpa-hero-media picture{position:absolute;inset:0;display:block;}
+.vpa-hero-media img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%;}
 
 /* 2) Vision, mission and core values on brown */
 .vpa-values{background:var(--vpa-brand);}
@@ -267,6 +272,7 @@ body{background:#fff;}
   .vpa-h1{font-size:28px;}
   .vpa-h2{font-size:25px;}
   .vpa-values-grid{grid-template-columns:minmax(0,1fr);gap:12px;}
+  .vpa-caps{grid-template-columns:minmax(0,1fr);}
   .vpa-person{grid-template-columns:minmax(0,1fr);}
   .vpa-photo{max-width:200px;}
   .vpa-btn{flex:1 1 auto;}
@@ -346,16 +352,17 @@ body{background:#fff;}
 				<p class="vpa-eyebrow">About Us · Our Firm</p>
 				<h1 class="vpa-h1">20+ Years of Expertise in Comprehensive Financial Solutions</h1>
 				<div class="vpa-body">
-					<p>Varish Partners was founded with a vision to deliver unparalleled service, earning the trust and confidence of our clients. Specializing in comprehensive tax and corporate consultancy services, Varish Partners is dedicated to maximizing business potential. From initial business setup to strategic transaction advisory, clients are guided through every stage of growth with precision and expertise.</p>
-					<p>Our team consists of seasoned professionals with extensive experience across diverse industries, ensuring tailored solutions that meet your specific requirements. Whether navigating regulatory landscapes as a startup or enhancing operational efficiency as an established entity, Varish Partners provides meticulous insights and proactive strategies to drive success.</p>
-					<p>Driven by a commitment to excellence and integrity, the firm prioritizes building long-term client partnerships based on trust and tangible results. Our services encompass a wide spectrum, including tax planning, compliance, transaction advisory, and financial advisory, all aimed at fostering sustainable success for your enterprise.</p>
+					<p>Varish Partners delivers specialized tax and corporate consultancy services designed to maximize business potential. Backed by extensive multi-industry expertise, our seasoned professionals partner with both startups and established enterprises to guide growth through every stage of development.</p>
+					<p class="vpa-caps-label">Core Capabilities</p>
+					<ul class="vpa-caps"><li>Initial business setup and corporate structuring</li><li>Strategic tax planning and regulatory compliance</li><li>Transaction and financial advisory</li><li>Operational efficiency and growth strategies</li></ul>
+					<p>Driven by integrity and precision, we provide tailored insights and proactive strategies that build long-term trust and foster sustainable success.</p>
 				</div>
 				<div class="vpa-actions">
 					<a class="vpa-btn vpa-btn--ghost" href="/services/">Explore services</a>
 					<a class="vpa-btn vpa-btn--dark" href="/contact-us/">Schedule a call</a>
 				</div>
 			</div>
-			<div class="vpa-hero-media"><img src="/wp-content/uploads/2024/09/corporate-teamworking-colleagues-in-modern-office-KTXS67W-qtbbg1pdno3lztht28865njbv8ffced9l5g1s0l3dk.jpg" alt="The Varish Partners team working together in the office" loading="eager"></div>
+			<div class="vpa-hero-media"><picture><source srcset="/images/about/about-hero.webp" type="image/webp"><img src="/images/about/about-hero.jpg" alt="Varish Partners partners reviewing a client file by the office window in Mangaluru" width="1200" height="1600" loading="eager"></picture></div>
 		</div>
 	</section>
 
@@ -874,6 +881,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 <script id="vp-about-page-js">
 (function () {
   'use strict';
@@ -1024,7 +1032,6 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   layout();
 })();
 </script>
-<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 

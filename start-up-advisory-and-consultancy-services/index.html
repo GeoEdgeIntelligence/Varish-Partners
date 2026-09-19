@@ -207,6 +207,7 @@ body{background:#fff;}
 .vpt-panel.is-active{display:block;animation:vptFade .6s var(--vpt-ease) both;}
 @keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
 .vpt-media{border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
+.vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
 .vpt-h2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px;font-family:var(--vpt-serif);font-size:26px;line-height:1.3;font-weight:700;color:var(--vpt-ink);}
@@ -383,42 +384,42 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="structuring" data-group="foundation">
-					<div class="vpt-media"><img src="/images/financial-advisors-in-office.jpeg" alt="Varish Partners advisors at work in the office" loading="eager"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-structuring.webp" type="image/webp"><img src="/images/services/jpeg/su-structuring.jpg" alt="Varish Partners advisors at work in the office" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business Structuring &amp; <em>Incorporation</em></h2>
 						<p>Entity selection, founders’ agreement support, and cap table design built correctly from day one.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="framework" data-group="foundation">
-					<div class="vpt-media"><img src="/images/professionals-reviewing-financials.jpeg" alt="Financial documents and reports under review" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-framework.webp" type="image/webp"><img src="/images/services/jpeg/su-framework.jpg" alt="Financial documents and reports under review" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Compliance <em>Framework Setup</em></h2>
 						<p>Statutory compliance calendars, ESOP structuring, and regulatory registrations built to scale with the business.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="modeling" data-group="fundraising">
-					<div class="vpt-media"><img src="/images/professionals-reviewing-financials.jpeg" alt="Financial documents and reports under review" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-modeling.webp" type="image/webp"><img src="/images/services/jpeg/su-modeling.jpg" alt="Financial documents and reports under review" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial Modeling &amp; <em>Projections</em></h2>
 						<p>Revenue models, unit economics, and investor-ready financial projections.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="diligence" data-group="fundraising">
-					<div class="vpt-media"><img src="/images/businessman-presenting-to-boardroom.jpeg" alt="An advisor presenting to a boardroom" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-diligence.webp" type="image/webp"><img src="/images/services/jpeg/su-diligence.jpg" alt="An advisor presenting to a boardroom" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Fundraising Readiness &amp; <em>Due Diligence Support</em></h2>
 						<p>Data room preparation, term sheet review coordination, and investor financial reporting.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="runway" data-group="growth">
-					<div class="vpt-media"><img src="/images/financial-advisors-in-office.jpeg" alt="Varish Partners advisors at work in the office" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-runway.webp" type="image/webp"><img src="/images/services/jpeg/su-runway.jpg" alt="Varish Partners advisors at work in the office" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Budgeting &amp; <em>Runway Management</em></h2>
 						<p>Burn-rate tracking, working capital planning, and milestone-based budgeting.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="stage" data-group="growth">
-					<div class="vpt-media"><img src="/images/businessman-presenting-to-boardroom.jpeg" alt="An advisor presenting to a boardroom" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-stage.webp" type="image/webp"><img src="/images/services/jpeg/su-stage.jpg" alt="An advisor presenting to a boardroom" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Growth-Stage <em>Advisory</em></h2>
 						<p>Ongoing financial and compliance advisory through Series A and beyond.</p>
@@ -825,6 +826,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 <script id="vp-tax-page-js">
 (function () {
   'use strict';
@@ -1004,7 +1006,6 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncSliders);
 })();
 </script>
-<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 

@@ -207,6 +207,7 @@ body{background:#fff;}
 .vpt-panel.is-active{display:block;animation:vptFade .6s var(--vpt-ease) both;}
 @keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
 .vpt-media{border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
+.vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
 .vpt-h2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px;font-family:var(--vpt-serif);font-size:26px;line-height:1.3;font-weight:700;color:var(--vpt-ink);}
@@ -383,42 +384,42 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="market" data-group="strategy">
-					<div class="vpt-media"><img src="/images/financial-advisors-in-office.jpeg" alt="Varish Partners advisors at work in the office" loading="eager"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-market.webp" type="image/webp"><img src="/images/services/jpeg/sc-market.jpg" alt="Varish Partners advisors at work in the office" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Growth Strategy &amp; <em>Market Entry</em></h2>
 						<p>Opportunity assessment, market entry planning, and go-to-market strategy design.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="benchmark" data-group="strategy">
-					<div class="vpt-media"><img src="/images/professionals-reviewing-financials.jpeg" alt="Financial documents and reports under review" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-benchmark.webp" type="image/webp"><img src="/images/services/jpeg/sc-benchmark.jpg" alt="Financial documents and reports under review" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Competitive &amp; <em>Financial Benchmarking</em></h2>
 						<p>Peer analysis, KPI benchmarking, and financial performance diagnostics.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="performance" data-group="operations">
-					<div class="vpt-media"><img src="/images/professionals-reviewing-financials.jpeg" alt="Financial documents and reports under review" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-performance.webp" type="image/webp"><img src="/images/services/jpeg/sc-performance.jpg" alt="Financial documents and reports under review" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Operational <em>Performance Improvement</em></h2>
 						<p>Process audits, efficiency benchmarking, and performance turnaround plans.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="restructuring" data-group="operations">
-					<div class="vpt-media"><img src="/images/businessman-presenting-to-boardroom.jpeg" alt="An advisor presenting to a boardroom" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/jpeg/sc-restructuring.jpg" alt="An advisor presenting to a boardroom" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Organizational <em>Restructuring</em></h2>
 						<p>Structure and process redesign to align with growth stage and strategic priorities.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="scenario" data-group="execution">
-					<div class="vpt-media"><img src="/images/financial-advisors-in-office.jpeg" alt="Varish Partners advisors at work in the office" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-scenario.webp" type="image/webp"><img src="/images/services/jpeg/sc-scenario.jpg" alt="Varish Partners advisors at work in the office" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Scenario &amp; <em>Risk Planning</em></h2>
 						<p>Stress-testing business plans against market, financial, and regulatory risk scenarios.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="implementation" data-group="execution">
-					<div class="vpt-media"><img src="/images/businessman-presenting-to-boardroom.jpeg" alt="An advisor presenting to a boardroom" loading="lazy"></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-implementation.webp" type="image/webp"><img src="/images/services/jpeg/sc-implementation.jpg" alt="An advisor presenting to a boardroom" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Execution &amp; <em>Implementation Support</em></h2>
 						<p>Hands-on support translating strategy into measurable operational change.</p>
@@ -825,6 +826,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 <script id="vp-tax-page-js">
 (function () {
   'use strict';
@@ -1004,7 +1006,6 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncSliders);
 })();
 </script>
-<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 
