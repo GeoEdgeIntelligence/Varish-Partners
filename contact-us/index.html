@@ -132,7 +132,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=15" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
 <style id="vp-contact-page">
 /* Single-screen pages with a form (Contact Us, Careers). One screen on desktop,
    sized to the window under the sticky header and scaled down on short windows
@@ -155,13 +155,14 @@ gtag("config", "GT-TX9689S5");
 .vpc-icon svg{width:19px;height:19px;fill:currentColor;}
 .vpc-label{display:block;margin:0 0 2px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#9a8a7c;}
 .vpc-value,.vpc-value a{font-size:15px;line-height:1.55;color:#1F1F1F;text-decoration:none;}
+.vpc-value a{white-space:nowrap;}
 .vpc-value a:hover{color:#6B4D37;text-decoration:underline;text-underline-offset:3px;}
 .vpc-sep{color:#c9b8a6;margin:0 6px;}
 .vpc-body p{margin:0 0 12px;font-size:15px;line-height:1.7;color:#5f5f5f;}
 .vpc-body{margin:0 0 18px;}
 .vpc-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none;}
 .vpc-chips li{margin:0;padding:7px 14px;border-radius:999px;background:#fff;font-size:13px;font-weight:500;line-height:1.2;color:#6B4D37;box-shadow:inset 0 0 0 1px rgba(107,77,55,.16);}
-.vpc-info--row{grid-template-columns:1fr 1fr;}
+.vpc-info--row{grid-template-columns:minmax(0,1fr);gap:12px;}
 
 /* Form card */
 .vpc-card{position:relative;background:#fff;border-radius:26px;padding:34px 34px 34px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 18px 48px rgba(107,77,55,.14);overflow:hidden;}
@@ -175,6 +176,9 @@ gtag("config", "GT-TX9689S5");
 .vpc-field label span{color:#6B4D37;}
 .vpc-field input,.vpc-field select,.vpc-field textarea{width:100%;padding:13px 15px;border:1.5px solid #e4d9cc;border-radius:12px;background:#fcfaf7;font-family:inherit;font-size:14.5px;line-height:1.4;color:#1F1F1F;transition:border-color .25s ease,box-shadow .25s ease,background-color .25s ease;}
 .vpc-field textarea{min-height:130px;resize:vertical;}
+.vpc-field input[type="file"]{padding:9px 12px;font-size:13.5px;cursor:pointer;}
+.vpc-field input[type="file"]::file-selector-button{margin-right:12px;padding:7px 14px;border:0;border-radius:999px;background:#6B4D37;color:#fff;font-family:inherit;font-size:13px;cursor:pointer;}
+.vpc-btn:disabled{opacity:.6;cursor:wait;transform:none;}
 .vpc-field select{appearance:none;-webkit-appearance:none;padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%236B4D37' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;}
 .vpc-field input:focus,.vpc-field select:focus,.vpc-field textarea:focus{outline:none;border-color:#6B4D37;background:#fff;box-shadow:0 0 0 3px rgba(107,77,55,.14);}
 .vpc-field input[aria-invalid="true"],.vpc-field textarea[aria-invalid="true"]{border-color:#b3261e;}
@@ -283,14 +287,14 @@ gtag("config", "GT-TX9689S5");
 			<div class="vpc-card">
 				<h2>Send us a message</h2>
 				<p>Tell us a little about what you need and we will get back to you.</p>
-				<form class="vpc-form" novalidate data-to="info@varishpartners.com" data-subject="Enquiry: {service} - {name}" data-invalid="Please add your name and a valid email address." data-sent="Opening your email app with your message.">
+				<form class="vpc-form" novalidate data-form="contact" data-invalid="Please add your name and a valid mobile number." data-sent="Thank you, {name}. We have received your message and will call you shortly.">
 					<div class="vpc-field"><label for="vpc-name">Name <span>*</span></label><input id="vpc-name" name="name" type="text" autocomplete="name" required></div>
-					<div class="vpc-field"><label for="vpc-email">Email <span>*</span></label><input id="vpc-email" name="email" type="email" autocomplete="email" required></div>
-					<div class="vpc-field"><label for="vpc-mobile">Mobile</label><input id="vpc-mobile" name="mobile" type="tel" autocomplete="tel"></div>
+					<div class="vpc-field"><label for="vpc-email">Email</label><input id="vpc-email" name="email" type="email" autocomplete="email"></div>
+					<div class="vpc-field"><label for="vpc-mobile">Mobile <span>*</span></label><input id="vpc-mobile" name="mobile" type="tel" autocomplete="tel" required></div>
 					<div class="vpc-field"><label for="vpc-service">Service</label><select id="vpc-service" name="service"><option>Tax Consultancy &amp; Compliances</option><option>GST Consultancy &amp; Compliance</option><option>Business Registration Services</option><option>Financial Planning</option><option>Start-Up Advisory &amp; Consultancy Services</option><option>Fractional CFO Services</option><option>Business Advisory Services</option><option>Strategic Consulting Impact</option><option>Other</option></select></div>
 					<div class="vpc-field vpc-field--full"><label for="vpc-message">Message</label><textarea id="vpc-message" name="message" rows="3"></textarea></div>
 					<div class="vpc-actions">
-						<p class="vpc-note" role="status" aria-live="polite">Sending opens your email app with this message addressed to us.</p>
+						<p class="vpc-note" role="status" aria-live="polite">Your message goes straight to our team. We will get back to you on the number you give.</p>
 						<button class="vpc-btn" type="submit">Send message <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 					</div>
 				</form>
@@ -314,7 +318,7 @@ gtag("config", "GT-TX9689S5");
 				</div>
 				<div class="elementor-element elementor-element-8f60519 elementor-widget elementor-widget-text-editor" data-id="8f60519" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-							With cutting-edge technology and a compassionate approach, we aim to make your Business comfortable and stress-free						</div>
+							Smart technology. A personal touch. Stress-free business solutions.						</div>
 				</div>
 		<div class="elementor-element elementor-element-0b2227a elementor-hidden-desktop elementor-hidden-tablet e-flex e-con-boxed e-con e-parent" data-id="0b2227a" data-element_type="container" data-settings="{&quot;sticky&quot;:&quot;bottom&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
 					<div class="e-con-inner">
@@ -344,85 +348,17 @@ gtag("config", "GT-TX9689S5");
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-69d9972d" data-id="69d9972d" data-element_type="column">
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element vpf-col" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-153ac62c elementor-widget elementor-widget-heading" data-id="153ac62c" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h5 class="elementor-heading-title elementor-size-default">Our Services</h5>		</div>
-				</div>
-				<div class="elementor-element elementor-element-78a6afd elementor-widget elementor-widget-nav-menu" data-id="78a6afd" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-angle-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;dropdown&quot;}" data-widget_type="nav-menu.default">
-				<div class="elementor-widget-container">
-						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-78a6afd" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="/tax-consultancy-compliances/" class="elementor-item" tabindex="-1">Tax Consultancy &amp; Compliances</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="/financial-planning/" class="elementor-item" tabindex="-1">Financial Planning</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="/business-advisory-services/" class="elementor-item" tabindex="-1">Business Advisory Services</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252"><a href="/gst-consultancy-compliance/" class="elementor-item" tabindex="-1">GST Consultancy &#038; Compliance</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-251"><a href="/business-registration-services/" class="elementor-item" tabindex="-1">Business Registration Services</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a href="/start-up-advisory-and-consultancy-services/" class="elementor-item" tabindex="-1">Start-up Advisory and Consultancy Services</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1103"><a href="/fractional-cfo-services/" class="elementor-item" tabindex="-1">Fractional CFO Services</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1608"><a href="/strategic-consulting-impact/" class="elementor-item" tabindex="-1">Strategic Consulting Impact</a></li>
-</ul>			</nav>
-				</div>
-				</div>
-					</div>
+				<div class="elementor-element elementor-element-2b8742bc elementor-widget elementor-widget-heading" data-widget_type="heading.default"><div class="elementor-widget-container"><h5 class="elementor-heading-title elementor-size-default">Company</h5></div></div>
+				<div class="elementor-element elementor-widget vpf-links-w"><ul class="vpf-links"><li><a href="/">Home</a></li><li><a href="/about-us/">About Us</a></li><li><a href="/insights/">Insights</a></li><li><a href="/careers-page/">Careers</a></li></ul></div>
+			</div>
 		</div>
-				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6188e5f6" data-id="6188e5f6" data-element_type="column">
+		<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element vpf-col" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2b8742bc elementor-widget elementor-widget-heading" data-id="2b8742bc" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h5 class="elementor-heading-title elementor-size-default">Pages</h5>		</div>
-				</div>
-				<div class="elementor-element elementor-element-ccdffd0 elementor-hidden-mobile elementor-widget elementor-widget-nav-menu" data-id="ccdffd0" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-angle-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;dropdown&quot;}" data-widget_type="nav-menu.default">
-				<div class="elementor-widget-container">
-						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-ccdffd0" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-106"><a href="/" class="elementor-item" tabindex="-1">Home</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-461"><a href="/insights/" class="elementor-item" tabindex="-1">Insights</a>
-<ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260"><a href="/our-story/" class="elementor-sub-item" tabindex="-1">Spotlights</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="/about-us/" class="elementor-item" tabindex="-1">About Us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-68 current_page_item menu-item-111"><a href="/contact-us/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Contact Us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="/careers-page/" class="elementor-item" tabindex="-1">Careers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1397"><a rel="privacy-policy" href="/privacy-policy/" class="elementor-item" tabindex="-1">Privacy Policy</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1453"><a href="/privacy-policy-2/" class="elementor-item" tabindex="-1">Terms of Use</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1607"><a href="/strategic-consulting-impact/" class="elementor-item" tabindex="-1">Strategic Consulting Impact</a></li>
-</ul>			</nav>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-a19339d elementor-nav-menu__align-center elementor-nav-menu--dropdown-none elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-nav-menu" data-id="a19339d" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-angle-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;vertical&quot;}" data-widget_type="nav-menu.default">
-				<div class="elementor-widget-container">
-						<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
-				<ul id="menu-1-a19339d" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-106"><a href="/" class="elementor-item">Home</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-461"><a href="/insights/" class="elementor-item">Insights</a>
-<ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260"><a href="/our-story/" class="elementor-sub-item">Spotlights</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="/about-us/" class="elementor-item">About Us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-68 current_page_item menu-item-111"><a href="/contact-us/" aria-current="page" class="elementor-item elementor-item-active">Contact Us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="/careers-page/" class="elementor-item">Careers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1397"><a rel="privacy-policy" href="/privacy-policy/" class="elementor-item">Privacy Policy</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1453"><a href="/privacy-policy-2/" class="elementor-item">Terms of Use</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1607"><a href="/strategic-consulting-impact/" class="elementor-item">Strategic Consulting Impact</a></li>
-</ul>			</nav>
-						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-a19339d" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-106"><a href="/" class="elementor-item" tabindex="-1">Home</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-461"><a href="/insights/" class="elementor-item" tabindex="-1">Insights</a>
-<ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260"><a href="/our-story/" class="elementor-sub-item" tabindex="-1">Spotlights</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="/about-us/" class="elementor-item" tabindex="-1">About Us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-68 current_page_item menu-item-111"><a href="/contact-us/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Contact Us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="/careers-page/" class="elementor-item" tabindex="-1">Careers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1397"><a rel="privacy-policy" href="/privacy-policy/" class="elementor-item" tabindex="-1">Privacy Policy</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1453"><a href="/privacy-policy-2/" class="elementor-item" tabindex="-1">Terms of Use</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1607"><a href="/strategic-consulting-impact/" class="elementor-item" tabindex="-1">Strategic Consulting Impact</a></li>
-</ul>			</nav>
-				</div>
-				</div>
-					</div>
+				<div class="elementor-element elementor-element-2b8742bc elementor-widget elementor-widget-heading" data-widget_type="heading.default"><div class="elementor-widget-container"><h5 class="elementor-heading-title elementor-size-default">Help &amp; Legal</h5></div></div>
+				<div class="elementor-element elementor-widget vpf-links-w"><ul class="vpf-links"><li><a href="/contact-us/">Contact Us</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/privacy-policy-2/">Terms of Use</a></li></ul></div>
+			</div>
 		</div>
 				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-58001a9e" data-id="58001a9e" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
@@ -442,8 +378,7 @@ gtag("config", "GT-TX9689S5");
 						<div class="elementor-icon-box-content">
 
 									<p class="elementor-icon-box-title">
-						<a href="tel:+918748020569" >
-							+91 87480 20569						</a>
+						<a href="tel:+918748020569">+91 87480 20569</a><br><a href="tel:+919972156327">+91 99721 56327</a>
 					</p>
 				
 				
@@ -682,6 +617,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=2"></script>
 <script id="vp-contact-page-js">
 (function () {
   'use strict';
@@ -708,57 +644,63 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
   layout();
 
-  // The site is static, so the form hands the message to the visitor's email
-  // app, addressed to data-to with every filled field in the body.
-  // data-subject may reference fields by name, e.g. "Enquiry: {service} - {name}".
+  // Submissions go to the firm's Google Sheet through window.vpSendForm
+  // (defined in the site script, zz-site-mobile.js). data-form names the tab.
   var form = document.querySelector('.vpc-form');
   if (!form) return;
   // Messages replace the note beside the button, so the screen never grows.
   var status = form.querySelector('.vpc-note');
-  var to = form.getAttribute('data-to');
+  var btn = form.querySelector('button[type="submit"]');
   var fields = Array.prototype.filter.call(form.elements, function (f) { return f.name && f.type !== 'submit'; });
   function val(f) { return (f.value || '').trim(); }
   function label(f) {
     var l = form.querySelector('label[for="' + f.id + '"]');
     return l ? l.firstChild.textContent.trim() : f.name;
   }
+  function say(text, alert) { status.textContent = text; status.classList.toggle('is-alert', !!alert); }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var first = null;
     fields.forEach(function (f) {
-      var bad = (f.required && !val(f)) ||
-        (f.type === 'email' && val(f) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val(f)));
+      var v = f.type === 'file' ? '' : val(f);
+      var bad = (f.required && f.type !== 'file' && !v) ||
+        (f.type === 'email' && v && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) ||
+        (f.type === 'tel' && (f.required || v) && !/^[+\d][\d\s-]{7,}$/.test(v));
       f.setAttribute('aria-invalid', bad ? 'true' : 'false');
       if (bad && !first) first = f;
     });
     if (first) {
-      status.textContent = form.getAttribute('data-invalid') || 'Please fill in the required fields.';
-      status.classList.add('is-alert');
+      say(form.getAttribute('data-invalid') || 'Please fill in the required fields.', true);
       first.focus();
       return;
     }
-    var lines = [], long = [];
+    var data = {};
+    var fileInput = null;
     fields.forEach(function (f) {
-      if (!val(f)) return;
-      if (f.tagName === 'TEXTAREA') long.push(val(f));
-      else lines.push(label(f) + ': ' + val(f));
+      if (f.type === 'file') { fileInput = f; return; }
+      data[label(f)] = val(f);
     });
-    var body = lines.join('\n') + (long.length ? '\n\n' + long.join('\n\n') : '');
-    var subject = (form.getAttribute('data-subject') || 'Website enquiry').replace(/\{(\w+)\}/g, function (_, n) {
-      return form.elements[n] ? val(form.elements[n]) : '';
-    });
-    status.classList.remove('is-alert');
-    status.textContent = (form.getAttribute('data-sent') || 'Opening your email app with your message.') +
-      ' If nothing opens, email us at ' + to + '.';
-    window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    btn.disabled = true;
+    say('Sending…');
+    window.vpReadFile(fileInput && fileInput.files[0]).then(function (file) {
+      if (file) { data.resume_name = file.name; data.resume_type = file.type; data.resume_data = file.data; }
+      return window.vpSendForm(form.getAttribute('data-form') || 'contact', data);
+    }).then(function () {
+      var name = (data.Name || '').split(' ')[0];
+      form.reset();
+      say(form.getAttribute('data-sent') .replace('{name}', name));
+    }).catch(function (err) {
+      say(err && err.message === 'too big'
+        ? 'That file is over 5 MB. Please attach a smaller PDF or Word file.'
+        : 'Sorry, that did not go through. Please call us on +91 87480 20569 or +91 99721 56327.', true);
+    }).then(function () { btn.disabled = false; });
   });
   form.addEventListener('input', function (e) {
     if (e.target.getAttribute('aria-invalid') === 'true') e.target.setAttribute('aria-invalid', 'false');
   });
 })();
 </script>
-<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=1"></script>
 </body>
 </html>
 

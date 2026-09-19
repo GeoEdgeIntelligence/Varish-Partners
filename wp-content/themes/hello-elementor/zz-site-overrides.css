@@ -187,3 +187,28 @@
   body:not(.home) main h2.elementor-heading-title{font-size:25px !important;line-height:1.25 !important;}
   body:not(.home) main h3.elementor-heading-title{font-size:21px !important;line-height:1.3 !important;}
 }
+
+/* Footer: "Our Services" column removed; the remaining three share the row. */
+@media (min-width:768px){
+  .elementor-location-footer .elementor-element-27dc20f2 > .elementor-container > .elementor-column{flex:1 1 0;width:auto !important;max-width:none;}
+}
+/* Footer link columns ("Company", "Help & Legal"), replacing the old "Pages" menu. */
+.elementor-location-footer .vpf-links{margin:0;padding:0;list-style:none;}
+.elementor-location-footer .vpf-links li{margin:0;}
+.elementor-location-footer .vpf-links a{display:inline-block;padding:6px 0;font-family:"Poppins",sans-serif;font-size:16px;font-weight:400;line-height:1.4;color:#1F1F1F;text-decoration:none;transition:color .25s ease;}
+.elementor-location-footer .vpf-links a:hover,.elementor-location-footer .vpf-links a:focus{color:#6B4D37;text-decoration:underline;text-underline-offset:4px;}
+.elementor-location-footer .vpf-col .elementor-element-2b8742bc{margin-bottom:12px !important;}
+@media (max-width:1024px){
+  .elementor-location-footer .vpf-links a{font-size:14px;padding:5px 0;}
+}
+@media (max-width:767px){
+  .elementor-location-footer .vpf-col{width:50% !important;margin-top:14px;}
+  .elementor-location-footer .elementor-element-58001a9e{width:100% !important;}
+}
+
+/* Homepage "Get in Touch" form: status line and invalid fields (zz-site-mobile.js). */
+.vp-form-msg{flex-basis:100%;margin:12px 0 0;font-family:"Poppins",sans-serif;font-size:14.5px;line-height:1.5;color:#6B4D37;}
+.vp-form-msg:empty{display:none;}
+.vp-form-msg.is-alert{color:#b3261e;font-weight:500;}
+.elementor-form [aria-invalid="true"]{border-color:#b3261e !important;box-shadow:0 0 0 2px rgba(179,38,30,.15) !important;}
+.elementor-form button[disabled]{opacity:.6;cursor:wait;}
