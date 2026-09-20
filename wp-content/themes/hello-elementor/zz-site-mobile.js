@@ -7,7 +7,7 @@
    Every form posts to one Google Apps Script web app that appends a row to a
    tab of the firm's Google Sheet (Homepage / Contact / Careers) and saves
    résumés to Google Drive. Paste the web app's /exec URL below. */
-window.VP_FORM_ENDPOINT = '';
+window.VP_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz13jWXiYu9IF_DbyPFdAkV0dOrYR9x7_lz3f2dJJqmEN9cHfVxIZp5iB1Ohtd1IXqE7g/exec';
 
 /* Send one submission. `form` names the Sheet tab; `fields` is {Label: value}.
    Apps Script can't return CORS headers, so the response can't be read: a
