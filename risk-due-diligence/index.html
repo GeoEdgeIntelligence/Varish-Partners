@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>Insights &#8211; Varish Partners</title>
+	<title>Risk &amp; Due Diligence &#8211; Varish Partners</title>
 <meta name='robots' content='max-image-preview:large' />
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 	<link rel='dns-prefetch' href='//www.googletagmanager.com' />
@@ -137,38 +137,178 @@ gtag("config", "GT-TX9689S5");
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
 <link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
-<style id="vp-insights-soon">
-/* Insights — "Coming Soon". Same tokens as the service pages: Merriweather
-   headings, Poppins copy, brand brown accent on a light brown band. */
-.vpi-main{max-width:none !important;width:100% !important;margin:0 !important;padding:0 !important;background:#F1E8DC;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:#1F1F1F;}
-.vpi-screen{display:flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:calc(100vh - var(--vpi-header,104px));padding:48px 24px;}
-.vpi-card{position:relative;max-width:720px;width:100%;text-align:center;background:#fff;border-radius:30px;padding:56px 48px 48px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 18px 48px rgba(107,77,55,.14);overflow:hidden;}
-.vpi-card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:#6B4D37;transform-origin:left;animation:vpiBar 1.2s cubic-bezier(.22,.61,.36,1) both;}
-@keyframes vpiBar{from{transform:scaleX(0);}to{transform:scaleX(1);}}
-.vpi-glyph{position:relative;display:inline-block;width:26px;height:20px;margin:0 0 18px;}
-.vpi-glyph::before,.vpi-glyph::after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;}
-.vpi-glyph::before{left:8px;top:0;background:#e6d6bd;}
-.vpi-glyph::after{left:0;bottom:0;background:#D6BC97;box-shadow:15px 0 0 #6B4D37;}
-.vpi-eyebrow{margin:0 0 8px;font-size:16px;font-weight:600;letter-spacing:.02em;color:#6B4D37;}
-.vpi-h1{margin:0 0 16px;font-family:"Merriweather",Georgia,serif;font-size:44px;line-height:1.15;font-weight:700;color:#1F1F1F;}
-.vpi-text{margin:0 auto 26px;max-width:540px;font-size:16px;line-height:1.7;color:#5f5f5f;}
-.vpi-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 32px;padding:0;list-style:none;}
-.vpi-tags li{margin:0;padding:7px 14px;border-radius:999px;background:#F7F1EA;font-size:13px;font-weight:500;line-height:1.2;color:#6B4D37;box-shadow:inset 0 0 0 1px rgba(107,77,55,.16);}
-.vpi-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
-.vpi-btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 30px;border-radius:999px;font-size:15px;font-weight:500;line-height:1.2;text-decoration:none;transition:transform .35s cubic-bezier(.22,.61,.36,1),background-color .35s ease,color .35s ease;}
-.vpi-btn:hover{transform:translateY(-2px);}
-.vpi-btn--ghost{background:#fff;color:#6B4D37;box-shadow:inset 0 0 0 1.5px #6B4D37;}
-.vpi-btn--ghost:hover,.vpi-btn--ghost:focus{background:#6B4D37;color:#fff;}
-.vpi-btn--dark{background:#6B4D37;color:#fff;box-shadow:0 12px 26px rgba(107,77,55,.28);}
-.vpi-btn--dark:hover,.vpi-btn--dark:focus{background:#5a3f2d;color:#fff;}
-.vpi-btn:focus-visible{outline:2px solid #6B4D37;outline-offset:3px;}
-@media (prefers-reduced-motion:reduce){.vpi-card::before{animation:none;}.vpi-btn{transition:none;}}
+<style id="vp-tax-page">
+/* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
+   Typography follows the homepage: Merriweather 700 for headings, Poppins for
+   eyebrows, body copy and buttons; brand brown (#6B4D37) as the accent. */
+:root{
+  --vpt-ink:#1F1F1F;
+  --vpt-muted:#5f5f5f;
+  --vpt-soft:#f4f4f5;
+  --vpt-brand:#6B4D37;
+  --vpt-brand-dark:#5a3f2d;
+  --vpt-accent:#D6BC97;
+  --vpt-serif:"Merriweather",Georgia,serif;
+  --vpt-sans:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --vpt-ease:cubic-bezier(.22,.61,.36,1);
+  --vpt-shadow:0 16px 40px rgba(20,20,20,.09), 0 2px 6px rgba(20,20,20,.05);
+}
+body{background:#fff;}
+.vpt-main{position:relative;z-index:1;max-width:none !important;width:100% !important;margin:0 !important;padding:0 !important;font-family:var(--vpt-sans);color:var(--vpt-ink);}
+.vpt-wrap{max-width:1204px;margin:0 auto;padding:0 32px 8px;}
+.vpt-hero{display:flex;flex-direction:column;justify-content:center;padding:14px 0 18px;}
+.vpt-grid{
+  display:grid;
+  grid-template-columns:340px minmax(0,1fr);
+  grid-template-rows:auto auto 1fr;
+  grid-template-areas:"title intro" "title tabs" "side card";
+  column-gap:36px;row-gap:20px;
+  align-items:start;
+}
+.vpt-title{grid-area:title;padding-top:4px;}
+.vpt-intro{grid-area:intro;}
+.vpt-tabs{grid-area:tabs;}
+/* Side list starts level with the photo (card has a 6px inner padding). */
+.vpt-side{grid-area:side;align-self:start;margin-top:6px;}
+.vpt-card{grid-area:card;}
+
+/* Title block (mirrors the homepage hero: Merriweather heading, Poppins copy) */
+.vpt-h1{font-family:var(--vpt-serif);font-size:38px;line-height:1.2;font-weight:700;margin:0 0 14px;color:var(--vpt-ink);}
+.vpt-sub{font-family:var(--vpt-sans);font-size:18px;line-height:1.45;color:var(--vpt-brand);margin:0 0 12px;font-weight:600;}
+.vpt-intro{font-family:var(--vpt-sans);font-size:15px;line-height:1.7;color:var(--vpt-muted);margin:0;padding-top:6px;}
+
+/* Shared dot: brown when unselected, white on the brown pill */
+.vpt-dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--vpt-brand);opacity:.45;flex:0 0 auto;transition:background .35s var(--vpt-ease),opacity .35s var(--vpt-ease),box-shadow .35s var(--vpt-ease);}
+.vpt-tab:hover > .vpt-dot,.vpt-side-btn:hover > .vpt-dot{opacity:.8;}
+[aria-selected="true"] > .vpt-dot{background:#fff;opacity:1;box-shadow:0 0 0 3px rgba(255,255,255,.28);}
+
+/* Sliding pill shared by the top tabs and the side list */
+.vpt-slider{position:absolute;left:0;top:0;width:0;height:0;border-radius:999px;background:var(--vpt-brand);box-shadow:0 10px 24px rgba(107,77,55,.28), 0 1px 2px rgba(20,20,20,.08);pointer-events:none;z-index:0;opacity:0;}
+.vpt-slider.is-ready{opacity:1;transition:transform .5s var(--vpt-ease),width .5s var(--vpt-ease),height .5s var(--vpt-ease),opacity .3s ease;}
+
+/* Top pill tabs */
+.vpt-tabs{position:relative;display:flex;gap:4px;padding:5px;background:var(--vpt-soft);border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,255,255,.8), 0 8px 24px rgba(20,20,20,.05);}
+.vpt-tab{position:relative;z-index:1;flex:1 1 0;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border:0;border-radius:999px;background:transparent;font-family:var(--vpt-sans);font-size:15.5px;font-weight:500;line-height:1.2;color:var(--vpt-brand);cursor:pointer;transition:color .35s var(--vpt-ease);}
+.vpt-tab:hover,.vpt-tab:focus{background:transparent;color:var(--vpt-brand);font-weight:700;}
+.vpt-tab[aria-selected="true"],.vpt-tab[aria-selected="true"]:hover,.vpt-tab[aria-selected="true"]:focus{background:transparent;color:#fff;font-weight:600;}
+.vpt-tab:focus,.vpt-side-btn:focus{outline:none;box-shadow:none;}
+.vpt-tab:focus-visible,.vpt-side-btn:focus-visible,.vpt-btn:focus-visible{outline:2px solid var(--vpt-brand);outline-offset:3px;}
+
+/* Side list */
+.vpt-side{position:relative;background:var(--vpt-soft);border-radius:28px;padding:6px;box-shadow:inset 0 1px 0 rgba(255,255,255,.8), 0 8px 24px rgba(20,20,20,.05);}
+.vpt-side-label{position:relative;z-index:1;margin:0;padding:10px 20px 4px;font-family:var(--vpt-sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a9a9e;font-weight:600;}
+.vpt-side-list{display:flex;flex-direction:column;gap:2px;}
+.vpt-side-list[hidden]{display:none;}
+.vpt-side-btn{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:15px 20px;border:0;border-radius:22px;background:transparent;font-family:var(--vpt-sans);font-size:15.5px;font-weight:500;line-height:1.2;color:var(--vpt-brand);text-align:left;cursor:pointer;transition:color .35s var(--vpt-ease);}
+.vpt-side-btn:hover,.vpt-side-btn:focus{background:transparent;color:var(--vpt-brand);font-weight:700;}
+.vpt-side-btn[aria-selected="true"],.vpt-side-btn[aria-selected="true"]:hover,.vpt-side-btn[aria-selected="true"]:focus{background:transparent;color:#fff;font-weight:600;}
+.vpt-side-btn,.vpt-tab{white-space:normal;}
+.vpt-tab{min-width:0;text-align:center;}
+.vpt-side-btn > span{min-width:0;}
+.vpt-side-btn > .vpt-dot{flex:0 0 auto;}
+
+/* Main card */
+.vpt-card{position:relative;background:var(--vpt-soft);border-radius:30px;padding:6px 6px 28px;box-shadow:var(--vpt-shadow);min-height:100%;}
+.vpt-panel{display:none;}
+.vpt-panel.is-active{display:block;animation:vptFade .6s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-media{border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
+.vpt-media picture{display:block;width:100%;height:100%;}
+.vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
+.vpt-body{padding:26px 28px 0;}
+.vpt-h2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px;font-family:var(--vpt-serif);font-size:26px;line-height:1.3;font-weight:700;color:var(--vpt-ink);}
+.vpt-h2 em{font-style:italic;font-weight:400;color:var(--vpt-brand);}
+.vpt-body p{margin:0;font-family:var(--vpt-sans);font-size:17px;line-height:1.7;color:var(--vpt-muted);max-width:760px;}
+.vpt-glyph{position:relative;display:inline-block;width:26px;height:20px;flex:0 0 auto;}
+.vpt-glyph::before,.vpt-glyph::after{content:"";position:absolute;border-radius:50%;background:var(--vpt-accent);}
+.vpt-glyph::before{width:8px;height:8px;left:8px;top:0;background:#e6d6bd;}
+.vpt-glyph::after{width:8px;height:8px;left:0;bottom:0;box-shadow:15px 0 0 var(--vpt-brand);}
+.vpt-actions{display:flex;justify-content:flex-end;gap:12px;padding:40px 10px 0 28px;flex-wrap:wrap;}
+.vpt-btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 30px;border-radius:999px;font-family:var(--vpt-sans);font-size:15px;font-weight:500;line-height:1.2;text-decoration:none;transition:transform .35s var(--vpt-ease),box-shadow .35s var(--vpt-ease),background-color .35s var(--vpt-ease),color .35s var(--vpt-ease);}
+.vpt-btn:hover{transform:translateY(-2px);}
+.vpt-btn--ghost{background:#fff;color:var(--vpt-brand);box-shadow:inset 0 0 0 1.5px var(--vpt-brand);}
+.vpt-btn--ghost:hover,.vpt-btn--ghost:focus{background:var(--vpt-brand);color:#fff;}
+.vpt-btn--dark{background:var(--vpt-brand);color:#fff;box-shadow:0 12px 26px rgba(107,77,55,.28);}
+.vpt-btn--dark:hover,.vpt-btn--dark:focus{background:var(--vpt-brand-dark);color:#fff;}
+
+/* Outro */
+.vpt-outro{margin:0 auto;padding:40px 0 8px;max-width:760px;text-align:center;}
+/* Halve the gap between the closing text and the footer (footer section carries a 4em top pad). */
+.vpt-main ~ .elementor-location-footer .elementor-element-18a4e857{padding-top:1.25em !important;padding-bottom:.5em !important;}
+.vpt-outro p{margin:0;font-family:var(--vpt-sans);font-size:17px;line-height:1.7;color:var(--vpt-muted);}
+.vpt-outro a{color:var(--vpt-brand);font-weight:600;text-decoration:underline;text-underline-offset:4px;}
+@media (prefers-reduced-motion:reduce){
+  .vpt-panel.is-active{animation:none;}
+  .vpt-slider.is-ready{transition:none;}
+}
+
+/* Desktop: the first section is sized to the visible area under the sticky
+   header (the card image flexes to absorb the difference), and the page snaps
+   between two positions: the component, and the closing text + footer. */
+@media (min-width:1025px) and (min-height:600px){
+  .vpt-hero{height:calc(100vh - var(--vpt-header,104px));min-height:0;box-sizing:border-box;padding:12px 0 14px;}
+  .vpt-grid{flex:1 1 auto;min-height:0;grid-template-rows:auto auto minmax(0,1fr);}
+  .vpt-title{min-height:0;overflow:hidden;}
+  .vpt-card{display:flex;flex-direction:column;height:100%;min-height:0;}
+  .vpt-panel.is-active{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;}
+  .vpt-media{flex:1 1 auto;min-height:140px;aspect-ratio:auto;}
+  .vpt-body{flex:0 0 auto;padding-top:20px;}
+  .vpt-actions{padding-top:22px;}
+  .vpt-outro{padding-top:24px;}
+  /* Tabs hold up to six services with two-line names, so the side list is
+     compact and the intro sits in the wide column above the tabs. */
+  .vpt-h1{font-size:34px;margin-bottom:10px;}
+  .vpt-sub{font-size:17px;margin-bottom:0;}
+  .vpt-intro{font-size:14.5px;line-height:1.6;}
+  .vpt-side-label{padding:8px 18px 2px;}
+  .vpt-side-btn{padding:9px 18px;font-size:14.5px;line-height:1.25;}
+}
+
+/* Short laptop screens: tighten the card so longer paragraphs still clear the buttons. */
+@media (min-width:1025px) and (min-height:600px) and (max-height:780px){
+  .vpt-hero{padding:8px 0 10px;}
+  .vpt-grid{row-gap:14px;}
+  .vpt-media{min-height:110px;}
+  .vpt-body{padding:14px 24px 0;}
+  .vpt-h2{font-size:22px;margin-bottom:6px;}
+  .vpt-body p{font-size:15px;line-height:1.55;}
+  .vpt-actions{padding-top:12px;}
+  .vpt-btn{padding:12px 26px;}
+  .vpt-card{padding-bottom:18px;}
+}
+
+/* Responsive */
+@media (max-width:1180px){
+  .vpt-grid{grid-template-columns:280px minmax(0,1fr);column-gap:24px;}
+  .vpt-h1{font-size:32px;}
+  .vpt-tab,.vpt-side-btn{font-size:14.5px;padding:13px 16px;}
+}
+@media (max-width:1024px){
+  .vpt-wrap{padding:0 20px 16px;}
+  .vpt-hero{min-height:0;padding:16px 0;}
+  .vpt-outro{padding:40px 0 16px;}
+  .vpt-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;grid-template-areas:"title" "intro" "tabs" "side" "card";row-gap:20px;}
+  .vpt-intro{max-width:none;}
+  .vpt-side{align-self:auto;margin-top:0;}
+  .vpt-side-btn{padding:12px 18px;}
+  .vpt-card{padding:6px 6px 22px;min-height:0;}
+  .vpt-body{padding:20px 18px 0;}
+  .vpt-h2{font-size:22px;}
+  .vpt-actions{padding:26px 6px 0 18px;justify-content:stretch;}
+  .vpt-btn{flex:1 1 auto;padding:14px 20px;}
+}
 @media (max-width:600px){
-  .vpi-screen{padding:24px 16px;min-height:0;}
-  .vpi-card{padding:40px 22px 32px;border-radius:24px;}
-  .vpi-h1{font-size:32px;}
-  .vpi-text{font-size:15px;}
-  .vpi-btn{flex:1 1 100%;}
+  .vpt-h1{font-size:27px;}
+  .vpt-sub{font-size:16px;}
+  .vpt-tabs{padding:4px;gap:3px;}
+  .vpt-tab{font-size:13px;padding:11px 6px;gap:6px;}
+  .vpt-tab .vpt-dot{display:none;}
+  .vpt-side-btn .vpt-dot{width:9px;height:9px;}
+  .vpt-side-btn{font-size:13.5px;padding:11px 14px;}
+  .vpt-media{aspect-ratio:4 / 3;border-radius:20px;}
+  .vpt-card{border-radius:24px;}
+  .vpt-h2{font-size:20px;gap:8px;}
+  .vpt-body p,.vpt-outro p{font-size:15px;}
 }
 </style>
 </head>
@@ -196,8 +336,8 @@ gtag("config", "GT-TX9689S5");
 						<div class="elementor-element elementor-element-16d00f68 elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="16d00f68" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-angle-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
 				<div class="elementor-widget-container">
 						<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
-				<ul id="menu-1-16d00f68" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="/services/" class="elementor-item">What we do</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item menu-item-463"><a href="/insights/" aria-current="page" class="elementor-item elementor-item-active">Our Thinking</a></li>
+				<ul id="menu-1-16d00f68" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent menu-item-66"><a href="/services/" class="elementor-item elementor-item-active">What we do</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463"><a href="/insights/" class="elementor-item">Our Thinking</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-65"><a href="/about-us/" class="elementor-item">Who we are</a>
 <ul class="sub-menu elementor-nav-menu--dropdown">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1261"><a href="/our-story/" class="elementor-sub-item">Spotlights</a></li>
@@ -210,8 +350,8 @@ gtag("config", "GT-TX9689S5");
 			<svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path></svg><svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path></svg>			<span class="elementor-screen-only">Menu</span>
 		</div>
 					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-16d00f68" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="/services/" class="elementor-item" tabindex="-1">What we do</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item menu-item-463"><a href="/insights/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Our Thinking</a></li>
+				<ul id="menu-2-16d00f68" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent menu-item-66"><a href="/services/" class="elementor-item elementor-item-active" tabindex="-1">What we do</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463"><a href="/insights/" class="elementor-item" tabindex="-1">Our Thinking</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-65"><a href="/about-us/" class="elementor-item" tabindex="-1">Who we are</a>
 <ul class="sub-menu elementor-nav-menu--dropdown">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1261"><a href="/our-story/" class="elementor-sub-item" tabindex="-1">Spotlights</a></li>
@@ -231,22 +371,114 @@ gtag("config", "GT-TX9689S5");
 					</div>
 		</section>
 				</div>
-<main id="content" class="site-main page type-page status-publish hentry vpi-main">
-	<section class="vpi-screen">
-		<div class="vpi-card">
-			<i class="vpi-glyph" aria-hidden="true"></i>
-			<p class="vpi-eyebrow">Insights</p>
-			<h1 class="vpi-h1">Coming Soon</h1>
-			<p class="vpi-text">We're putting together practical guides and updates on tax, GST and business advisory, written by the Varish Partners team. Check back shortly.</p>
-			<ul class="vpi-tags" aria-label="Topics">
-				<li>Income Tax</li><li>GST</li><li>TDS</li><li>Capital Gains</li><li>Start-ups</li><li>Business Advisory</li>
-			</ul>
-			<div class="vpi-actions">
-				<a class="vpi-btn vpi-btn--ghost" href="/services/">Explore services</a>
-				<a class="vpi-btn vpi-btn--dark" href="/contact-us/">Schedule a call</a>
+<main id="content" class="site-main page type-page status-publish hentry vpt-main">
+	<div class="vpt-wrap">
+		<div class="vpt-hero">
+		<div class="vpt-grid">
+
+			<div class="vpt-title">
+				<h1 class="vpt-h1">Risk &amp; Due Diligence</h1>
+				<p class="vpt-sub">Independent insight into financial, tax and business risks.</p>
 			</div>
+
+			<p class="vpt-intro">Good decisions depend on knowing what could go wrong. We give investors, buyers, lenders and management an independent view of the financial, tax and business risks in front of them, clearly explained and quantified wherever possible.</p>
+
+			<div class="vpt-tabs" role="tablist" aria-label="Service areas">
+				<span class="vpt-slider" aria-hidden="true"></span>
+				<button class="vpt-tab" type="button" role="tab" data-group="due-diligence" aria-selected="true"><span>Due Diligence</span><i class="vpt-dot"></i></button>
+				<button class="vpt-tab" type="button" role="tab" data-group="transactions" aria-selected="false"><span>Transactions</span><i class="vpt-dot"></i></button>
+				<button class="vpt-tab" type="button" role="tab" data-group="risk" aria-selected="false"><span>Risk &amp; Controls</span><i class="vpt-dot"></i></button>
+			</div>
+
+			<div class="vpt-side">
+				<span class="vpt-slider" aria-hidden="true"></span>
+				<p class="vpt-side-label">What all includes</p>
+				<div class="vpt-side-list" data-group="due-diligence" role="tablist" aria-label="Due Diligence services">
+					<button class="vpt-side-btn" type="button" role="tab" data-item="financial" aria-selected="true"><span>Financial Due Diligence</span><i class="vpt-dot"></i></button>
+					<button class="vpt-side-btn" type="button" role="tab" data-item="tax" aria-selected="false"><span>Tax Due Diligence</span><i class="vpt-dot"></i></button>
+					<button class="vpt-side-btn" type="button" role="tab" data-item="gst" aria-selected="false"><span>GST Due Diligence</span><i class="vpt-dot"></i></button>
+					<button class="vpt-side-btn" type="button" role="tab" data-item="commercial" aria-selected="false"><span>Business &amp; Commercial Due Diligence</span><i class="vpt-dot"></i></button>
+				</div>
+				<div class="vpt-side-list" data-group="transactions" role="tablist" aria-label="Transactions services" hidden>
+					<button class="vpt-side-btn" type="button" role="tab" data-item="pre-investment" aria-selected="true"><span>Pre-Investment Due Diligence</span><i class="vpt-dot"></i></button>
+					<button class="vpt-side-btn" type="button" role="tab" data-item="transaction" aria-selected="false"><span>Transaction Due Diligence</span><i class="vpt-dot"></i></button>
+				</div>
+				<div class="vpt-side-list" data-group="risk" role="tablist" aria-label="Risk &amp; Controls services" hidden>
+					<button class="vpt-side-btn" type="button" role="tab" data-item="risk-assessment" aria-selected="true"><span>Risk Assessment</span><i class="vpt-dot"></i></button>
+					<button class="vpt-side-btn" type="button" role="tab" data-item="internal-controls" aria-selected="false"><span>Internal Control Reviews</span><i class="vpt-dot"></i></button>
+				</div>
+			</div>
+
+			<div class="vpt-card">
+				<section class="vpt-panel is-active" role="tabpanel" data-item="financial" data-group="due-diligence">
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-body">
+						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial <em>Due Diligence</em></h2>
+						<p>We test the numbers behind a business: the quality and sustainability of earnings, working capital, debt and off-balance-sheet items. You learn what you are really paying for and where the price or terms should change.</p>
+					</div>
+				</section>
+				<section class="vpt-panel" role="tabpanel" data-item="tax" data-group="due-diligence">
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-audit.webp" type="image/webp"><img src="/images/services/jpeg/tax-audit.jpg" alt="Auditors reviewing files and a laptop" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-body">
+						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Tax <em>Due Diligence</em></h2>
+						<p>We review past income tax, TDS and related filings, open assessments and aggressive positions, and estimate the potential exposure, so it can be addressed through price, indemnities or pre-closing fixes.</p>
+					</div>
+				</section>
+				<section class="vpt-panel" role="tabpanel" data-item="gst" data-group="due-diligence">
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/gst-audits.webp" type="image/webp"><img src="/images/services/jpeg/gst-audits.jpg" alt="Consultants reviewing audit files" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-body">
+						<h2 class="vpt-h2"><i class="vpt-glyph"></i>GST <em>Due Diligence</em></h2>
+						<p>GST exposures can build up quietly through wrong classifications, credit claims or missed reconciliations. We examine returns, credits and notices to identify liabilities before they become yours.</p>
+					</div>
+				</section>
+				<section class="vpt-panel" role="tabpanel" data-item="commercial" data-group="due-diligence">
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-market.webp" type="image/webp"><img src="/images/services/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-body">
+						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business &amp; <em>Commercial Due Diligence</em></h2>
+						<p>We look at the market, customers, competitors and business model to test whether the growth story holds up. This helps you judge whether the plan you are backing is realistic.</p>
+					</div>
+				</section>
+				<section class="vpt-panel" role="tabpanel" data-item="pre-investment" data-group="transactions">
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-diligence.webp" type="image/webp"><img src="/images/services/jpeg/su-diligence.jpg" alt="A founder presenting to investors" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-body">
+						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Pre-Investment <em>Due Diligence</em></h2>
+						<p>Before you invest in a company, whether a startup or an established business, we give you a focused review of its finances, compliance and key risks, scaled to the size of the investment and the time available.</p>
+					</div>
+				</section>
+				<section class="vpt-panel" role="tabpanel" data-item="transaction" data-group="transactions">
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-body">
+						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Transaction <em>Due Diligence</em></h2>
+						<p>For acquisitions, mergers and sales, we coordinate financial, tax and commercial diligence into one clear report, highlighting the issues that affect value and the protections you should seek in the agreement.</p>
+					</div>
+				</section>
+				<section class="vpt-panel" role="tabpanel" data-item="risk-assessment" data-group="risk">
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-risk.webp" type="image/webp"><img src="/images/services/jpeg/cfo-risk.jpg" alt="Professionals studying a risk matrix" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-body">
+						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Risk <em>Assessment</em></h2>
+						<p>We help management identify and rank the risks facing the business, from financial and tax to operational and regulatory, and agree practical actions and owners for the ones that matter most.</p>
+					</div>
+				</section>
+				<section class="vpt-panel" role="tabpanel" data-item="internal-controls" data-group="risk">
+					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-secretarial.webp" type="image/webp"><img src="/images/services/jpeg/reg-secretarial.jpg" alt="Professionals conducting a compliance review" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-body">
+						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Internal Control <em>Reviews</em></h2>
+						<p>We test whether your internal controls work in practice, not just on paper, and recommend improvements that reduce errors and fraud without slowing the business down.</p>
+					</div>
+				</section>
+				<div class="vpt-actions">
+					<a class="vpt-btn vpt-btn--ghost" href="/services/">Explore services</a>
+					<a class="vpt-btn vpt-btn--dark" href="/contact-us/">Schedule a call</a>
+				</div>
+			</div>
+
 		</div>
-	</section>
+		</div>
+
+		<section class="vpt-outro">
+			<p>Whether you are about to invest, buy, lend or simply want to know where your own business is exposed, we will give you an independent view you can act on. <a href="/contact-us/">Contact us</a> to discuss your requirements.</p>
+		</section>
+	</div>
 </main>
 <div data-elementor-type="footer" data-elementor-id="51" class="elementor elementor-51 elementor-location-footer" data-elementor-post-type="elementor_library">
 					<section class="elementor-section elementor-top-section elementor-element elementor-element-18a4e857 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="18a4e857" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -568,16 +800,186 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.8" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.25.3" id="pro-elements-handlers-js"></script>
 
-<script id="vp-insights-soon-js">
+<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=3"></script>
+<script id="vp-tax-page-js">
 (function () {
+  'use strict';
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.vpt-tab'));
+  var sideLists = Array.prototype.slice.call(document.querySelectorAll('.vpt-side-list'));
+  var sideBtns = Array.prototype.slice.call(document.querySelectorAll('.vpt-side-btn'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.vpt-panel'));
+  var tabBar = document.querySelector('.vpt-tabs');
+  var sideBox = document.querySelector('.vpt-side');
+  var tabSlider = tabBar ? tabBar.querySelector('.vpt-slider') : null;
+  var sideSlider = sideBox ? sideBox.querySelector('.vpt-slider') : null;
+
+  /* ----- Sliding pill: move the brown pill under the selected button ----- */
+  function moveSlider(slider, container, target) {
+    if (!slider || !container || !target) return;
+    var c = container.getBoundingClientRect();
+    var t = target.getBoundingClientRect();
+    slider.style.width = t.width + 'px';
+    slider.style.height = t.height + 'px';
+    slider.style.transform = 'translate(' + (t.left - c.left) + 'px,' + (t.top - c.top) + 'px)';
+  }
+  // Expose the sticky header height so the first section can fill exactly one screen.
   var header = document.querySelector('.elementor-location-header');
-  function sync() { if (header) document.documentElement.style.setProperty('--vpi-header', header.getBoundingClientRect().height + 'px'); }
-  sync();
-  window.addEventListener('resize', sync);
-  window.addEventListener('load', sync);
+  function syncHeader() {
+    if (header) document.documentElement.style.setProperty('--vpt-header', header.getBoundingClientRect().height + 'px');
+  }
+  function syncSliders() {
+    syncHeader();
+    moveSlider(tabSlider, tabBar, tabBar && tabBar.querySelector('.vpt-tab[aria-selected="true"]'));
+    moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
+  }
+
+  /* ----- Tab state ----- */
+  function activateItem(itemId) {
+    var panel = null;
+    panels.forEach(function (p) {
+      var on = p.getAttribute('data-item') === itemId;
+      p.classList.toggle('is-active', on);
+      if (on) panel = p;
+    });
+    sideBtns.forEach(function (b) {
+      b.setAttribute('aria-selected', b.getAttribute('data-item') === itemId ? 'true' : 'false');
+    });
+    if (panel) {
+      var img = panel.querySelector('img');
+      if (img && img.getAttribute('loading') === 'lazy') img.setAttribute('loading', 'eager');
+    }
+    syncSliders();
+  }
+
+  function activateGroup(groupId, itemId) {
+    tabs.forEach(function (t) {
+      t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
+    });
+    var list = null;
+    sideLists.forEach(function (l) {
+      var on = l.getAttribute('data-group') === groupId;
+      l.hidden = !on;
+      if (on) list = l;
+    });
+    if (!list) return;
+    var target = itemId
+      ? list.querySelector('[data-item="' + itemId + '"]')
+      : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    if (target) activateItem(target.getAttribute('data-item'));
+  }
+
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { activateGroup(t.getAttribute('data-group')); });
+  });
+  sideBtns.forEach(function (b) {
+    b.addEventListener('click', function () { activateItem(b.getAttribute('data-item')); });
+  });
+
+  // Arrow-key navigation within each tablist.
+  function keyNav(list, selector) {
+    list.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' && e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+      var items = Array.prototype.slice.call(list.querySelectorAll(selector));
+      var i = items.indexOf(document.activeElement);
+      if (i < 0) return;
+      e.preventDefault();
+      var next = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? (i + 1) % items.length : (i - 1 + items.length) % items.length;
+      items[next].focus();
+      items[next].click();
+    });
+  }
+  if (tabBar) keyNav(tabBar, '.vpt-tab');
+  sideLists.forEach(function (l) { keyNav(l, '.vpt-side-btn'); });
+
+  // Open the first tab and its first service, whatever this page's groups are.
+  if (tabs.length) activateGroup(tabs[0].getAttribute('data-group'));
+
+  // Place the pills instantly on first paint, then enable the slide transition.
+  window.requestAnimationFrame(function () {
+    syncSliders();
+    window.requestAnimationFrame(function () {
+      if (tabSlider) tabSlider.classList.add('is-ready');
+      if (sideSlider) sideSlider.classList.add('is-ready');
+    });
+  });
+  window.addEventListener('resize', syncSliders);
+
+  /* ----- Two-screen scrolling (desktop): one wheel gesture moves between the
+     component screen and the closing text + footer screen. ----- */
+  var twoScreen = window.matchMedia('(min-width:1025px) and (min-height:600px)');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var animating = false;
+  var lockUntil = 0;
+
+  function maxScroll() {
+    return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  }
+  function glideTo(targetY) {
+    var startY = window.pageYOffset;
+    var dist = targetY - startY;
+    if (Math.abs(dist) < 1) return;
+    if (reduceMotion.matches) { window.scrollTo(0, targetY); return; }
+    var duration = Math.min(900, Math.max(550, Math.abs(dist) * 0.9));
+    var t0 = null;
+    animating = true;
+    function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+    function finish() {
+      if (!animating) return;
+      clearTimeout(safety);
+      window.scrollTo(0, targetY);
+      animating = false;
+      lockUntil = Date.now() + 250;
+    }
+    // requestAnimationFrame is throttled or paused when the window is hidden or
+    // occluded. This guarantees the move completes either way.
+    var safety = setTimeout(finish, duration + 400);
+    function step(now) {
+      if (!animating) return;
+      if (document.hidden) { finish(); return; }
+      if (t0 === null) t0 = now;
+      var p = Math.min(1, (now - t0) / duration);
+      if (p >= 1) { finish(); return; }
+      window.scrollTo(0, startY + dist * ease(p));
+      window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+  }
+  function goTo(dir) {
+    var y = window.pageYOffset, max = maxScroll();
+    if (dir > 0 && y >= max - 1) return false;
+    if (dir < 0 && y <= 1) return false;
+    glideTo(dir > 0 ? max : 0);
+    return true;
+  }
+
+  window.addEventListener('wheel', function (e) {
+    if (!twoScreen.matches || e.ctrlKey) return;
+    if (Math.abs(e.deltaY) < 2) return;
+    var dir = e.deltaY > 0 ? 1 : -1;
+    var y = window.pageYOffset, max = maxScroll();
+    if ((dir > 0 && y >= max - 1) || (dir < 0 && y <= 1)) return; // nothing to do at the ends
+    e.preventDefault();
+    if (animating || Date.now() < lockUntil) return; // swallow trackpad inertia
+    goTo(dir);
+  }, { passive: false });
+
+  window.addEventListener('keydown', function (e) {
+    if (!twoScreen.matches || e.altKey || e.ctrlKey || e.metaKey) return;
+    var tag = (document.activeElement && document.activeElement.tagName) || '';
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test(tag) || (document.activeElement && document.activeElement.isContentEditable)) return;
+    var dir = 0;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === 'End' || (e.key === ' ' && !e.shiftKey)) dir = 1;
+    else if (e.key === 'ArrowUp' || e.key === 'PageUp' || e.key === 'Home' || (e.key === ' ' && e.shiftKey)) dir = -1;
+    if (!dir) return;
+    e.preventDefault();
+    if (animating) return;
+    goTo(dir);
+  });
+  window.addEventListener('load', syncSliders);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncSliders);
 })();
 </script>
-<script id="zz-site-mobile-js" src="/wp-content/themes/hello-elementor/zz-site-mobile.js?v=3"></script>
 </body>
 </html>
 
