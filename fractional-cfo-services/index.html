@@ -210,9 +210,12 @@ body{background:#fff;}
 /* Main card */
 .vpt-card{position:relative;background:var(--vpt-soft);border-radius:30px;padding:6px 6px 28px;box-shadow:var(--vpt-shadow);min-height:100%;}
 .vpt-panel{display:none;}
-.vpt-panel.is-active{display:block;animation:vptFade .6s var(--vpt-ease) both;}
+.vpt-panel.is-active{display:block;}
+/* Text fades up; the photo slides in step with the pill (service-page.js). */
+.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
 @keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
-.vpt-media{border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
+.vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -238,7 +241,7 @@ body{background:#fff;}
 .vpt-outro p{margin:0;font-family:var(--vpt-sans);font-size:17px;line-height:1.7;color:var(--vpt-muted);}
 .vpt-outro a{color:var(--vpt-brand);font-weight:600;text-decoration:underline;text-underline-offset:4px;}
 @media (prefers-reduced-motion:reduce){
-  .vpt-panel.is-active{animation:none;}
+  .vpt-panel.is-active .vpt-body{animation:none;}
   .vpt-slider.is-ready{transition:none;}
 }
 
@@ -850,8 +853,35 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
+  /* ----- Photo slide: the new photo pushes the old one out in the same
+     direction, with the same timing, as the pill that was clicked
+     (sideways for the top tabs, up/down for the side list). ----- */
+  var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  function slidePhoto(oldPanel, newPanel, dx, dy) {
+    if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
+    if (reduceMotionMQ.matches || !Element.prototype.animate) return;
+    var box = newPanel.querySelector('.vpt-media');
+    var incoming = box && box.firstElementChild;
+    var oldPic = oldPanel.querySelector('.vpt-media > :not(.vpt-media-out)');
+    if (!incoming || !oldPic) return;
+    Array.prototype.forEach.call(document.querySelectorAll('.vpt-media-out'), function (n) { n.remove(); });
+    var outgoing = oldPic.cloneNode(true);
+    outgoing.classList.add('vpt-media-out');
+    outgoing.setAttribute('aria-hidden', 'true');
+    box.appendChild(outgoing);
+    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
+    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
+    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
+    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
+    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
+  }
+  function indexIn(list, el) { return list.indexOf(el); }
+
   /* ----- Tab state ----- */
-  function activateItem(itemId) {
+  function activateItem(itemId, dx, dy) {
+    var oldPanel = document.querySelector('.vpt-panel.is-active');
     var panel = null;
     panels.forEach(function (p) {
       var on = p.getAttribute('data-item') === itemId;
@@ -865,10 +895,14 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
       var img = panel.querySelector('img');
       if (img && img.getAttribute('loading') === 'lazy') img.setAttribute('loading', 'eager');
     }
+    slidePhoto(oldPanel, panel, dx || 0, dy || 0);
     syncSliders();
   }
 
   function activateGroup(groupId, itemId) {
+    var oldTab = tabBar && tabBar.querySelector('.vpt-tab[aria-selected="true"]');
+    var newTab = tabs.filter(function (t) { return t.getAttribute('data-group') === groupId; })[0];
+    var dx = oldTab && newTab ? Math.sign(indexIn(tabs, newTab) - indexIn(tabs, oldTab)) : 0;
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
@@ -882,14 +916,19 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
-    if (target) activateItem(target.getAttribute('data-item'));
+    if (target) activateItem(target.getAttribute('data-item'), dx, 0);
   }
 
   tabs.forEach(function (t) {
     t.addEventListener('click', function () { activateGroup(t.getAttribute('data-group')); });
   });
   sideBtns.forEach(function (b) {
-    b.addEventListener('click', function () { activateItem(b.getAttribute('data-item')); });
+    b.addEventListener('click', function () {
+      var list = Array.prototype.slice.call(b.parentNode.querySelectorAll('.vpt-side-btn'));
+      var cur = b.parentNode.querySelector('.vpt-side-btn[aria-selected="true"]');
+      var dy = cur ? Math.sign(indexIn(list, b) - indexIn(list, cur)) : 0;
+      activateItem(b.getAttribute('data-item'), 0, dy);
+    });
   });
 
   // Arrow-key navigation within each tablist.

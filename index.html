@@ -207,9 +207,6 @@ gtag("config", "GT-TX9689S5");
 
   /* 1) Hero + Who We Are: photos are capped to a share of the window height
      (--vp-header is set by the script) so the first screen fits any window. */
-  .home .elementor-element-746da61 img[src*="businessman-presenting-to-boardroom"]{height:min(422px, calc((100vh - var(--vp-header,104px)) * 0.44)) !important;width:100%;object-fit:cover;}
-  .home .elementor-element-5b7e454c img[src*="financial-advisors-in-office"]{height:min(307px, calc((100vh - var(--vp-header,104px)) * 0.36)) !important;width:100%;object-fit:cover;}
-  .home .elementor-element-5b7e454c .elementor-element-f7da20e{margin-bottom:10px !important;}
 
   /* 2) Our Services */
   .home .elementor-element-475a9772{padding-top:24px !important;padding-bottom:28px !important;}
@@ -266,7 +263,8 @@ gtag("config", "GT-TX9689S5");
   .home .vp-duo > .elementor-section{transition:padding .6s cubic-bezier(.22,.61,.36,1),opacity .4s ease;}
   .home .vp-duo.is-expanded{grid-template-columns:minmax(0,0fr) minmax(0,1fr);}
   .home .vp-duo.is-expanded > .elementor-element-786b4f7f{padding-left:0 !important;padding-right:0 !important;opacity:0;overflow:hidden;align-self:start;height:0;min-height:0 !important;}
-  .home .vp-duo.is-expanded > .elementor-element-581e20b3{padding-left:max(24px, calc(100% - 570px)) !important;}
+  /* Expanded, this half spans the whole row: pad both sides so the review lines up with the 1140px content width. */
+  .home .vp-duo.is-expanded > .elementor-element-581e20b3{padding-left:max(24px, calc((100% - 1140px) / 2)) !important;padding-right:max(24px, calc((100% - 1140px) / 2)) !important;}
   .home .vp-duo.is-expanded .elementor-element-03e44b8 .swiper-wrapper{min-height:0 !important;}
 
   /* 4) Get in Touch + footer */
@@ -283,7 +281,6 @@ gtag("config", "GT-TX9689S5");
 
 /* ---------- Tablets (768–1024px): scale the laptop layout down ---------- */
 @media (min-width:768px) and (max-width:1024px){
-  .home .elementor-element-165c3e3 .elementor-heading-title{font-size:38px !important;line-height:1.15 !important;}
   .home .elementor-element-7716e755 .elementor-heading-title,
   .home .elementor-element-6554decb .elementor-heading-title,
   .home .elementor-element-2c2a6daa .elementor-heading-title,
@@ -295,23 +292,6 @@ gtag("config", "GT-TX9689S5");
 
 /* ---------- Phones (≤767px) ---------- */
 @media (max-width:767px){
-  /* Hero */
-  .home .elementor-element-746da61{padding-top:20px !important;padding-bottom:12px !important;}
-  .home .elementor-element-165c3e3 .elementor-heading-title{font-size:30px !important;line-height:1.18 !important;letter-spacing:0 !important;}
-  .home .elementor-element-165c3e3{margin-bottom:14px !important;}
-  .home .elementor-element-51261f2,.home .elementor-element-51261f2 p{font-size:16px !important;line-height:1.6 !important;}
-  .home .elementor-element-51261f2{margin-bottom:16px !important;}
-  .home .elementor-element-e2b93f4 .elementor-button-wrapper{text-align:left !important;}
-  .home .elementor-element-e2b93f4 .elementor-button{padding:14px 26px !important;font-size:16px !important;}
-  .home .elementor-element-746da61 img{border-radius:18px;}
-
-  /* Who we are */
-  .home .elementor-element-5b7e454c{padding-top:12px !important;padding-bottom:28px !important;}
-  .home .elementor-element-f7da20e .elementor-heading-title{white-space:normal !important;line-height:1.15 !important;}
-  .home .elementor-element-f7da20e .elementor-heading-title span:first-child{font-size:44px !important;}
-  .home .elementor-element-f7da20e .elementor-heading-title span:last-child{font-size:22px !important;}
-  .home .elementor-element-7ae5f873,.home .elementor-element-7ae5f873 p,.home .elementor-element-7ae5f873 li{font-size:15.5px !important;line-height:1.65 !important;}
-
   /* Our Services */
   .home .elementor-element-475a9772{padding-top:36px !important;padding-bottom:40px !important;}
   .home .elementor-element-7716e755 .elementor-heading-title{font-size:28px !important;line-height:1.2 !important;}
@@ -347,6 +327,139 @@ gtag("config", "GT-TX9689S5");
 }
 </style>
 <link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<style id="vp-hero">
+/* Homepage hero: dark brand panel, headline + intro on the left, the four
+   lead services as a 2x2 grid of tiles on the right. */
+.home .vp-hero{--vh-accent:#C9A27E;--vh-accent-2:#B0835C;position:relative;display:flex;align-items:center;box-sizing:border-box;margin:0;padding:80px 0;color:#fff;
+  background:radial-gradient(at 80% 20%, rgba(201,162,126,.20) 0%, rgba(0,0,0,0) 55%), linear-gradient(135deg, #3B2A1E 0%, #24190F 100%);}
+.home .vp-hero-inner{width:100%;max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:72px;align-items:center;box-sizing:border-box;}
+.home .vp-hero-eyebrow{display:inline-flex;align-items:center;gap:12px;margin:0 0 20px;font-family:"Poppins",sans-serif;font-size:17px;font-weight:600;color:var(--vh-accent);}
+.home .vp-hero-eyebrow::before{content:"";width:36px;height:1px;background:var(--vh-accent-2);}
+.home .vp-hero-h1{margin:0 0 24px;font-family:"Merriweather",Georgia,serif;font-size:48px;line-height:1.22;font-weight:700;color:#fff;}
+.home .vp-hero-h1 em{font-style:normal;color:var(--vh-accent);}
+.home .vp-hero-sub p{margin:0 0 14px;max-width:580px;font-family:"Poppins",sans-serif;font-size:16px;line-height:1.9;font-weight:400;color:rgba(234,223,205,.85);}
+.home .vp-hero-meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:28px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12);font-family:"Poppins",sans-serif;font-size:15px;font-weight:500;color:rgba(234,223,205,.7);}
+.home .vp-hero-meta .is-primary{color:#fff;font-weight:600;}
+.home .vp-hero-meta a{color:inherit;text-decoration:none;transition:color .3s;}
+.home .vp-hero-meta a:hover,.home .vp-hero-meta a:focus-visible{color:#fff;}
+.home .vp-hero-visual{display:flex;justify-content:center;}
+.home .vp-quad{position:relative;width:400px;height:400px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;}
+.home .vp-quad > a{display:flex;flex-direction:column;justify-content:space-around;padding:30px 20px 30px 44px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);color:#fff;text-decoration:none;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);transition:background .3s,border-color .3s;}
+.home .vp-quad > a:hover,.home .vp-quad > a:focus-visible{background:rgba(201,162,126,.14);border-color:var(--vh-accent-2);outline:none;}
+.home .vp-q-num{font-family:"Merriweather",Georgia,serif;font-size:28px;line-height:1;font-weight:700;color:var(--vh-accent);}
+.home .vp-q-label{font-family:"Poppins",sans-serif;font-size:14.5px;line-height:1.4;font-weight:600;color:#fff;}
+.home .vp-quad-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:84px;height:84px;display:flex;align-items:center;justify-content:center;background:#2E2117;border:1px solid rgba(201,162,126,.45);font-family:"Merriweather",Georgia,serif;font-size:24px;font-weight:700;color:var(--vh-accent);box-shadow:0 12px 40px rgba(201,162,126,.28);pointer-events:none;}
+@media (max-width:1024px){
+  .home .vp-hero{padding:56px 0;}
+  .home .vp-hero-inner{grid-template-columns:minmax(0,1fr);gap:48px;}
+  .home .vp-hero-h1{font-size:40px;}
+}
+@media (max-width:600px){
+  .home .vp-hero{padding:40px 0 44px;}
+  .home .vp-hero-inner{padding:0 20px;gap:36px;}
+  .home .vp-hero-eyebrow{margin-bottom:14px;font-size:15px;}
+  .home .vp-hero-h1{font-size:31px;margin-bottom:16px;}
+  .home .vp-hero-sub p{font-size:15.5px;line-height:1.8;}
+  .home .vp-hero-meta{gap:10px 20px;margin-top:22px;padding-top:22px;}
+  .home .vp-quad{width:100%;max-width:340px;height:auto;aspect-ratio:1;}
+  .home .vp-quad > a{padding:20px 12px 20px 26px;}
+  .home .vp-q-num{font-size:22px;}
+  .home .vp-q-label{font-size:12.5px;}
+  .home .vp-quad-center{width:66px;height:66px;font-size:20px;}
+}
+</style>
+<style id="vp-about">
+/* Homepage "Who we are": heading across the top, story on the left,
+   four figures in a bordered 2x2 grid on the right. */
+.home .vp-about{--va-ink:#2B1D14;--va-accent:#8A6245;display:flex;align-items:center;box-sizing:border-box;margin:0;padding:80px 0;background:#F8F4EE;color:var(--va-ink);}
+.home .vp-about-inner{width:100%;max-width:1140px;margin:0 auto;padding:0 24px;box-sizing:border-box;}
+.home .vp-about-eyebrow{display:inline-flex;align-items:center;gap:14px;margin:0 0 16px;font-family:"Poppins",sans-serif;font-size:17px;font-weight:600;color:#6B4D37;}
+.home .vp-about-eyebrow::before{content:"";width:40px;height:1px;background:#6B4D37;}
+.home .vp-about-h2{margin:0 0 48px;max-width:860px;font-family:"Merriweather",Georgia,serif;font-size:42px;line-height:1.25;font-weight:700;color:#1F1F1F;}
+.home .vp-about-h2 em{font-style:normal;color:#6B4D37;}
+.home .vp-about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center;}
+.home .vp-about-copy p{margin:0 0 18px;font-family:"Poppins",sans-serif;font-size:16px;line-height:1.95;font-weight:400;color:#1F1F1F;}
+.home .vp-about-copy p:last-child{margin-bottom:0;}
+.home .vp-about-copy strong{font-weight:600;color:#6B4D37;}
+.home .vp-about-stats{display:grid;grid-template-columns:1fr 1fr;margin:0;border:1px solid #E4D9CB;}
+.home .vp-about-stats > div{display:flex;flex-direction:column-reverse;align-items:center;justify-content:center;gap:14px;min-height:180px;padding:24px 16px;text-align:center;box-sizing:border-box;}
+.home .vp-about-stats > div:nth-child(odd){border-right:1px solid #E4D9CB;}
+.home .vp-about-stats > div:nth-child(-n+2){border-bottom:1px solid #E4D9CB;}
+.home .vp-about-stats dd{margin:0;font-family:"Merriweather",Georgia,serif;font-size:40px;line-height:1;font-weight:700;color:#6B4D37;}
+.home .vp-about-stats dt{font-family:"Poppins",sans-serif;font-size:15px;line-height:1.45;font-weight:500;color:#1F1F1F;}
+/* Short laptop screens: less padding, so the section needs little or no scaling to fit. */
+@media (min-width:1025px) and (max-height:780px){
+  .home .vp-hero,.home .vp-about{padding:32px 0;}
+  .home .vp-about-h2{margin-bottom:28px;}
+  .home .vp-about-copy p{line-height:1.8;margin-bottom:14px;}
+  .home .vp-about-stats > div{min-height:150px;}
+}
+@media (max-width:1024px){
+  .home .vp-about{padding:64px 0;}
+  .home .vp-about-h2{font-size:36px;margin-bottom:36px;}
+  .home .vp-about-grid{grid-template-columns:minmax(0,1fr);gap:44px;}
+}
+@media (max-width:600px){
+  .home .vp-about{padding:48px 0;}
+  .home .vp-about-inner{padding:0 20px;}
+  .home .vp-about-eyebrow{font-size:15px;margin-bottom:12px;}
+  .home .vp-about-h2{font-size:28px;margin-bottom:26px;}
+  .home .vp-about-copy p{font-size:15.5px;line-height:1.75;margin-bottom:16px;}
+  .home .vp-about-stats > div{min-height:130px;padding:20px 10px;gap:10px;}
+  .home .vp-about-stats dd{font-size:32px;}
+  .home .vp-about-stats dt{font-size:13px;}
+}
+</style>
+<style id="vp-services">
+/* Homepage "What we do": heading + intro, then all eight service lines as a
+   4x2 grid of linked tiles (site fonts: Merriweather headings, Poppins text). */
+.home .vp-services{display:flex;align-items:center;box-sizing:border-box;margin:0;padding:48px 0;background:#fff;color:#1F1F1F;}
+.home .vp-services-inner{width:100%;max-width:1140px;margin:0 auto;padding:0 24px;box-sizing:border-box;}
+.home .vp-services-head{display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin:0 0 32px;}
+.home .vp-services-eyebrow{display:inline-flex;align-items:center;gap:14px;margin:0 0 16px;font-family:"Poppins",sans-serif;font-size:17px;font-weight:600;color:#6B4D37;}
+.home .vp-services-eyebrow::before{content:"";width:40px;height:1px;background:#6B4D37;}
+.home .vp-services-h2{margin:0;font-family:"Merriweather",Georgia,serif;font-size:42px;line-height:1.25;font-weight:700;color:#1F1F1F;}
+.home .vp-services-h2 em{font-style:normal;color:#6B4D37;}
+.home .vp-services-intro{margin:0;max-width:430px;font-family:"Poppins",sans-serif;font-size:16px;line-height:1.85;color:#4A4A4A;}
+.home .vp-services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin:0;padding:0;list-style:none;background:#E4D9CB;border:1px solid #E4D9CB;}
+.home .vp-services-grid > li{margin:0;background:#fff;}
+.home .vp-services-grid a{display:flex;flex-direction:column;height:100%;padding:24px 24px 22px;box-sizing:border-box;color:inherit;text-decoration:none;transition:background-color .3s ease;}
+.home .vp-services-grid a:hover,.home .vp-services-grid a:focus-visible{background:#F8F4EE;outline:none;}
+.home .vp-s-num{font-family:"Merriweather",Georgia,serif;font-size:20px;font-weight:700;line-height:1;color:#6B4D37;}
+.home .vp-services-grid h3{margin:14px 0 8px;font-family:"Merriweather",Georgia,serif;font-size:19px;line-height:1.35;font-weight:700;color:#1F1F1F;}
+.home .vp-services-grid p{margin:0 0 14px;font-family:"Poppins",sans-serif;font-size:14.5px;line-height:1.6;color:#4A4A4A;}
+.home .vp-s-more{display:inline-flex;align-items:center;gap:8px;margin-top:auto;font-family:"Poppins",sans-serif;font-size:14.5px;font-weight:600;color:#6B4D37;}
+.home .vp-s-more svg{width:16px;height:16px;transition:transform .35s cubic-bezier(.22,.61,.36,1);}
+.home .vp-services-grid a:hover .vp-s-more svg,.home .vp-services-grid a:focus-visible .vp-s-more svg{transform:translateX(4px);}
+@media (min-width:1025px) and (max-height:780px){
+  .home .vp-services{padding:22px 0;}
+  .home .vp-services-head{margin-bottom:20px;}
+  .home .vp-services-eyebrow{margin-bottom:10px;}
+  .home .vp-services-h2{font-size:34px;}
+  .home .vp-services-intro{font-size:15px;line-height:1.7;}
+  .home .vp-services-grid a{padding:18px 20px 16px;}
+  .home .vp-services-grid h3{font-size:17.5px;margin:10px 0 6px;}
+  .home .vp-services-grid p{font-size:14px;margin-bottom:10px;line-height:1.55;}
+}
+@media (max-width:1024px){
+  .home .vp-services{padding:64px 0;}
+  .home .vp-services-head{flex-direction:column;align-items:flex-start;gap:18px;margin-bottom:32px;}
+  .home .vp-services-h2{font-size:36px;}
+  .home .vp-services-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .home .vp-services-grid a{min-height:0;}
+}
+@media (max-width:600px){
+  .home .vp-services{padding:48px 0;}
+  .home .vp-services-inner{padding:0 20px;}
+  .home .vp-services-eyebrow{font-size:15px;margin-bottom:12px;}
+  .home .vp-services-h2{font-size:28px;}
+  .home .vp-services-intro{font-size:15.5px;line-height:1.75;}
+  .home .vp-services-grid{grid-template-columns:minmax(0,1fr);}
+  .home .vp-services-grid a{padding:22px 20px;}
+  .home .vp-services-grid h3{font-size:18px;margin:12px 0 6px;}
+  .home .vp-services-grid p{font-size:14.5px;margin-bottom:12px;}
+}
+</style>
 </head>
 <body class="home wp-singular page-template-default page page-id-9 wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page elementor-page-9">
 
@@ -416,203 +529,77 @@ gtag("config", "GT-TX9689S5");
 	
 	<div class="page-content">
 				<div data-elementor-type="wp-page" data-elementor-id="9" class="elementor elementor-9" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-746da61 e-flex e-con-boxed e-con e-parent" data-id="746da61" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-3d79607 e-con-full e-flex e-con e-child" data-id="3d79607" data-element_type="container" style="margin-right:0;">
-				<div class="elementor-element elementor-element-165c3e3 elementor-invisible elementor-widget elementor-widget-heading" data-id="165c3e3" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h1 class="elementor-heading-title elementor-size-default" style="font-size:44px;line-height:1.2;">EXPERT GUIDANCE,<br>SEAMLESS COMPLIANCE</h1>		</div>
-				</div>
-				<div class="elementor-element elementor-element-51261f2 elementor-widget elementor-widget-text-editor" data-id="51261f2" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>Navigate complex tax laws, financial planning, and regulatory compliance with precision.<br>We deliver tailored strategies that protect and grow your enterprise.</p><p><span style="color: #6a4138;"><strong>Let us guide you toward financial success!</strong></span></p>						</div>
-				</div>
-				<div class="elementor-element elementor-element-e2b93f4 elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="e2b93f4" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="/contact-us/">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Contact Us</span>
-					</span>
-					</a>
-				</div>
+				<section class="vp-hero" aria-label="Introduction">
+					<div class="vp-hero-inner">
+						<div class="vp-hero-copy">
+							<p class="vp-hero-eyebrow">Tax, CFO &amp; business advisory</p>
+							<h1 class="vp-hero-h1">Expert guidance, <em>seamless compliance</em></h1>
+							<div class="vp-hero-sub">
+								<p>Varish Partners is an Indian tax and business advisory firm built on a simple belief: growing businesses deserve senior, specialist advice on every decision that shapes them, and an adviser who stays accountable for the outcome.</p>
+								<p>From tax and compliance to CFO support, strategy, transactions and cross-border expansion, we work alongside founders and promoters across India, and a partner stays involved in every mandate from first call to final filing.</p>
+							</div>
+							<div class="vp-hero-meta">
+								<span class="is-primary">Mangaluru</span>
+								<a href="tel:+918748020569">+91 87480 20569</a>
+								<a href="mailto:info@varishpartners.com">info@varishpartners.com</a>
+							</div>
 						</div>
-				</div>
-				</div>
-		<div class="elementor-element e-con-full e-flex e-con e-child" data-element_type="container" style="align-items:center;">
-			<img src="/images/businessman-presenting-to-boardroom.jpeg" alt="Businessman presenting to boardroom" style="width:100%;height:auto;max-height:430px;object-fit:cover;border-radius:6px;display:block;" />
-		</div>
+						<div class="vp-hero-visual">
+							<nav class="vp-quad" aria-label="Core services">
+								<a href="/tax-consultancy-compliances/"><span class="vp-q-num">01</span><span class="vp-q-label">Tax &amp;<br>Compliance</span></a>
+								<a href="/fractional-cfo-services/"><span class="vp-q-num">02</span><span class="vp-q-label">CFO &amp; Financial<br>Advisory</span></a>
+								<a href="/strategic-consulting-impact/"><span class="vp-q-num">03</span><span class="vp-q-label">Strategy &amp;<br>Growth</span></a>
+								<a href="/business-advisory-services/"><span class="vp-q-num">04</span><span class="vp-q-label">Transactions &amp;<br>Cross-Border</span></a>
+								<span class="vp-quad-center" aria-hidden="true">VP</span>
+							</nav>
+						</div>
 					</div>
-				</div>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-5b7e454c elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5b7e454c" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default" style="flex-direction: row-reverse;">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4256f3b8" data-id="4256f3b8" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-28df8d0c elementor-widget elementor-widget-heading" data-id="28df8d0c" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Who We Are</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-f7da20e elementor-invisible elementor-widget elementor-widget-heading" data-id="f7da20e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default" style="line-height:1.15;white-space:nowrap;"><span style="font-size:64px;">YOUR</span> <span style="font-size:28px;font-weight:600;">Trusted Financial Advisors</span></h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-7ae5f873 elementor-widget elementor-widget-text-editor" data-id="7ae5f873" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>At Varish Partners, we turn complex financial decisions into clear, actionable strategies tailored to your growth.</p>
-						<ul style="list-style:none;padding-left:0;margin-left:0;">
-							<li><strong>Tax &amp; GST:</strong> End-to-end consultancy and seamless regulatory compliance.</li>
-							<li><strong>Financial Planning:</strong> Strategic wealth and portfolio management for long-term security.</li>
-							<li><strong>Business Advisory:</strong> High-impact guidance to optimize financial performance.</li>
-						</ul>						</div>
-				</div>
+				</section>
+				<section class="vp-about" aria-labelledby="vp-about-h">
+					<div class="vp-about-inner">
+						<p class="vp-about-eyebrow">Who we are</p>
+						<h2 class="vp-about-h2" id="vp-about-h">Big-firm rigour. <em>Owner-level care.</em></h2>
+						<div class="vp-about-grid">
+							<div class="vp-about-copy">
+								<p><strong>Varish Partners</strong> was founded to give growing businesses the tax, finance and advisory support usually reserved for large companies. The firm is led by <strong>Varun Shenoy</strong>, Managing Partner, whose work centres on <strong>startup advisory</strong>, finance, taxation and business strategy.</p>
+								<p>He is joined by <strong>Vishwanath Prabhu</strong>, Partner, who specialises in <strong>GST compliance</strong> and statutory and concurrent <strong>bank audits</strong>. Their client work spans technology, e-commerce, real estate, construction, consumer goods and retail.</p>
+								<p>Our eight service lines, from Tax and CFO support to Strategy, Transactions, Cross-Border, Startups, Risk and Business Setup, are built to work as one team, so advice on one question already accounts for the others.</p>
+							</div>
+							<dl class="vp-about-stats">
+								<div><dt>Years of expertise</dt><dd>20+</dd></div>
+								<div><dt>Service lines</dt><dd>8</dd></div>
+								<div><dt>Partners</dt><dd>2</dd></div>
+								<div><dt>Team for tax, finance &amp; strategy</dt><dd>1</dd></div>
+							</dl>
+						</div>
 					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5f69622a" data-id="5f69622a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated" style="display:flex;flex-direction:column;justify-content:flex-end;">
-						<div class="elementor-element elementor-element-1f7e9da1 elementor-widget elementor-widget-image" data-id="1f7e9da1" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<img src="/images/financial-advisors-in-office.jpeg" alt="Financial advisors in office" style="width:100%;height:auto;max-height:430px;object-fit:cover;border-radius:6px;display:block;" />
-				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
+				</section>
 				
 				
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-475a9772 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="475a9772" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4721ab62" data-id="4721ab62" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-27fb1ff6 elementor-widget elementor-widget-heading" data-id="27fb1ff6" data-element_type="widget" data-widget_type="heading.default" style="margin-bottom:6px;">
-				<div class="elementor-widget-container">
-			<h6 class="elementor-heading-title elementor-size-default">Our Services</h6>		</div>
-				</div>
-				<div class="elementor-element elementor-element-7716e755 elementor-invisible elementor-widget elementor-widget-heading" data-id="7716e755" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default" style="margin-bottom:6px;">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">We Serve The Best Service</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-3d628d6b elementor-widget elementor-widget-spacer" data-id="3d628d6b" data-element_type="widget" data-widget_type="spacer.default" style="margin-bottom:6px;">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner" style="padding-top:6px;"></div>
-		</div>
-				</div>
-				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-6f77ff4a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6f77ff4a" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-4b4210e8 animated-fast elementor-invisible" data-id="4b4210e8" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-d21b88f elementor-widget elementor-widget-image" data-id="d21b88f" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" width="100" height="100" src="/wp-content/uploads/2024/08/icons8-council-tax-100.png" class="attachment-full size-full wp-image-478" alt="" />													</div>
-				</div>
-				<div class="elementor-element elementor-element-4ad2f9c8 elementor-widget elementor-widget-heading" data-id="4ad2f9c8" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Tax Consultancy and Compliance</h4>		</div>
-				</div>
-				<div class="elementor-element elementor-element-21fcd6c6 elementor-widget elementor-widget-text-editor" data-id="21fcd6c6" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>Assist individuals and businesses with tax planning, filing returns, and ensuring compliance with tax laws. Provide advice on tax-saving investments and deductions.</p>						</div>
-				</div>
-				<div class="elementor-element elementor-element-66b5fcad elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button" data-id="66b5fcad" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="/tax-consultancy-compliances/">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>			</span>
-									<span class="elementor-button-text">Learn More</span>
-					</span>
-					</a>
-				</div>
+				
+<section class="vp-services" aria-labelledby="vp-services-h">
+					<div class="vp-services-inner">
+						<div class="vp-services-head">
+							<div>
+								<p class="vp-services-eyebrow">What we do</p>
+								<h2 class="vp-services-h2" id="vp-services-h">Eight service lines. <em>One team.</em></h2>
+							</div>
+							<p class="vp-services-intro">Each practice is specialist in its own right, and all eight work together, so the tax, finance and strategic view of your business stays in step.</p>
 						</div>
-				</div>
+						<ul class="vp-services-grid">
+								<li><a href="/tax-consultancy-compliances/"><span class="vp-s-num">01</span><h3>Tax Advisory &amp; Compliance</h3><p>Helping businesses manage tax efficiently, compliantly and strategically.</p><span class="vp-s-more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+								<li><a href="/fractional-cfo-services/"><span class="vp-s-num">02</span><h3>CFO &amp; Financial Advisory</h3><p>Financial clarity and decision support for growing businesses.</p><span class="vp-s-more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+								<li><a href="/strategic-consulting-impact/"><span class="vp-s-num">03</span><h3>Strategy &amp; Growth Advisory</h3><p>Turning business ambitions into executable growth strategies.</p><span class="vp-s-more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+								<li><a href="/business-advisory-services/"><span class="vp-s-num">04</span><h3>Transaction &amp; Corporate Advisory</h3><p>Advising businesses through critical transactions and strategic events.</p><span class="vp-s-more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+								<li><a href="/cross-border-international-advisory/"><span class="vp-s-num">05</span><h3>Cross-Border &amp; International Advisory</h3><p>Helping businesses navigate international expansion, investments and transactions.</p><span class="vp-s-more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+								<li><a href="/start-up-advisory-and-consultancy-services/"><span class="vp-s-num">06</span><h3>Startup &amp; Venture Advisory</h3><p>From incorporation to institutional capital and scale.</p><span class="vp-s-more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+								<li><a href="/risk-due-diligence/"><span class="vp-s-num">07</span><h3>Risk &amp; Due Diligence</h3><p>Independent insight into financial, tax and business risks.</p><span class="vp-s-more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+								<li><a href="/business-registration-services/"><span class="vp-s-num">08</span><h3>Business Setup, Compliance &amp; Governance</h3><p>Building the financial and regulatory foundation for businesses.</p><span class="vp-s-more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+						</ul>
 					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-426b31ef elementor-invisible" data-id="426b31ef" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-ca00f6e elementor-widget elementor-widget-image" data-id="ca00f6e" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img decoding="async" width="256" height="256" src="/wp-content/uploads/2024/08/rupee.png" class="attachment-full size-full wp-image-545" alt="" sizes="(max-width: 256px) 100vw, 256px" />													</div>
-				</div>
-				<div class="elementor-element elementor-element-696d1127 elementor-widget elementor-widget-heading" data-id="696d1127" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Financial Planning</h4>		</div>
-				</div>
-				<div class="elementor-element elementor-element-1243e27a elementor-widget elementor-widget-text-editor" data-id="1243e27a" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							Help clients create personalized financial plans, including budgeting, investment strategies, and retirement planning.<br>
-Offer guidance on wealth management, insurance, and risk assessment.						</div>
-				</div>
-				<div class="elementor-element elementor-element-0eb716b elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button" data-id="0eb716b" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="/financial-planning/">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>			</span>
-									<span class="elementor-button-text">Learn More</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2fa0b141 animated-slow elementor-invisible" data-id="2fa0b141" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-03dc9d3 elementor-widget elementor-widget-image" data-id="03dc9d3" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="100" height="100" src="/wp-content/uploads/2024/08/icons8-combo-chart-100.png" class="attachment-full size-full wp-image-480" alt="" />													</div>
-				</div>
-				<div class="elementor-element elementor-element-50127c8 elementor-widget elementor-widget-heading" data-id="50127c8" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Business Advisory Services</h4>		</div>
-				</div>
-				<div class="elementor-element elementor-element-56e8d3e elementor-widget elementor-widget-text-editor" data-id="56e8d3e" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							Advise startups and established businesses on financial strategies, expansion plans, and cost optimization. Assist with business valuation, due diligence, and mergers/acquisitions.						</div>
-				</div>
-				<div class="elementor-element elementor-element-9f5c458 elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button" data-id="9f5c458" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="/business-advisory-services/">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>			</span>
-									<span class="elementor-button-text">Learn More</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<div class="elementor-element elementor-element-76ac97a2 elementor-widget elementor-widget-spacer" data-id="76ac97a2" data-element_type="widget" data-widget_type="spacer.default" style="margin-bottom:6px;">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner" style="padding-top:6px;"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-266305 elementor-align-center elementor-widget elementor-widget-button" data-id="266305" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="/services/">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">More Service</span>
-					</span>
-					</a>
-				</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
+				</section>
+				
+				
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-3f93bbf3 elementor-section-full_width elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-height-default elementor-section-height-default" data-id="3f93bbf3" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 						<div class="elementor-container elementor-column-gap-no">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6f6cc0b3" data-id="6f6cc0b3" data-element_type="column">
@@ -1620,14 +1607,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   // Each screen is a group of top-level sections. On desktop every group is
   // padded out to exactly one window height and the wheel snaps between them.
   var SCREENS = [
-    ['746da61', '5b7e454c'],
-    ['475a9772'],
+    ['.vp-hero'],
+    ['.vp-about'],
+    ['.vp-services'],
     ['.vp-duo'],
     ['753833f7', 'footer']
   ];
   // The section in each group that absorbs spare height. The side-by-side
   // pair grows as a whole (min-height) so both halves stay full height.
-  var FILL = ['5b7e454c', '475a9772', '.vp-duo', '753833f7'];
+  var FILL = ['.vp-hero', '.vp-about', '.vp-services', '.vp-duo', '753833f7'];
   var desktop = window.matchMedia('(min-width:1025px) and (min-height:600px)');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var header = document.querySelector('.elementor-location-header');
