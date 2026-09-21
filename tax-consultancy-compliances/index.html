@@ -136,7 +136,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=20" media="all" />
 <style id="vp-tax-page">
 /* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
    Typography follows the homepage: Merriweather 700 for headings, Poppins for
@@ -212,10 +212,11 @@ body{background:#fff;}
 .vpt-panel{display:none;}
 .vpt-panel.is-active{display:block;}
 /* Text fades up; the photo slides in step with the pill (service-page.js). */
-.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
-@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-panel.is-active .vpt-body{animation:vptFade .4s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
-.vpt-media > .vpt-media-out{position:absolute;inset:0;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;z-index:1;}
+.vpt-media > picture,.vpt-media > img{will-change:transform,opacity;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -416,70 +417,70 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="direct-indirect" data-group="advisory">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-direct.webp" type="image/webp"><img src="/images/services/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-direct.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Direct &amp; <em>Indirect Tax Advisory</em></h2>
 						<p>Income tax and GST are usually handled by different people, which is where gaps and double costs appear. We look at both together, advise on the tax impact of day-to-day business decisions, and give you clear positions you can rely on when filing and when questioned.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="corporate-international" data-group="advisory">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-nri.webp" type="image/webp"><img src="/images/services/jpeg/tax-nri.jpg" alt="A consultant on a video call" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-nri.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-nri.jpg" alt="A consultant on a video call" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Corporate &amp; <em>International Tax</em></h2>
 						<p>Companies face questions on residence, permanent establishment, foreign income and cross-border payments as soon as they deal overseas. We advise on corporate tax positions at home and on how international activity is taxed, so profits are not taxed twice and reporting stays consistent.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="planning" data-group="advisory">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-restructure.webp" type="image/webp"><img src="/images/services/jpeg/reg-restructure.jpg" alt="Business owners discussing company structure" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-restructure.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-restructure.jpg" alt="Business owners discussing company structure" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Tax Planning &amp; <em>Structuring</em></h2>
 						<p>The right structure, set up early, saves far more than any year-end adjustment. We review how your business, its entities and its owners are organised and recommend arrangements that are efficient, commercially sensible and able to stand up to scrutiny.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="transaction" data-group="advisory">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Transaction <em>Tax Advisory</em></h2>
 						<p>Acquisitions, share sales, mergers and restructurings each carry tax consequences that can change the value of the deal. We model those consequences before terms are fixed and advise on structures that protect value for buyers, sellers and promoters.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="gst" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-gst.webp" type="image/webp"><img src="/images/services/jpeg/tax-gst.jpg" alt="A professional explaining a GST summary" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-gst.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-gst.jpg" alt="A professional explaining a GST summary" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>GST Advisory &amp; <em>Compliance</em></h2>
 						<p>We handle GST registrations, monthly and annual returns, reconciliations and input tax credit reviews, and advise on classification, place of supply and e-invoicing questions. The aim is simple: no credit lost to avoidable errors and no surprises when the department asks questions.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="tds" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-tds.webp" type="image/webp"><img src="/images/services/jpeg/tax-tds.jpg" alt="An executive checking figures on a phone" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-tds.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-tds.jpg" alt="An executive checking figures on a phone" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>TDS &amp; <em>Withholding Tax Advisory</em></h2>
 						<p>Getting withholding wrong leads to interest, disallowed expenses and unhappy vendors and employees. We advise on the correct rates and sections for domestic and foreign payments, manage quarterly returns and certificates, and help with lower-deduction applications where they apply.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="health-checks" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-audit.webp" type="image/webp"><img src="/images/services/jpeg/tax-audit.jpg" alt="Auditors reviewing files and a laptop" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-audit.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-audit.jpg" alt="Auditors reviewing files and a laptop" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Tax Reviews &amp; <em>Health Checks</em></h2>
 						<p>A periodic review finds exposures while they are still cheap to fix. We go through your income tax, GST and TDS positions, filings and records, and give you a clear list of gaps, their likely cost and the steps to close them before an audit or notice does it for you.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="transfer-pricing" data-group="specialist">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-reporting.webp" type="image/webp"><img src="/images/services/jpeg/cfo-reporting.jpg" alt="A CFO signing monthly financial statements" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-reporting.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-reporting.jpg" alt="A CFO signing monthly financial statements" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Transfer Pricing <em>Advisory</em></h2>
 						<p>Transactions between related entities must be priced as if they were between strangers. We help set and document arm’s length pricing for goods, services, royalties and funding, prepare the required reports, and support you when those prices are examined.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="due-diligence" data-group="specialist">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Tax <em>Due Diligence</em></h2>
 						<p>Before you invest in or buy a business, you need to know what tax history comes with it. We review past filings, open assessments and risky positions, quantify the exposure, and suggest how it should be handled in the price, warranties or indemnities.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="litigation" data-group="specialist">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-litigation.webp" type="image/webp"><img src="/images/services/jpeg/tax-litigation.jpg" alt="A tax advocate climbing the office steps" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-litigation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-litigation.jpg" alt="A tax advocate climbing the office steps" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Tax Litigation &amp; <em>Representation</em></h2>
 						<p>When a notice, assessment or demand arrives, the quality of the first response often decides the outcome. We draft replies, represent you before tax authorities and appellate forums, and manage disputes with a practical eye on both the merits and the cost of fighting.</p>
@@ -853,11 +854,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
-  /* ----- Photo slide: the new photo pushes the old one out in the same
-     direction, with the same timing, as the pill that was clicked
-     (sideways for the top tabs, up/down for the side list). ----- */
+  /* ----- Photo change: the new photo crossfades in with a short drift in the
+     direction the pill moved (sideways for the top tabs, up/down for the side
+     list), while the old one fades away the other way. ----- */
   var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  var EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var SLIDE = { duration: 520, easing: EASE };
+  var DRIFT = 8; // percent of the photo box
   function slidePhoto(oldPanel, newPanel, dx, dy) {
     if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
     if (reduceMotionMQ.matches || !Element.prototype.animate) return;
@@ -870,11 +873,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     outgoing.classList.add('vpt-media-out');
     outgoing.setAttribute('aria-hidden', 'true');
     box.appendChild(outgoing);
-    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
-    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
-    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
-    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
-    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    var shift = 'translate(' + (dx * DRIFT) + '%,' + (dy * DRIFT) + '%) scale(1.04)';
+    var back = 'translate(' + (-dx * DRIFT) + '%,' + (-dy * DRIFT) + '%) scale(1.04)';
+    incoming.animate([{ transform: shift, opacity: 0 }, { transform: 'none', opacity: 1 }], SLIDE);
+    // fill: 'forwards' keeps the old photo invisible once faded; without it the
+    // copy snaps back to full opacity for a frame before it is removed (a blink).
+    var fade = outgoing.animate([{ transform: 'none', opacity: 1 }, { transform: back, opacity: 0 }],
+      { duration: SLIDE.duration, easing: SLIDE.easing, fill: 'forwards' });
+    fade.onfinish = function () { outgoing.remove(); };
+    // Animations pause in a hidden tab, so also clear it on a timer.
     setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
   }
   function indexIn(list, el) { return list.indexOf(el); }
@@ -906,6 +913,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
+    var animate = dx !== 0 && !reduceMotionMQ.matches && sideBox && Element.prototype.animate;
+    var fromH = animate ? sideBox.offsetHeight : 0;
     var list = null;
     sideLists.forEach(function (l) {
       var on = l.getAttribute('data-group') === groupId;
@@ -916,7 +925,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    // A new list: set its pill in place without gliding across the old one.
+    if (animate && sideSlider) sideSlider.classList.remove('is-ready');
     if (target) activateItem(target.getAttribute('data-item'), dx, 0);
+    if (!animate) return;
+    // Fade the new list in and ease the box to its new height instead of jumping.
+    var toH = sideBox.offsetHeight;
+    list.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (sideSlider) sideSlider.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (fromH !== toH) sideBox.animate([{ height: fromH + 'px' }, { height: toH + 'px' }], { duration: 420, easing: EASE });
+    // Timer, not requestAnimationFrame: rAF pauses in a background tab and the pill would stay hidden.
+    setTimeout(function () { if (sideSlider) sideSlider.classList.add('is-ready'); }, 60);
   }
 
   tabs.forEach(function (t) {

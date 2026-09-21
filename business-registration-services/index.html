@@ -136,7 +136,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=20" media="all" />
 <style id="vp-tax-page">
 /* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
    Typography follows the homepage: Merriweather 700 for headings, Poppins for
@@ -212,10 +212,11 @@ body{background:#fff;}
 .vpt-panel{display:none;}
 .vpt-panel.is-active{display:block;}
 /* Text fades up; the photo slides in step with the pill (service-page.js). */
-.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
-@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-panel.is-active .vpt-body{animation:vptFade .4s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
-.vpt-media > .vpt-media-out{position:absolute;inset:0;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;z-index:1;}
+.vpt-media > picture,.vpt-media > img{will-change:transform,opacity;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -417,77 +418,77 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="incorporation" data-group="setup">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-incorporation.webp" type="image/webp"><img src="/images/services/jpeg/reg-incorporation.jpg" alt="Co-founders shaking hands with their advisor" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-incorporation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-incorporation.jpg" alt="Co-founders shaking hands with their advisor" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business Incorporation &amp; <em>Structuring</em></h2>
 						<p>We help you choose between a private company, LLP, partnership or other form, and handle incorporation from name approval to the registrations needed to start trading.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="ownership" data-group="setup">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-restructure.webp" type="image/webp"><img src="/images/services/jpeg/reg-restructure.jpg" alt="Business owners discussing company structure" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-restructure.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-restructure.jpg" alt="Business owners discussing company structure" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Entity &amp; <em>Ownership Structuring</em></h2>
 						<p>How ownership is split between founders, family members, holding companies and investors affects control, tax and future deals. We design ownership structures that are simple today and flexible for tomorrow.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="gst" data-group="setup">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/gst-register.webp" type="image/webp"><img src="/images/services/jpeg/gst-register.jpg" alt="Entrepreneurs completing a GST registration" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/gst-register.webp" type="image/webp"><img src="/images/services/NEW/jpeg/gst-register.jpg" alt="Entrepreneurs completing a GST registration" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>GST Registration &amp; <em>Compliance</em></h2>
 						<p>We handle GST registration in the right states and categories, file returns on time, reconcile input tax credit every month and respond to routine departmental queries.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="accounting" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/gst-returns.webp" type="image/webp"><img src="/images/services/jpeg/gst-returns.jpg" alt="A professional reconciling invoices on a laptop" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/gst-returns.webp" type="image/webp"><img src="/images/services/NEW/jpeg/gst-returns.jpg" alt="A professional reconciling invoices on a laptop" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Accounting &amp; <em>Bookkeeping</em></h2>
 						<p>We keep your books accurate and up to date, close the accounts every month and prepare financial statements you can rely on for decisions, lenders, investors and tax filings.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="payroll" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-tds.webp" type="image/webp"><img src="/images/services/jpeg/tax-tds.jpg" alt="An executive checking figures on a phone" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-tds.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-tds.jpg" alt="An executive checking figures on a phone" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Payroll &amp; <em>TDS</em></h2>
 						<p>We run monthly payroll, compute tax deductions, manage provident fund and other statutory contributions, and file TDS returns and certificates on time, so employees are paid correctly and the business stays compliant.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="roc" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-post.webp" type="image/webp"><img src="/images/services/jpeg/reg-post.jpg" alt="A secretary organising compliance folders" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-post.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-post.jpg" alt="A secretary organising compliance folders" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>ROC &amp; <em>Corporate Compliance</em></h2>
 						<p>We manage annual filings with the Registrar of Companies, board and shareholder meetings, statutory registers and event-based filings, so your company stays in good standing and avoids penalties.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="regulatory" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-statutory.webp" type="image/webp"><img src="/images/services/jpeg/reg-statutory.jpg" alt="A business owner receiving registration documents" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-statutory.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-statutory.jpg" alt="A business owner receiving registration documents" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Regulatory <em>Compliance</em></h2>
 						<p>Beyond tax and company law, businesses must keep up with labour, shops and establishments, import-export and sector-specific rules. We track these obligations and handle the registrations and filings on your behalf.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="health-checks" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/gst-audits.webp" type="image/webp"><img src="/images/services/jpeg/gst-audits.jpg" alt="Consultants reviewing audit files" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/gst-audits.webp" type="image/webp"><img src="/images/services/NEW/jpeg/gst-audits.jpg" alt="Consultants reviewing audit files" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Compliance <em>Health Checks</em></h2>
 						<p>We review your tax, corporate and regulatory compliance in one exercise, identify gaps and penalties at risk, and give you a clear plan to put things right before an audit, fundraise or sale.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="internal-controls" data-group="governance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-risk.webp" type="image/webp"><img src="/images/services/jpeg/cfo-risk.jpg" alt="Professionals studying a risk matrix" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-risk.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-risk.jpg" alt="Professionals studying a risk matrix" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Internal <em>Controls</em></h2>
 						<p>We put in place the approvals, checks and segregation of duties that protect the business from errors and fraud, sized to your team so controls help rather than slow down daily work.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="sop" data-group="governance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-process.webp" type="image/webp"><img src="/images/services/jpeg/cfo-process.jpg" alt="A CFO and team redesigning a workflow" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-process.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-process.jpg" alt="A CFO and team redesigning a workflow" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>SOP &amp; <em>Process Development</em></h2>
 						<p>Written procedures make work consistent and easier to delegate. We document your finance and compliance processes as clear standard operating procedures that new team members can follow from day one.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="governance" data-group="governance">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Corporate Governance <em>Advisory</em></h2>
 						<p>Good governance builds trust with investors, lenders and partners. We advise boards and promoters on board composition, policies, related party transactions and reporting that match the size and ambitions of the business.</p>
@@ -861,11 +862,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
-  /* ----- Photo slide: the new photo pushes the old one out in the same
-     direction, with the same timing, as the pill that was clicked
-     (sideways for the top tabs, up/down for the side list). ----- */
+  /* ----- Photo change: the new photo crossfades in with a short drift in the
+     direction the pill moved (sideways for the top tabs, up/down for the side
+     list), while the old one fades away the other way. ----- */
   var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  var EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var SLIDE = { duration: 520, easing: EASE };
+  var DRIFT = 8; // percent of the photo box
   function slidePhoto(oldPanel, newPanel, dx, dy) {
     if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
     if (reduceMotionMQ.matches || !Element.prototype.animate) return;
@@ -878,11 +881,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     outgoing.classList.add('vpt-media-out');
     outgoing.setAttribute('aria-hidden', 'true');
     box.appendChild(outgoing);
-    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
-    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
-    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
-    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
-    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    var shift = 'translate(' + (dx * DRIFT) + '%,' + (dy * DRIFT) + '%) scale(1.04)';
+    var back = 'translate(' + (-dx * DRIFT) + '%,' + (-dy * DRIFT) + '%) scale(1.04)';
+    incoming.animate([{ transform: shift, opacity: 0 }, { transform: 'none', opacity: 1 }], SLIDE);
+    // fill: 'forwards' keeps the old photo invisible once faded; without it the
+    // copy snaps back to full opacity for a frame before it is removed (a blink).
+    var fade = outgoing.animate([{ transform: 'none', opacity: 1 }, { transform: back, opacity: 0 }],
+      { duration: SLIDE.duration, easing: SLIDE.easing, fill: 'forwards' });
+    fade.onfinish = function () { outgoing.remove(); };
+    // Animations pause in a hidden tab, so also clear it on a timer.
     setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
   }
   function indexIn(list, el) { return list.indexOf(el); }
@@ -914,6 +921,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
+    var animate = dx !== 0 && !reduceMotionMQ.matches && sideBox && Element.prototype.animate;
+    var fromH = animate ? sideBox.offsetHeight : 0;
     var list = null;
     sideLists.forEach(function (l) {
       var on = l.getAttribute('data-group') === groupId;
@@ -924,7 +933,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    // A new list: set its pill in place without gliding across the old one.
+    if (animate && sideSlider) sideSlider.classList.remove('is-ready');
     if (target) activateItem(target.getAttribute('data-item'), dx, 0);
+    if (!animate) return;
+    // Fade the new list in and ease the box to its new height instead of jumping.
+    var toH = sideBox.offsetHeight;
+    list.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (sideSlider) sideSlider.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (fromH !== toH) sideBox.animate([{ height: fromH + 'px' }, { height: toH + 'px' }], { duration: 420, easing: EASE });
+    // Timer, not requestAnimationFrame: rAF pauses in a background tab and the pill would stay hidden.
+    setTimeout(function () { if (sideSlider) sideSlider.classList.add('is-ready'); }, 60);
   }
 
   tabs.forEach(function (t) {

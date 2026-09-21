@@ -136,7 +136,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=20" media="all" />
 <style id="vp-tax-page">
 /* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
    Typography follows the homepage: Merriweather 700 for headings, Poppins for
@@ -212,10 +212,11 @@ body{background:#fff;}
 .vpt-panel{display:none;}
 .vpt-panel.is-active{display:block;}
 /* Text fades up; the photo slides in step with the pill (service-page.js). */
-.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
-@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-panel.is-active .vpt-body{animation:vptFade .4s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
-.vpt-media > .vpt-media-out{position:absolute;inset:0;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;z-index:1;}
+.vpt-media > picture,.vpt-media > img{will-change:transform,opacity;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -429,140 +430,140 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="corporate-strategy" data-group="strategy">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-scenario.webp" type="image/webp"><img src="/images/services/jpeg/sc-scenario.jpg" alt="A consultant leading a scenario-planning session" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-scenario.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-scenario.jpg" alt="A consultant leading a scenario-planning session" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business &amp; <em>Corporate Strategy</em></h2>
 						<p>We work with leadership to set a clear direction: which markets to play in, which businesses to grow or exit, and how resources should be allocated between them. The result is a strategy that is specific enough to guide everyday decisions.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="business-model" data-group="strategy">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-structuring.webp" type="image/webp"><img src="/images/services/jpeg/su-structuring.jpg" alt="Founders sketching a company structure" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-structuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-structuring.jpg" alt="Founders sketching a company structure" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business Model Design &amp; <em>Optimisation</em></h2>
 						<p>How you make money matters as much as what you sell. We examine your revenue streams, cost structure and delivery model, and redesign them where needed so the business earns more from the same effort.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="market-analysis" data-group="strategy">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-benchmark.webp" type="image/webp"><img src="/images/services/jpeg/sc-benchmark.jpg" alt="Analysts comparing performance charts" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-benchmark.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-benchmark.jpg" alt="Analysts comparing performance charts" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Market &amp; <em>Competitive Analysis</em></h2>
 						<p>We size your market, map the competitors and study what customers actually choose and why. This gives you a fact-based view of where the opportunities are and where you are exposed.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="restructuring" data-group="strategy">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business <em>Restructuring</em></h2>
 						<p>When a business has outgrown its shape or is under pressure, restructuring can restore focus and viability. We plan and support changes to operations, entities, costs and finances, keeping stakeholders informed at every stage.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="performance" data-group="strategy">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-performance.webp" type="image/webp"><img src="/images/services/jpeg/sc-performance.jpg" alt="Consultants reviewing metrics on a screen" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-performance.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-performance.jpg" alt="Consultants reviewing metrics on a screen" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Performance <em>Improvement</em></h2>
 						<p>We identify the few operational and financial levers that most affect results, set targets for them and track progress with management. The focus is on measurable improvement within months, not reports that sit on a shelf.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="promoter" data-group="strategy">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/fp-hni.webp" type="image/webp"><img src="/images/services/jpeg/fp-hni.jpg" alt="A senior advisor meeting a business family" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/fp-hni.webp" type="image/webp"><img src="/images/services/NEW/jpeg/fp-hni.jpg" alt="A senior advisor meeting a business family" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Promoter &amp; <em>Management Advisory</em></h2>
 						<p>Promoters carry decisions that no one else in the business can make for them. We act as a trusted sounding board on growth, succession, governance and personal wealth questions that sit alongside the business.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="growth-strategy" data-group="growth">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Growth <em>Strategy</em></h2>
 						<p>We lay out the realistic paths to growth, whether new customers, new products, new geographies or acquisitions, and compare them on return, risk and what they demand from the organisation. You leave with a prioritised plan, not a wish list.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="market-entry" data-group="growth">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-market.webp" type="image/webp"><img src="/images/services/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-market.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Market Entry &amp; <em>Expansion Strategy</em></h2>
 						<p>Entering a new city, state or country takes more than a good product. We assess demand, regulation, tax and competition in the target market and recommend the entry route, structure and timing most likely to succeed.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="gtm" data-group="growth">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-expansion.webp" type="image/webp"><img src="/images/services/jpeg/ba-expansion.jpg" alt="A business owner and an advisor planning together" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-expansion.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-expansion.jpg" alt="A business owner and an advisor planning together" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Go-to-Market <em>Strategy</em></h2>
 						<p>We help you decide who to sell to first, through which channels, at what price and with what message. A clear go-to-market plan shortens the time from launch to steady revenue.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="pricing" data-group="growth">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-profitability.webp" type="image/webp"><img src="/images/services/jpeg/cfo-profitability.jpg" alt="An analyst studying reports at a table" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-profitability.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-profitability.jpg" alt="An analyst studying reports at a table" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Pricing &amp; <em>Revenue Strategy</em></h2>
 						<p>Pricing is often the fastest route to better margins. We analyse your costs, customers and competitors and recommend pricing and discount structures that grow revenue without losing the customers who matter.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="funding-requirement" data-group="funding">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-runway.webp" type="image/webp"><img src="/images/services/jpeg/su-runway.jpg" alt="A startup team examining burn-rate figures" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-runway.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-runway.jpg" alt="A startup team examining burn-rate figures" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Funding Requirement <em>Assessment</em></h2>
 						<p>Before raising money, you need to know how much, when and for what. We work out the real funding need from your plans and cash forecasts, so you raise enough to reach the next milestone without giving away more than necessary.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="capital-structure" data-group="funding">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-restructure.webp" type="image/webp"><img src="/images/services/jpeg/reg-restructure.jpg" alt="Business owners discussing company structure" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-restructure.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-restructure.jpg" alt="Business owners discussing company structure" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Capital Structure <em>Advisory</em></h2>
 						<p>The mix of equity, debt and internal funds shapes your cost of capital, your control and your flexibility. We recommend a capital structure that suits your stage, cash flows and appetite for risk.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="debt-equity" data-group="funding">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/jpeg/ba-valuation.jpg" alt="A valuation expert presenting a report" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-valuation.jpg" alt="A valuation expert presenting a report" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Debt vs Equity <em>Funding Strategy</em></h2>
 						<p>Debt is cheaper but must be repaid; equity is patient but dilutes ownership. We compare the options available to you, including bank finance, NBFCs, venture debt and equity investors, and help you choose the right combination.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="fundraising-readiness" data-group="funding">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-investors.webp" type="image/webp"><img src="/images/services/jpeg/cfo-investors.jpg" alt="A CFO presenting a pitch deck to investors" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-investors.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-investors.jpg" alt="A CFO presenting a pitch deck to investors" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Fundraising <em>Readiness</em></h2>
 						<p>Lenders and investors decide quickly, so your numbers, documents and story need to be ready before the first meeting. We prepare the financial model, information pack and data room, and help you answer the questions they will ask.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="incentive-identification" data-group="incentives">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/gst-notices.webp" type="image/webp"><img src="/images/services/jpeg/gst-notices.jpg" alt="A consultant reading a notice at a desk" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/gst-notices.webp" type="image/webp"><img src="/images/services/NEW/jpeg/gst-notices.jpg" alt="A consultant reading a notice at a desk" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Grant &amp; Incentive <em>Identification</em></h2>
 						<p>Central and state governments offer grants, subsidies, tax benefits and concessional finance that many businesses never hear about. We review your business, sector and plans to identify the incentives you may be entitled to.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="scheme-mapping" data-group="incentives">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-market.webp" type="image/webp"><img src="/images/services/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-market.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Central &amp; State <em>Scheme Mapping</em></h2>
 						<p>Schemes differ widely by state, sector and project size. We map the central and state schemes relevant to your investment, including industrial policies and production-linked incentives, so you can compare locations and plans on their full economics.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="subsidy-optimisation" data-group="incentives">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-budgeting.webp" type="image/webp"><img src="/images/services/jpeg/cfo-budgeting.jpg" alt="Professionals reviewing a forecast" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-budgeting.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-budgeting.jpg" alt="Professionals reviewing a forecast" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Subsidy &amp; Incentive <em>Optimisation</em></h2>
 						<p>The way a project is planned, located and phased can change how much support it qualifies for. We help you shape investments to maximise eligible benefits while keeping the commercial logic intact.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="application-support" data-group="incentives">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-post.webp" type="image/webp"><img src="/images/services/jpeg/reg-post.jpg" alt="A secretary organising compliance folders" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-post.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-post.jpg" alt="A secretary organising compliance folders" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Application &amp; <em>Documentation Support</em></h2>
 						<p>Incentive applications are detailed and unforgiving of gaps. We prepare and file the applications, project reports and supporting documents, and follow up with the departments concerned until approval.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="eligibility" data-group="incentives">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-structuring.webp" type="image/webp"><img src="/images/services/jpeg/su-structuring.jpg" alt="Founders sketching a company structure" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-structuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-structuring.jpg" alt="Founders sketching a company structure" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Incentive Eligibility &amp; <em>Structuring</em></h2>
 						<p>Eligibility often depends on the entity, its ownership, the investment category and the timing of spend. We structure your project and entity so it meets the conditions from the outset rather than discovering a mismatch later.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="post-sanction" data-group="incentives">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-secretarial.webp" type="image/webp"><img src="/images/services/jpeg/reg-secretarial.jpg" alt="Professionals conducting a compliance review" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-secretarial.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-secretarial.jpg" alt="Professionals conducting a compliance review" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Post-Sanction Compliance &amp; <em>Claim Support</em></h2>
 						<p>Approval is only the start; benefits are paid out when conditions are met and claims are filed correctly. We track your obligations, prepare periodic claims and certifications, and help ensure the money you were promised actually arrives.</p>
@@ -936,11 +937,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
-  /* ----- Photo slide: the new photo pushes the old one out in the same
-     direction, with the same timing, as the pill that was clicked
-     (sideways for the top tabs, up/down for the side list). ----- */
+  /* ----- Photo change: the new photo crossfades in with a short drift in the
+     direction the pill moved (sideways for the top tabs, up/down for the side
+     list), while the old one fades away the other way. ----- */
   var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  var EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var SLIDE = { duration: 520, easing: EASE };
+  var DRIFT = 8; // percent of the photo box
   function slidePhoto(oldPanel, newPanel, dx, dy) {
     if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
     if (reduceMotionMQ.matches || !Element.prototype.animate) return;
@@ -953,11 +956,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     outgoing.classList.add('vpt-media-out');
     outgoing.setAttribute('aria-hidden', 'true');
     box.appendChild(outgoing);
-    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
-    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
-    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
-    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
-    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    var shift = 'translate(' + (dx * DRIFT) + '%,' + (dy * DRIFT) + '%) scale(1.04)';
+    var back = 'translate(' + (-dx * DRIFT) + '%,' + (-dy * DRIFT) + '%) scale(1.04)';
+    incoming.animate([{ transform: shift, opacity: 0 }, { transform: 'none', opacity: 1 }], SLIDE);
+    // fill: 'forwards' keeps the old photo invisible once faded; without it the
+    // copy snaps back to full opacity for a frame before it is removed (a blink).
+    var fade = outgoing.animate([{ transform: 'none', opacity: 1 }, { transform: back, opacity: 0 }],
+      { duration: SLIDE.duration, easing: SLIDE.easing, fill: 'forwards' });
+    fade.onfinish = function () { outgoing.remove(); };
+    // Animations pause in a hidden tab, so also clear it on a timer.
     setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
   }
   function indexIn(list, el) { return list.indexOf(el); }
@@ -989,6 +996,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
+    var animate = dx !== 0 && !reduceMotionMQ.matches && sideBox && Element.prototype.animate;
+    var fromH = animate ? sideBox.offsetHeight : 0;
     var list = null;
     sideLists.forEach(function (l) {
       var on = l.getAttribute('data-group') === groupId;
@@ -999,7 +1008,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    // A new list: set its pill in place without gliding across the old one.
+    if (animate && sideSlider) sideSlider.classList.remove('is-ready');
     if (target) activateItem(target.getAttribute('data-item'), dx, 0);
+    if (!animate) return;
+    // Fade the new list in and ease the box to its new height instead of jumping.
+    var toH = sideBox.offsetHeight;
+    list.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (sideSlider) sideSlider.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (fromH !== toH) sideBox.animate([{ height: fromH + 'px' }, { height: toH + 'px' }], { duration: 420, easing: EASE });
+    // Timer, not requestAnimationFrame: rAF pauses in a background tab and the pill would stay hidden.
+    setTimeout(function () { if (sideSlider) sideSlider.classList.add('is-ready'); }, 60);
   }
 
   tabs.forEach(function (t) {

@@ -136,7 +136,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=20" media="all" />
 <style id="vp-tax-page">
 /* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
    Typography follows the homepage: Merriweather 700 for headings, Poppins for
@@ -212,10 +212,11 @@ body{background:#fff;}
 .vpt-panel{display:none;}
 .vpt-panel.is-active{display:block;}
 /* Text fades up; the photo slides in step with the pill (service-page.js). */
-.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
-@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-panel.is-active .vpt-body{animation:vptFade .4s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
-.vpt-media > .vpt-media-out{position:absolute;inset:0;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;z-index:1;}
+.vpt-media > picture,.vpt-media > img{will-change:transform,opacity;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -414,56 +415,56 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="financial" data-group="due-diligence">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial <em>Due Diligence</em></h2>
 						<p>We test the numbers behind a business: the quality and sustainability of earnings, working capital, debt and off-balance-sheet items. You learn what you are really paying for and where the price or terms should change.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="tax" data-group="due-diligence">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-audit.webp" type="image/webp"><img src="/images/services/jpeg/tax-audit.jpg" alt="Auditors reviewing files and a laptop" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-audit.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-audit.jpg" alt="Auditors reviewing files and a laptop" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Tax <em>Due Diligence</em></h2>
 						<p>We review past income tax, TDS and related filings, open assessments and aggressive positions, and estimate the potential exposure, so it can be addressed through price, indemnities or pre-closing fixes.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="gst" data-group="due-diligence">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/gst-audits.webp" type="image/webp"><img src="/images/services/jpeg/gst-audits.jpg" alt="Consultants reviewing audit files" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/gst-audits.webp" type="image/webp"><img src="/images/services/NEW/jpeg/gst-audits.jpg" alt="Consultants reviewing audit files" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>GST <em>Due Diligence</em></h2>
 						<p>GST exposures can build up quietly through wrong classifications, credit claims or missed reconciliations. We examine returns, credits and notices to identify liabilities before they become yours.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="commercial" data-group="due-diligence">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-market.webp" type="image/webp"><img src="/images/services/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-market.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business &amp; <em>Commercial Due Diligence</em></h2>
 						<p>We look at the market, customers, competitors and business model to test whether the growth story holds up. This helps you judge whether the plan you are backing is realistic.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="pre-investment" data-group="transactions">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-diligence.webp" type="image/webp"><img src="/images/services/jpeg/su-diligence.jpg" alt="A founder presenting to investors" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-diligence.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-diligence.jpg" alt="A founder presenting to investors" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Pre-Investment <em>Due Diligence</em></h2>
 						<p>Before you invest in a company, whether a startup or an established business, we give you a focused review of its finances, compliance and key risks, scaled to the size of the investment and the time available.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="transaction" data-group="transactions">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Transaction <em>Due Diligence</em></h2>
 						<p>For acquisitions, mergers and sales, we coordinate financial, tax and commercial diligence into one clear report, highlighting the issues that affect value and the protections you should seek in the agreement.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="risk-assessment" data-group="risk">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-risk.webp" type="image/webp"><img src="/images/services/jpeg/cfo-risk.jpg" alt="Professionals studying a risk matrix" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-risk.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-risk.jpg" alt="Professionals studying a risk matrix" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Risk <em>Assessment</em></h2>
 						<p>We help management identify and rank the risks facing the business, from financial and tax to operational and regulatory, and agree practical actions and owners for the ones that matter most.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="internal-controls" data-group="risk">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-secretarial.webp" type="image/webp"><img src="/images/services/jpeg/reg-secretarial.jpg" alt="Professionals conducting a compliance review" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-secretarial.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-secretarial.jpg" alt="Professionals conducting a compliance review" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Internal Control <em>Reviews</em></h2>
 						<p>We test whether your internal controls work in practice, not just on paper, and recommend improvements that reduce errors and fraud without slowing the business down.</p>
@@ -837,11 +838,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
-  /* ----- Photo slide: the new photo pushes the old one out in the same
-     direction, with the same timing, as the pill that was clicked
-     (sideways for the top tabs, up/down for the side list). ----- */
+  /* ----- Photo change: the new photo crossfades in with a short drift in the
+     direction the pill moved (sideways for the top tabs, up/down for the side
+     list), while the old one fades away the other way. ----- */
   var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  var EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var SLIDE = { duration: 520, easing: EASE };
+  var DRIFT = 8; // percent of the photo box
   function slidePhoto(oldPanel, newPanel, dx, dy) {
     if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
     if (reduceMotionMQ.matches || !Element.prototype.animate) return;
@@ -854,11 +857,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     outgoing.classList.add('vpt-media-out');
     outgoing.setAttribute('aria-hidden', 'true');
     box.appendChild(outgoing);
-    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
-    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
-    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
-    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
-    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    var shift = 'translate(' + (dx * DRIFT) + '%,' + (dy * DRIFT) + '%) scale(1.04)';
+    var back = 'translate(' + (-dx * DRIFT) + '%,' + (-dy * DRIFT) + '%) scale(1.04)';
+    incoming.animate([{ transform: shift, opacity: 0 }, { transform: 'none', opacity: 1 }], SLIDE);
+    // fill: 'forwards' keeps the old photo invisible once faded; without it the
+    // copy snaps back to full opacity for a frame before it is removed (a blink).
+    var fade = outgoing.animate([{ transform: 'none', opacity: 1 }, { transform: back, opacity: 0 }],
+      { duration: SLIDE.duration, easing: SLIDE.easing, fill: 'forwards' });
+    fade.onfinish = function () { outgoing.remove(); };
+    // Animations pause in a hidden tab, so also clear it on a timer.
     setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
   }
   function indexIn(list, el) { return list.indexOf(el); }
@@ -890,6 +897,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
+    var animate = dx !== 0 && !reduceMotionMQ.matches && sideBox && Element.prototype.animate;
+    var fromH = animate ? sideBox.offsetHeight : 0;
     var list = null;
     sideLists.forEach(function (l) {
       var on = l.getAttribute('data-group') === groupId;
@@ -900,7 +909,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    // A new list: set its pill in place without gliding across the old one.
+    if (animate && sideSlider) sideSlider.classList.remove('is-ready');
     if (target) activateItem(target.getAttribute('data-item'), dx, 0);
+    if (!animate) return;
+    // Fade the new list in and ease the box to its new height instead of jumping.
+    var toH = sideBox.offsetHeight;
+    list.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (sideSlider) sideSlider.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (fromH !== toH) sideBox.animate([{ height: fromH + 'px' }, { height: toH + 'px' }], { duration: 420, easing: EASE });
+    // Timer, not requestAnimationFrame: rAF pauses in a background tab and the pill would stay hidden.
+    setTimeout(function () { if (sideSlider) sideSlider.classList.add('is-ready'); }, 60);
   }
 
   tabs.forEach(function (t) {

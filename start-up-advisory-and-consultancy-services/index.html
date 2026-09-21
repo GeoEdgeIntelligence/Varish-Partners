@@ -136,7 +136,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=20" media="all" />
 <style id="vp-tax-page">
 /* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
    Typography follows the homepage: Merriweather 700 for headings, Poppins for
@@ -212,10 +212,11 @@ body{background:#fff;}
 .vpt-panel{display:none;}
 .vpt-panel.is-active{display:block;}
 /* Text fades up; the photo slides in step with the pill (service-page.js). */
-.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
-@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-panel.is-active .vpt-body{animation:vptFade .4s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
-.vpt-media > .vpt-media-out{position:absolute;inset:0;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;z-index:1;}
+.vpt-media > picture,.vpt-media > img{will-change:transform,opacity;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -420,98 +421,98 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="structuring" data-group="build">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-structuring.webp" type="image/webp"><img src="/images/services/jpeg/su-structuring.jpg" alt="Founders sketching a company structure" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-structuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-structuring.jpg" alt="Founders sketching a company structure" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Startup <em>Structuring</em></h2>
 						<p>The entity you choose and how ownership is set up on day one affect fundraising, taxes and exits years later. We help founders choose the right structure, including where international founders or investors are involved, and set it up cleanly.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="founder" data-group="build">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-stage.webp" type="image/webp"><img src="/images/services/jpeg/su-stage.jpg" alt="A founder walking through the office floor" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-stage.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-stage.jpg" alt="A founder walking through the office floor" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Founder &amp; <em>Promoter Advisory</em></h2>
 						<p>We act as a sounding board for founders on equity splits, vesting, founder agreements, personal tax and the financial side of big decisions, so the relationships at the top stay clear as the company grows.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="business-planning" data-group="build">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business <em>Planning</em></h2>
 						<p>We turn your idea into a plan with clear milestones, costs and revenue assumptions. A realistic plan keeps the team aligned and gives investors confidence that you understand your own business.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="tax" data-group="build">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-direct.webp" type="image/webp"><img src="/images/services/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-direct.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Startup <em>Tax Advisory</em></h2>
 						<p>Startups face specific tax questions around share issues, investor funding, ESOPs and eligible tax holidays. We advise on these early so tax does not become an obstacle during a funding round or due diligence.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="schemes" data-group="build">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-statutory.webp" type="image/webp"><img src="/images/services/jpeg/reg-statutory.jpg" alt="A business owner receiving registration documents" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-statutory.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-statutory.jpg" alt="A business owner receiving registration documents" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Government Startup <em>Schemes &amp; Incentives</em></h2>
 						<p>Recognition under the Startup India programme and various state policies can bring tax benefits, grants and easier compliance. We check your eligibility, handle the applications and help you use the benefits available.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="fundraising" data-group="raise">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-runway.webp" type="image/webp"><img src="/images/services/jpeg/su-runway.jpg" alt="A startup team examining burn-rate figures" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-runway.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-runway.jpg" alt="A startup team examining burn-rate figures" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Fundraising <em>Strategy</em></h2>
 						<p>We help you decide how much to raise, when, from whom and on what instrument, whether equity, convertible notes or venture debt, so each round moves the company forward without unnecessary dilution.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="investor-readiness" data-group="raise">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-diligence.webp" type="image/webp"><img src="/images/services/jpeg/su-diligence.jpg" alt="A founder presenting to investors" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-diligence.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-diligence.jpg" alt="A founder presenting to investors" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Investor <em>Readiness</em></h2>
 						<p>We get your numbers, documents and pitch ready before you meet investors: clean financials, a credible model and a data room that answers questions before they are asked.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="modelling" data-group="raise">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-modeling.webp" type="image/webp"><img src="/images/services/jpeg/su-modeling.jpg" alt="Professionals building a revenue model" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-modeling.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-modeling.jpg" alt="Professionals building a revenue model" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial <em>Modelling</em></h2>
 						<p>We build startup models that investors can follow, linking growth drivers, unit economics, hiring and burn to show how the business reaches its milestones and what happens if assumptions slip.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="cap-table" data-group="raise">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/jpeg/ba-valuation.jpg" alt="A valuation expert presenting a report" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-valuation.jpg" alt="A valuation expert presenting a report" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Cap Table <em>Structuring</em></h2>
 						<p>A cap table that is messy or poorly planned can scare off investors. We keep your cap table accurate, model dilution across future rounds and advise on investor rights and share classes.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="esop" data-group="raise">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>ESOP <em>Advisory</em></h2>
 						<p>Stock options help startups attract and keep good people. We design ESOP schemes, advise on the size of the pool, vesting and valuation, and explain the tax treatment clearly to the company and employees.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="dd-readiness" data-group="raise">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Due Diligence <em>Readiness</em></h2>
 						<p>We review your records, filings and contracts the way an investor would and fix the gaps before diligence begins, so the round is not delayed or repriced over issues you could have solved in advance.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="virtual-cfo" data-group="scale">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-reporting.webp" type="image/webp"><img src="/images/services/jpeg/cfo-reporting.jpg" alt="A CFO signing monthly financial statements" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-reporting.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-reporting.jpg" alt="A CFO signing monthly financial statements" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Virtual CFO / <em>CFO Support</em></h2>
 						<p>As you scale, you need senior finance support long before you can hire a full-time CFO. We run your finance function part-time, covering reporting, cash, compliance and investor relations.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="investor-reporting" data-group="scale">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-investors.webp" type="image/webp"><img src="/images/services/jpeg/cfo-investors.jpg" alt="A CFO presenting a pitch deck to investors" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-investors.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-investors.jpg" alt="A CFO presenting a pitch deck to investors" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Investor <em>Reporting</em></h2>
 						<p>Regular, honest investor updates build trust for the next round. We prepare monthly and quarterly reports and board materials that show performance, cash position and progress against plan.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="exit" data-group="scale">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-integration.webp" type="image/webp"><img src="/images/services/jpeg/ba-integration.jpg" alt="Professionals meeting in a bright office" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-integration.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-integration.jpg" alt="Professionals meeting in a bright office" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Exit &amp; <em>Liquidity Planning</em></h2>
 						<p>Whether the goal is an acquisition, a secondary sale or a public listing, we help founders and investors plan the exit, understand its tax impact and prepare the company to achieve the best value.</p>
@@ -885,11 +886,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
-  /* ----- Photo slide: the new photo pushes the old one out in the same
-     direction, with the same timing, as the pill that was clicked
-     (sideways for the top tabs, up/down for the side list). ----- */
+  /* ----- Photo change: the new photo crossfades in with a short drift in the
+     direction the pill moved (sideways for the top tabs, up/down for the side
+     list), while the old one fades away the other way. ----- */
   var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  var EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var SLIDE = { duration: 520, easing: EASE };
+  var DRIFT = 8; // percent of the photo box
   function slidePhoto(oldPanel, newPanel, dx, dy) {
     if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
     if (reduceMotionMQ.matches || !Element.prototype.animate) return;
@@ -902,11 +905,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     outgoing.classList.add('vpt-media-out');
     outgoing.setAttribute('aria-hidden', 'true');
     box.appendChild(outgoing);
-    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
-    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
-    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
-    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
-    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    var shift = 'translate(' + (dx * DRIFT) + '%,' + (dy * DRIFT) + '%) scale(1.04)';
+    var back = 'translate(' + (-dx * DRIFT) + '%,' + (-dy * DRIFT) + '%) scale(1.04)';
+    incoming.animate([{ transform: shift, opacity: 0 }, { transform: 'none', opacity: 1 }], SLIDE);
+    // fill: 'forwards' keeps the old photo invisible once faded; without it the
+    // copy snaps back to full opacity for a frame before it is removed (a blink).
+    var fade = outgoing.animate([{ transform: 'none', opacity: 1 }, { transform: back, opacity: 0 }],
+      { duration: SLIDE.duration, easing: SLIDE.easing, fill: 'forwards' });
+    fade.onfinish = function () { outgoing.remove(); };
+    // Animations pause in a hidden tab, so also clear it on a timer.
     setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
   }
   function indexIn(list, el) { return list.indexOf(el); }
@@ -938,6 +945,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
+    var animate = dx !== 0 && !reduceMotionMQ.matches && sideBox && Element.prototype.animate;
+    var fromH = animate ? sideBox.offsetHeight : 0;
     var list = null;
     sideLists.forEach(function (l) {
       var on = l.getAttribute('data-group') === groupId;
@@ -948,7 +957,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    // A new list: set its pill in place without gliding across the old one.
+    if (animate && sideSlider) sideSlider.classList.remove('is-ready');
     if (target) activateItem(target.getAttribute('data-item'), dx, 0);
+    if (!animate) return;
+    // Fade the new list in and ease the box to its new height instead of jumping.
+    var toH = sideBox.offsetHeight;
+    list.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (sideSlider) sideSlider.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (fromH !== toH) sideBox.animate([{ height: fromH + 'px' }, { height: toH + 'px' }], { duration: 420, easing: EASE });
+    // Timer, not requestAnimationFrame: rAF pauses in a background tab and the pill would stay hidden.
+    setTimeout(function () { if (sideSlider) sideSlider.classList.add('is-ready'); }, 60);
   }
 
   tabs.forEach(function (t) {

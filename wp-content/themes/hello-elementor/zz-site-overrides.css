@@ -212,3 +212,18 @@
 .vp-form-msg.is-alert{color:#b3261e;font-weight:500;}
 .elementor-form [aria-invalid="true"]{border-color:#b3261e !important;box-shadow:0 0 0 2px rgba(179,38,30,.15) !important;}
 .elementor-form button[disabled]{opacity:.6;cursor:wait;}
+
+/* Desktop menu: the section you are in is bold as well as brown (the phone menu already does this). */
+.elementor-location-header .elementor-nav-menu--main a.elementor-item.elementor-item-active{font-weight:600 !important;}
+
+/* ---------- Brand fonts only: Merriweather for headings, Poppins for everything else ---------- */
+/* Elementor's global font settings still named Roboto / Roboto Slab. */
+.elementor-kit-6{--e-global-typography-primary-font-family:"Merriweather";--e-global-typography-secondary-font-family:"Poppins";--e-global-typography-text-font-family:"Poppins";--e-global-typography-accent-font-family:"Poppins";}
+/* Text with no font of its own (footer, blog posts, Our Story) fell back to the device font. */
+body{font-family:"Poppins",sans-serif;}
+button,input,select,textarea{font-family:inherit;}
+h1,h2,h3,h4,h5,h6{font-family:"Merriweather",Georgia,serif;}
+/* The original Elementor forms (homepage and pop-up) set Work Sans. */
+.elementor-form .elementor-field-group > label,.elementor-form .elementor-field,.elementor-form .elementor-button,.elementor-form .elementor-message,.elementor-form .elementor-field-type-html,.elementor-element-4193cb49{font-family:"Poppins",sans-serif !important;}
+/* The blog post template set Roboto on the article body. */
+.elementor-444 .elementor-element-59558eaf{font-family:"Poppins",sans-serif !important;}

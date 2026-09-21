@@ -136,7 +136,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=20" media="all" />
 <style id="vp-tax-page">
 /* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
    Typography follows the homepage: Merriweather 700 for headings, Poppins for
@@ -212,10 +212,11 @@ body{background:#fff;}
 .vpt-panel{display:none;}
 .vpt-panel.is-active{display:block;}
 /* Text fades up; the photo slides in step with the pill (service-page.js). */
-.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
-@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-panel.is-active .vpt-body{animation:vptFade .4s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
-.vpt-media > .vpt-media-out{position:absolute;inset:0;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;z-index:1;}
+.vpt-media > picture,.vpt-media > img{will-change:transform,opacity;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -417,77 +418,77 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="ma" data-group="deals">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>M&amp;A <em>Advisory</em></h2>
 						<p>We support buyers and sellers through the full deal process: identifying and approaching counterparties, evaluating the business, negotiating terms and managing the path to completion, so decisions are made with a clear view of value and risk.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="acquisitions" data-group="deals">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-integration.webp" type="image/webp"><img src="/images/services/jpeg/ba-integration.jpg" alt="Professionals meeting in a bright office" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-integration.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-integration.jpg" alt="Professionals meeting in a bright office" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Acquisitions &amp; <em>Divestitures</em></h2>
 						<p>Whether you are buying a business to grow or selling a part that no longer fits, we help you prepare, value, negotiate and complete the transaction, and plan the integration or separation that follows.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="deal-structuring" data-group="deals">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-restructure.webp" type="image/webp"><img src="/images/services/jpeg/reg-restructure.jpg" alt="Business owners discussing company structure" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-restructure.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-restructure.jpg" alt="Business owners discussing company structure" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Deal <em>Structuring</em></h2>
 						<p>The same price can be worth very different amounts depending on how a deal is structured. We advise on share versus asset deals, payment terms, earn-outs and consideration so the structure works commercially, legally and for tax.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="joint-venture" data-group="deals">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-incorporation.webp" type="image/webp"><img src="/images/services/jpeg/reg-incorporation.jpg" alt="Co-founders shaking hands with their advisor" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-incorporation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-incorporation.jpg" alt="Co-founders shaking hands with their advisor" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Joint Venture <em>Advisory</em></h2>
 						<p>A joint venture succeeds when the partners agree clearly on contributions, control and exit from the start. We help structure the venture, model its economics and set out the terms that keep the partnership workable.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="strategic-investments" data-group="deals">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Strategic <em>Investments</em></h2>
 						<p>When you invest in another business, whether a minority stake or a strategic partnership, we assess the target, the fit with your own business and the terms on offer, so the investment supports your strategy rather than distracting from it.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="fin-tax-dd" data-group="value">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-diligence.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-diligence.jpg" alt="Professionals reviewing files and documents" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial &amp; <em>Tax Due Diligence</em></h2>
 						<p>We examine the quality of earnings, working capital, debt and tax history of the business you are dealing with. Our findings feed directly into price, deal terms and protections, so there are fewer surprises after closing.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="valuation" data-group="value">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/jpeg/ba-valuation.jpg" alt="A valuation expert presenting a report" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-valuation.jpg" alt="A valuation expert presenting a report" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Valuation &amp; <em>Financial Modelling</em></h2>
 						<p>We value businesses and shares using methods that suit the purpose, whether a transaction, fundraising, regulatory filing or internal decision, and build models that show how value moves with each key assumption.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="transaction-tax" data-group="value">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-direct.webp" type="image/webp"><img src="/images/services/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-direct.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Transaction <em>Tax Advisory</em></h2>
 						<p>Every transaction has tax consequences for both sides. We identify them early, compare alternative structures and advise on the approach that protects value while staying on solid technical ground.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="corporate-restructuring" data-group="corporate">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Corporate <em>Restructuring</em></h2>
 						<p>Group structures built up over years often become complex and inefficient. We advise on mergers, demergers, consolidations and simplifications that reduce cost and risk and make the group easier to manage and invest in.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="shareholder" data-group="corporate">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/fp-hni.webp" type="image/webp"><img src="/images/services/jpeg/fp-hni.jpg" alt="A senior advisor meeting a business family" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/fp-hni.webp" type="image/webp"><img src="/images/services/NEW/jpeg/fp-hni.jpg" alt="A senior advisor meeting a business family" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Shareholder &amp; <em>Promoter Advisory</em></h2>
 						<p>We advise promoters and shareholders on ownership, shareholder agreements, family arrangements and the terms of new investment, helping protect their interests while keeping the business able to raise capital and grow.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="succession" data-group="corporate">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/fp-estate.webp" type="image/webp"><img src="/images/services/jpeg/fp-estate.jpg" alt="A family reviewing financial plans" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/fp-estate.webp" type="image/webp"><img src="/images/services/NEW/jpeg/fp-estate.jpg" alt="A family reviewing financial plans" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Succession &amp; <em>Business Transfer</em></h2>
 						<p>Passing a business to the next generation, to management or to a buyer takes years of planning to do well. We help promoters plan the timing, structure and tax impact of the transfer so the business and the family are both protected.</p>
@@ -861,11 +862,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
-  /* ----- Photo slide: the new photo pushes the old one out in the same
-     direction, with the same timing, as the pill that was clicked
-     (sideways for the top tabs, up/down for the side list). ----- */
+  /* ----- Photo change: the new photo crossfades in with a short drift in the
+     direction the pill moved (sideways for the top tabs, up/down for the side
+     list), while the old one fades away the other way. ----- */
   var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  var EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var SLIDE = { duration: 520, easing: EASE };
+  var DRIFT = 8; // percent of the photo box
   function slidePhoto(oldPanel, newPanel, dx, dy) {
     if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
     if (reduceMotionMQ.matches || !Element.prototype.animate) return;
@@ -878,11 +881,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     outgoing.classList.add('vpt-media-out');
     outgoing.setAttribute('aria-hidden', 'true');
     box.appendChild(outgoing);
-    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
-    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
-    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
-    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
-    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    var shift = 'translate(' + (dx * DRIFT) + '%,' + (dy * DRIFT) + '%) scale(1.04)';
+    var back = 'translate(' + (-dx * DRIFT) + '%,' + (-dy * DRIFT) + '%) scale(1.04)';
+    incoming.animate([{ transform: shift, opacity: 0 }, { transform: 'none', opacity: 1 }], SLIDE);
+    // fill: 'forwards' keeps the old photo invisible once faded; without it the
+    // copy snaps back to full opacity for a frame before it is removed (a blink).
+    var fade = outgoing.animate([{ transform: 'none', opacity: 1 }, { transform: back, opacity: 0 }],
+      { duration: SLIDE.duration, easing: SLIDE.easing, fill: 'forwards' });
+    fade.onfinish = function () { outgoing.remove(); };
+    // Animations pause in a hidden tab, so also clear it on a timer.
     setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
   }
   function indexIn(list, el) { return list.indexOf(el); }
@@ -914,6 +921,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
+    var animate = dx !== 0 && !reduceMotionMQ.matches && sideBox && Element.prototype.animate;
+    var fromH = animate ? sideBox.offsetHeight : 0;
     var list = null;
     sideLists.forEach(function (l) {
       var on = l.getAttribute('data-group') === groupId;
@@ -924,7 +933,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    // A new list: set its pill in place without gliding across the old one.
+    if (animate && sideSlider) sideSlider.classList.remove('is-ready');
     if (target) activateItem(target.getAttribute('data-item'), dx, 0);
+    if (!animate) return;
+    // Fade the new list in and ease the box to its new height instead of jumping.
+    var toH = sideBox.offsetHeight;
+    list.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (sideSlider) sideSlider.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (fromH !== toH) sideBox.animate([{ height: fromH + 'px' }, { height: toH + 'px' }], { duration: 420, easing: EASE });
+    // Timer, not requestAnimationFrame: rAF pauses in a background tab and the pill would stay hidden.
+    setTimeout(function () { if (sideSlider) sideSlider.classList.add('is-ready'); }, 60);
   }
 
   tabs.forEach(function (t) {

@@ -136,7 +136,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=20" media="all" />
 <style id="vp-tax-page">
 /* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
    Typography follows the homepage: Merriweather 700 for headings, Poppins for
@@ -212,10 +212,11 @@ body{background:#fff;}
 .vpt-panel{display:none;}
 .vpt-panel.is-active{display:block;}
 /* Text fades up; the photo slides in step with the pill (service-page.js). */
-.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
-@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-panel.is-active .vpt-body{animation:vptFade .4s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
-.vpt-media > .vpt-media-out{position:absolute;inset:0;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;z-index:1;}
+.vpt-media > picture,.vpt-media > img{will-change:transform,opacity;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -420,98 +421,98 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="inbound" data-group="investment">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-nri.webp" type="image/webp"><img src="/images/services/jpeg/tax-nri.jpg" alt="A consultant on a video call" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-nri.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-nri.jpg" alt="A consultant on a video call" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Inbound Investment <em>Advisory</em></h2>
 						<p>Foreign investors coming into India need to know which sectors are open, which approval routes apply and how their investment will be taxed. We advise on the entry route, pricing and reporting requirements, and on how returns can be taken out efficiently.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="outbound" data-group="investment">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-market.webp" type="image/webp"><img src="/images/services/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-market.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-market.jpg" alt="A consultant presenting a market-entry plan" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Outbound Investment <em>Advisory</em></h2>
 						<p>Indian businesses investing abroad must follow the overseas investment rules and plan for tax in both countries. We advise on the structure, funding and reporting of overseas investments so they stay compliant and tax-efficient.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="india-entry" data-group="investment">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/reg-incorporation.webp" type="image/webp"><img src="/images/services/jpeg/reg-incorporation.jpg" alt="Co-founders shaking hands with their advisor" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/reg-incorporation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/reg-incorporation.jpg" alt="Co-founders shaking hands with their advisor" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>India Entry Strategy for <em>Foreign Businesses</em></h2>
 						<p>We help foreign companies choose how to enter India, whether through a subsidiary, branch, liaison office or partnership, and support them through setup, registrations and the first years of operation.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="expansion-planning" data-group="investment">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>International <em>Expansion Planning</em></h2>
 						<p>Before you expand into a new country, we help you compare markets on demand, regulation, tax and cost of operation, and plan a phased entry that limits risk while you learn the market.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="overseas-entity" data-group="investment">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-structuring.webp" type="image/webp"><img src="/images/services/jpeg/su-structuring.jpg" alt="Founders sketching a company structure" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-structuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-structuring.jpg" alt="Founders sketching a company structure" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Overseas Subsidiary &amp; <em>Entity Structuring</em></h2>
 						<p>The jurisdiction and form of your overseas entities affect tax, control and future flexibility. We design group structures that support your operations and funding plans and comply with the rules in every country involved.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="cross-border-transactions" data-group="transactions">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-structuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-structuring.jpg" alt="Professionals at a negotiation table" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Cross-Border <em>Transaction Advisory</em></h2>
 						<p>Transactions that cross borders involve two tax systems, foreign exchange rules and often different accounting standards. We coordinate these moving parts so the deal is structured, priced and completed correctly on both sides.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="cross-border-ma" data-group="transactions">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-integration.webp" type="image/webp"><img src="/images/services/jpeg/ba-integration.jpg" alt="Professionals meeting in a bright office" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-integration.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-integration.jpg" alt="Professionals meeting in a bright office" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Cross-Border <em>M&amp;A Advisory</em></h2>
 						<p>We advise on acquisitions and sales involving foreign buyers, sellers or targets, covering valuation, diligence, deal structure and the regulatory approvals and filings needed to close.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="intercompany" data-group="transactions">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-process.webp" type="image/webp"><img src="/images/services/jpeg/cfo-process.jpg" alt="A CFO and team redesigning a workflow" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-process.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-process.jpg" alt="A CFO and team redesigning a workflow" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Structuring of <em>Intercompany Transactions</em></h2>
 						<p>Services, royalties, loans and goods moving between group companies must be structured and priced carefully. We design intercompany arrangements and agreements that reflect real activity and hold up under tax review.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="repatriation" data-group="transactions">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-cashflow.webp" type="image/webp"><img src="/images/services/jpeg/cfo-cashflow.jpg" alt="A CFO reviewing a tablet on a factory floor" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-cashflow.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-cashflow.jpg" alt="A CFO reviewing a tablet on a factory floor" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Repatriation &amp; <em>Remittance Structuring</em></h2>
 						<p>Getting profits and capital back from an investment should be planned from day one. We advise on the most efficient routes, whether dividends, interest, royalties, fees or buy-backs, and the tax and regulatory steps each one requires.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="payments" data-group="transactions">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-tds.webp" type="image/webp"><img src="/images/services/jpeg/tax-tds.jpg" alt="An executive checking figures on a phone" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-tds.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-tds.jpg" alt="An executive checking figures on a phone" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Cross-Border Payment &amp; <em>Withholding Advisory</em></h2>
 						<p>Payments to non-residents raise questions of withholding tax, treaty rates and remittance certification. We advise on the correct treatment before money leaves the country, so neither you nor the recipient faces demands later.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="international-tax" data-group="tax-regulatory">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/tax-direct.webp" type="image/webp"><img src="/images/services/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-direct.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>International Tax <em>Structuring</em></h2>
 						<p>We design cross-border structures that are tax-efficient and have real commercial substance, taking into account treaties, anti-avoidance rules and global minimum tax developments that increasingly limit aggressive planning.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="transfer-pricing" data-group="tax-regulatory">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-reporting.webp" type="image/webp"><img src="/images/services/jpeg/cfo-reporting.jpg" alt="A CFO signing monthly financial statements" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-reporting.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-reporting.jpg" alt="A CFO signing monthly financial statements" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Transfer <em>Pricing</em></h2>
 						<p>We help multinational groups set arm’s length prices for intercompany transactions, prepare benchmarking studies and documentation, and support audits and disputes in India and abroad.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="treaty" data-group="tax-regulatory">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/gst-itc.webp" type="image/webp"><img src="/images/services/jpeg/gst-itc.jpg" alt="Finance professionals comparing records" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/gst-itc.webp" type="image/webp"><img src="/images/services/NEW/jpeg/gst-itc.jpg" alt="Finance professionals comparing records" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Double Taxation &amp; <em>Treaty Advisory</em></h2>
 						<p>Tax treaties can reduce or remove double tax, but only if their conditions are met and properly documented. We advise on treaty eligibility, residency certificates and foreign tax credits so income is not taxed twice.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="fema" data-group="tax-regulatory">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/gst-notices.webp" type="image/webp"><img src="/images/services/jpeg/gst-notices.jpg" alt="A consultant reading a notice at a desk" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/gst-notices.webp" type="image/webp"><img src="/images/services/NEW/jpeg/gst-notices.jpg" alt="A consultant reading a notice at a desk" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>FEMA &amp; <em>Regulatory Advisory</em></h2>
 						<p>Foreign exchange rules govern how money and investments move in and out of India. We advise on FEMA and RBI requirements, handle the required filings, and help resolve delays or defaults through compounding where needed.</p>
@@ -885,11 +886,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
-  /* ----- Photo slide: the new photo pushes the old one out in the same
-     direction, with the same timing, as the pill that was clicked
-     (sideways for the top tabs, up/down for the side list). ----- */
+  /* ----- Photo change: the new photo crossfades in with a short drift in the
+     direction the pill moved (sideways for the top tabs, up/down for the side
+     list), while the old one fades away the other way. ----- */
   var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  var EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var SLIDE = { duration: 520, easing: EASE };
+  var DRIFT = 8; // percent of the photo box
   function slidePhoto(oldPanel, newPanel, dx, dy) {
     if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
     if (reduceMotionMQ.matches || !Element.prototype.animate) return;
@@ -902,11 +905,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     outgoing.classList.add('vpt-media-out');
     outgoing.setAttribute('aria-hidden', 'true');
     box.appendChild(outgoing);
-    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
-    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
-    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
-    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
-    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    var shift = 'translate(' + (dx * DRIFT) + '%,' + (dy * DRIFT) + '%) scale(1.04)';
+    var back = 'translate(' + (-dx * DRIFT) + '%,' + (-dy * DRIFT) + '%) scale(1.04)';
+    incoming.animate([{ transform: shift, opacity: 0 }, { transform: 'none', opacity: 1 }], SLIDE);
+    // fill: 'forwards' keeps the old photo invisible once faded; without it the
+    // copy snaps back to full opacity for a frame before it is removed (a blink).
+    var fade = outgoing.animate([{ transform: 'none', opacity: 1 }, { transform: back, opacity: 0 }],
+      { duration: SLIDE.duration, easing: SLIDE.easing, fill: 'forwards' });
+    fade.onfinish = function () { outgoing.remove(); };
+    // Animations pause in a hidden tab, so also clear it on a timer.
     setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
   }
   function indexIn(list, el) { return list.indexOf(el); }
@@ -938,6 +945,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
+    var animate = dx !== 0 && !reduceMotionMQ.matches && sideBox && Element.prototype.animate;
+    var fromH = animate ? sideBox.offsetHeight : 0;
     var list = null;
     sideLists.forEach(function (l) {
       var on = l.getAttribute('data-group') === groupId;
@@ -948,7 +957,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    // A new list: set its pill in place without gliding across the old one.
+    if (animate && sideSlider) sideSlider.classList.remove('is-ready');
     if (target) activateItem(target.getAttribute('data-item'), dx, 0);
+    if (!animate) return;
+    // Fade the new list in and ease the box to its new height instead of jumping.
+    var toH = sideBox.offsetHeight;
+    list.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (sideSlider) sideSlider.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (fromH !== toH) sideBox.animate([{ height: fromH + 'px' }, { height: toH + 'px' }], { duration: 420, easing: EASE });
+    // Timer, not requestAnimationFrame: rAF pauses in a background tab and the pill would stay hidden.
+    setTimeout(function () { if (sideSlider) sideSlider.classList.add('is-ready'); }, 60);
   }
 
   tabs.forEach(function (t) {

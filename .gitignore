@@ -45,3 +45,5 @@ build-legal.js
 service-photos.py
 service-photos-state.json
 form-to-sheet.gs
+service-photo-prompts.md
+__pycache__/

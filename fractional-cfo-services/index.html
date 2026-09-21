@@ -136,7 +136,7 @@ gtag("config", "GT-TX9689S5");
 <style id="vp-sticky-header">
 .elementor-location-header{position:sticky;top:0;z-index:999;background:#fff;border-bottom:3px solid #6a4138;}
 </style>
-<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=18" media="all" />
+<link rel="stylesheet" id="zz-site-overrides-css" href="/wp-content/themes/hello-elementor/zz-site-overrides.css?v=20" media="all" />
 <style id="vp-tax-page">
 /* Tax Consultancy & Compliances — tabbed "What We Offer" layout.
    Typography follows the homepage: Merriweather 700 for headings, Poppins for
@@ -212,10 +212,11 @@ body{background:#fff;}
 .vpt-panel{display:none;}
 .vpt-panel.is-active{display:block;}
 /* Text fades up; the photo slides in step with the pill (service-page.js). */
-.vpt-panel.is-active .vpt-body{animation:vptFade .6s var(--vpt-ease) both;}
-@keyframes vptFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.vpt-panel.is-active .vpt-body{animation:vptFade .4s var(--vpt-ease) both;}
+@keyframes vptFade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .vpt-media{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:2 / 1;background:#e9e9ec;}
-.vpt-media > .vpt-media-out{position:absolute;inset:0;}
+.vpt-media > .vpt-media-out{position:absolute;inset:0;z-index:1;}
+.vpt-media > picture,.vpt-media > img{will-change:transform,opacity;}
 .vpt-media picture{display:block;width:100%;height:100%;}
 .vpt-media img{display:block;width:100%;height:100%;object-fit:cover;}
 .vpt-body{padding:26px 28px 0;}
@@ -416,70 +417,70 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="fractional-cfo" data-group="leadership">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="eager" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Fractional <em>CFO Services</em></h2>
 						<p>You get an experienced CFO for the days and hours your business actually needs. We lead the finance function, work alongside your team and advisers, and bring the discipline and perspective of a senior finance leader without the cost of a full-time hire.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="board-investor" data-group="leadership">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-investors.webp" type="image/webp"><img src="/images/services/jpeg/cfo-investors.jpg" alt="A CFO presenting a pitch deck to investors" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-investors.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-investors.jpg" alt="A CFO presenting a pitch deck to investors" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Board &amp; <em>Investor Reporting</em></h2>
 						<p>Boards and investors want the same things: accurate numbers, a clear story and no surprises. We prepare board packs and investor updates that explain performance, flag risks early and show how the business is tracking against its plan.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="performance-reviews" data-group="leadership">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-benchmark.webp" type="image/webp"><img src="/images/services/jpeg/sc-benchmark.jpg" alt="Analysts comparing performance charts" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-benchmark.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-benchmark.jpg" alt="Analysts comparing performance charts" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business <em>Performance Reviews</em></h2>
 						<p>We step back and look at how the business is really doing across products, customers, locations and teams. The review shows where money is made and lost, how you compare with peers, and which few changes would make the biggest difference.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="fpa" data-group="planning">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-profitability.webp" type="image/webp"><img src="/images/services/jpeg/cfo-profitability.jpg" alt="An analyst studying reports at a table" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-profitability.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-profitability.jpg" alt="An analyst studying reports at a table" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial Planning &amp; <em>Analysis</em></h2>
 						<p>Good planning turns strategy into numbers you can manage against. We build the planning cycle, analyse actual results against plan every month, and explain the variances in plain language so management knows what to do next.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="budgeting" data-group="planning">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-budgeting.webp" type="image/webp"><img src="/images/services/jpeg/cfo-budgeting.jpg" alt="Professionals reviewing a forecast" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-budgeting.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-budgeting.jpg" alt="Professionals reviewing a forecast" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Budgeting &amp; <em>Forecasting</em></h2>
 						<p>We prepare annual budgets that reflect how the business actually runs, and rolling forecasts that update as conditions change. You see where the year is heading early enough to act, not after the quarter has closed.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="modelling" data-group="planning">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/su-modeling.webp" type="image/webp"><img src="/images/services/jpeg/su-modeling.jpg" alt="Professionals building a revenue model" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-modeling.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-modeling.jpg" alt="Professionals building a revenue model" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial <em>Modelling</em></h2>
 						<p>A well-built model lets you test decisions before you commit to them. We build clear, auditable models for budgets, new projects, pricing, fundraising and expansion, with scenarios that show what happens when assumptions change.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="cashflow" data-group="planning">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-cashflow.webp" type="image/webp"><img src="/images/services/jpeg/cfo-cashflow.jpg" alt="A CFO reviewing a tablet on a factory floor" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-cashflow.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-cashflow.jpg" alt="A CFO reviewing a tablet on a factory floor" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Cash Flow &amp; <em>Working Capital</em></h2>
 						<p>Profitable businesses still fail when cash runs short. We forecast cash week by week, tighten collections, payables and inventory, and free up working capital so growth is funded from within wherever possible.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="mis" data-group="control">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/sc-performance.webp" type="image/webp"><img src="/images/services/jpeg/sc-performance.jpg" alt="Consultants reviewing metrics on a screen" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-performance.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-performance.jpg" alt="Consultants reviewing metrics on a screen" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Management Reporting &amp; <em>MIS</em></h2>
 						<p>We design monthly MIS that management actually reads: the handful of numbers that matter, reported on time and in a consistent format. Dashboards and commentary make it easy to spot trends and act on them.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="profitability" data-group="control">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/ba-cost.webp" type="image/webp"><img src="/images/services/jpeg/ba-cost.jpg" alt="An advisor and a manager discussing cost figures" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-cost.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-cost.jpg" alt="An advisor and a manager discussing cost figures" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Profitability &amp; <em>Cost Optimisation</em></h2>
 						<p>We analyse margins by product, customer and channel to show which parts of the business earn their keep. Then we look at costs line by line and help you cut waste without damaging the things customers value.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="controls" data-group="control">
-					<div class="vpt-media"><picture><source srcset="/images/services/webp/cfo-process.webp" type="image/webp"><img src="/images/services/jpeg/cfo-process.jpg" alt="A CFO and team redesigning a workflow" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-process.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-process.jpg" alt="A CFO and team redesigning a workflow" loading="lazy" width="1600" height="900"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial Controls &amp; <em>Process Improvement</em></h2>
 						<p>Weak processes lead to errors, delays and fraud. We review how money moves through the business, from purchase to payment and from sale to collection, and put in practical controls and cleaner processes that scale as you grow.</p>
@@ -853,11 +854,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     moveSlider(sideSlider, sideBox, sideBox && sideBox.querySelector('.vpt-side-list:not([hidden]) .vpt-side-btn[aria-selected="true"]'));
   }
 
-  /* ----- Photo slide: the new photo pushes the old one out in the same
-     direction, with the same timing, as the pill that was clicked
-     (sideways for the top tabs, up/down for the side list). ----- */
+  /* ----- Photo change: the new photo crossfades in with a short drift in the
+     direction the pill moved (sideways for the top tabs, up/down for the side
+     list), while the old one fades away the other way. ----- */
   var reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SLIDE = { duration: 500, easing: 'cubic-bezier(.22,.61,.36,1)' };
+  var EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var SLIDE = { duration: 520, easing: EASE };
+  var DRIFT = 8; // percent of the photo box
   function slidePhoto(oldPanel, newPanel, dx, dy) {
     if (!oldPanel || !newPanel || oldPanel === newPanel || (!dx && !dy)) return;
     if (reduceMotionMQ.matches || !Element.prototype.animate) return;
@@ -870,11 +873,15 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     outgoing.classList.add('vpt-media-out');
     outgoing.setAttribute('aria-hidden', 'true');
     box.appendChild(outgoing);
-    var shift = 'translate(' + (dx * 100) + '%,' + (dy * 100) + '%)';
-    var back = 'translate(' + (-dx * 100) + '%,' + (-dy * 100) + '%)';
-    incoming.animate([{ transform: shift }, { transform: 'none' }], SLIDE);
-    outgoing.animate([{ transform: 'none' }, { transform: back }], SLIDE);
-    // Animations pause in a hidden tab, so don't rely on onfinish to clear the old photo.
+    var shift = 'translate(' + (dx * DRIFT) + '%,' + (dy * DRIFT) + '%) scale(1.04)';
+    var back = 'translate(' + (-dx * DRIFT) + '%,' + (-dy * DRIFT) + '%) scale(1.04)';
+    incoming.animate([{ transform: shift, opacity: 0 }, { transform: 'none', opacity: 1 }], SLIDE);
+    // fill: 'forwards' keeps the old photo invisible once faded; without it the
+    // copy snaps back to full opacity for a frame before it is removed (a blink).
+    var fade = outgoing.animate([{ transform: 'none', opacity: 1 }, { transform: back, opacity: 0 }],
+      { duration: SLIDE.duration, easing: SLIDE.easing, fill: 'forwards' });
+    fade.onfinish = function () { outgoing.remove(); };
+    // Animations pause in a hidden tab, so also clear it on a timer.
     setTimeout(function () { outgoing.remove(); }, SLIDE.duration + 50);
   }
   function indexIn(list, el) { return list.indexOf(el); }
@@ -906,6 +913,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     tabs.forEach(function (t) {
       t.setAttribute('aria-selected', t.getAttribute('data-group') === groupId ? 'true' : 'false');
     });
+    var animate = dx !== 0 && !reduceMotionMQ.matches && sideBox && Element.prototype.animate;
+    var fromH = animate ? sideBox.offsetHeight : 0;
     var list = null;
     sideLists.forEach(function (l) {
       var on = l.getAttribute('data-group') === groupId;
@@ -916,7 +925,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     var target = itemId
       ? list.querySelector('[data-item="' + itemId + '"]')
       : (list.querySelector('[aria-selected="true"]') || list.querySelector('.vpt-side-btn'));
+    // A new list: set its pill in place without gliding across the old one.
+    if (animate && sideSlider) sideSlider.classList.remove('is-ready');
     if (target) activateItem(target.getAttribute('data-item'), dx, 0);
+    if (!animate) return;
+    // Fade the new list in and ease the box to its new height instead of jumping.
+    var toH = sideBox.offsetHeight;
+    list.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (sideSlider) sideSlider.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: EASE });
+    if (fromH !== toH) sideBox.animate([{ height: fromH + 'px' }, { height: toH + 'px' }], { duration: 420, easing: EASE });
+    // Timer, not requestAnimationFrame: rAF pauses in a background tab and the pill would stay hidden.
+    setTimeout(function () { if (sideSlider) sideSlider.classList.add('is-ready'); }, 60);
   }
 
   tabs.forEach(function (t) {
