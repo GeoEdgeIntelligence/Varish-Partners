@@ -223,13 +223,32 @@ body{background:#fff;}
 .vpa-team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
 .vpa-person{display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;padding:20px;align-items:start;}
 .vpa-photo{border-radius:16px;overflow:hidden;background:var(--vpa-chip);aspect-ratio:4 / 5;}
+.vpa-photo picture{display:block;width:100%;height:100%;}
 .vpa-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;}
 .vpa-role{margin:2px 0 2px;font-size:14px;font-weight:600;color:var(--vpa-brand);}
 .vpa-mail{display:inline-block;margin:0 0 8px;font-size:13.5px;color:var(--vpa-muted);text-decoration:none;word-break:break-all;}
 .vpa-mail:hover{color:var(--vpa-brand);text-decoration:underline;}
 .vpa-bio{position:relative;max-height:calc(1.6em * 3);overflow:hidden;font-size:14px;line-height:1.6;color:var(--vpa-muted);-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent);}
 .vpa-bio p{margin:0 0 8px;}
-.vpa-person.is-open .vpa-bio{max-height:calc(1.6em * 8);overflow-y:auto;-webkit-mask-image:none;mask-image:none;padding-right:6px;}
+.vpa-bio{transition:max-height .6s cubic-bezier(.22,.61,.36,1);}
+.vpa-person.is-open .vpa-bio{max-height:min(60vh, calc(1.6em * 22));overflow-y:auto;-webkit-mask-image:none;mask-image:none;padding-right:6px;}
+
+/* Desktop: an open bio takes the whole row. The other card shrinks away
+   (its contents keep their width and are clipped, so nothing squashes),
+   and the open card lays its bio out in two columns. */
+@media (min-width:1025px){
+  .vpa-team-grid{transition:grid-template-columns .6s cubic-bezier(.22,.61,.36,1),column-gap .6s cubic-bezier(.22,.61,.36,1);}
+  .vpa-team-grid[data-open="0"]{grid-template-columns:minmax(0,1fr) minmax(0,0fr);column-gap:0;}
+  .vpa-team-grid[data-open="1"]{grid-template-columns:minmax(0,0fr) minmax(0,1fr);column-gap:0;}
+  .vpa-person{transition:opacity .35s ease,padding .6s cubic-bezier(.22,.61,.36,1);}
+  .vpa-person.is-collapsed{opacity:0;overflow:hidden;pointer-events:none;grid-template-columns:140px 380px;padding-left:0;padding-right:0;}
+  .vpa-person.is-open .vpa-bio{column-count:2;column-gap:36px;}
+  .vpa-person.is-open .vpa-bio p{break-inside:avoid;}
+}
+/* Tablet and phone: cards are stacked and the page scrolls, so an open bio shows in full. */
+@media (max-width:1024px){
+  .vpa-person.is-open .vpa-bio{max-height:1600px;overflow:visible;padding-right:0;}
+}
 .vpa-person-actions{display:flex;align-items:center;gap:16px;margin-top:10px;flex-wrap:wrap;}
 .vpa-readmore{padding:0;border:0;background:none;font-family:var(--vpa-sans);font-size:14px;font-weight:600;color:var(--vpa-brand);text-decoration:underline;text-underline-offset:4px;cursor:pointer;}
 .vpa-readmore:hover,.vpa-readmore:focus{background:none;color:var(--vpa-brand-dark);}
@@ -360,7 +379,7 @@ body{background:#fff;}
 					<a class="vpa-btn vpa-btn--dark" href="/contact-us/">Schedule a call</a>
 				</div>
 			</div>
-			<div class="vpa-hero-media"><picture><source srcset="/images/about/about-hero.webp" type="image/webp"><img src="/images/about/about-hero.jpg" alt="Varish Partners partners reviewing a client file by the office window in Mangaluru" width="1200" height="1600" loading="eager"></picture></div>
+			<div class="vpa-hero-media"><picture><source srcset="/images/about/about-hero.webp?v=2" type="image/webp"><img src="/images/about/about-hero.jpg?v=2" alt="A partner’s office by the window in Mangaluru, with financial reports, reading glasses and a cup of filter coffee" width="1200" height="1600" loading="eager"></picture></div>
 		</div>
 	</section>
 
@@ -423,12 +442,12 @@ body{background:#fff;}
 			</div>
 			<div class="vpa-team-grid">
 				<article class="vpa-card vpa-person">
-					<div class="vpa-photo"><img src="/wp-content/uploads/2024/09/VS_Professional-qtbbg1p63rnbangntz5sxv1iihz37zz4dsdxblw8i8.png" alt="Varun Shenoy, Managing Partner" loading="lazy"></div>
+					<div class="vpa-photo"><picture><source srcset="/images/team/webp/varun-shenoy.webp" type="image/webp"><img src="/images/team/jpeg/varun-shenoy.jpg" alt="Varun Shenoy, Managing Partner" loading="lazy"></picture></div>
 					<div>
 						<h3 class="vpa-h3">Varun Shenoy</h3>
 						<p class="vpa-role">Managing Partner</p>
 						<a class="vpa-mail" href="mailto:vshenoy@varishpartners.com">vshenoy@varishpartners.com</a>
-						<div class="vpa-bio"><p>Varun Shenoy is a consultant and CA Final candidate, specialising in startup advisory with expertise in startups and entrepreneurship, finance and taxation, economic laws and capital markets. Previously, he co-founded Health-E, a health-tech platform, in 2020, demonstrating his entrepreneurial acumen.</p><p>Varun’s astute insights have been recognised at prestigious events like the i5 Summit (IIM Indore), Anveeksha (AIMIT) and national conferences hosted by ICAI, where he shared expertise on entrepreneurship, economics, tax and corporate laws, and finance.</p><p>With a diverse professional background, Varun has worked with esteemed clients across various sectors, including technology, e-commerce, real estate, construction, consumer goods, and retail, honing his professional acumen. At Varish Partners, he spearheads client relations, business strategy, finance and overall management.</p></div>
+						<div class="vpa-bio"><p>Varun is a consultant and CA Final candidate specialising in strategy and business advisory, with expertise spanning growth and expansion, finance and taxation, capital raising and structuring, economic and corporate laws, capital markets, and entrepreneurship.</p><p>An entrepreneur himself, Varun co-founded Health-E, a health-tech platform, in 2020. This experience shaped his understanding of the challenges involved in building and scaling businesses, from strategy and finance to execution.</p><p>His perspectives on entrepreneurship, economics, taxation, corporate laws and finance have been featured at platforms including the i5 Summit at IIM Indore, Anveeksha at AIMIT, and national conferences organised by the Institute of Chartered Accountants of India (ICAI).</p><p>Over the course of his professional journey, Varun has worked with businesses across technology, e-commerce, real estate, construction, consumer goods and retail, as well as listed companies. His engagements have included strategic expansion, cross border transaction advisory, capital raising and financial structuring, due diligence, providing exposure to businesses at different stages of growth and across diverse sectors.</p><p>At Varish Partners, Varun leads client relationships and contributes to business strategy, finance and the firm’s overall management. He works closely with founders, promoters and management teams on strategic decisions, growth initiatives, capital requirements and complex financial matters.</p></div>
 						<div class="vpa-person-actions">
 							<button class="vpa-readmore" type="button" aria-expanded="false">Read bio</button>
 							<a class="vpa-link" href="https://www.linkedin.com/in/varun-shenoy-bb9058154/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg>LinkedIn</a>
@@ -441,7 +460,7 @@ body{background:#fff;}
 						<h3 class="vpa-h3">Vishwanath Prabhu</h3>
 						<p class="vpa-role">Partner</p>
 						<a class="vpa-mail" href="mailto:Vishwanath@varishpartners.com">Vishwanath@varishpartners.com</a>
-						<div class="vpa-bio"><p>Vishwanath is a dedicated and experienced Chartered Accountant aspirant with a robust background in financial regulations. With over five years of experience, Vishwanath has developed a specialization in concurrent and statutory bank audits, GST compliance, and reporting, making him a sought-after expert in his field.</p><p>Vishwanath’s impressive repertoire includes consulting and conducting GST audits for nationalized banks, effectively representing clients before GST authorities, and providing intricate advisory services related to GST. His extensive experience has equipped him with a deep understanding of the complexities of Indian tax laws, enabling him to deliver precise and effective solutions to businesses navigating these challenges.</p><p>With a strong foundation in financial regulations and a passion for helping businesses thrive, Vishwanath is committed to making a positive impact in the world of finance.</p></div>
+						<div class="vpa-bio"><p>Vishwanath is a Chartered Accountant aspirant with over seven years of experience across banking audits, GST advisory, tax compliance and business setup advisory. His professional experience includes concurrent and statutory audits of banks, GST compliance and reporting, tax advisory, and supporting businesses through the process of establishing their operations.</p><p>He has worked extensively with nationalised banks, including on GST audits and compliance engagements, and has represented clients before GST authorities. His experience has given him a strong understanding of Indian tax regulations and the practical considerations involved in setting up and operating businesses in India.</p><p>Vishwanath has also supported clients with business setup and related regulatory requirements, helping businesses navigate the financial, tax and compliance considerations involved in establishing their operations.</p><p>At Varish Partners, Vishwanath works closely with clients across GST, taxation, compliance and business setup matters, combining regulatory knowledge with a practical approach to solving complex business requirements.</p></div>
 						<div class="vpa-person-actions">
 							<button class="vpa-readmore" type="button" aria-expanded="false">Read bio</button>
 							<a class="vpa-link" href="https://www.linkedin.com/in/vishwanath-prabhu-357201148/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg>LinkedIn</a>
@@ -846,17 +865,35 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     });
   }
 
-  /* ----- Leadership bios: "Read bio" opens the full bio inside the card ----- */
-  Array.prototype.forEach.call(document.querySelectorAll('.vpa-person'), function (card) {
-    var btn = card.querySelector('.vpa-readmore');
-    var bio = card.querySelector('.vpa-bio');
-    if (!btn || !bio) return;
-    btn.addEventListener('click', function () {
-      var open = !card.classList.contains('is-open');
+  /* ----- Leadership bios: "Read bio" opens the full bio. On desktop the
+     open card takes the whole row and the other card shrinks away. ----- */
+  var teamGrid = document.querySelector('.vpa-team-grid');
+  var people = Array.prototype.slice.call(document.querySelectorAll('.vpa-person'));
+  function setOpen(index) {
+    people.forEach(function (card, i) {
+      var open = i === index;
+      var btn = card.querySelector('.vpa-readmore');
       card.classList.toggle('is-open', open);
-      btn.textContent = open ? 'Close bio' : 'Read bio';
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      bio.scrollTop = 0;
+      card.classList.toggle('is-collapsed', index !== -1 && !open);
+      card.setAttribute('aria-hidden', index !== -1 && !open ? 'true' : 'false');
+      if (btn) {
+        btn.textContent = open ? 'Close bio' : 'Read bio';
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      var bio = card.querySelector('.vpa-bio');
+      if (bio) bio.scrollTop = 0;
+    });
+    if (teamGrid) {
+      if (index === -1) teamGrid.removeAttribute('data-open');
+      else teamGrid.setAttribute('data-open', String(index));
+    }
+  }
+  people.forEach(function (card, i) {
+    var btn = card.querySelector('.vpa-readmore');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      setOpen(card.classList.contains('is-open') ? -1 : i);
+      if (!card.classList.contains('is-open')) btn.focus();
     });
   });
 
