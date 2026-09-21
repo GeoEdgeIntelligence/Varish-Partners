@@ -141,7 +141,12 @@ gtag("config", "GT-TX9689S5");
 .vpc-main{max-width:none !important;width:100% !important;margin:0 !important;padding:0 !important;background:#F1E8DC;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:#1F1F1F;}
 .vpc-main *{box-sizing:border-box;}
 .vpc-screen{display:flex;flex-direction:column;justify-content:center;padding:28px 0;}
-.vpc-wrap{max-width:1188px;width:100%;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:44px;align-items:center;}
+.vpc-wrap{max-width:1188px;width:100%;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:44px;align-items:stretch;}
+/* Both columns share top and bottom edges: heading block at the top, contact cards at the bottom. */
+.vpc-wrap > :first-child{display:flex;flex-direction:column;}
+.vpc-wrap > :first-child > .vpc-info{margin-top:auto;}
+.vpc-card{display:flex;flex-direction:column;}
+.vpc-card > form{flex:1 1 auto;}
 .vpc-eyebrow{margin:0 0 8px;font-size:16px;font-weight:600;line-height:22px;color:#6B4D37;}
 .vpc-h1{margin:0 0 16px;font-family:"Merriweather",Georgia,serif;font-size:42px;line-height:1.18;font-weight:700;color:#1F1F1F;}
 .vpc-lead{margin:0 0 26px;font-size:16px;line-height:1.7;color:#5f5f5f;}
@@ -183,7 +188,8 @@ gtag("config", "GT-TX9689S5");
 .vpc-field input:focus,.vpc-field select:focus,.vpc-field textarea:focus{outline:none;border-color:#6B4D37;background:#fff;box-shadow:0 0 0 3px rgba(107,77,55,.14);}
 .vpc-field input[aria-invalid="true"],.vpc-field textarea[aria-invalid="true"]{border-color:#b3261e;}
 .vpc-actions{grid-column:1 / -1;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:4px;}
-.vpc-note{margin:0;font-size:12.5px;line-height:1.5;color:#8a7d72;max-width:300px;}
+.vpc-note{flex:1 1 0;min-width:0;margin:0;font-size:12.5px;line-height:1.5;color:#8a7d72;}
+.vpc-actions > .vpc-btn{flex:0 0 auto;}
 .vpc-note.is-alert{color:#b3261e;font-weight:500;}
 .vpc-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 30px;border:0;border-radius:999px;background:#6B4D37;color:#fff;font-family:inherit;font-size:15px;font-weight:500;line-height:1.2;cursor:pointer;box-shadow:0 12px 26px rgba(107,77,55,.28);transition:transform .35s cubic-bezier(.22,.61,.36,1),background-color .35s ease;}
 .vpc-btn:hover,.vpc-btn:focus{background:#5a3f2d;color:#fff;transform:translateY(-2px);}
@@ -191,8 +197,19 @@ gtag("config", "GT-TX9689S5");
 .vpc-btn svg{width:16px;height:16px;}
 
 @media (prefers-reduced-motion:reduce){.vpc-item,.vpc-item::before,.vpc-btn{transition:none;}.vpc-item:hover{transform:none;}}
+/* Short laptop screens: tighter spacing so the page still fits one screen. */
+@media (min-width:1025px) and (max-height:760px){
+  .vpc-screen{padding:16px 0;}
+  .vpc-card{padding:24px 28px 24px;}
+  .vpc-card > p{margin-bottom:14px;}
+  .vpc-field textarea{min-height:84px;}
+  .vpc-h1{font-size:36px;margin-bottom:12px;}
+  .vpc-lead{margin-bottom:18px;}
+  .vpc-item{padding:14px 18px;}
+}
 @media (max-width:1024px){
   .vpc-wrap{grid-template-columns:minmax(0,1fr);gap:24px;padding:0 20px;}
+  .vpc-wrap > :first-child > .vpc-info{margin-top:0;}
   .vpc-info--row{grid-template-columns:minmax(0,1fr);}
   .vpc-screen{padding:32px 0;}
 }
