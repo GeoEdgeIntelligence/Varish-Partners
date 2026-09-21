@@ -172,15 +172,8 @@
 }
 /* The empty container after the homepage contact section. */
 .elementor-element-04da43f{display:none !important;}
-@media (max-width:767px){
-  /* Fixed call-to-action bar (it sits inside the footer markup; hidden on larger screens). */
-  .elementor-element-0b2227a{position:fixed !important;left:0;right:0;bottom:0;z-index:990;margin:0 !important;
-    padding:10px 16px calc(10px + env(safe-area-inset-bottom)) !important;background:#fff;box-shadow:0 -8px 24px rgba(20,20,20,.14);}
-  .elementor-element-0b2227a > .e-con-inner{display:flex !important;flex-direction:row !important;gap:10px !important;padding:0 !important;max-width:none !important;}
-  .elementor-element-0b2227a .elementor-widget{flex:1 1 0;margin:0 !important;width:auto !important;}
-  .elementor-element-0b2227a .elementor-button{display:flex !important;justify-content:center;width:100%;padding:13px 10px !important;border-radius:999px !important;font-size:15px !important;}
-  body{padding-bottom:72px;}
-}
+/* The footer's "Free Consultation / WhatsApp" call-to-action bar is not used (removed on phones too, 2026-09-21). */
+.elementor-element-0b2227a{display:none !important;}
 @media (max-width:767px){
   /* Recovered Elementor pages (blog posts, Our Story): cap laptop-sized headings on phones. */
   body:not(.home) main h1.elementor-heading-title{font-size:30px !important;line-height:1.2 !important;}

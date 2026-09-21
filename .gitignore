@@ -47,3 +47,5 @@ service-photos-state.json
 form-to-sheet.gs
 service-photo-prompts.md
 __pycache__/
+build-thinking.js
+thinking-data.js
