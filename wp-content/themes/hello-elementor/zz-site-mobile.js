@@ -101,9 +101,12 @@ window.vpReadFile = function (file) {
   var links = Array.prototype.slice.call(panel.querySelectorAll('a'));
 
   function syncHeader() {
-    document.documentElement.style.setProperty('--vp-hdr', Math.round(header.getBoundingClientRect().bottom) + 'px');
+    // The panel opens just below the header; never above the top of the screen.
+    var bottom = Math.round(header.getBoundingClientRect().bottom);
+    document.documentElement.style.setProperty('--vp-hdr', Math.max(0, bottom) + 'px');
   }
   function setOpen(open) {
+    if (open) syncHeader(); // measure before the page is locked
     widget.classList.toggle('vp-menu-open', open);
     document.documentElement.classList.toggle('vp-menu-lock', open);
     toggle.classList.toggle('elementor-active', open);
@@ -111,7 +114,6 @@ window.vpReadFile = function (file) {
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     panel.setAttribute('aria-hidden', open ? 'false' : 'true');
     links.forEach(function (a) { a.setAttribute('tabindex', open ? '0' : '-1'); });
-    if (open) syncHeader();
   }
   function isOpen() { return widget.classList.contains('vp-menu-open'); }
 

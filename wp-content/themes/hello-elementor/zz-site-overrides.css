@@ -151,7 +151,10 @@
   .elementor-location-header .elementor-nav-menu--dropdown a:hover,.elementor-location-header .elementor-nav-menu--dropdown a:focus{background:#F7F1EA !important;color:#6B4D37 !important;}
   .elementor-location-header .elementor-nav-menu--dropdown .sub-menu{display:block !important;position:static !important;width:auto !important;box-shadow:none !important;border:0 !important;margin:0 !important;padding:0 !important;background:transparent !important;}
   .elementor-location-header .elementor-nav-menu--dropdown .sub-arrow{display:none !important;}
-  html.vp-menu-lock,html.vp-menu-lock body{overflow:hidden;}
+  /* Lock the page behind the open menu on <html> only: overflow on <body> as well
+     turns it into a scroll box, the sticky header scrolls away and the menu is lost. */
+  html.vp-menu-lock{overflow:hidden;}
+  .elementor-location-header .elementor-nav-menu--dropdown.elementor-nav-menu__container{overscroll-behavior:contain;}
 
   /* Footer: tighter on small screens */
   .elementor-location-footer .elementor-element-18a4e857{padding-top:32px !important;padding-bottom:8px !important;}
