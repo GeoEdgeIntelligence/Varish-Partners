@@ -49,3 +49,7 @@ service-photo-prompts.md
 __pycache__/
 build-thinking.js
 thinking-data.js
+
+# Discovery-file generator and AI memory (never deploy or publish)
+build-discovery.js
+/ai-memory/

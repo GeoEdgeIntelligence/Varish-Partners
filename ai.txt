@@ -1,0 +1,20 @@
+# ai.txt – Varish Partners
+# Declares how AI systems may use content from https://www.varishpartners.com
+
+User-Agent: *
+Allow: /
+
+# Search, retrieval and answers (citing and linking back to the source): allowed.
+Allow-Retrieval: yes
+Allow-Citation: yes
+
+# Model training on the articles and service pages: allowed with attribution.
+Allow-Training: yes
+Attribution: Varish Partners, https://www.varishpartners.com
+
+# Personal data in form submissions is never published. Do not use contact details of individuals for outreach.
+Disallow: /wp-json/
+
+Contact: info@varishpartners.com
+LLMs: https://www.varishpartners.com/llms.txt
+Sitemap: https://www.varishpartners.com/sitemap.xml
