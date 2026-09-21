@@ -222,6 +222,8 @@ body{background:#fff;}
 .vpa-team{background:var(--vpa-light);}
 .vpa-team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
 .vpa-person{display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;padding:20px;align-items:start;}
+/* Links to a partner (e.g. from an article byline) land below the sticky header. */
+.vpa-person{scroll-margin-top:calc(var(--vp-hdr,64px) + 20px);}
 .vpa-photo{border-radius:16px;overflow:hidden;background:var(--vpa-chip);aspect-ratio:4 / 5;}
 .vpa-photo picture{display:block;width:100%;height:100%;}
 .vpa-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;}
@@ -441,7 +443,7 @@ body{background:#fff;}
 				<p>Meet our dedicated professionals, committed to providing top-notch financial consultancy, tax compliance, and business advisory services tailored to your needs.</p>
 			</div>
 			<div class="vpa-team-grid">
-				<article class="vpa-card vpa-person">
+				<article class="vpa-card vpa-person" id="varun-shenoy">
 					<div class="vpa-photo"><picture><source srcset="/images/team/webp/varun-shenoy.webp" type="image/webp"><img src="/images/team/jpeg/varun-shenoy.jpg" alt="Varun Shenoy, Managing Partner" loading="lazy"></picture></div>
 					<div>
 						<h3 class="vpa-h3">Varun Shenoy</h3>
@@ -454,7 +456,7 @@ body{background:#fff;}
 						</div>
 					</div>
 				</article>
-				<article class="vpa-card vpa-person">
+				<article class="vpa-card vpa-person" id="vishwanath-prabhu">
 					<div class="vpa-photo"><img src="/wp-content/uploads/2024/09/2_-removebg-preview-qtbbg1p63rnbangntz5sxv1iihz37zz4dsdxblw8i8.png" alt="Vishwanath Prabhu, Partner" loading="lazy"></div>
 					<div>
 						<h3 class="vpa-h3">Vishwanath Prabhu</h3>
