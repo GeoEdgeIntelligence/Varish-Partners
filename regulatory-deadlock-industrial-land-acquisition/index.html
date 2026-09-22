@@ -149,7 +149,8 @@ gtag("config", "GT-TX9689S5");
 .vp-crumbs [aria-current]{display:block;max-width:46ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4A4A4A;}
 @media (max-width:767px){.vp-crumbs{font-size:13px;margin-bottom:18px;}.vp-crumbs [aria-current]{max-width:26ch;}}
 .vpk-main{max-width:none !important;width:100% !important;margin:0 !important;padding:0 !important;background:#fff;color:#1F1F1F;font-family:"Poppins",sans-serif;}
-.vpk-wrap{max-width:1140px;margin:0 auto;padding:56px 24px 72px;box-sizing:border-box;}
+/* Content spans the header box: from the logo to the end of "Careers" (1140px box, menu link ends 8px in). */
+.vpk-wrap{width:min(1140px,100% - 40px);margin:0 auto;padding:56px 8px 72px 0;box-sizing:border-box;}
 .vpk-eyebrow{display:inline-flex;align-items:center;gap:14px;margin:0 0 14px;font-size:16px;font-weight:600;color:#6B4D37;}
 .vpk-eyebrow::before{content:"";width:40px;height:1px;background:#6B4D37;}
 .vpk-h1{margin:0 0 16px;font-family:"Merriweather",Georgia,serif;font-size:42px;line-height:1.25;font-weight:700;color:#1F1F1F;text-wrap:balance;}
@@ -167,7 +168,7 @@ gtag("config", "GT-TX9689S5");
 .vpk-more svg,.vpk-btn svg{width:16px;height:16px;transition:transform .35s cubic-bezier(.22,.61,.36,1);}
 .vpk-card:hover .vpk-more svg,.vpk-card:focus-visible .vpk-more svg,.vpk-btn:hover svg{transform:translateX(4px);}
 /* Article */
-.vpk-article{max-width:760px;margin:0 auto;padding:48px 24px 80px;box-sizing:border-box;}
+.vpk-article{width:min(1140px,100% - 40px);margin:0 auto;padding:48px 8px 80px 0;box-sizing:border-box;}
 .vpk-byline{display:flex;align-items:center;gap:14px;margin:8px 0 0;padding:20px 0 28px;border-bottom:1px solid #E4D9CB;}
 .vpk-byline img{display:block;width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:top center;background:#F3EBE1;}
 .vpk-author{display:block;font-size:15.5px;font-weight:600;color:#1F1F1F;}
@@ -198,17 +199,19 @@ gtag("config", "GT-TX9689S5");
 .vpk-cta:hover,.vpk-cta:focus-within{transform:translateY(-6px);box-shadow:0 26px 56px rgba(0,0,0,.22),0 2px 6px rgba(0,0,0,.08);}
 .vpk-cta:hover::before,.vpk-cta:focus-within::before{width:100%;}
 .vpk-article--paired{padding-bottom:0;}
-.vpk-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:1040px;margin:0 auto;padding:56px 24px 80px;box-sizing:border-box;}
+.vpk-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:min(1140px,100% - 40px);margin:0 auto;padding:56px 8px 80px 0;box-sizing:border-box;}
 .vpk-pair .vpk-cta{display:flex;flex-direction:column;margin-top:0;}
-.vpk-pair .vpk-actions{margin-top:auto;}
+.vpk-pair .vpk-actions{display:grid;grid-template-columns:max-content;gap:12px;margin-top:auto;}
+.vpk-pair .vpk-btn{justify-content:center;}
+.vpk-pair .vpk-cta p{margin-bottom:24px;}
 @media (prefers-reduced-motion:reduce){.vpk-cta,.vpk-cta::before{transition:none;}.vpk-cta:hover,.vpk-cta:focus-within{transform:none;}}
 @media (max-width:900px){.vpk-pair{grid-template-columns:minmax(0,1fr);}}
 .vpk-cta h2{margin:0 0 8px;font-family:"Merriweather",Georgia,serif;font-size:24px;line-height:1.3;font-weight:700;color:#1F1F1F;}
 .vpk-cta p{margin:0 0 20px;font-size:16px;line-height:1.75;color:#4A4A4A;}
 .vpk-actions{display:flex;flex-wrap:wrap;gap:12px;}
 .vpk-svc{display:grid;gap:10px;margin:0;padding:0;list-style:none;}
-.vpk-svc a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border-radius:14px;background:#F7F1EA;box-shadow:inset 0 0 0 1px rgba(107,77,55,.12);color:#4A4A4A;text-decoration:none;transition:box-shadow .3s ease,background-color .3s ease;}
-.vpk-svc a span{display:flex;flex-direction:column;gap:2px;font-size:14.5px;line-height:1.55;}
+.vpk-svc a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px;border-radius:14px;background:#F7F1EA;box-shadow:inset 0 0 0 1px rgba(107,77,55,.12);color:#4A4A4A;text-decoration:none;transition:box-shadow .3s ease,background-color .3s ease;}
+.vpk-svc a span{display:flex;flex-direction:column;gap:2px;font-size:14px;line-height:1.5;}
 .vpk-svc a strong{font-family:"Merriweather",Georgia,serif;font-size:16.5px;font-weight:700;color:#1F1F1F;}
 .vpk-svc a svg{flex:0 0 auto;width:18px;height:18px;color:#6B4D37;transition:transform .35s cubic-bezier(.22,.61,.36,1);}
 .vpk-svc a:hover,.vpk-svc a:focus-visible{box-shadow:inset 0 0 0 1.5px #6B4D37;outline:none;}
@@ -219,15 +222,15 @@ gtag("config", "GT-TX9689S5");
 .vpk-btn--ghost{color:#6B4D37;box-shadow:inset 0 0 0 1.5px #6B4D37;}
 .vpk-btn--ghost:hover,.vpk-btn--ghost:focus-visible{background:#6B4D37;color:#fff;}
 @media (max-width:767px){
-  .vpk-wrap{padding:36px 20px 56px;}
+  .vpk-wrap{padding:36px 0 56px;}
   .vpk-h1{font-size:30px;}
-  .vpk-article{padding:32px 20px 56px;}
+  .vpk-article{padding:32px 0 56px;}
   .vpk-body{font-size:16.5px;line-height:1.8;}
   .vpk-body h2{font-size:23px;}
   .vpk-body ol > li{padding-left:40px;}
   .vpk-body .vpk-closing{font-size:19px;}
   .vpk-cta{padding:24px 20px;}
-  .vpk-pair{padding:40px 20px 56px;}
+  .vpk-pair{padding:40px 0 56px;}
 }
 </style>
 </head>
