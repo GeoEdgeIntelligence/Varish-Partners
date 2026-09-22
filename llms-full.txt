@@ -129,19 +129,15 @@ LinkedIn
 
 Spotlight
 
-## Case Studies in Practice
+More Spotlight
 
-A closer look at how we have solved real, complex problems for clients.
-
--
 Strategy & Transaction Advisory
 
-## Spotlight: Structuring Around a Regulatory Deadlock in an Industrial Land Acquisition
+### Spotlight: Unlocking Control of a Scarce Industrial Asset Ahead of Schedule
 
-How a phased structure gave a greenfield-expansion client immediate operational control of a scarce industrial site, without breaching the very allotment conditions built to prevent that.
+How a bespoke ownership and control framework gave a client operational control of a scarce industrial site years ahead of formal title transfer, while staying fully compliant.
 
-22 September 2026 · 5 min read
-Read case study
+22 September 2026 · 2 min readRead case study
 
 ---
 
@@ -684,70 +680,95 @@ Whether you are starting a new business or tidying up an existing one, we will m
 
 ---
 
-# Spotlight: Structuring Around a Regulatory Deadlock in an Industrial Land Acquisition
+# ODI Simplified: What Indian Founders Need to Know Before Investing Abroad
+Source: https://www.varishpartners.com/odi-simplified-guide-for-indian-founders/
+
+By Varun ShenoyManaging Partner · 22 September 2026 · 3 min read
+
+The moment an Indian company sets up a subsidiary in Singapore, invests in a Delaware holding entity, or takes equity in an overseas joint venture, it has made an Overseas Direct Investment (ODI), and a compliance clock starts immediately. Most founders only discover this clock exists when an AD bank flags a missing filing or an investor’s due diligence team raises a red flag mid-deal. Here’s what the framework actually requires.
+
+## The rules, in brief
+
+ODI is governed by a consolidated framework that has been in force since August 2022: the Overseas Investment Rules, the Overseas Investment Regulations, and the RBI’s Master Direction on Overseas Investment. Together they replaced an older, more fragmented 2004-era regime.
+
+Most outbound investment can proceed under the Automatic Route, no prior RBI approval needed, provided a few conditions are met:
+
+- The foreign entity must carry on a genuine, lawful business activity in its host country.
+
+- Total financial commitment (equity, loans, and guarantees combined) cannot exceed 400% of the Indian entity’s net worth, based on its last audited balance sheet.
+
+- Since the 2022 overhaul, a company can no longer lean on a subsidiary’s or holding company’s net worth to expand this headroom, only its own.
+
+Step outside these boundaries, certain regulated sectors, structures involving multiple layers of overseas entities, or commitments beyond the 400% ceiling, and prior RBI approval becomes necessary.
+
+## Funding it correctly
+
+Indian companies can fund overseas investments through internal accruals, fresh equity issuance, External Commercial Borrowings, or share swaps, among other routes. Each method carries its own documentation trail, and mixing them without proper structuring is one of the more common ways founders create reporting headaches later.
+
+## The part everyone underestimates: reporting
+
+Making the investment is only step one. Every ODI requires:
+
+- Filing Form FC through an Authorised Dealer bank.
+
+- Obtaining a Unique Identification Number (UIN) for the foreign entity.
+
+- Filing an Annual Performance Report (APR) every year by 31 December, for as long as the investment exists.
+
+Miss an APR, and the RBI doesn’t just levy a fine, it blocks any further financial commitment to that entity until the lapse is regularised. A Late Submission Fee (currently ₹7,500 per form) covers delays of up to three years. Beyond that, or for anything more substantive than a late filing, the matter moves into formal FEMA compounding, where penalties can run up to three times the contravention amount.
+
+## Why this matters before you sign anything
+
+The businesses that navigate ODI cleanly are the ones that treat it as part of deal structuring from day one, not paperwork to sort out after the wire transfer. This is exactly the kind of situation we work through with clients regularly. When one of our clients was preparing for a significant overseas investment, our role was to help them navigate the regulatory environment early, structure the investment correctly, and stay ahead of the reporting obligations that come with it, rather than reacting to them. That kind of preparation is what keeps an international expansion a strategic milestone instead of a compliance scramble.
+
+ODI isn’t complicated once it’s mapped out properly, but it rewards founders who plan for it before the first remittance leaves the country, not after.
+
+## Have a decision to make?
+
+Bring us the question, the challenge or the opportunity. We’ll bring the experience and perspective to help you move forward with clarity.
+
+Talk to a Partner
+
+---
+
+# Spotlight: Unlocking Control of a Scarce Industrial Asset Ahead of Schedule
 Source: https://www.varishpartners.com/regulatory-deadlock-industrial-land-acquisition/
 
-22 September 2026 · 5 min read
+22 September 2026 · 2 min read
 
-**Sector:** Strategy & Transaction Advisory. **Engagement type:** Greenfield expansion, industrial land acquisition strategy.
+**Sector:** Strategy & Transaction Advisory. **Engagement type:** Greenfield expansion, industrial land acquisition.
 
-## The Situation
+## The Challenge
 
-A client planning a strategic greenfield expansion identified a promising industrial site, but the land came with a structural complication. The plot was held by three individual allottees under a 10-year lease-cum-sale agreement with the state’s industrial land development authority, a common allotment structure in Karnataka’s industrial corridors. The district in question is a dense industrial belt, home to multiple designated industrial areas and hundreds of allotted units, making land scarce and highly regulated.
+A client pursuing a strategic greenfield expansion had identified the right site: industrial land already under a long-term lease allotment from a state development authority, with title transfer still some years away. Regulatory conditions on the allotment made a conventional acquisition impossible. The framework was designed specifically to prevent control from changing hands before the lease term concluded, with severe consequences, including loss of the land itself, for any structure that breached it.
 
-The Client needed operational control of the site immediately, with a clear path to full ownership. The authority’s allotment framework, however, was built to prevent exactly that kind of fast-tracked change of hands.
+The client faced a costly choice: wait years for a conventional path to ownership, or risk a structure that could jeopardise the asset entirely.
 
-## The Core Challenge
+## Our Role
 
-Lease-cum-sale allotments of this kind exist to ensure land goes to genuine industrial users, not intermediaries. Two features of the framework made a straightforward acquisition impossible:
+We were engaged to find a third path. Drawing on our experience structuring transactions around regulatory constraints, we designed a bespoke ownership and control framework that worked entirely within the letter of the regulatory conditions, securing the client immediate operational authority and financial priority over the asset while preserving full compliance with the allotment terms throughout.
 
-**The 51% rule.** Until an Absolute Sale Deed is executed, the original allottees are required to retain at least 51% interest in the entity holding the lease.
+The solution combined elements of corporate restructuring, contractual control mechanisms and phased capital structuring, tailored specifically to the regulatory environment governing this class of asset, to give the client functional control of the site well ahead of formal title transfer.
 
-**Resumption risk.** Any structure that looks like an indirect transfer of the land, or that quietly hands economic and operational control to a third party before the sale deed is executed, exposes the allotment to resumption by the authority, without compensation.
+## The Impact
 
-With nine of the ten lease years already elapsed, the Client faced a real trade-off: wait out the final year and risk losing the opportunity to a competing bidder or delay, or find a structure that gave them control now without breaching the letter of the allotment conditions.
+- **Immediate operational control,** years ahead of what the conventional timeline would have allowed.
 
-## Our Approach: The Investment-as-Debt Model
+- **Zero disruption to the underlying allotment:** the asset remained fully compliant and protected from regulatory risk throughout.
 
-We designed a phased structure that gives the Client operational and financial control immediately, while preserving the legal continuity the authority requires, and positions the Client for a clean, low-friction transfer to full ownership once the sale deed is executed.
+- **Capital protection built into the structure,** giving the client priority financial standing over the asset from day one.
 
-- **Reconstitution, not replacement.** The three original allottees reconstitute themselves as an LLP and seek the authority’s approval for the change in constitution, a recognised, compliant route, rather than an attempted transfer of the allotment itself.
+- **Continued eligibility for state industrial incentives,** without the client having to compete for a fresh allotment.
 
-- **A capped equity position.** The Client (or a subsidiary) is inducted as a 49% partner. The original allottees retain 51%, satisfying the authority’s minimum-holding rule on paper in full.
+- **A clear, pre-agreed path to full ownership,** removing uncertainty and renegotiation risk at the point of formal transfer.
 
-- **Capital as senior debt, not equity.** Rather than infusing its investment as capital, the Client structures its funding as a secured loan or inter-corporate deposit to the entity. This does two things: it keeps the Client’s formal equity stake within the regulatory cap, and it gives the Client priority repayment rights over the entity’s revenue, ahead of any distribution to the 51% partners.
+## Why It Mattered
 
-- **Control through a Development Management Agreement.** A DMA gives the Client sole managerial authority over construction, marketing, and site operations from day one. The original allottees are compensated through a fixed upfront payment or a modest revenue share, becoming passive financial beneficiaries rather than active operational partners.
+This wasn’t just a legal workaround. It was a strategic unlock. The client secured a scarce, well-located industrial asset years before competitors pursuing the same category of opportunity could have, without taking on the regulatory or financial risk that a less carefully structured approach would have carried.
 
-- **A pre-agreed exit for the original allottees.** The agreement includes a binding buyout trigger: once the Absolute Sale Deed is executed, the 51% stake transfers to the Client automatically. Pre-signed transfer documentation, held subject to legal vetting, ensures this happens without renegotiation risk at the finish line.
+## From the Deal Team
 
-## Where the Strategy Creates an Opening
-
-Two elements of the current policy environment work in the Client’s favour and are built into the roadmap:
-
-- **Incentive eligibility without new-entrant competition.** Under the current 2025-30 industrial policy, existing enterprises that increase capital expenditure by 25% remain eligible for the same subsidy benefits as new enterprises, without having to compete for a fresh allotment. Because the Client is stepping into an existing lessee entity rather than acquiring a new one, this path stays open.
-
-- **A possible accelerated exit from the 51% rule.** The authority’s regulations allow for relaxation of the minority-holding penalty where a project shows “substantial implementation.” Separately, current policy allows units that have run production successfully for two years to qualify for clear title. Beginning construction immediately, under the entity’s name, keeps both of these accelerants live, potentially shortening the runway to full title well ahead of the original ten-year mark.
-
-## Risk Profile
-
-We were candid with the Client that this structure carries two real, monitored risks:
-
-- **Temporary minority status.** For a window of roughly 12-24 months, the Client’s formal position is a 49% stake, meaning the loan structuring and DMA are doing the real work of protecting its interests, not the equity position itself.
-
-- **Ongoing regulatory scrutiny.** The authority monitors the entity’s balance sheet and implementation progress throughout. Failure to demonstrate production within the required window reintroduces resumption risk, making the construction timeline as much a legal milestone as an operational one.
-
-## Why This Structure
-
-The alternative, waiting out the remaining lease term, or attempting a direct transfer that could read as a disguised third-party right, carried a much higher risk profile: potential resumption of the land without compensation, loss of subsidy eligibility, and a live risk of the opportunity being lost to a competing allottee altogether.
-
-By keeping legal title exactly where the regulator expects it to sit, and using financial and contractual structuring, not equity, to secure control, this approach let the Client move from zero control to full operational authority immediately, while preserving bankability, subsidy eligibility, and a clean path to eventual ownership.
-
-## The Value We Added
-
-What could easily have become a stalled expansion, or an expensive, high-risk workaround, became a structured, compliant path to ownership. Our role was to translate a rigid regulatory framework into a workable commercial structure: giving the Client immediate operational control and priority on its capital, without triggering the very restrictions the framework was designed to enforce.
-
-In doing so, we protected the Client from resumption risk, kept the project’s subsidy eligibility intact under the current incentive policy, and converted a nine-year waiting problem into a near-term path to full title, turning a regulatory obstacle into a genuine first-mover advantage on a scarce industrial asset.
+Cases like this are exactly where structuring expertise earns its keep: not in avoiding the rules, but in finding the compliant path that everyone else assumes doesn’t exist. Our job was to give the client certainty in a situation that looked, on paper, like a multi-year wait.
 
 ## Have a decision to make?
 
@@ -755,6 +776,16 @@ Bring us the question, the challenge or the opportunity. We’ll bring the exper
 
 Talk to a Partner
 More from Spotlight
+
+## Services behind this story
+
+The expertise we brought to this engagement.
+
+- **Transaction & Corporate Advisory**Advising businesses through critical transactions and strategic events.
+
+- **Strategy & Growth Advisory**Turning business ambitions into executable growth strategies.
+
+- **Business Setup, Compliance & Governance**Building the financial and regulatory foundation for businesses.
 
 ---
 

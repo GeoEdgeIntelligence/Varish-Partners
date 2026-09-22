@@ -269,6 +269,11 @@ body{background:#fff;}
 }
 
 /* Short laptop screens: tighten the card so longer paragraphs still clear the buttons. */
+/* Laptop/desktop: the photo is a wide strip, and a centred crop cuts off the desk-level
+   subject (papers, stamp, laptop). Anchor the crop lower so the subject stays in frame. */
+@media (min-width:1025px){
+  .vpt-media img{object-position:center var(--vpt-crop,72%);}
+}
 @media (min-width:1025px) and (min-height:600px) and (max-height:780px){
   .vpt-hero{padding:8px 0 10px;}
   .vpt-grid{row-gap:14px;}
@@ -314,6 +319,15 @@ body{background:#fff;}
   .vpt-h2{font-size:20px;gap:8px;}
   .vpt-body p,.vpt-outro p{font-size:15px;}
 }
+.vp-crumbs{margin:0 0 22px;font-family:"Poppins",sans-serif;font-size:13.5px;line-height:1.5;}
+.vp-crumbs ol{display:flex;flex-wrap:nowrap;align-items:center;margin:0;padding:0;list-style:none;}
+.vp-crumbs li{display:inline-flex;flex:0 0 auto;align-items:center;min-width:0;margin:0;color:#6A6A6A;white-space:nowrap;}
+.vp-crumbs li:last-child{flex:0 1 auto;}
+.vp-crumbs li + li::before{content:"";flex:0 0 auto;width:5px;height:5px;margin:0 11px 0 8px;border-top:1.5px solid #B9A48F;border-right:1.5px solid #B9A48F;transform:rotate(45deg);}
+.vp-crumbs a{color:#6B4D37;font-weight:500;text-decoration:none;}
+.vp-crumbs a:hover,.vp-crumbs a:focus-visible{text-decoration:underline;text-underline-offset:3px;}
+.vp-crumbs [aria-current]{display:block;max-width:46ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4A4A4A;}
+@media (max-width:767px){.vp-crumbs{font-size:13px;margin-bottom:18px;}.vp-crumbs [aria-current]{max-width:26ch;}}
 </style>
 </head>
 <body class="page-template-default page wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page ">
@@ -381,6 +395,7 @@ body{background:#fff;}
 		<div class="vpt-grid">
 
 			<div class="vpt-title">
+				<nav class="vp-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/services/">What we do</a></li><li><span aria-current="page">Tax Advisory &amp; Compliance</span></li></ol></nav><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.varishpartners.com/"},{"@type":"ListItem","position":2,"name":"What we do","item":"https://www.varishpartners.com/services/"},{"@type":"ListItem","position":3,"name":"Tax Advisory & Compliance","item":"https://www.varishpartners.com/tax-consultancy-compliances/"}]}</script>
 				<h1 class="vpt-h1">Tax Advisory &amp; Compliance</h1>
 				<p class="vpt-sub">Helping businesses manage tax efficiently, compliantly and strategically.</p>
 			</div>
@@ -417,14 +432,14 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="direct-indirect" data-group="advisory">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-direct.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-direct.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="eager" width="1600" height="900" style="--vpt-crop:60%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Direct &amp; <em>Indirect Tax Advisory</em></h2>
 						<p>Income tax and GST are usually handled by different people, which is where gaps and double costs appear. We look at both together, advise on the tax impact of day-to-day business decisions, and give you clear positions you can rely on when filing and when questioned.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="corporate-international" data-group="advisory">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-nri.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-nri.jpg" alt="A consultant on a video call" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-nri.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-nri.jpg" alt="A consultant on a video call" loading="lazy" width="1600" height="900" style="--vpt-crop:45%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Corporate &amp; <em>International Tax</em></h2>
 						<p>Companies face questions on residence, permanent establishment, foreign income and cross-border payments as soon as they deal overseas. We advise on corporate tax positions at home and on how international activity is taxed, so profits are not taxed twice and reporting stays consistent.</p>
@@ -452,7 +467,7 @@ body{background:#fff;}
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="tds" data-group="compliance">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-tds.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-tds.jpg" alt="An executive checking figures on a phone" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-tds.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-tds.jpg" alt="An executive checking figures on a phone" loading="lazy" width="1600" height="900" style="--vpt-crop:40%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>TDS &amp; <em>Withholding Tax Advisory</em></h2>
 						<p>Getting withholding wrong leads to interest, disallowed expenses and unhappy vendors and employees. We advise on the correct rates and sections for domestic and foreign payments, manage quarterly returns and certificates, and help with lower-deduction applications where they apply.</p>

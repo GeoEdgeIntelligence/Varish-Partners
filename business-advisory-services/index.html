@@ -269,6 +269,11 @@ body{background:#fff;}
 }
 
 /* Short laptop screens: tighten the card so longer paragraphs still clear the buttons. */
+/* Laptop/desktop: the photo is a wide strip, and a centred crop cuts off the desk-level
+   subject (papers, stamp, laptop). Anchor the crop lower so the subject stays in frame. */
+@media (min-width:1025px){
+  .vpt-media img{object-position:center var(--vpt-crop,72%);}
+}
 @media (min-width:1025px) and (min-height:600px) and (max-height:780px){
   .vpt-hero{padding:8px 0 10px;}
   .vpt-grid{row-gap:14px;}
@@ -314,6 +319,15 @@ body{background:#fff;}
   .vpt-h2{font-size:20px;gap:8px;}
   .vpt-body p,.vpt-outro p{font-size:15px;}
 }
+.vp-crumbs{margin:0 0 22px;font-family:"Poppins",sans-serif;font-size:13.5px;line-height:1.5;}
+.vp-crumbs ol{display:flex;flex-wrap:nowrap;align-items:center;margin:0;padding:0;list-style:none;}
+.vp-crumbs li{display:inline-flex;flex:0 0 auto;align-items:center;min-width:0;margin:0;color:#6A6A6A;white-space:nowrap;}
+.vp-crumbs li:last-child{flex:0 1 auto;}
+.vp-crumbs li + li::before{content:"";flex:0 0 auto;width:5px;height:5px;margin:0 11px 0 8px;border-top:1.5px solid #B9A48F;border-right:1.5px solid #B9A48F;transform:rotate(45deg);}
+.vp-crumbs a{color:#6B4D37;font-weight:500;text-decoration:none;}
+.vp-crumbs a:hover,.vp-crumbs a:focus-visible{text-decoration:underline;text-underline-offset:3px;}
+.vp-crumbs [aria-current]{display:block;max-width:46ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4A4A4A;}
+@media (max-width:767px){.vp-crumbs{font-size:13px;margin-bottom:18px;}.vp-crumbs [aria-current]{max-width:26ch;}}
 </style>
 </head>
 <body class="page-template-default page wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page ">
@@ -381,6 +395,7 @@ body{background:#fff;}
 		<div class="vpt-grid">
 
 			<div class="vpt-title">
+				<nav class="vp-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/services/">What we do</a></li><li><span aria-current="page">Transaction &amp; Corporate Advisory</span></li></ol></nav><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.varishpartners.com/"},{"@type":"ListItem","position":2,"name":"What we do","item":"https://www.varishpartners.com/services/"},{"@type":"ListItem","position":3,"name":"Transaction & Corporate Advisory","item":"https://www.varishpartners.com/business-advisory-services/"}]}</script>
 				<h1 class="vpt-h1">Transaction &amp; Corporate Advisory</h1>
 				<p class="vpt-sub">Advising businesses through critical transactions and strategic events.</p>
 			</div>
@@ -446,7 +461,7 @@ body{background:#fff;}
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="strategic-investments" data-group="deals">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="lazy" width="1600" height="900" style="--vpt-crop:40%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Strategic <em>Investments</em></h2>
 						<p>When you invest in another business, whether a minority stake or a strategic partnership, we assess the target, the fit with your own business and the terms on offer, so the investment supports your strategy rather than distracting from it.</p>
@@ -460,21 +475,21 @@ body{background:#fff;}
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="valuation" data-group="value">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-valuation.jpg" alt="A valuation expert presenting a report" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-valuation.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-valuation.jpg" alt="A valuation expert presenting a report" loading="lazy" width="1600" height="900" style="--vpt-crop:35%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Valuation &amp; <em>Financial Modelling</em></h2>
 						<p>We value businesses and shares using methods that suit the purpose, whether a transaction, fundraising, regulatory filing or internal decision, and build models that show how value moves with each key assumption.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="transaction-tax" data-group="value">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-direct.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/tax-direct.webp" type="image/webp"><img src="/images/services/NEW/jpeg/tax-direct.jpg" alt="An accountant reviewing a tax return" loading="lazy" width="1600" height="900" style="--vpt-crop:60%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Transaction <em>Tax Advisory</em></h2>
 						<p>Every transaction has tax consequences for both sides. We identify them early, compare alternative structures and advise on the approach that protects value while staying on solid technical ground.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="corporate-restructuring" data-group="corporate">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-restructuring.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-restructuring.jpg" alt="A consultant guiding a leadership team" loading="lazy" width="1600" height="900" style="--vpt-crop:45%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Corporate <em>Restructuring</em></h2>
 						<p>Group structures built up over years often become complex and inefficient. We advise on mergers, demergers, consolidations and simplifications that reduce cost and risk and make the group easier to manage and invest in.</p>
@@ -488,7 +503,7 @@ body{background:#fff;}
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="succession" data-group="corporate">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/fp-estate.webp" type="image/webp"><img src="/images/services/NEW/jpeg/fp-estate.jpg" alt="A family reviewing financial plans" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/fp-estate.webp" type="image/webp"><img src="/images/services/NEW/jpeg/fp-estate.jpg" alt="A family reviewing financial plans" loading="lazy" width="1600" height="900" style="--vpt-crop:85%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Succession &amp; <em>Business Transfer</em></h2>
 						<p>Passing a business to the next generation, to management or to a buyer takes years of planning to do well. We help promoters plan the timing, structure and tax impact of the transfer so the business and the family are both protected.</p>

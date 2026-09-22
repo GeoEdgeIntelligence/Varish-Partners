@@ -269,6 +269,11 @@ body{background:#fff;}
 }
 
 /* Short laptop screens: tighten the card so longer paragraphs still clear the buttons. */
+/* Laptop/desktop: the photo is a wide strip, and a centred crop cuts off the desk-level
+   subject (papers, stamp, laptop). Anchor the crop lower so the subject stays in frame. */
+@media (min-width:1025px){
+  .vpt-media img{object-position:center var(--vpt-crop,72%);}
+}
 @media (min-width:1025px) and (min-height:600px) and (max-height:780px){
   .vpt-hero{padding:8px 0 10px;}
   .vpt-grid{row-gap:14px;}
@@ -314,6 +319,15 @@ body{background:#fff;}
   .vpt-h2{font-size:20px;gap:8px;}
   .vpt-body p,.vpt-outro p{font-size:15px;}
 }
+.vp-crumbs{margin:0 0 22px;font-family:"Poppins",sans-serif;font-size:13.5px;line-height:1.5;}
+.vp-crumbs ol{display:flex;flex-wrap:nowrap;align-items:center;margin:0;padding:0;list-style:none;}
+.vp-crumbs li{display:inline-flex;flex:0 0 auto;align-items:center;min-width:0;margin:0;color:#6A6A6A;white-space:nowrap;}
+.vp-crumbs li:last-child{flex:0 1 auto;}
+.vp-crumbs li + li::before{content:"";flex:0 0 auto;width:5px;height:5px;margin:0 11px 0 8px;border-top:1.5px solid #B9A48F;border-right:1.5px solid #B9A48F;transform:rotate(45deg);}
+.vp-crumbs a{color:#6B4D37;font-weight:500;text-decoration:none;}
+.vp-crumbs a:hover,.vp-crumbs a:focus-visible{text-decoration:underline;text-underline-offset:3px;}
+.vp-crumbs [aria-current]{display:block;max-width:46ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4A4A4A;}
+@media (max-width:767px){.vp-crumbs{font-size:13px;margin-bottom:18px;}.vp-crumbs [aria-current]{max-width:26ch;}}
 </style>
 </head>
 <body class="page-template-default page wp-theme-hello-elementor elementor-default elementor-kit-6 elementor-page ">
@@ -381,6 +395,7 @@ body{background:#fff;}
 		<div class="vpt-grid">
 
 			<div class="vpt-title">
+				<nav class="vp-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/services/">What we do</a></li><li><span aria-current="page">CFO &amp; Financial Advisory</span></li></ol></nav><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.varishpartners.com/"},{"@type":"ListItem","position":2,"name":"What we do","item":"https://www.varishpartners.com/services/"},{"@type":"ListItem","position":3,"name":"CFO & Financial Advisory","item":"https://www.varishpartners.com/fractional-cfo-services/"}]}</script>
 				<h1 class="vpt-h1">CFO &amp; Financial Advisory</h1>
 				<p class="vpt-sub">Financial clarity and decision support for growing businesses.</p>
 			</div>
@@ -417,21 +432,21 @@ body{background:#fff;}
 
 			<div class="vpt-card">
 				<section class="vpt-panel is-active" role="tabpanel" data-item="fractional-cfo" data-group="leadership">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="eager" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-roadmap.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-roadmap.jpg" alt="A CFO mapping a growth roadmap" loading="eager" width="1600" height="900" style="--vpt-crop:40%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Fractional <em>CFO Services</em></h2>
 						<p>You get an experienced CFO for the days and hours your business actually needs. We lead the finance function, work alongside your team and advisers, and bring the discipline and perspective of a senior finance leader without the cost of a full-time hire.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="board-investor" data-group="leadership">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-investors.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-investors.jpg" alt="A CFO presenting a pitch deck to investors" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-investors.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-investors.jpg" alt="A CFO presenting a pitch deck to investors" loading="lazy" width="1600" height="900" style="--vpt-crop:30%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Board &amp; <em>Investor Reporting</em></h2>
 						<p>Boards and investors want the same things: accurate numbers, a clear story and no surprises. We prepare board packs and investor updates that explain performance, flag risks early and show how the business is tracking against its plan.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="performance-reviews" data-group="leadership">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-benchmark.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-benchmark.jpg" alt="Analysts comparing performance charts" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-benchmark.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-benchmark.jpg" alt="Analysts comparing performance charts" loading="lazy" width="1600" height="900" style="--vpt-crop:45%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Business <em>Performance Reviews</em></h2>
 						<p>We step back and look at how the business is really doing across products, customers, locations and teams. The review shows where money is made and lost, how you compare with peers, and which few changes would make the biggest difference.</p>
@@ -445,14 +460,14 @@ body{background:#fff;}
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="budgeting" data-group="planning">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-budgeting.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-budgeting.jpg" alt="Professionals reviewing a forecast" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-budgeting.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-budgeting.jpg" alt="Professionals reviewing a forecast" loading="lazy" width="1600" height="900" style="--vpt-crop:20%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Budgeting &amp; <em>Forecasting</em></h2>
 						<p>We prepare annual budgets that reflect how the business actually runs, and rolling forecasts that update as conditions change. You see where the year is heading early enough to act, not after the quarter has closed.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="modelling" data-group="planning">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-modeling.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-modeling.jpg" alt="Professionals building a revenue model" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/su-modeling.webp" type="image/webp"><img src="/images/services/NEW/jpeg/su-modeling.jpg" alt="Professionals building a revenue model" loading="lazy" width="1600" height="900" style="--vpt-crop:60%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial <em>Modelling</em></h2>
 						<p>A well-built model lets you test decisions before you commit to them. We build clear, auditable models for budgets, new projects, pricing, fundraising and expansion, with scenarios that show what happens when assumptions change.</p>
@@ -466,21 +481,21 @@ body{background:#fff;}
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="mis" data-group="control">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-performance.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-performance.jpg" alt="Consultants reviewing metrics on a screen" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/sc-performance.webp" type="image/webp"><img src="/images/services/NEW/jpeg/sc-performance.jpg" alt="Consultants reviewing metrics on a screen" loading="lazy" width="1600" height="900" style="--vpt-crop:80%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Management Reporting &amp; <em>MIS</em></h2>
 						<p>We design monthly MIS that management actually reads: the handful of numbers that matter, reported on time and in a consistent format. Dashboards and commentary make it easy to spot trends and act on them.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="profitability" data-group="control">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-cost.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-cost.jpg" alt="An advisor and a manager discussing cost figures" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/ba-cost.webp" type="image/webp"><img src="/images/services/NEW/jpeg/ba-cost.jpg" alt="An advisor and a manager discussing cost figures" loading="lazy" width="1600" height="900" style="--vpt-crop:85%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Profitability &amp; <em>Cost Optimisation</em></h2>
 						<p>We analyse margins by product, customer and channel to show which parts of the business earn their keep. Then we look at costs line by line and help you cut waste without damaging the things customers value.</p>
 					</div>
 				</section>
 				<section class="vpt-panel" role="tabpanel" data-item="controls" data-group="control">
-					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-process.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-process.jpg" alt="A CFO and team redesigning a workflow" loading="lazy" width="1600" height="900"></picture></div>
+					<div class="vpt-media"><picture><source srcset="/images/services/NEW/webp/cfo-process.webp" type="image/webp"><img src="/images/services/NEW/jpeg/cfo-process.jpg" alt="A CFO and team redesigning a workflow" loading="lazy" width="1600" height="900" style="--vpt-crop:35%"></picture></div>
 					<div class="vpt-body">
 						<h2 class="vpt-h2"><i class="vpt-glyph"></i>Financial Controls &amp; <em>Process Improvement</em></h2>
 						<p>Weak processes lead to errors, delays and fraud. We review how money moves through the business, from purchase to payment and from sale to collection, and put in practical controls and cleaner processes that scale as you grow.</p>
