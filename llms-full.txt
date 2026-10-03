@@ -680,6 +680,254 @@ Whether you are starting a new business or tidying up an existing one, we will m
 
 ---
 
+# Redesigning how Indian MSMEs operate
+Source: https://www.varishpartners.com/redesigning-how-indian-msmes-operate/
+
+By Varun ShenoyManaging Partner · 3 October 2026 · 9 min read
+
+Download the full paperPDF · 14 pages · 379 KB
+Download
+
+## Executive summary
+
+- Access to AI is no longer the constraint on MSME productivity. The constraint is organisational: how work, decisions and information are structured.
+
+- As a business grows, the work needed to coordinate it can grow faster than the business itself. We call this the **complexity tax**.
+
+- Most MSMEs have digitised without transforming. They run old processes in new formats, so the operating model is unchanged.
+
+- AI allows software to interpret information and perform parts of knowledge work. Systems can handle routine transactions and escalate only exceptions to people.
+
+- Value comes from focusing on the few activities that drive the economics, standardising before automating, and measuring outcomes.
+
+- The high-performing MSMEs of the next decade will not necessarily have more technology. They will have better-designed organisations.
+
+## 01As MSMEs grow, coordination work outpaces revenue, creating a complexity tax that technology alone does not remove
+
+Indian MSMEs have grown through entrepreneurial instinct, relationships, hard work and, increasingly, technology. That model works well in the early stages. Growth then adds complexity: more customers create more coordination, more employees create more management layers, more products create more inventory decisions, more transactions create more administration, and more locations create more information gaps.
+
+As a business grows, the work required to coordinate it can grow faster than the business itself.
+
+This is why a company can double revenue without doubling productivity. Staff spend more time on:
+
+- finding information
+
+- preparing reports
+
+- following up
+
+- reconciling data
+
+- requesting approvals
+
+- correcting errors
+
+- coordinating between departments
+
+- repetitive administrative tasks
+
+**Implication**The next productivity opportunity for MSMEs comes less from adding technology than from removing unnecessary organisational work.
+
+## 02Digitisation has mostly reproduced old processes; transformation redesigns the work itself
+
+Many MSMEs already use accounting software, ERP, CRM, spreadsheets, cloud applications, messaging platforms and dashboards. Yet digitisation often reproduces the old process in a new format.
+
+Exhibit 1Digitisation changes the format, not the operating model
+
+BeforeAfter digitisation
+
+Manual processDigital workflow
+
+Paper reportExcel report
+
+Phone callWhatsApp message
+
+SpreadsheetDashboard
+
+Transformation asks a different question: if we were designing this business today, how would we run this process? The answer may be that an approval should not exist, a report need not be prepared, an employee should not enter the same data twice, a customer should not need to call, a manager should not have to ask for a number, or the system should detect the problem on its own.
+
+**Implication**Transformation begins when organisations redesign the work itself, not when they buy another technology product.
+
+## 03AI changes the economics of coordination by letting software interpret information and perform parts of knowledge work
+
+Earlier software helped people store, retrieve and process information. AI adds the ability to interpret information and carry out parts of knowledge work, which matters a great deal for MSMEs.
+
+The human does not disappear. The nature of the human’s work shifts from processing every transaction to managing exceptions, relationships and decisions.
+
+Exhibit 2An AI-enabled process removes steps from the employee’s workload
+
+StageTraditional processAI-enabled process
+
+EnquiryEmployee reads messageSystem understands enquiry
+
+InformationEmployee searches customer history and checks pricingSystem retrieves customer information
+
+QuotationEmployee prepares and sends quotationSystem prepares quotation; exceptions routed to employee
+
+Follow-upEmployee records interaction and schedules follow-upSystem records interaction and schedules follow-up
+
+**Implication**The most important economic impact of AI may not be replacing jobs. It may be reducing the amount of coordination required to run a business.
+
+## 04The organisation of the future is built around exceptions, not transactions
+
+Traditional organisations are designed around a standard path: input, employee, decision, approval, output. Every transaction follows roughly the same route, even though most are routine and only a minority need human judgement. AI and automation allow this model to be inverted: instead of humans processing everything and escalating exceptions, systems process routine work and escalate exceptions to humans.
+
+Exhibit 3Exception-based design applies across core functions
+
+FunctionTodayException-based model
+
+ProcurementEmployee reviews every purchase requestSystem checks requests; routine purchases proceed and unusual ones are escalated
+
+CollectionsEmployee manually reviews every customerSystem monitors accounts and prioritises high-risk ones; humans intervene where judgement matters
+
+Customer serviceEmployee answers every questionAI handles routine requests; complex cases reach employees
+
+**Implication**Organisations should be designed around exceptions rather than transactions.
+
+## 05Founder-centred decision-making becomes the most expensive bottleneck as the business scales
+
+Founder involvement is a defining strength of successful MSMEs. The founder knows the customers, suppliers, pricing, employees, risks, exceptions and the history behind decisions. But if every important decision needs the founder, the company has built a system with one central processor. The founder becomes the escalation point for approvals, pricing, hiring, complaints, procurement, collections and operational problems, so growth raises the founder’s workload instead of organisational capacity.
+
+**Implication**The aim is not to remove the founder, but to remove the founder from decisions that no longer require one. The result is not less control. It is better control through systems, information and clearly defined decision rights.
+
+## 06Information should reach decision-makers before they have to ask for it
+
+Many organisations run on questions: can you send me the sales report, what happened to this order, has the customer paid, how much inventory do we have, which leads are pending, why did sales fall last week. The information often exists. It is not flowing to the person who needs it when they need it. A modern operating model reverses this, so that the system proactively surfaces what matters. For example:
+
+- Sales are down 14% in Region A.
+
+- Three high-value customers have not ordered in 60 days.
+
+- Inventory for Product X will fall below threshold in nine days.
+
+- Receivables above 60 days have increased 18%.
+
+(The figures above are illustrations of the kind of alert, not data.) This is more than a dashboard. It is a different management system.
+
+**Implication**The best information system is not the one with the most data. It is the one that surfaces the right decision at the right time.
+
+## 07AI investment should be prioritised by economic value, not enthusiasm
+
+Not every process should be automated, not every problem needs AI, and not every AI implementation creates economic value. We use a simple screening lens.
+
+**Value** = Frequency × Time × Cost × Error × Strategic importance
+
+A process is particularly attractive when it happens frequently, consumes significant human time, has measurable costs, produces avoidable errors and affects an important business outcome. The question shifts from “where can we use AI?” to “where can AI create measurable economic value?”, which prevents spending on impressive technology that does not materially improve the business.
+
+## 08Transformation should start with the few activities that drive the business economics
+
+Every business has a small number of activities that disproportionately shape its economics. Transformation should begin there, not with the easiest process to automate, the newest AI tool or the department most enthusiastic about technology.
+
+Exhibit 4Value pools differ by business type
+
+Business typeActivities that drive economics
+
+ManufacturerProduction utilisation, procurement, inventory, quality, working capital
+
+DistributorSales productivity, inventory turns, collections, customer retention
+
+Service businessUtilisation, lead conversion, delivery capacity, employee productivity, customer retention
+
+**Implication**Technology investment should follow economic value, not the other way around.
+
+## 09Standardise before automating, or automation simply makes a poor process faster
+
+A common mistake in digital transformation is automating a bad process, which only speeds it up. If five employees perform the same task in five different ways, automating first can add complexity. The sequence should generally be:
+
+UnderstandSimplifyStandardiseAutomateMeasureImprove
+
+A growing MSME does not need hundreds of sophisticated workflows. It needs a small number of clear, repeatable, measurable ways of working.
+
+**Implication**The first step toward automation is often not technology. It is clarity.
+
+## 10The best transformation is invisible to the customer and felt by employees and management
+
+Customers do not care whether a company uses an AI agent. They care whether enquiries are answered quickly, orders arrive on time, invoices are correct, problems are resolved quickly, information is accurate and promises are kept. The best technology disappears into the experience.
+
+Exhibit 5Transformation should be experienced differently by each stakeholder
+
+StakeholderWhat they experience
+
+CustomersFaster service, fewer errors, greater reliability
+
+EmployeesLess repetitive work, better information, fewer bottlenecks
+
+ManagementGreater visibility and faster decisions
+
+## 11The next generation of high-performing MSMEs will be operationally different, not more technological
+
+Exhibit 6Six characteristics of the next generation of MSMEs
+
+CharacteristicWhat it means
+
+More data-drivenDecisions supported by current operating information rather than delayed reports
+
+More automatedRoutine work increasingly handled by software
+
+More exception-drivenHuman attention concentrated where judgement creates the most value
+
+Less founder-dependentKnowledge and decision-making embedded in systems and processes
+
+More scalableRevenue growth without a proportional increase in administrative complexity
+
+More measurableEvery important process has a small set of visible performance indicators
+
+Importantly, these businesses will not necessarily have more technology. They will have better-designed organisations.
+
+## 12Eight principles guide how we approach transformation
+
+Exhibit 7Our transformation principles
+
+PrincipleIn practice
+
+1. Start with the business problemTechnology comes second.
+
+2. Follow the economicsPrioritise opportunities with measurable business impact.
+
+3. Simplify before automatingDo not digitise unnecessary complexity.
+
+4. Automate the routineReserve human attention for judgement, relationships and exceptions.
+
+5. Design around information flowThe right information reaches the right person at the right time.
+
+6. Build for adoptionA sophisticated system that nobody uses is a failed transformation.
+
+7. Measure outcomesResults should show up in revenue, margin, cash flow, productivity, working capital, customer experience or management capacity.
+
+8. Build capability, not dependencyMake the organisation stronger, not permanently dependent on the consultant.
+
+## 13Leaders should ask how they would redesign the business, not how they could use AI
+
+The conversation is often framed as “how can my company use AI?” We think that is the wrong starting point. The better question is: if we could redesign the way our business operates from scratch, what would we change? From there, leaders can ask:
+
+- What should people do?
+
+- What should systems do?
+
+- What should AI do?
+
+- What information should flow automatically?
+
+- Which decisions should remain with humans?
+
+- Which processes should disappear entirely?
+
+- Where would these changes create the greatest economic value?
+
+## Our thesis
+
+India’s MSMEs spent the last decade becoming digital. The next decade will be about becoming intelligent, integrated and operationally scalable. AI is an important part of that transition, but it is not the strategy. The strategy is to build a better business, and the companies that understand this will hold an advantage that is difficult to replicate: not simply better technology, but a better way of operating.
+
+This paper reflects our current thinking. Figures shown are illustrative.
+
+## Have a decision to make?
+
+Bring us the question, the challenge or the opportunity. We’ll bring the experience and perspective to help you move forward with clarity.
+
+Talk to a Partner
+
+---
+
 # ODI Simplified: What Indian Founders Need to Know Before Investing Abroad
 Source: https://www.varishpartners.com/odi-simplified-guide-for-indian-founders/
 
