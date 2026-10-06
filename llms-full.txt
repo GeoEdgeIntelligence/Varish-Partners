@@ -688,6 +688,300 @@ Whether you are starting a new business or tidying up an existing one, we will m
 
 ---
 
+# India’s ice-cream market: a portfolio of cold-chain micro-economies
+Source: https://www.varishpartners.com/indias-ice-cream-market-cold-chain-micro-economies/
+
+By Varun ShenoyManaging Partner · 6 October 2026 · 15 min read
+
+Download the full paperPDF · 18 pages · 492 KB
+Download
+
+Source note. Numbers in square brackets, such as [2], refer to the source register in Appendix A. Sources marked “opened” were read in full or in part for this paper. Others are cited only as summarised in the research brief and have not been independently verified. Calculations by the author are marked “our calculation”.
+
+## Executive summary
+
+- **Size depends on scope.** IBEF cites about ₹30,000 crore for 2023 [1]. IMARC, which includes frozen desserts, puts 2025 at ₹24,350 crore [2]. The later figure is smaller, which shows that the two measure different things.
+
+- **Growth is strong but sources differ on pace.** IBEF implies about 11% a year to 2028 (our calculation) [1]. IMARC forecasts 11.3% a year for 2026 to 2034 [2]. McKinsey reported growth above 20% a year in India in 2022 [7]. Per-capita consumption is about 1.6 litres [1][2].
+
+- **Demand is impulse-led.** Impulse formats hold 60.6% of the market and cones and sticks together 51.8% [2]. Single-serve products need a working freezer at the point of sale.
+
+- **Infrastructure is the binding constraint.** IMARC lists the cold-chain gap and seasonality as the main restraints [2]. McKinsey notes that millions of Indian consumers who like ice cream have no refrigerator [7].
+
+- **The category is structurally different from FMCG.** HUL is demerging its ice-cream business into Kwality Wall’s (India) Limited, citing its “distinctive business model and market dynamics” [9]. The standalone business reported an operating loss of €19 million on €180 million revenue for 2025 [12].
+
+- **Geography is concentrated.** Four states account for 40.9% of the market: Maharashtra, Uttar Pradesh, Karnataka and Gujarat [2].
+
+- **India is not one ice-cream market.** It is a set of local cold-chain micro-economies, and returns will be decided by route density, freezer productivity, dairy sourcing and city-level price architecture.
+
+## 01Published market sizes differ because scope differs, so the first task is to define the market
+
+Public estimates cannot be compared without checking what each includes. IBEF frames a market of about ₹30,000 crore in 2023, rising to ₹50,000 crore by 2028, with 60 to 65% organised and 35 to 40% unorganised [1]. IMARC’s 2025 figure of ₹24,350 crore comes from a model that covers impulse, take-home and artisanal ice cream and frozen desserts sold through retail, foodservice and online channels [2]. Fortune India’s headline on Tetra Pak and IMARC data points to ₹57,500 crore by 2033 [5]. A Euromonitor-linked discussion cited in the research brief puts the organised packaged segment nearer ₹23,000 crore for 2025.
+
+Exhibit 1Published estimates of India’s ice-cream market
+
+SourceYearEstimateScope note
+
+IBEF [1]2023 / 2028₹30,000 cr / ₹50,000 crIndustry estimate; 60–65% organised
+
+IMARC [2]2025₹24,350 cr (₹243.5 bn)Ice cream and frozen desserts across retail, foodservice, online
+
+IMARC [2]2026 / 2030 / 2034₹27,170 cr / ₹41,783 cr / ₹63,941 crForecast; CAGR 11.29% for 2026–34
+
+Fortune India, citing Tetra Pak [5]2033₹57,500 crHeadline only; article body not opened
+
+Euromonitor-linked (per brief)2025~₹23,000 crOrganised packaged segment only
+
+Note: IMARC’s page metadata quotes a CAGR of 8.83%, but its body text states 11.29%. The body figure is consistent with the stated 2026 and 2034 values (our calculation), so this paper uses 11.29%.
+
+We recommend three nested definitions. The broad frozen-indulgence market (branded ice cream, frozen desserts, kulfi, local makers, parlours) sizes the consumer opportunity. The organised packaged market is the right basis for share and valuation. The addressable branded profit pool, meaning the segments, regions and channels where service levels and price realisation support returns, should drive entry and investment decisions.
+
+**Implication**Any analysis that uses a single headline number without stating its definition will mislead. Size the market at three levels and use the right one for each decision.
+
+## 02Growth is strong and per-capita consumption is low, but sources disagree on pace
+
+Per-capita consumption rose from 400 ml in 2011 to nearly 1.6 litres in 2023 [1][2]. IMARC estimates the market grew from ₹11,600 crore in 2020 to ₹24,350 crore in 2025, about 16% a year (our calculation) [2], and forecasts 11.3% a year to 2034. Industry commentary reported by Storyboard18 cites 12 to 15% annual growth [6]. Amul stated that its ice-cream value grew more than 40% in FY23 [18, per brief]. McKinsey’s 2022 survey found growth above 20% a year in India, the highest among the markets it compared, while noting that many consumers lack refrigerators [7].
+
+Exhibit 2Growth engines and what constrains each
+
+EngineWhat changesBinding constraint
+
+FrequencyShift from summer-led treat to year-round regular dessert [2]Freezer availability, power reliability, seasonal demand swings [2]
+
+PremiumisationArtisanal, gelato, vegan, millet and low-sugar offerings [2]; premiumisation drives most global ice-cream growth [7]Willingness to pay and repeat purchase, not yet validated in India
+
+Quick commerce and deliveryDelivery platforms widen access and impulse purchase [2][6]Platform commissions, promotions, insulated packaging, spoilage
+
+Tier-2/3 expansionFranchise parlours and mini-sticks in smaller cities [2]Cold-chain gaps and weak last-mile logistics [2]
+
+**Implication**Every growth engine has an operational constraint. Consumption headroom becomes revenue only where the cold chain, the outlet and the unit economics support it.
+
+## 03Demand is impulse-led and single-serve, which makes the freezer at the outlet the central asset
+
+IMARC splits the 2025 market by type as impulse 60.6%, take-home 27.8% and bulk 11.6%. By format, cones lead with 27.3%, followed by sticks (24.5%), bricks (20.7%) and cups (10.8%) [2]. Each format has different margins and different freezer needs. IMARC’s segment data on flavour, channel, end-user and price point sit behind its paywall and were not available.
+
+Exhibit 3Demand mix, 2025 (IMARC)
+
+By typeShareBy formatShare
+
+Impulse60.6%Cones27.3%
+
+Take-home27.8%Sticks24.5%
+
+Bulk (institutional, QSR, catering)11.6%Bricks20.7%
+
+Cups10.8%
+
+Others (sundaes, tubs, sandwiches, rolls)16.8%
+
+**Implication**A market that is 60% impulse is a market sold out of freezers. Growth in outlets with working freezers matters as much as growth in consumer demand.
+
+## 04Cold chain and seasonality decide where the category can grow profitably
+
+IMARC identifies two main restraints: an uneven cold-chain infrastructure in tier-2, tier-3 and rural India (limited freezers, unreliable power, weak last-mile logistics), and strong seasonal dependence on summer, with weaker demand in monsoon and winter [2]. It also lists rising milk, sugar and packaging costs and spoilage from temperature breaks as challenges [2]. These effects raise operating costs and limit distribution beyond major cities.
+
+The research brief points to further supply-side context, which we have not independently verified. MoFPI records milk production rising from 187.3 million tonnes in FY19 to 239.3 million tonnes in FY24, about 5% a year (our calculation) [23, per brief]. The NCCD study [24] and the CLASP cold-chain assessment [25] give foundational and equipment-level views of capacity and last-mile economics. Both should be read before this section is used in a client deliverable.
+
+**Implication**Seasonality and cold-chain gaps turn fixed assets (plants, cold rooms, reefers, freezers) into the main cost lever. Utilisation through the off-season and freezer throughput are management priorities, not operational details.
+
+## 05Ice cream is structurally different from FMCG, and the Kwality Wall’s demerger is the clearest evidence
+
+On 22 January 2025, HUL’s board approved a scheme to demerge its ice-cream business into its subsidiary Kwality Wall’s (India) Limited, with shares allotted one-for-one to HUL shareholders. HUL said the demerged company would have:
+
+“greater focus and flexibility to deploy strategies suited to its distinctive business model and market dynamics” [9]
+
+**A correction to our earlier draft.** The research brief stated that HUL explicitly cited cold-chain infrastructure and a distinct channel landscape as limiting synergies. The press release itself does not use those words [9]. Cold-chain economics are a reasonable reading of “distinctive business model”, and IMARC and McKinsey both support them as a constraint [2][7]. They should be presented as our interpretation, not as HUL’s stated rationale. The separate demerger documentation page [10] may contain a fuller rationale and should be checked.
+
+IMARC lists The Magnum Ice Cream Company, which owns Kwality Wall’s, Cornetto and Magnum, as a market leader [2]. An SEC filing, as summarised in the brief, reports India Ice Cream Business revenue of €180 million and an operating loss of €19 million for the 12 months to 31 December 2025, an operating margin of about -11% (our calculation) [12]. Accounting scope and currency need to be reconciled before this is used as a benchmark.
+
+**Implication**Even the category’s best-known brand is not automatically profitable at scale. Brand strength does not substitute for cold-chain economics.
+
+## 06Different players win on different bases, and none of the advantages is universal
+
+Exhibit 4Competitor archetypes
+
+ArchetypeExamplesAdvantageVulnerability
+
+Integrated dairy / co-operativeAmul (GCMMF), Mother DairyMilk procurement, dairy credentials, mass pricing; IMARC credits Amul with replacing vegetable-fat frozen desserts with real-milk ice cream at competitive prices [2]Portfolio prioritisation; stretch into premium
+
+National specialistKwality Wall’s (Magnum Ice Cream Co.)Brand, innovation, category focus [2][9]Cold-chain fixed costs; standalone profitability [12]
+
+Pan-Indian challengerLOTTE (Havmor), Dinshaw’sInfrastructure investment and manufacturing technology (Havmor); legacy brand with automated manufacturing (Dinshaw’s) [2]Scale against leaders; channel investment
+
+Regional route-to-market leaderHatsun (Arun, Ibaco)Dense local distribution, lower service cost per outlet [17, per brief]Scaling nationally without eroding economics
+
+Listed specialistVadilalCategory focus and breadth: ice cream, frozen desserts, flavoured milk, processed food [16, per brief]Raw-material volatility, seasonality, channel burden
+
+Premium and artisanal challengerNaturals, NIC, Indulge Creamery, IcebergDifferentiated experience, premium price points, speed of innovation [2]Narrow reach; high acquisition and fulfilment costs
+
+Evidence from the Amul filings, as summarised in the brief, supports the dairy-co-operative advantage. Amul reported ice-cream value growth above 40% in FY23 [18] and a 25% rise in ice-cream production in FY22 [19]. Its earlier AGM records show premium extensions such as Amul EPIC and Creme Rich [20], and the Chairman’s speech for 1999–2000 records a milk-first, affordability-led origin for the business [27]. Mother Dairy’s 2020 launch of an ice-cream chocolate format [22] shows category boundaries widening. Vadilal, Hatsun and Mother Dairy financials [13]–[17][21] are the first documents to pull when this paper is extended into a financial benchmark.
+
+**Implication**Strategy should start with which archetype a company can credibly be. Copying another archetype’s playbook without its economic base is a common failure.
+
+## 07Four states hold 41% of the market, but economics are decided at city level
+
+Exhibit 5State share of the market, 2025 (IMARC)
+
+StateShareStateShare
+
+Maharashtra15.9%Tamil Nadu6.6%
+
+Uttar Pradesh9.5%West Bengal6.2%
+
+Karnataka7.9%Delhi5.9%
+
+Gujarat7.6%Rajasthan, Kerala, Bihar, Haryana, MP, Punjab, Odisha combined23.5%
+
+Andhra Pradesh and Telangana7.1%Other states9.7%
+
+Share totals follow IMARC’s published list. The combined figure for the seven smaller states is our sum (4.0 + 3.8 + 3.7 + 3.5 + 3.4 + 3.2 + 1.9).
+
+Fortune India, citing Tetra Pak, ranks Maharashtra, Uttar Pradesh, Karnataka and Gujarat as the largest organised markets, consistent with IMARC [2][5]. State shares are a useful shortlist. But outlet density, power reliability, distributor capability and competitive intensity vary widely within a state, and break-even depends on them.
+
+**Implication**Use state data to shortlist and city-level route economics to decide. A national plan is the sum of city-level plans.
+
+## 08Returns are decided by a handful of operating variables, not by category growth
+
+Exhibit 6Where the economics are decided
+
+DriverWhy it matters
+
+Net realisation per litre, by formatStick, cone, cup, brick and scoop-shop differ widely in margin
+
+Gross-to-netDistributor and retailer margins, platform commissions, promotions, returns
+
+Freezer productivitySales per freezer per day, stock-outs, power downtime, maintenance
+
+Capacity utilisationSeasonal peaks leave plants underused part of the year [2]
+
+Input sensitivityMilk fat and solids, sugar, cocoa, packaging, energy [2]
+
+SpoilageTemperature excursions, expiry, write-offs [2]
+
+Route densityOutlets per route and drops per vehicle set break-even by city
+
+Working capitalPre-summer inventory build and general-trade receivables
+
+**Implication**Value follows the few variables that shape unit economics. Brand spending that ignores them can buy volume the cold chain cannot profitably serve.
+
+## 09Dairy-fat ice cream and vegetable-fat frozen desserts are different businesses, and the primary regulation has not yet been pulled
+
+The category sources distinguish dairy-fat ice cream from vegetable-fat frozen desserts. IMARC’s description of Amul’s strategy, replacing vegetable-fat frozen desserts with 100% real-milk ice cream, shows that the distinction shapes positioning and sourcing [2]. The two can differ in input costs, price points and consumer perception. We have not retrieved FSSAI’s standards for ice cream, frozen desserts, labelling and claims. The primary FSSAI text should be the citation for any regulatory claim in a final report.
+
+**Implication**Whether to sell ice cream or frozen dessert is a regulatory and economic decision, not only a marketing one.
+
+## 10Public data cannot close the gaps that matter most
+
+- Consumer segmentation by age, city tier, income, diet, occasion and channel (IMARC’s channel and price-point splits are paywalled)
+
+- Price-pack architecture across ₹10, ₹20, ₹30, ₹50, ₹100+ and family packs
+
+- Outlet-level freezer penetration, ownership, throughput and power reliability
+
+- City-wise retail audits across general trade, modern trade, parlours, QSRs, quick commerce and delivery
+
+- Brand-level net sales, as opposed to shelf MRP and apparent share
+
+- Audited financials from Vadilal [13]–[16], Hatsun [17] and Mother Dairy [21] for a competitor benchmark
+
+- FSSAI primary standards, and the HUL demerger scheme documents [10]
+
+- Competitive response after the Kwality Wall’s demerger
+
+**Implication**Secondary sources frame the question. The decision-grade answer comes from retail audits, expert interviews and company filings.
+
+## What leaders should ask
+
+The common question is “how large can ice cream get in India?” A better one is: where, in which format and through which route can we serve consumers profitably?
+
+- Which market definition applies to this decision?
+
+- Which archetype’s advantages do we actually hold?
+
+- What is our net realisation per litre by format and channel?
+
+- How productive is each freezer we own or finance?
+
+- Which cities have the route density to break even?
+
+- What would we stop doing if we could redesign our channel from scratch?
+
+## Our thesis
+
+India’s ice-cream consumers will keep growing in number and frequency. But the category will reward the businesses that master route density, freezer productivity, dairy sourcing and city-level price architecture, not those with the loudest national brand. The strategy is not to chase the headline market. It is to build a profitable operating model in each place where it can be served well.
+
+This paper reflects our current thinking. Sources marked “Brief only” have not been independently verified.
+
+## Appendix A: Source register
+
+“Opened” means the page was retrieved and read for this paper. “Brief only” means the source is cited as summarised in the research brief and has not been opened or verified.
+
+#SourceUsed forStatus
+
+1IBEF: Scooping Success, India’s Ice Cream IndustryMarket size, organised share, per-capita consumptionBrief only
+
+2IMARC: India Ice Cream Market (updated 7 Jul 2026)Size, forecast, type, format and state shares, restraints, competitorsOpened
+
+3MarkNtel Advisors: India Ice Cream MarketAlternative sizing (not yet used)Brief only
+
+4Marketsandata: India Ice Cream MarketAlternative forecast (not yet used)Brief only
+
+5Fortune India: Ice-cream market outlook (Tetra Pak)State ranking, 2033 headlineBrief only
+
+6Storyboard18: digital-first ice-cream sales (Technopak)12–15% growth range, digital channelsBrief only
+
+7McKinsey: How to stay cool as competition heats up in ice cream and yogurt (13 May 2022)India growth above 20%, refrigerator constraint, premiumisationOpened
+
+8A Strategic Analysis of Ice Cream Market in India (PDF, 2024)Background (not yet used)Brief only
+
+9HUL: Board approves demerger of Ice Cream business (22 Jan 2025)Demerger terms and stated rationaleOpened
+
+10HUL: Demerger of Ice Cream Business (scheme documents)To be checked for fuller rationaleBrief only
+
+11HUL annual reports and performance highlightsHistoric ice-cream revenue (not yet used)Brief only
+
+12SEC filing: acquisitions and disposals (R28)Standalone revenue and operating lossBrief only
+
+13Vadilal Industries: reports archiveAudited financials (not yet used)Brief only
+
+14Vadilal annual report 2023–24 (PDF)Baseline financials (not yet used)Brief only
+
+15Vadilal annual report 2024–25Latest peer data (not yet used)Brief only
+
+16Vadilal annual report 2025–26 (PDF)Product portfolioBrief only
+
+17Hatsun Agro ProductBrand architecture, regional distributionBrief only
+
+18GCMMF 49th Annual General Body MeetingAmul ice-cream growth above 40% in FY23Brief only
+
+19Amulfed Dairy Sustainability Report 2021–22 (PDF)25% rise in ice-cream production, FY22Brief only
+
+20Amul 41st Annual General Body Meeting (2015)Premium extensionsBrief only
+
+21Mother Dairy annual return 2025Statutory disclosures (not yet used)Brief only
+
+22Mother Dairy: Rocket ice-cream chocolates launch (2020)Portfolio adjacencyBrief only
+
+23MoFPI: Infrastructure and logistics requirements of food processing (PDF)Milk production FY19 to FY24Brief only
+
+24NCCD: All-India Cold-Chain Infrastructure Capacity (PDF)Cold-chain capacity and gaps (older)Brief only
+
+25CLASP: Assessment of the Cold Chain Market in India (PDF)Last-mile cold-chain economicsBrief only
+
+26IBEF: Indian FMCG IndustryMacro demand context (not yet used)Brief only
+
+27Amul 26th AGM: Chairman’s speech 1999–2000Origins of Amul ice creamBrief only
+
+FSSAI standards for ice cream and frozen desserts were not considered for the study.
+
+## Have a decision to make?
+
+Bring us the question, the challenge or the opportunity. We’ll bring the experience and perspective to help you move forward with clarity.
+
+Talk to a Partner
+
+---
+
 # Spotlight: Enabling Faster Overseas Expansion
 Source: https://www.varishpartners.com/enabling-faster-overseas-expansion/
 
