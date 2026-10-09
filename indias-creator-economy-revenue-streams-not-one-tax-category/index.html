@@ -215,14 +215,56 @@ gtag("config", "GT-TX9689S5");
 html{scroll-behavior:smooth;}
 .vpk-body h2,.vpk-exhibit{scroll-margin-top:calc(var(--vp-hdr,96px) + 20px);}
 .vpk-layout{display:flex;flex-direction:column;}
-.vpk-toc{order:-1;margin:24px 0 0;}
-.vpk-toc details{border:1px solid #E4D9CB;border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 1px 2px rgba(107,77,55,.06),0 10px 28px rgba(0,0,0,.08);}
-.vpk-toc summary{position:relative;display:block;padding:15px 48px 15px 20px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6B4D37;cursor:pointer;list-style:none;}
+/* Phones and tablets: the index is a side drawer, pulled out from a tab on the right edge */
+.vpk-toc{position:fixed;top:0;right:0;bottom:0;z-index:100001;width:min(86vw,340px);transform:translateX(100%);transition:transform .35s cubic-bezier(.22,.61,.36,1);touch-action:pan-y;}
+.vpk-toc.is-open{transform:translateX(0);}
+.vpk-toc.is-dragging{transition:none;}
+.vpk-toc details{display:flex;flex-direction:column;height:100%;background:#fff;box-shadow:-12px 0 40px rgba(0,0,0,.22);}
+.vpk-toc summary{display:block;flex:0 0 auto;padding:20px 60px 16px 20px;border-bottom:1px solid #E4D9CB;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#6B4D37;list-style:none;pointer-events:none;cursor:default;}
 .vpk-toc summary::-webkit-details-marker{display:none;}
-.vpk-toc summary::after{content:"";position:absolute;right:22px;top:50%;width:7px;height:7px;margin-top:-6px;border-right:1.8px solid #6B4D37;border-bottom:1.8px solid #6B4D37;transform:rotate(45deg);transition:transform .3s ease;}
-.vpk-toc details[open] summary{border-bottom:1px solid #E4D9CB;}
-.vpk-toc details[open] summary::after{margin-top:-2px;transform:rotate(225deg);}
-.vpk-toc nav{max-height:60vh;overflow-y:auto;padding:8px 0 12px;overscroll-behavior:contain;}
+.vpk-toc nav{flex:1 1 auto;min-height:0;overflow-y:auto;padding:8px 0 28px;overscroll-behavior:contain;}
+.vpk-toc-handle{position:absolute;left:-34px;top:38%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:34px;height:96px;margin:0;padding:0 !important;border:0 !important;border-radius:14px 0 0 14px;background:#6B4D37 !important;color:#fff !important;box-shadow:-4px 4px 14px rgba(0,0,0,.25);cursor:pointer;font-family:"Poppins",sans-serif;}
+.vpk-toc-handle:hover,.vpk-toc-handle:focus-visible{background:#5a3f2d !important;color:#fff !important;outline:none;}
+.vpk-toc-handle svg{width:14px;height:14px;transition:transform .35s ease;}
+.vpk-toc.is-open .vpk-toc-handle svg{transform:rotate(180deg);}
+.vpk-toc-handle span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;}
+.vpk-toc-x{position:absolute;top:12px;right:12px;z-index:2;display:flex;align-items:center;justify-content:center;width:36px;height:36px;margin:0;padding:0 !important;border:0 !important;border-radius:50%;background:#F3EBE1 !important;color:#6B4D37 !important;cursor:pointer;transition:background-color .3s ease,color .3s ease;}
+.vpk-toc-x svg{width:16px;height:16px;}
+.vpk-toc-x:hover,.vpk-toc-x:focus-visible{background:#6B4D37 !important;color:#fff !important;outline:none;}
+.vpk-toc-backdrop{position:fixed;inset:0;z-index:100000;background:rgba(31,31,31,.5);opacity:0;pointer-events:none;transition:opacity .3s ease;}
+.vpk-toc-backdrop.is-open{opacity:1;pointer-events:auto;}
+/* After the first scroll the tab drops the word and becomes a faint arrow */
+.vpk-toc-handle{transition:width .3s ease,left .3s ease,height .3s ease,background-color .3s ease,box-shadow .3s ease,color .3s ease;}
+.vpk-toc.is-min .vpk-toc-handle{left:-28px;align-items:flex-end;width:28px;height:64px;gap:0;padding:0 2px 0 0 !important;border-radius:0;background:transparent !important;color:rgba(107,77,55,.72) !important;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;}
+.vpk-toc.is-min .vpk-toc-handle span{display:none;}
+.vpk-toc.is-min .vpk-toc-handle svg{width:16px;height:16px;filter:drop-shadow(0 0 3px #fff) drop-shadow(0 0 1px #fff);}
+.vpk-toc.is-min .vpk-toc-handle:hover,.vpk-toc.is-min .vpk-toc-handle:focus-visible{background:transparent !important;color:#5a3f2d !important;}
+.vpk-toc.is-min.is-open .vpk-toc-handle{color:#fff !important;}
+.vpk-toc.is-min.is-open .vpk-toc-handle svg{filter:none;}
+/* Secondary header: title, author and download pinned under the site header once the big title block has scrolled away */
+.vpk-sticky{position:fixed;left:0;right:0;top:var(--vpk-stick,96px);z-index:99980;height:64px;background:rgba(255,255,255,.97);border-bottom:1px solid #E4D9CB;box-shadow:0 8px 22px rgba(0,0,0,.08);transform:translateY(-110%);opacity:0;visibility:hidden;transition:transform .3s cubic-bezier(.22,.61,.36,1),opacity .25s ease,visibility .3s;}
+.vpk-sticky.is-shown{transform:none;opacity:1;visibility:visible;}
+.vpk-sticky-in{display:flex;align-items:center;gap:14px;box-sizing:border-box;width:min(1140px,100% - 40px);height:100%;margin:0 auto;padding-right:8px;}
+.vpk-sticky img{flex:0 0 auto;width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:top center;background:#F3EBE1;}
+.vpk-sticky-text{display:flex;flex:1 1 auto;flex-direction:column;gap:1px;min-width:0;}
+.vpk-sticky-text b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Merriweather",Georgia,serif;font-size:16px;line-height:1.35;font-weight:700;color:#1F1F1F;}
+.vpk-sticky-text span{font-size:12.5px;line-height:1.3;color:#6A6A6A;}
+.vpk-sticky-dl{display:inline-flex;flex:0 0 auto;align-items:center;margin:0;padding:9px 18px !important;border:0 !important;border-radius:999px;background:#6B4D37 !important;color:#fff !important;font-family:"Poppins",sans-serif;font-size:13.5px;font-weight:600;line-height:1.2;white-space:nowrap;cursor:pointer;transition:background-color .3s ease;}
+.vpk-sticky-dl:hover,.vpk-sticky-dl:focus-visible{background:#5a3f2d !important;color:#fff !important;outline:none;}
+.vpk-article--toc .vpk-body h2,.vpk-article--toc .vpk-exhibit{scroll-margin-top:calc(var(--vpk-stick,96px) + 84px);}
+@media (min-width:1024px){
+  .vpk-layout .vpk-toc{top:calc(var(--vpk-stick,96px) + 84px);}
+  .vpk-layout .vpk-toc nav{max-height:calc(100vh - var(--vpk-stick,96px) - 200px);}
+}
+@media (max-width:767px){.vpk-sticky{height:54px;}.vpk-sticky-in{gap:10px;width:calc(100% - 32px);}.vpk-sticky img,.vpk-sticky-text span,.vpk-sticky-dl span{display:none;}.vpk-sticky-text b{font-size:14px;}.vpk-sticky-dl{padding:8px 14px !important;}}
+@media (prefers-reduced-motion:reduce){.vpk-sticky{transition:none;}}
+/* Back to top */
+.vpk-top{position:fixed;right:20px;bottom:24px;z-index:99990;display:flex;align-items:center;justify-content:center;width:46px;height:46px;margin:0;padding:0 !important;border:0 !important;border-radius:50%;background:#6B4D37 !important;color:#fff !important;box-shadow:0 8px 22px rgba(0,0,0,.28);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease,visibility .3s,background-color .3s ease;}
+.vpk-top.is-shown{opacity:1;visibility:visible;transform:none;}
+.vpk-top:hover,.vpk-top:focus-visible{background:#5a3f2d !important;color:#fff !important;outline:none;}
+.vpk-top svg{width:18px;height:18px;}
+@media (max-width:1023px){.vpk-top{right:16px;bottom:20px;width:44px;height:44px;}}
+@media (prefers-reduced-motion:reduce){.vpk-top,.vpk-toc-handle{transition:none;}}
 .vpk-toc ol,.vpk-toc ul{margin:0;padding:0;list-style:none;}
 .vpk-toc li{margin:0;}
 .vpk-toc a{display:flex;align-items:baseline;gap:10px;padding:7px 18px 7px 17px;border-left:3px solid transparent;font-size:13.5px;line-height:1.4;color:#4A4A4A;text-decoration:none;transition:background-color .25s ease,color .25s ease,border-color .25s ease;}
@@ -237,10 +279,12 @@ html{scroll-behavior:smooth;}
 .vpk-toc ul a.is-here{color:#6B4D37;font-weight:600;}
 @media (min-width:1024px){
   .vpk-article--toc .vpk-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 56px;align-items:start;}
-  .vpk-toc{order:0;position:sticky;top:calc(var(--vp-hdr,96px) + 16px);margin:32px 0 0;}
-  .vpk-toc summary{cursor:default;pointer-events:none;}
-  .vpk-toc summary::after{display:none;}
-  .vpk-toc nav{max-height:calc(100vh - var(--vp-hdr,96px) - 110px);}
+  .vpk-toc{position:sticky;top:calc(var(--vp-hdr,96px) + 16px);right:auto;bottom:auto;z-index:auto;width:auto;margin:32px 0 0;transform:none;transition:none;touch-action:auto;}
+  .vpk-toc details{display:block;height:auto;border:1px solid #E4D9CB;border-radius:18px;box-shadow:0 1px 2px rgba(107,77,55,.06),0 10px 28px rgba(0,0,0,.08);overflow:hidden;}
+  .vpk-toc summary{padding:15px 20px;}
+  .vpk-toc nav{flex:none;max-height:calc(100vh - var(--vp-hdr,96px) - 110px);padding:8px 0 12px;}
+  .vpk-toc-handle,.vpk-toc-x,.vpk-toc-backdrop{display:none !important;}
+}
 }
 .vpk-glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:8px 0 28px;}
 .vpk-glance > div{padding:20px 18px;border-radius:16px;background:#F8F4EE;}
@@ -735,30 +779,83 @@ html{scroll-behavior:smooth;}
   </table></div>
 </figure>
 </div>
-			<aside class="vpk-toc" aria-label="In this paper"><details><summary>In this paper</summary><nav><ol><li data-id="s-executive-summary"><a href="#s-executive-summary"><span class="n n--dot"></span><span>Executive summary</span></a></li><li data-id="s-at-a-glance"><a href="#s-at-a-glance"><span class="n n--dot"></span><span>At a glance</span></a></li><li data-id="s-what-creators-should-ask"><a href="#s-what-creators-should-ask"><span class="n n--dot"></span><span>What creators should ask</span></a></li><li data-id="s-how-varish-partners-helps"><a href="#s-how-varish-partners-helps"><span class="n n--dot"></span><span>How Varish Partners helps</span></a></li><li data-id="s01-india-s-creator-economy-has-outgrown"><a href="#s01-india-s-creator-economy-has-outgrown"><span class="n">01</span><span>India’s creator economy has outgrown the side-hustle label</span></a><ul><li><a href="#figure-1"><b>Figure 1</b>Creator base, 2020 and 2025</a></li><li><a href="#exhibit-1"><b>Exhibit 1</b>India’s creator economy in numbers</a></li></ul></li><li data-id="s02-reach-is-broad-but-income-is-thin-an"><a href="#s02-reach-is-broad-but-income-is-thin-an"><span class="n">02</span><span>Reach is broad, but income is thin and concentrated</span></a><ul><li><a href="#exhibit-2"><b>Exhibit 2</b>What the income evidence says</a></li></ul></li><li data-id="s03-almost-all-the-money-comes-from-two-"><a href="#s03-almost-all-the-money-comes-from-two-"><span class="n">03</span><span>Almost all the money comes from two sources, and each new source brings its own paperwork</span></a><ul><li><a href="#exhibit-3"><b>Exhibit 3</b>Where creators earn, and what each avenue brings with it</a></li></ul></li><li data-id="s04-demand-is-shifting-to-regional-langu"><a href="#s04-demand-is-shifting-to-regional-langu"><span class="n">04</span><span>Demand is shifting to regional languages, smaller cities and longer relationships</span></a><ul><li><a href="#exhibit-4"><b>Exhibit 4</b>What brands are signalling, and how to respond</a></li></ul></li><li data-id="s05-a-serious-creator-business-has-a-fin"><a href="#s05-a-serious-creator-business-has-a-fin"><span class="n">05</span><span>A serious creator business has a finance function before it has a team</span></a><ul><li><a href="#figure-2"><b>Figure 2</b>From side income to structured business</a></li><li><a href="#exhibit-5"><b>Exhibit 5</b>Four stages of a creator business</a></li></ul></li><li data-id="s06-the-first-task-is-to-define-the-busi"><a href="#s06-the-first-task-is-to-define-the-busi"><span class="n">06</span><span>The first task is to define the business, not to count followers</span></a><ul><li><a href="#exhibit-6"><b>Exhibit 6</b>A creator’s revenue map</a></li></ul></li><li data-id="s07-gst-registration-follows-the-whole-b"><a href="#s07-gst-registration-follows-the-whole-b"><span class="n">07</span><span>GST registration follows the whole business; the rate follows the supply</span></a><ul><li><a href="#exhibit-7"><b>Exhibit 7</b>Registration is a turnover test, not a domestic-sales test</a></li></ul></li><li data-id="s08-a-retained-product-can-create-tax-ex"><a href="#s08-a-retained-product-can-create-tax-ex"><span class="n">08</span><span>A retained product can create tax exposure without creating cash</span></a></li><li data-id="s09-overseas-platform-income-is-an-expor"><a href="#s09-overseas-platform-income-is-an-expor"><span class="n">09</span><span>Overseas platform income is an export only when the facts support it</span></a><ul><li><a href="#figure-3"><b>Figure 3</b>The five export-of-services conditions</a></li></ul></li><li data-id="s10-tds-is-an-advance-tax-credit-not-a-u"><a href="#s10-tds-is-an-advance-tax-credit-not-a-u"><span class="n">10</span><span>TDS is an advance tax credit, not a universal rate for creators</span></a><ul><li><a href="#exhibit-9"><b>Exhibit 9</b>Familiar labels and the current law</a></li></ul></li><li data-id="s11-presumptive-tax-depends-on-eligibili"><a href="#s11-presumptive-tax-depends-on-eligibili"><span class="n">11</span><span>Presumptive tax depends on eligibility, not on being called a freelancer</span></a></li><li data-id="s12-foreign-withholding-and-indian-tax-a"><a href="#s12-foreign-withholding-and-indian-tax-a"><span class="n">12</span><span>Foreign withholding and Indian tax are two parts of the same income file</span></a></li><li data-id="s13-durable-income-comes-from-records-an"><a href="#s13-durable-income-comes-from-records-an"><span class="n">13</span><span>Durable income comes from records and margins, not from a bigger payout screenshot</span></a><ul><li><a href="#exhibit-10"><b>Exhibit 10</b>A monthly creator close</a></li></ul></li><li data-id="s-appendix-a-source-register"><a href="#s-appendix-a-source-register"><span class="n n--dot"></span><span>Appendix A. Source register</span></a></li></ol></nav></details></aside>
+			<aside class="vpk-toc" aria-label="In this paper"><button class="vpk-toc-handle" type="button" aria-label="Open the paper index" aria-expanded="false"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Index</span></button><button class="vpk-toc-x" type="button" aria-label="Close the index"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><details open><summary>In this paper</summary><nav><ol><li data-id="s-executive-summary"><a href="#s-executive-summary"><span class="n n--dot"></span><span>Executive summary</span></a></li><li data-id="s-at-a-glance"><a href="#s-at-a-glance"><span class="n n--dot"></span><span>At a glance</span></a></li><li data-id="s-what-creators-should-ask"><a href="#s-what-creators-should-ask"><span class="n n--dot"></span><span>What creators should ask</span></a></li><li data-id="s-how-varish-partners-helps"><a href="#s-how-varish-partners-helps"><span class="n n--dot"></span><span>How Varish Partners helps</span></a></li><li data-id="s01-india-s-creator-economy-has-outgrown"><a href="#s01-india-s-creator-economy-has-outgrown"><span class="n">01</span><span>India’s creator economy has outgrown the side-hustle label</span></a><ul><li><a href="#figure-1"><b>Figure 1</b>Creator base, 2020 and 2025</a></li><li><a href="#exhibit-1"><b>Exhibit 1</b>India’s creator economy in numbers</a></li></ul></li><li data-id="s02-reach-is-broad-but-income-is-thin-an"><a href="#s02-reach-is-broad-but-income-is-thin-an"><span class="n">02</span><span>Reach is broad, but income is thin and concentrated</span></a><ul><li><a href="#exhibit-2"><b>Exhibit 2</b>What the income evidence says</a></li></ul></li><li data-id="s03-almost-all-the-money-comes-from-two-"><a href="#s03-almost-all-the-money-comes-from-two-"><span class="n">03</span><span>Almost all the money comes from two sources, and each new source brings its own paperwork</span></a><ul><li><a href="#exhibit-3"><b>Exhibit 3</b>Where creators earn, and what each avenue brings with it</a></li></ul></li><li data-id="s04-demand-is-shifting-to-regional-langu"><a href="#s04-demand-is-shifting-to-regional-langu"><span class="n">04</span><span>Demand is shifting to regional languages, smaller cities and longer relationships</span></a><ul><li><a href="#exhibit-4"><b>Exhibit 4</b>What brands are signalling, and how to respond</a></li></ul></li><li data-id="s05-a-serious-creator-business-has-a-fin"><a href="#s05-a-serious-creator-business-has-a-fin"><span class="n">05</span><span>A serious creator business has a finance function before it has a team</span></a><ul><li><a href="#figure-2"><b>Figure 2</b>From side income to structured business</a></li><li><a href="#exhibit-5"><b>Exhibit 5</b>Four stages of a creator business</a></li></ul></li><li data-id="s06-the-first-task-is-to-define-the-busi"><a href="#s06-the-first-task-is-to-define-the-busi"><span class="n">06</span><span>The first task is to define the business, not to count followers</span></a><ul><li><a href="#exhibit-6"><b>Exhibit 6</b>A creator’s revenue map</a></li></ul></li><li data-id="s07-gst-registration-follows-the-whole-b"><a href="#s07-gst-registration-follows-the-whole-b"><span class="n">07</span><span>GST registration follows the whole business; the rate follows the supply</span></a><ul><li><a href="#exhibit-7"><b>Exhibit 7</b>Registration is a turnover test, not a domestic-sales test</a></li></ul></li><li data-id="s08-a-retained-product-can-create-tax-ex"><a href="#s08-a-retained-product-can-create-tax-ex"><span class="n">08</span><span>A retained product can create tax exposure without creating cash</span></a></li><li data-id="s09-overseas-platform-income-is-an-expor"><a href="#s09-overseas-platform-income-is-an-expor"><span class="n">09</span><span>Overseas platform income is an export only when the facts support it</span></a><ul><li><a href="#figure-3"><b>Figure 3</b>The five export-of-services conditions</a></li></ul></li><li data-id="s10-tds-is-an-advance-tax-credit-not-a-u"><a href="#s10-tds-is-an-advance-tax-credit-not-a-u"><span class="n">10</span><span>TDS is an advance tax credit, not a universal rate for creators</span></a><ul><li><a href="#exhibit-9"><b>Exhibit 9</b>Familiar labels and the current law</a></li></ul></li><li data-id="s11-presumptive-tax-depends-on-eligibili"><a href="#s11-presumptive-tax-depends-on-eligibili"><span class="n">11</span><span>Presumptive tax depends on eligibility, not on being called a freelancer</span></a></li><li data-id="s12-foreign-withholding-and-indian-tax-a"><a href="#s12-foreign-withholding-and-indian-tax-a"><span class="n">12</span><span>Foreign withholding and Indian tax are two parts of the same income file</span></a></li><li data-id="s13-durable-income-comes-from-records-an"><a href="#s13-durable-income-comes-from-records-an"><span class="n">13</span><span>Durable income comes from records and margins, not from a bigger payout screenshot</span></a><ul><li><a href="#exhibit-10"><b>Exhibit 10</b>A monthly creator close</a></li></ul></li><li data-id="s-appendix-a-source-register"><a href="#s-appendix-a-source-register"><span class="n n--dot"></span><span>Appendix A. Source register</span></a></li></ol></nav></details></aside>
 		</div><script>
 	(function () {
 		var toc = document.querySelector('.vpk-toc'); if (!toc) return;
-		var det = toc.querySelector('details'), nav = toc.querySelector('nav'), mq = window.matchMedia('(min-width:1024px)');
-		function sync() { if (mq.matches) det.open = true; }
-		sync(); if (mq.addEventListener) mq.addEventListener('change', sync);
+		var det = toc.querySelector('details'), nav = toc.querySelector('nav'), handle = toc.querySelector('.vpk-toc-handle'), xbtn = toc.querySelector('.vpk-toc-x'),
+			mq = window.matchMedia('(min-width:1024px)'), back = document.createElement('div');
+		det.open = true; back.className = 'vpk-toc-backdrop'; document.body.appendChild(back);
+
+		/* Phones and tablets: a side drawer. Tap the edge tab, or pull it out with a finger; pull it back, tap outside, or pick a section to close. */
+		function setOpen(o) { toc.classList.toggle('is-open', o); back.classList.toggle('is-open', o); handle.setAttribute('aria-expanded', o ? 'true' : 'false'); handle.setAttribute('aria-label', o ? 'Close the paper index' : 'Open the paper index'); }
+		var W = 0, sx = 0, sy = 0, st = 0, base = 0, curX = 0, active = false, moved = false, justDragged = false;
+		function begin(e) { if (mq.matches || e.touches.length !== 1) return; var t = e.touches[0]; sx = t.clientX; sy = t.clientY; st = Date.now(); W = toc.getBoundingClientRect().width; base = toc.classList.contains('is-open') ? 0 : W; curX = base; active = true; moved = false; }
+		function move(e) {
+			if (!active) return;
+			var t = e.touches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+			if (!moved) { if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return; if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } moved = true; toc.classList.add('is-dragging'); }
+			curX = Math.min(W, Math.max(0, base + dx));
+			toc.style.transform = 'translateX(' + curX + 'px)'; back.style.opacity = String(1 - curX / W); back.style.pointerEvents = 'auto';
+		}
+		function end(e) {
+			if (!active) return; active = false; if (!moved) return;
+			var dt = Math.max(1, Date.now() - st), v = (curX - base) / dt, open = Math.abs(v) > 0.4 ? v < 0 : curX < W / 2;
+			toc.classList.remove('is-dragging'); toc.style.transform = ''; back.style.opacity = ''; back.style.pointerEvents = '';
+			setOpen(open); justDragged = true; setTimeout(function () { justDragged = false; }, 80);
+		}
+		toc.addEventListener('touchstart', begin, { passive: true });
+		toc.addEventListener('touchmove', move, { passive: true });
+		toc.addEventListener('touchend', end); toc.addEventListener('touchcancel', end);
+		handle.addEventListener('click', function () { if (!justDragged) setOpen(!toc.classList.contains('is-open')); });
+		xbtn.addEventListener('click', function () { setOpen(false); });
+		back.addEventListener('click', function () { setOpen(false); });
+		toc.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) setOpen(false); });
+		document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+		if (mq.addEventListener) mq.addEventListener('change', function () { if (mq.matches) setOpen(false); });
+
+		/* Highlight where the reader is, and show that section's exhibits. */
 		var items = [].slice.call(toc.querySelectorAll('ol > li')), subs = [].slice.call(toc.querySelectorAll('ul a')),
-			heads = items.map(function (li) { return document.getElementById(li.getAttribute('data-id')); }).filter(Boolean), raf = 0;
+			heads = items.map(function (li) { return document.getElementById(li.getAttribute('data-id')); }).filter(Boolean), timer = 0;
 		function update() {
-			raf = 0;
-			var y = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vp-hdr')) || 96) + 40, cur = heads[0];
-			/* The section whose heading is nearest above the reading line, whatever order the index lists them in. */
-			var best = -Infinity;
+			timer = 0;
+			var y = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vpk-stick')) || 96) + 100, cur = heads[0], best = -Infinity;
 			heads.forEach(function (h) { var t = h.getBoundingClientRect().top; if (t <= y && t > best) { best = t; cur = h; } });
 			items.forEach(function (li) { var on = li.getAttribute('data-id') === cur.id; li.classList.toggle('is-active', on); li.classList.toggle('is-open', on); });
 			var here = null;
 			subs.forEach(function (s) { s.classList.remove('is-here'); var f = document.getElementById(s.getAttribute('href').slice(1)); if (f && f.getBoundingClientRect().top <= y) here = s; });
 			if (here && here.closest('li[data-id]').classList.contains('is-active')) here.classList.add('is-here');
 			var act = toc.querySelector('li.is-active > a');
-			if (act && nav && mq.matches) { var r = act.getBoundingClientRect(), n = nav.getBoundingClientRect(); if (r.top < n.top || r.bottom > n.bottom) nav.scrollTop += r.top - n.top - 48; }
+			if (act && nav && (mq.matches || toc.classList.contains('is-open'))) { var r = act.getBoundingClientRect(), n = nav.getBoundingClientRect(); if (r.top < n.top || r.bottom > n.bottom) nav.scrollTop += r.top - n.top - 48; }
 		}
-		window.addEventListener('scroll', function () { if (!raf) raf = setTimeout(update, 60); }, { passive: true });
+		window.addEventListener('scroll', function () { if (!timer) timer = setTimeout(update, 60); }, { passive: true });
+		handle.addEventListener('click', update);
 		update();
+
+		/* After the first scroll the edge tab shrinks to an arrow; a back-to-top button shows once the reader is well down the page. */
+		var top = document.createElement('button');
+		top.className = 'vpk-top'; top.type = 'button'; top.setAttribute('aria-label', 'Back to top');
+		top.innerHTML = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 10L8 5.5l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+		document.body.appendChild(top);
+		top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth' }); });
+		/* Secondary header: once the title block has scrolled away, a slim bar keeps the title, author and download in view. */
+		var hdrEl = document.querySelector('.elementor-location-header'), titleEl = document.querySelector('.vpk-h1'), bylineEl = document.querySelector('.vpk-byline'),
+			img = bylineEl && bylineEl.querySelector('img'), gate = document.querySelector('[data-gate]'), bar = document.createElement('div');
+		bar.className = 'vpk-sticky'; bar.setAttribute('aria-hidden', 'true');
+		bar.innerHTML = '<div class="vpk-sticky-in">' + (img ? '<img src="' + img.currentSrc + '" alt="" width="36" height="36">' : '') + '<div class="vpk-sticky-text"><b></b><span></span></div>' + (gate ? '<button type="button" class="vpk-sticky-dl" tabindex="-1">Download<span> the paper</span></button>' : '') + '</div>';
+		bar.querySelector('b').textContent = titleEl ? titleEl.textContent : '';
+		var who = bylineEl && bylineEl.querySelector('.vpk-author'); bar.querySelector('.vpk-sticky-text span').textContent = who ? who.textContent.replace(/s+/g, ' ').trim() : '';
+		document.body.appendChild(bar);
+		var dl = bar.querySelector('.vpk-sticky-dl'); if (dl) dl.addEventListener('click', function () { gate.click(); });
+		function flags() {
+			var y = window.pageYOffset || document.documentElement.scrollTop, stick = hdrEl ? Math.max(0, Math.round(hdrEl.getBoundingClientRect().bottom)) : 96;
+			document.documentElement.style.setProperty('--vpk-stick', stick + 'px');
+			if (y > 30) toc.classList.add('is-min');
+			top.classList.toggle('is-shown', y > 600);
+			bar.classList.toggle('is-shown', !!bylineEl && bylineEl.getBoundingClientRect().bottom < stick + 4);
+		}
+		window.addEventListener('scroll', flags, { passive: true }); window.addEventListener('resize', flags);
+		flags();
 	})();
 	</script>
 		<aside class="vpk-cta" aria-label="Talk to us">
