@@ -688,10 +688,479 @@ Whether you are starting a new business or tidying up an existing one, we will m
 
 ---
 
+# India’s creator economy: a portfolio of revenue streams, not one tax category
+Source: https://www.varishpartners.com/indias-creator-economy-revenue-streams-not-one-tax-category/
+
+By Varun ShenoyManaging Partner · 9 October 2026 · 28 min read
+
+Download the full paperPDF · 31 pages · 633 KB
+Download
+
+A finance lens for creators building a business. Research cut-off: 9 October 2026. General information, not individual tax advice.
+
+Source note. Numbers in square brackets refer to the source register in Appendix A. Legal positions are separated from operating recommendations and illustrative calculations. Some statutory text was read through identified secondary reproductions; the register makes that distinction explicit. Market figures in sections 1 to 5 come from third-party research with different definitions; projections are labelled, and calculations marked as ours are illustrative.
+
+## Executive summary
+
+**The central argument:** India’s creator economy is large and widening, but income is thin and concentrated. It becomes durable when each revenue stream has a clear contract, tax position and record trail.
+
+- **Scale is real.** Creators on influencer-marketing platforms grew from about 0.96 million in 2020 to 4.12 million in 2025, and two-thirds are now outside the big metros. Creator-influenced consumer spending is estimated at $350-400 billion a year. [17][19]
+
+- **Income is thin.** Only 8-10% of creators monetise effectively, and most earn under ₹18,000 a month. The ISB-Hashfame data points to repeat paid work, not more followers, as the gap. [17][20]
+
+- **Money is concentrated.** Brand sponsorships and ads were nearly 90% of creator monetisation in FY24, and each new avenue brings a different payer and a different tax treatment. [20][27]
+
+- **Demand is moving to regional languages, smaller cities and longer brand relationships.** Brands want proof of audience quality and organised delivery. [17][20][22]
+
+- **A creator is an operating business, not a tax category.** Platform payouts, campaigns, commissions, courses and merchandise need separate treatment.
+
+- **GST follows aggregate turnover and the nature of the supply.** For a Karnataka service provider, the ordinary registration threshold is ₹20 lakh, including exports. Domestic promotional services generally attract 18%; not every creator product does.
+
+- **Barter is not free.** A retained product can trigger benefit-related TDS. A product received in exchange for promotion can also be non-cash consideration for GST. These are separate tests.
+
+- **Foreign payment does not automatically mean an export.** Check the contracting recipient, place of supply, permitted receipt and other statutory conditions before using zero-rating and an LUT.
+
+- **Presumptive tax is an eligibility decision.** Creating content does not, by itself, make someone a specified professional. Commission income can also close the ordinary small-business route.
+
+- **The compliance calendar changed in 2026.** Current income-tax references are to the Income-tax Act, 2025; the new RBI service-export EDF framework took effect on 1 October 2026.
+
+## At a glance
+
+**4.12 million**Creators on influencer-marketing platforms, 2025 [17][18]
+
+**66%**Creators outside the eight big metros, 2025 [17][18]
+
+**8-10%**Creators who monetise effectively [20]
+
+**Nearly 90%**Of creator monetisation from advertising and brand sponsorships, FY24 [20]
+
+**₹20 lakh**Ordinary GST registration threshold, services from Karnataka [1][2]
+
+## 01India’s creator economy has outgrown the side-hustle label
+
+The number of creators on India’s influencer-marketing platforms rose from about 0.96 million in 2020 to 4.12 million in 2025, roughly 33% a year. Creators outside the eight big metros are now two-thirds of the base. Audience grew with supply: average engagement rose from 1.8% to 7.2%, and annual creator campaigns grew from about 14,000 to 42,000 at about 3.6 times the average spend per campaign. [17][18]
+
+The money around creators is larger than the money paid to them. BCG estimates that monetised creators (more than 1,000 followers) influence $350-400 billion of annual consumer spending, with a projection above $1 trillion by 2030. The ecosystem’s own direct revenue is much smaller: $20-25 billion today, with a projection of $100-125 billion by 2030. Treat the projections as projections. [19][20][21]
+
+Counts differ because definitions differ. BCG’s 2-2.5 million is monetised creators; ISB’s 4.12 million is creators registered on influencer-marketing platforms; Kofluence puts active creators at 4.0-4.4 million. Use each as a range marker, not a census. [17][19][22]
+
+Figure 1Creator base, 2020 and 2025
+
+**20200.96 million · 44% outside the big metros**
+
+**20254.12 million · 66% outside the big metros**
+
+Source: ISB-Hashfame [17][18]. Bar lengths are in proportion to creator numbers.
+
+Exhibit 1India’s creator economy in numbers
+
+MeasureLatest figureSource
+
+Creators on influencer-marketing platforms4.12 million in 2025, up from 0.96 million in 2020ISB-Hashfame [17][18]
+
+Non-metro share of creators66% in 2025 (2.72 million), against 44% in 2020ISB-Hashfame [17][18]
+
+Average engagement rate1.8% in 2020 to 7.2% in 2025ISB-Hashfame [17]
+
+Monetised creators (1,000+ followers)2-2.5 millionBCG [19][20]
+
+Consumer spend influenced by creators$350-400 billion a year; BCG projects more than $1 trillion by 2030BCG [19][20]
+
+Direct creator-ecosystem revenue$20-25 billion today; BCG projects $100-125 billion by 2030BCG [20][21]
+
+Influencer-marketing spend₹3,000-3,500 crore in 2025; estimated ₹4,500-5,000 crore by 2027Kofluence [22]
+
+Digital advertising₹947 billion in 2025, up 26%, about 63% of total advertisingFICCI-EY [24]
+
+Social media and online video ad spend₹21,057 crore and ₹20,004 crore respectivelydentsu-e4m [25]
+
+YouTube’s creative ecosystemMore than ₹16,000 crore of GDP and 930,000 full-time-equivalent jobs, reported November 2025Oxford Economics for YouTube [26]
+
+A comparison, with its limits: Kofluence’s ₹3,000-3,500 crore of influencer-marketing spend is roughly 3-5% of the digital advertising totals from FICCI-EY (₹94,700 crore) and dentsu-e4m (₹71,621 crore). The definitions differ, so read it as direction, not share. Creators influence far more spending than they directly collect. This is our calculation. [22][24][25]
+
+**Implication**The market is real and widening. Treat the headline numbers as context for your own pricing and planning, not as a forecast of your income.
+
+## 02Reach is broad, but income is thin and concentrated
+
+The same studies that show growth also show how little of it reaches most creators. BCG reports that only 8-10% of India’s creators monetise effectively, and that the majority earn less than ₹18,000 a month. Kofluence’s 2024-25 survey finds only 12% of creators earn 75% or more of their income from social media; more than half earn under a quarter of it there. [20][23]
+
+The ISB-Hashfame data explains part of the gap. Non-metro creators taking part in brand campaigns rose from about 38,000 to more than 408,000, yet most still do a single paid campaign a year. The ratio of campaigns to creators in that group fell from about 0.37 to about 0.10. The authors conclude that the next stage depends on repeat work, not on more entrants. [17][18]
+
+Scale matters less than frequency. In ISB’s wage comparison, a nano creator completing two campaigns earns about 29% of the average rural salaried wage and about 20% of the urban one. Only a micro creator completing five campaigns approaches a full-time wage. Kofluence finds 61.1% of creators in the 1,000-10,000 follower tier. [17][22]
+
+Surveys disagree on who counts. YouTube reports that for nearly two-thirds of creators earning on its platform, YouTube is their primary income. That is a population already earning on the platform, not all creators, which is why it sits beside Kofluence’s 12% rather than contradicting it. [23][26]
+
+A rough sense of scale follows from two of the figures above. Divide Kofluence’s ₹3,000-3,500 crore of 2025 influencer-marketing spend by ISB’s 4.12 million creators and the average is about ₹7,300-8,500 per creator a year. This is our arithmetic across data sets with different definitions; it is not an income statistic. Its point is that the average is small and the distribution is uneven. [17][22]
+
+Exhibit 2What the income evidence says
+
+EvidenceFindingSource
+
+Share monetising effectively8-10% of creators; most earn under ₹18,000 a monthBCG via BuzzInContent [20]
+
+Dependence on social income12% earn 75% or more of income from social; over half earn under 25% thereKofluence [23]
+
+Repeat brand workMost non-metro creators do one paid campaign a year; campaigns per creator fell from about 0.37 to about 0.10ISB-Hashfame [17][18]
+
+Pay per short videoFrom about ₹500 per Instagram reel for nano creators to over ₹2 lakh for mega creatorsKofluence [23]
+
+Income against wagesTwo campaigns for a nano creator is about 29% of a rural salaried wage; five for a micro creator approaches a full-time wageISB-Hashfame [17]
+
+Platform viewNearly two-thirds of creators earning on YouTube say it is their primary incomeYouTube / Oxford Economics [26]
+
+**Implication**Judge a business by repeat paying relationships and margin, not audience size. A creator with a few recurring payers and clean records is closer to a stable income than one with a bigger audience and a single campaign a year.
+
+## 03Almost all the money comes from two sources, and each new source brings its own paperwork
+
+BCG found that advertising and brand sponsorships made up nearly 90% of creator monetisation in FY24. Kofluence’s survey is consistent: 47% of creators depend on sponsored collaborations and only 15% earn mainly from platform ad revenue. The dependence is a commercial risk. It is also a finance risk, because one kind of payer is easy to track and several are not. [20][23]
+
+The other avenues are real but uneven. Platform programmes have thresholds. YouTube lists 1,000 subscribers plus either 4,000 qualified watch hours or 10 million qualified Shorts views in 90 days for ad revenue, and a lower 500-subscriber tier for memberships, with availability that depends on the country. The 4,000 hours are qualified long-form watch hours over the last 365 days. The 500-subscriber tier also needs 3 public uploads in the last 90 days, plus either 3,000 qualified long-form watch hours in the last 365 days or 3 million qualified Shorts views in the last 90 days. BCG describes virtual gifting as microtransactions of ₹10-100 on regional platforms, subscriptions as held back by price sensitivity, and live commerce as still early in India. [20][27]
+
+The less visible point is that every avenue has a different payer, a different place of supply and a different tax treatment. Adding revenue streams is therefore also adding compliance work. Exhibit 3 maps each avenue to the finance question it raises, with the section of this paper that covers it.
+
+Exhibit 3Where creators earn, and what each avenue brings with it
+
+AvenueWhat the evidence saysHow money arrivesFinance question (section)
+
+Brand deals and sponsored contentNearly 90% of FY24 monetisation; 47% of creators depend on it [20][23]Fee per deliverable, sometimes plus a productGST rate (7), barter (8), TDS (10)
+
+Platform ad revenue1,000 subscribers plus watch-hour or Shorts-view thresholds; 15% earn mainly here [23][27]Revenue share paid by the platform, often a foreign entityExport status (9), foreign withholding (12)
+
+Fan funding on platformsMemberships, Super Chat, Super Thanks and Shopping have separate thresholds and country availability [27]Platform payouts in several categoriesStatement reconciliation (13)
+
+Virtual gifts and live tipping₹10-100 microtransactions on regional platforms [20]Many small receipts through a platformRecords and reconciliation (13)
+
+Affiliate and commerce linksNamed by BCG as a diversification route [20]Commission on salesCommission income and eligibility for presumptive tax (11); supply analysis (9)
+
+Courses, digital products, merchandiseOwn-product revenue is a separate stream from content incomeDirect sales to buyersGST classification (7), stock and margin records (13)
+
+Subscriptions and live commerceEarly in India; price sensitivity limits subscriptions, live commerce is still testing [20]Recurring fees or sales commissionRegistration threshold (7), records (13)
+
+**Implication**Diversify on purpose. Before adding a revenue stream, decide who will pay, what you are supplying and how it will be recorded. Revenue you cannot reconcile is not yet income you can plan with.
+
+## 04Demand is shifting to regional languages, smaller cities and longer relationships
+
+The ISB-Hashfame study finds Hindi accounts for 42% of creators; regional languages together account for 58%. It identifies Bhojpuri and Kannada as markets where creator participation runs ahead of brand investment. Karnataka is one of the states that produces more creators than its share of population would predict. For a Karnataka creator working in Kannada, Tulu or Konkani, that is a positioning point worth testing against real campaign enquiries. [17][18]
+
+Kofluence reports that more than 62% of creators have seen more regional and vernacular briefs from brands. Engagement in Tier III and IV markets was 4.5-5.5%, against 3-4% in metros, and campaign costs were significantly lower there. The second half of that sentence matters for pricing: a market with lower campaign costs can reward volume but punish thin margins. [22]
+
+Brands say they want longer commitments. In Kofluence’s survey, 62% of brand professionals see better returns from long-term creator partnerships, and 13.3% link influencer marketing directly to revenue targets. BCG finds around 70% of surveyed brands plan to raise influencer budgets by 1.5-3 times over two to three years, while 74% name fake engagement as a concern. A creator who can show real audience quality and organised delivery has an advantage. [20][22]
+
+Exhibit 4What brands are signalling, and how to respond
+
+Brand signalEvidenceWhat it suggests for a creator
+
+Budgets are growingAbout 70% of surveyed brands plan 1.5-3 times higher influencer budgets [20]Expect more briefs; screen for fit and payment terms
+
+Preference for long relationships62% of brand professionals see better returns from long-term partnerships [22]Offer retainers and repeat packages, with clear scope
+
+Accountability is rising13.3% link to revenue targets; 46.4% apply campaign-level performance accountability [22]Keep delivery and performance records ready for the brand
+
+Authenticity concern74% of brands cite fake engagement [20]Audience quality can justify a higher price
+
+Regional demandMore than 62% of creators saw more regional briefs [22]Language and local relevance are priced assets
+
+Where the money sitsE-commerce is 23% of influencer-marketing spend and FMCG 19% [22]Know your category’s paying sectors and payment cycles
+
+**Implication**Price for the relationship, not for a single post. A longer arrangement needs a contract that says what is delivered, what rights are licensed, whether GST is added and who bears the tax on any product.
+
+## 05A serious creator business has a finance function before it has a team
+
+Kofluence reports that 15.2% of India’s creators are now registered as business entities or GST-registered individuals. The same report points to ASCI disclosure norms, SEBI scrutiny and the Digital Personal Data Protection Act as pressures moving the industry towards formal compliance. The ISB-Hashfame authors make a related point: creators need access to the institutions available to other self-employed professionals and MSMEs. [18][22]
+
+Most creator businesses grow in stages, and the finance work changes at each one. The stages below are our framework for planning, not a statutory classification. The thresholds that move a creator from one stage to the next are the subject of the rest of this paper: GST registration, withholding, export reporting and the choice of tax scheme.
+
+Figure 2From side income to structured business
+1. Side income2. Regular earner3. Registered professional4. Structured business
+
+The stages are our framework for planning, not a statutory classification.
+
+Exhibit 5Four stages of a creator business
+
+StageTypical signalsFinance set-up that fits
+
+1. Side incomeOccasional brand deals or first platform payoutsPAN and bank trail in order; keep every invoice, payout statement and TDS certificate
+
+2. Regular earnerRepeat brand work, several platforms, products received as part of dealsA written revenue map; monthly tracking against the GST turnover threshold; written barter terms
+
+3. Registered professionalGST registration, overseas platform income or foreign clientsExport file linking contract, invoice, bank receipt, LUT and EDF; reconciled TDS credits; a scheme decision backed by eligibility
+
+4. Structured businessA team, own products, possibly more than one entityMonthly management accounts, contribution by revenue stream, entity and contract review, planned tax payments
+
+The tax sections that follow are written for stages 2 to 4. A creator at stage 1 should still read them, because the records that matter later are cheapest to keep from the start.
+
+**Implication**Know which stage you are in before the next deal, not after it. The cheapest time to set up records is before a threshold forces the question.
+
+## 06The first task is to define the business, not to count followers
+
+A channel is a distribution asset. It is not a complete description of the business earning the money. Two creators with similar audiences may have entirely different exposure: one supplies promotional content to Indian brands; another licenses content, earns overseas platform revenue and sells a physical product.
+
+The useful unit of analysis is the revenue stream and its contract. Identify who owes the money, what is delivered, whether rights are licensed, and whether the creator acts on their own account or arranges someone else’s transaction. Those facts matter to export treatment, withholding and presumptive-tax eligibility. [3][5][6][8]
+
+Exhibit 6A creator’s revenue map
+
+StreamQuestion that changes the treatmentRecord to keep
+
+Brand campaignsContent production, promotion, rights licensing, or a combination?Contract, scope, invoice, TDS certificate
+
+YouTube / AdSenseWhich entity contracts and pays, and for what?Platform terms, payout statement, remittance proof
+
+AffiliatesOwn-account service or commission / agency arrangement?Affiliate agreement and commission statement
+
+Courses / digital productsWhat is supplied, to whom, and where?Product description, buyer location, sales records
+
+MerchandiseOwn inventory or another seller’s commission model?Purchase and sales invoices, returns, stock records
+
+Barter collaborationsWhat is promised in exchange, and is the product returned?Written barter terms, valuation, return evidence
+
+The right advisory budget depends on the business’s complexity: the number of streams, entities, overseas arrangements and staff. A single annual price cannot describe every creator’s needs.
+
+**Implication**Build a revenue map before choosing a return form, GST code or tax scheme. Follower count is not the decision rule.
+
+## 07GST registration follows the whole business; the rate follows the supply
+
+For a creator supplying services from Karnataka, the ordinary registration threshold is aggregate turnover above ₹20 lakh in a financial year. Aggregate turnover is computed across India for the same PAN and includes taxable supplies, exempt supplies, exports and inter-State supplies; GST itself is excluded. It is not the bank balance or profit. Lower service thresholds apply in certain states, and compulsory-registration provisions need separate review. [1][2]
+
+Notification 10/2017-Integrated Tax gives threshold-based relief for inter-State taxable services. An overseas client alone therefore does not automatically compel a small service provider to register. Once registered, eligible exports may be made without payment of IGST under an LUT. The ₹40 lakh goods-only threshold is not a general threshold for a creator who also supplies services. [1][2][4]
+
+Domestic advertising / promotional services generally sit in the 18% service-rate framework. The exact classification must follow the agreement. Merchandise, licensing, digital products and courses should not simply inherit the same code or rate. A creator-led course is not automatically exempt education. [9]
+
+Exhibit 7Registration is a turnover test, not a domestic-sales test
+₹12 lakh Indian campaigns + ₹7 lakh qualifying foreign platform services + ₹3 lakh own courses = **₹22 lakh aggregate turnover**
+
+Illustration only: ₹12 lakh Indian campaigns + ₹7 lakh qualifying foreign platform services + ₹3 lakh own courses = ₹22 lakh aggregate turnover, before considering other supplies. The foreign stream is included even if it qualifies for zero-rating. This is our calculation, assuming all three are supplies of the same PAN. [1][2]
+
+Contracts should say whether fees are exclusive or inclusive of GST. An all-in price can leave the creator funding the tax from the agreed fee. Separately recording GST also keeps it out of management revenue and profit.
+
+**Implication**Track the registration threshold monthly across every channel. Price a campaign after classifying it, not after copying another creator’s invoice.
+
+## 08A retained product can create tax exposure without creating cash
+
+A phone, outfit or hotel stay may feel like a perk. In a commercial collaboration it can also be part of the business’s compensation. The absence of a bank transfer does not end the analysis.
+
+CBDT Circular 12/2022 directly addresses social-media influencers. A product returned after use for the promotional service is not treated as a benefit / perquisite for that withholding rule; a retained product is. The circular survives the new Act to the extent consistent with it. Current benefit-related TDS is under section 393(1), Table 8(iv), commonly still called the old section 194R. [5][6][7]
+
+The general rate is 10%, subject to the ₹20,000 annual benefit threshold and the payer conditions. The threshold concerns the provider’s aggregate benefits to the recipient, not each product separately. Where the benefit is wholly in kind, or the cash component cannot cover the tax, the provider must ensure the required tax is paid before releasing it. The creator and brand should agree the mechanics in advance. [5][6]
+
+GST is a different test. If a product is consideration for a promised post, supply valuation must consider the non-money consideration; Rule 27 starts with open-market value. An unsolicited sample with no agreed promotional service is not automatically the same arrangement. Nor does the income-tax return-of-product rule settle whether a GST supply occurred. [10]
+
+**Exhibit 8: The barter file**Keep the agreed deliverables; the product’s supported value; who retains ownership; whether and when it is returned; the invoice or valuation workings; and evidence of withholding or tax paid. Do not treat a brand’s TDS valuation as automatically the right GST value.
+
+**Implication**Agree the tax and cash burden before accepting barter. A collaboration with no cash fee can still need cash to settle its tax obligations.
+
+## 09Overseas platform income is an export only when the facts support it
+
+The IGST Act’s export-of-services definition requires the supplier to be in India, the recipient outside India, the place of supply outside India, payment in convertible foreign exchange or RBI-permitted rupees, and the supplier and recipient not merely establishments of the same person. All conditions matter. [3]
+
+Figure 3The five export-of-services conditions
+
+- Supplier in India
+
+- Recipient outside India
+
+- Place of supply outside India
+
+- Payment in convertible foreign exchange or RBI-permitted rupees
+
+- Supplier and recipient not merely establishments of the same person
+
+As described in the IGST Act’s export-of-services definition [3]. All conditions matter.
+
+YouTube or AdSense income can qualify, but a platform label or a foreign bank credit is insufficient. Read the actual contracting entity and terms. Own-account services generally use the recipient-location rule under section 13(2), subject to the other place-of-supply provisions. Arranging or facilitating another person’s supply can raise the intermediary issue. [3]
+
+CBIC Circular 230/24/2024 distinguishes an advertising agency providing services on its own account from an agent merely facilitating media supply. Indian viewers are not, merely by being viewers, the paying recipient in the circular’s fact pattern. This is useful reasoning, not a blanket ruling on every platform or affiliate agreement. [11]
+
+A registered exporter using the without-payment route needs an eligible LUT and export invoices, return reporting and receipt evidence. LUT validity is for the financial year. The LUT does not fix a failed export condition, and zero-rated GST does not mean income-tax-free income. [3][4][14]
+
+From 1 October 2026, RBI Regulation 3(2) requires an EDF for service exports within 30 days after the end of the invoice month. One EDF may cover that month’s exports to multiple recipients. For non-software services, the regulation also allows submission on or before receipt of payment; an Authorised Dealer can extend the filing period on a reasoned request. Ordinary creator promotional/content services should be assessed as non-software rather than assumed to be software merely because delivery is online. Confirm the filing route with the bank. [12]
+
+The amended regulation generally requires service export proceeds to be realised and repatriated within nine months of the invoice, subject to applicable exceptions and extensions. This is distinct from GST receipt conditions. [12]
+
+**Implication**Maintain one export file that connects contract, invoice, platform statement, bank receipt, LUT and EDF. A payout dashboard alone is not that file.
+
+## 10TDS is an advance tax credit, not a universal rate for creators
+
+Brands do not all buy the same service. A campaign may involve contractual production, professional services, royalty rights or a benefit in kind. The withholding analysis must match the transaction. The rate deducted does not by itself decide the creator’s final taxable profit or eligibility for a tax scheme. [5][8]
+
+Exhibit 9Familiar labels and the current law
+
+Familiar 1961 Act labelCurrent 2025 Act referenceGeneral rule, subject to payer and payment conditions
+
+194C: contractual work393(1), Table 6(i)1% for an individual/HUF contractor; 2% for other contractors. ₹30,000 single-payment / ₹1 lakh aggregate thresholds.
+
+194J: professional / technical fees, specified royalties393(1), Table 6(iii)Generally 10% for professional fees; 2% for specified technical-service / film-royalty cases. ₹50,000 threshold for relevant fee / royalty categories.
+
+194R: benefits / perquisites393(1), Table 8(iv)10%; ₹20,000 annual benefit threshold. Retained-product guidance is especially relevant.
+
+These are general resident-payee rules, not a recommendation to select the lowest rate. Advertising, production and rights arrangements need contract-level review. The table does not cover every payer, non-resident payment, PAN failure, certificate or other exception. [5][6]
+
+Reconcile gross invoices, money received and TDS certificates. A ₹1 lakh fee with ₹10,000 withheld is generally not ₹90,000 revenue merely because ₹90,000 reaches the account. That is an illustration of the reconciliation, not a ruling that 10% is the correct rate for the campaign.
+
+Creators hiring editors, agencies or consultants may also become deductors. Their entity type, turnover and payment category determine the obligation. Deduction by the brand does not discharge the creator’s own payer obligations. [5]
+
+**Implication**Resolve the withholding category before the invoice is paid. Reconcile credits during the year, rather than discovering missing credits at return time.
+
+## 11Presumptive tax depends on eligibility, not on being called a freelancer
+
+The Income-tax Act, 2025 took effect on 1 April 2026. Tax year 2026-27 is under that Act; earlier-year returns remain under the old framework. Section 58 now contains the presumptive schemes often described by the old labels 44AD and 44ADA. [7]
+
+The specified-profession route uses section 58(2), Table 3 and section 62(4). The normal gross-receipts limit is ₹50 lakh, rising to ₹75 lakh where cash receipts do not exceed 5%. Income is 50% of gross receipts or the higher profit claimed actually earned. Resident individuals and firms other than LLPs can qualify, subject to the conditions. [8]
+
+Section 62(4) lists specified professions including legal, medical, engineering, architecture, accountancy, technical consultancy, interior decoration, information technology and company secretary, plus notified professions. Content creation is not a standalone listed profession. Using technology is not the same as practising information technology. A notified professional category may apply on the actual facts, but it should be documented, not assumed. [8]
+
+For an eligible business, section 58(2), Table 1 provides the ₹2 crore limit, increased to ₹3 crore when cash receipts do not exceed 5%, with the 6% / 8% computation depending on qualifying receipt modes and timing, or higher profit claimed. The eligibility definition excludes specified professionals, commission / brokerage earners and agency businesses. Affiliate commission can therefore be a material obstacle, not a trivial label to rename. Companies and LLPs do not qualify for these routes. [8]
+
+Presumptive income does not permit another deduction for every camera, trip or editor bill. Nor does it erase GST, export reporting or the need to prove receipts and eligibility. Compare it with actual books before electing it; lower-profit claims, audit rules and the business-route opt-out restrictions need separate review. [8]
+
+**Implication**Obtain a reasoned eligibility position before choosing the scheme. A low-effort return is not a substitute for a defensible classification.
+
+## 12Foreign withholding and Indian tax are two parts of the same income file
+
+A resident and ordinarily resident individual is generally taxable in India on worldwide income. The rules differ for non-residents and residents who are not ordinarily resident. Receiving money from abroad does not by itself establish residence or the legal source of the income. [14]
+
+Google says it collects US tax information from monetising YouTube creators and, where applicable, withholds tax on US-viewer earnings. With valid information, the applicable rate depends on residence, income category and treaty eligibility. Without valid information, the default withholding can extend further. Do not promise a universal India-US rate or assume every AdSense payment has the same US classification. [13]
+
+Foreign tax credit is not automatic. Check the treaty and Indian rules, offer the corresponding income correctly, and retain the tax statement and proof of deduction or payment. Under the 2026 Rules, the department’s current guidance uses Form 44 and Rule 76, rather than telling creators to use legacy Form 67 for every year. The guidance specifies the filing timing and requires accountant verification for companies, or in other cases where foreign tax paid for the tax year is at least ₹1 lakh. [15]
+
+The platform’s gross earnings, foreign withholding and net remittance should reconcile. The overseas deduction does not replace Indian return reporting, and foreign tax credit is not the same as a GST refund.
+
+**Implication**Treat US tax information, Indian income reporting and foreign tax credit as a connected process. Review the relevant year’s form, not an old checklist.
+
+## 13Durable income comes from records and margins, not from a bigger payout screenshot
+
+Creators should know the contribution from each stream after production costs, platform or agency charges and the tax cash reserve. This is an operating recommendation, not a claim that every cost is deductible. A campaign with heavy rework can be less attractive than a smaller repeat contract. Under actual-profit taxation, ordinary expense deductibility depends on business purpose and statutory conditions. General revenue expenses must be incurred wholly and exclusively for the business or profession; personal and capital spending are not automatically deductible as current expenses. Cameras and computers may need capital-asset and depreciation treatment, and mixed-use costs need supported allocation. Income-tax deductions and GST input credit are separate analyses. [16]
+
+Exhibit 10A monthly creator close
+
+- Reconcile each platform statement and brand invoice to receipts, withholding, fees and outstanding balances.
+
+- Update the PAN-wide turnover tracker and classify new products, contracts and barter arrangements.
+
+- Keep expense evidence, asset records and the basis for business / personal allocations.
+
+- Review GST reporting, export receipts, EDF status and the income-tax / advance-tax cash plan.
+
+- Compare contribution by stream, unpaid work and customer concentration; keep personal withdrawals outside operating costs.
+
+Presumptive taxation, where available, simplifies one part of tax computation. It does not answer whether a product line is profitable or whether the next campaign will fund payroll. [8]
+
+**Implication**The goal is a small finance system that runs with the business. Annual filing should be its output, not the first time the numbers are assembled.
+
+## What creators should ask
+
+- Which stage of Exhibit 5 is my business in, and does my record-keeping match it?
+
+- Which two or three payers account for most of my income, and what happens if one leaves?
+
+- Do I have a written scope and rate for repeat work, not only a price per post?
+
+- Can I explain what each payer is buying, and show the contract that supports that treatment?
+
+- Does my GST turnover tracker include exports and non-cash commercial collaborations?
+
+- Are my brand quotes clear on GST, rights, reimbursements, withholding and payment timing?
+
+- If I call a receipt an export, can I prove all the conditions and connect it to the bank receipt?
+
+- Who is tracking the new EDF requirement with my Authorised Dealer?
+
+- If I use presumptive tax, what is the written eligibility basis, especially for commissions and mixed streams?
+
+- Do the platform’s gross earnings, foreign tax and net payment reconcile to my Indian reporting?
+
+- Which revenue stream leaves cash after production costs and the tax reserve?
+
+## How Varish Partners helps
+
+The starting point is a creator-business review: revenue streams, contracts, turnover, platform statements and the way cash moves. From that map, a tax and CFO advisory engagement can connect classification, GST, withholding reconciliation, export documentation, tax planning and monthly management reporting.
+
+The scope should match the business. A creator taking their first paid campaign needs a different finance setup from a team selling courses, merchandise and overseas content rights. The objective is the same: clear treatment, reliable records and a view of what is actually earned.
+
+If your business sits at stage 2 or 3 of Exhibit 5, a first review is most useful before a registration threshold, an export filing or a larger brand deal forces the question. Varish Partners is a tax and CFO advisory practice in Mangaluru, and the review starts from your contracts and statements, not from a form.
+
+General information as at 9 October 2026. Treatment depends on residence, entity, contracts, supply location and current law. This paper is not a filing instruction or an opinion on a particular creator. Contract-level conclusions and bank filing mechanics require individual review.
+
+## Appendix A. Source register
+
+All sources accessed 9 October 2026. Statutory and administrative sources take priority over illustrations and our operating recommendations. Sources [17] to [27] support the market sections; they are research and press sources, not statutory authority, and market estimates differ between publishers.
+
+#Source and notesLinks
+
+1CBIC, CGST Act sections 2(6) and 22. Primary law, opened. PAN-wide aggregate turnover, exports, general registration threshold and goods-only qualification.taxinformation.cbic.gov.in
+taxinformation.cbic.gov.in
+
+2CBIC, Notification 10/2017-Integrated Tax, 13 October 2017. Primary notification, opened. Inter-State service registration relief within applicable turnover limits. Do not confuse with the similarly numbered Integrated Tax (Rate) notification.cbic-gst.gov.in
+
+3CBIC, IGST Act sections 2(6), 2(13) and 13. Primary law, opened. Export conditions, intermediary definition and cross-border place of supply.taxinformation.cbic.gov.in
+taxinformation.cbic.gov.in
+
+4CBIC, LUT / bond circular, 4 October 2017. Primary guidance, opened. Eligible registered exporters and financial-year LUT validity; use with current law and GST rules.cbic-gst.gov.in
+
+5Income Tax Department, Income-tax Act, 2025, section 393 (version including Finance Act 2026 footnotes). Primary law, opened. Resident-payee TDS categories and payer conditions. Retrieval flattened portions of the table; rates and thresholds were read alongside the full table transcription in [6].incometaxindia.gov.in
+
+6EZTax, transcription of Income-tax Act, 2025 section 393. Secondary legal reproduction, opened. Full table rendering for contractor, professional-fee and benefit rates / thresholds. Cross-checked against [5] and the CBDT circular in [7]. This is not a government site.eztax.in
+
+7Income Tax Department, “Objective and scope of the New Act” FAQs; CBDT Circular 12/2022, 16 June 2022, hosted by Department of Pharmaceuticals. Primary administrative guidance, opened. Commencement / transition, continuing circulars and presumptive-scheme consolidation; influencer retained-versus-returned products and benefit-related withholding mechanics.incometax.gov.in
+ucmp.pharma-dept.gov.in
+
+8Income Tax Department, Income-tax Act, 2025 section 62; eCourtsIndia, section 58 consolidated transcription. Primary law for section 62 and secondary legal reproduction for section 58, opened. Specified professions; presumptive limits, computation, exclusions and consequences. Section 58 reproduction states it is recovered from the departmental text as amended by Finance Act 2026. Cross-checked limits with departmental presumptive-tax FAQs; the official long Act PDF was only partly retrievable and is not treated as fully read.incometaxindia.gov.in
+indiacode.ecourtsindia.com
+incometax.gov.in
+
+9GST Council / CBIC service-rate schedule; CBIC Notification 11/2017-Central Tax (Rate). Primary rate material, opened. Heading 9983 other professional / technical / business services: 9% CGST plus 9% SGST, or 18% IGST. The older primary schedule was checked alongside IncorpX’s secondary heading-9983 table, which reports the 18% residual rate under amendments through Notification 15/2025-CT(R). This is not a universal classification for merchandise or digital products; confirm contract-specific rates before billing.gstcouncil.gov.in
+cbic-gst.gov.in
+incorpx.io
+
+10Indian Kanoon, CGST Rule 27 transcription. Secondary reproduction of primary rule, opened. Non-money consideration and open-market valuation order. The CBIC consolidated-rules retrieval exposed the rule index but not the full relevant text, so that retrieval was not used as proof of the wording.indiankanoon.org
+
+11CBIC Circular 230/24/2024-GST, 10 September 2024. Primary guidance, opened. Own-account advertising versus facilitation; recipient and target-audience distinction. Applied by analogy, not represented as an AdSense-specific ruling.cbic-gst.gov.in
+
+12RBI, FEMA 23(R)/2026-RB, 13 January 2026, amended to 22 September 2026; effective 1 October 2026. Primary regulation, opened. Regulation 3(2): EDF timing, monthly consolidation and non-software option. Regulation 5: nine-month general service-export realisation period. The regulation establishes obligations; this paper does not verify a particular bank’s filing interface.rbi.org.in
+
+13Google / YouTube Help, “U.S. tax requirements for YouTube earnings”. Operator guidance, opened. US-viewer withholding, tax-information requirements and treaty-dependent rates. Not a substitute for Indian law or a treaty analysis.support.google.com
+
+14eCourtsIndia, Income-tax Act, 2025 section 5. Secondary legal reproduction, opened. Worldwide-income scope and not-ordinarily-resident qualification. Export GST and Indian income tax remain distinct analyses.indiacode.ecourtsindia.com
+
+15Income Tax Department, guidance note for Form 44 and Form 45 (Foreign Tax Credit), 2026. Primary administrative guidance, opened. Rule 76, current form, filing timing and accountant verification. Earlier-year filings still require the appropriate old-law form.incometaxindia.gov.in
+
+16eCourtsIndia, Income-tax Act, 2025 section 34. Secondary legal reproduction, opened. General business-expense conditions and exclusions for personal / capital spending. Asset-specific deduction and depreciation conditions require separate review.indiacode.ecourtsindia.com
+
+17ISB SRITNE and Hashfame, “Understanding the Canvas of India’s Creator Economy”, 2026. Primary research report, opened. Creator counts, non-metro share, engagement, campaign volume and spend, language mix, income benchmarks. Data from the Qoruz platform, CMIE, PLFS and Census.prodcd.isb.edu
+
+18ISB press release, 14 July 2026. Primary, opened. Summary of the report above, including the single-campaign finding and the policy conclusions.isb.edu
+
+19BCG, “From Content to Commerce: Mapping India’s Creator Economy”, 30 April 2025. Primary summary page, opened. Monetised creators, influenced spend and 2030 projection. The full report was not retrieved.bcg.com
+
+20BuzzInContent, report on BCG findings, 3 May 2025. Trade press, opened. Monetisation share, 8-10% effective monetisers, income below ₹18,000 a month, brand budget plans, fake-engagement concern, gifting, subscriptions and live commerce. Secondary reporting of BCG.buzzincontent.com
+
+21Mint, report on BCG findings, 2 May 2025. Trade press, opened. Corroborates direct creator-ecosystem revenue of $20-25 billion and the $100-125 billion projection.livemint.com
+
+22Kofluence, “Decoding Influence: Annual Research Report 2026”, reported by Social Samosa, 14 May 2026. Vendor research via trade press, opened. Influencer-marketing spend, creator tiers, business registration, regional briefs, brand behaviour and category shares. Vendor-sourced estimate.socialsamosa.com
+
+23Kofluence Annual Research Report 2024-25, reported by Financial Express, 8 July 2025. Vendor research via press, opened. Income dependence on social media, sponsored-collaboration dependence, reel pay range.financialexpress.com
+
+24FICCI and EY India, M&E report press release, 24 March 2026. Industry body publication, opened. 2025 digital advertising and digital media figures.ficci.in
+
+25dentsu and exchange4media, Digital Advertising Report 2026, reported 2 February 2026. Trade press, opened. Social media and online video ad spend, total digital ad market.exchange4media.com
+
+26Google / YouTube India, “How YouTube is Fueling India’s Next Wave of Growth, Knowledge, and Culture”, 17 November 2025. Platform publication of Oxford Economics research, opened. GDP contribution, jobs and primary-income statement. Platform-reported.blog.google
+
+27YouTube Help, “How to earn money on YouTube”. Platform documentation, opened 9 October 2026. Monetisation features and eligibility thresholds. Availability varies by country and the thresholds can change.support.google.com
+
+In this paper
+
+## Have a decision to make?
+
+Bring us the question, the challenge or the opportunity. We’ll bring the experience and perspective to help you move forward with clarity.
+
+Talk to a Partner
+
+---
+
 # India’s ice-cream market: a portfolio of cold-chain micro-economies
 Source: https://www.varishpartners.com/indias-ice-cream-market-cold-chain-micro-economies/
 
-By Varun ShenoyManaging Partner · 6 October 2026 · 15 min read
+By Varun ShenoyManaging Partner · 6 October 2026 · 13 min read
 
 Download the full paperPDF · 22 pages · 888 KB
 Download
