@@ -245,6 +245,7 @@ html{scroll-behavior:smooth;}
 .vpk-sticky{position:fixed;left:0;right:0;top:var(--vpk-stick,96px);z-index:99980;height:64px;background:rgba(255,255,255,.97);border-bottom:1px solid #E4D9CB;box-shadow:0 8px 22px rgba(0,0,0,.08);transform:translateY(-110%);opacity:0;visibility:hidden;transition:transform .3s cubic-bezier(.22,.61,.36,1),opacity .25s ease,visibility .3s;}
 .vpk-sticky.is-shown{transform:none;opacity:1;visibility:visible;}
 .vpk-sticky-in{display:flex;align-items:center;gap:14px;box-sizing:border-box;width:min(1140px,100% - 40px);height:100%;margin:0 auto;padding-right:8px;}
+.vpk-sticky picture{display:flex;flex:0 0 auto;}
 .vpk-sticky img{flex:0 0 auto;width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:top center;background:#F3EBE1;}
 .vpk-sticky-text{display:flex;flex:1 1 auto;flex-direction:column;gap:1px;min-width:0;}
 .vpk-sticky-text b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Merriweather",Georgia,serif;font-size:16px;line-height:1.35;font-weight:700;color:#1F1F1F;}
@@ -451,7 +452,7 @@ html{scroll-behavior:smooth;}
 		</section>
 				</div>
 <main id="content" class="site-main vpk-main">
-	<article class="vpk-article">
+	<article class="vpk-article vpk-article--toc">
 		<header>
 			<nav class="vp-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/insights/">Our Thinking</a></li><li><span aria-current="page">India’s ice-cream market: a portfolio of cold-chain micro-economies</span></li></ol></nav><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.varishpartners.com/"},{"@type":"ListItem","position":2,"name":"Our Thinking","item":"https://www.varishpartners.com/insights/"},{"@type":"ListItem","position":3,"name":"India’s ice-cream market: a portfolio of cold-chain micro-economies","item":"https://www.varishpartners.com/indias-ice-cream-market-cold-chain-micro-economies/"}]}</script>
 			<p class="vpk-eyebrow">Food &amp; Consumer</p>
@@ -465,10 +466,11 @@ html{scroll-behavior:smooth;}
 			</a>
 			</div>
 		</header>
-		<div class="vpk-body">
+		<div class="vpk-layout">
+			<div class="vpk-body">
 <p class="vpk-note">Source note. Numbers in square brackets, such as [2], refer to the source register in Appendix A. Sources marked “opened” were read in full or in part for this paper. Others are cited only as summarised in the research brief and have not been independently verified. Calculations by the author are marked “our calculation”.</p>
 
-<h2>Executive summary</h2>
+<h2 id="s-executive-summary">Executive summary</h2>
 <ul>
   <li><strong>Size depends on scope.</strong> IBEF cites about ₹30,000 crore for 2023 [1]. IMARC, which includes frozen desserts, puts 2025 at ₹24,350 crore [2]. The later figure is smaller, which shows that the two measure different things.</li>
   <li><strong>Growth is strong but sources differ on pace.</strong> IBEF implies about 11% a year to 2028 (our calculation) [1]. IMARC forecasts 11.3% a year for 2026 to 2034 [2]. McKinsey reported growth above 20% a year in India in 2022 [7]. Per-capita consumption is about 1.6 litres [1][2].</li>
@@ -479,9 +481,9 @@ html{scroll-behavior:smooth;}
   <li><strong>India is not one ice-cream market.</strong> It is a set of local cold-chain micro-economies, and returns will be decided by route density, freezer productivity, dairy sourcing and city-level price architecture.</li>
 </ul>
 
-<h2><span class="vpk-sec">01</span>Published market sizes differ because scope differs, so the first task is to define the market</h2>
+<h2 id="s01-published-market-sizes-differ-becaus"><span class="vpk-sec">01</span>Published market sizes differ because scope differs, so the first task is to define the market</h2>
 <p>Public estimates cannot be compared without checking what each includes. IBEF frames a market of about ₹30,000 crore in 2023, rising to ₹50,000 crore by 2028, with 60 to 65% organised and 35 to 40% unorganised [1]. IMARC’s 2025 figure of ₹24,350 crore comes from a model that covers impulse, take-home and artisanal ice cream and frozen desserts sold through retail, foodservice and online channels [2]. Fortune India’s headline on Tetra Pak and IMARC data points to ₹57,500 crore by 2033 [5]. A Euromonitor-linked discussion cited in the research brief puts the organised packaged segment nearer ₹23,000 crore for 2025.</p>
-<figure class="vpk-exhibit">
+<figure id="exhibit-1" class="vpk-exhibit">
   <figcaption><span>Exhibit 1</span>Published estimates of India’s ice-cream market</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Source</th><th>Year</th><th>Estimate</th><th>Scope note</th></tr></thead>
@@ -498,9 +500,9 @@ html{scroll-behavior:smooth;}
 <p>We recommend three nested definitions. The broad frozen-indulgence market (branded ice cream, frozen desserts, kulfi, local makers, parlours) sizes the consumer opportunity. The organised packaged market is the right basis for share and valuation. The addressable branded profit pool, meaning the segments, regions and channels where service levels and price realisation support returns, should drive entry and investment decisions.</p>
 <p class="vpk-implication"><strong>Implication</strong>Any analysis that uses a single headline number without stating its definition will mislead. Size the market at three levels and use the right one for each decision.</p>
 
-<h2><span class="vpk-sec">02</span>Growth is strong and per-capita consumption is low, but sources disagree on pace</h2>
+<h2 id="s02-growth-is-strong-and-per-capita-cons"><span class="vpk-sec">02</span>Growth is strong and per-capita consumption is low, but sources disagree on pace</h2>
 <p>Per-capita consumption rose from 400 ml in 2011 to nearly 1.6 litres in 2023 [1][2]. IMARC estimates the market grew from ₹11,600 crore in 2020 to ₹24,350 crore in 2025, about 16% a year (our calculation) [2], and forecasts 11.3% a year to 2034. Industry commentary reported by Storyboard18 cites 12 to 15% annual growth [6]. Amul stated that its ice-cream value grew more than 40% in FY23 [18, per brief]. McKinsey’s 2022 survey found growth above 20% a year in India, the highest among the markets it compared, while noting that many consumers lack refrigerators [7].</p>
-<figure class="vpk-exhibit">
+<figure id="exhibit-2" class="vpk-exhibit">
   <figcaption><span>Exhibit 2</span>Growth engines and what constrains each</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Engine</th><th>What changes</th><th>Binding constraint</th></tr></thead>
@@ -514,9 +516,9 @@ html{scroll-behavior:smooth;}
 </figure>
 <p class="vpk-implication"><strong>Implication</strong>Every growth engine has an operational constraint. Consumption headroom becomes revenue only where the cold chain, the outlet and the unit economics support it.</p>
 
-<h2><span class="vpk-sec">03</span>Demand is impulse-led and single-serve, which makes the freezer at the outlet the central asset</h2>
+<h2 id="s03-demand-is-impulse-led-and-single-ser"><span class="vpk-sec">03</span>Demand is impulse-led and single-serve, which makes the freezer at the outlet the central asset</h2>
 <p>IMARC splits the 2025 market by type as impulse 60.6%, take-home 27.8% and bulk 11.6%. By format, cones lead with 27.3%, followed by sticks (24.5%), bricks (20.7%) and cups (10.8%) [2]. Each format has different margins and different freezer needs. IMARC’s segment data on flavour, channel, end-user and price point sit behind its paywall and were not available.</p>
-<figure class="vpk-exhibit">
+<figure id="exhibit-3" class="vpk-exhibit">
   <figcaption><span>Exhibit 3</span>Demand mix, 2025 (IMARC)</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>By type</th><th>Share</th><th>By format</th><th>Share</th></tr></thead>
@@ -531,20 +533,20 @@ html{scroll-behavior:smooth;}
 </figure>
 <p class="vpk-implication"><strong>Implication</strong>A market that is 60% impulse is a market sold out of freezers. Growth in outlets with working freezers matters as much as growth in consumer demand.</p>
 
-<h2><span class="vpk-sec">04</span>Cold chain and seasonality decide where the category can grow profitably</h2>
+<h2 id="s04-cold-chain-and-seasonality-decide-wh"><span class="vpk-sec">04</span>Cold chain and seasonality decide where the category can grow profitably</h2>
 <p>IMARC identifies two main restraints: an uneven cold-chain infrastructure in tier-2, tier-3 and rural India (limited freezers, unreliable power, weak last-mile logistics), and strong seasonal dependence on summer, with weaker demand in monsoon and winter [2]. It also lists rising milk, sugar and packaging costs and spoilage from temperature breaks as challenges [2]. These effects raise operating costs and limit distribution beyond major cities.</p>
 <p>The research brief points to further supply-side context, which we have not independently verified. MoFPI records milk production rising from 187.3 million tonnes in FY19 to 239.3 million tonnes in FY24, about 5% a year (our calculation) [23, per brief]. The NCCD study [24] and the CLASP cold-chain assessment [25] give foundational and equipment-level views of capacity and last-mile economics. Both should be read before this section is used in a client deliverable.</p>
 <p class="vpk-implication"><strong>Implication</strong>Seasonality and cold-chain gaps turn fixed assets (plants, cold rooms, reefers, freezers) into the main cost lever. Utilisation through the off-season and freezer throughput are management priorities, not operational details.</p>
 
-<h2><span class="vpk-sec">05</span>Ice cream is structurally different from FMCG, and the Kwality Wall’s demerger is the clearest evidence</h2>
+<h2 id="s05-ice-cream-is-structurally-different-"><span class="vpk-sec">05</span>Ice cream is structurally different from FMCG, and the Kwality Wall’s demerger is the clearest evidence</h2>
 <p>On 22 January 2025, HUL’s board approved a scheme to demerge its ice-cream business into its subsidiary Kwality Wall’s (India) Limited, with shares allotted one-for-one to HUL shareholders. HUL said the demerged company would have:</p>
 <p class="vpk-closing">“greater focus and flexibility to deploy strategies suited to its distinctive business model and market dynamics” [9]</p>
 <p><strong>A correction to our earlier draft.</strong> The research brief stated that HUL explicitly cited cold-chain infrastructure and a distinct channel landscape as limiting synergies. The press release itself does not use those words [9]. Cold-chain economics are a reasonable reading of “distinctive business model”, and IMARC and McKinsey both support them as a constraint [2][7]. They should be presented as our interpretation, not as HUL’s stated rationale. The separate demerger documentation page [10] may contain a fuller rationale and should be checked.</p>
 <p>IMARC lists The Magnum Ice Cream Company, which owns Kwality Wall’s, Cornetto and Magnum, as a market leader [2]. An SEC filing, as summarised in the brief, reports India Ice Cream Business revenue of €180 million and an operating loss of €19 million for the 12 months to 31 December 2025, an operating margin of about -11% (our calculation) [12]. Accounting scope and currency need to be reconciled before this is used as a benchmark.</p>
 <p class="vpk-implication"><strong>Implication</strong>Even the category’s best-known brand is not automatically profitable at scale. Brand strength does not substitute for cold-chain economics.</p>
 
-<h2><span class="vpk-sec">06</span>Different players win on different bases, and none of the advantages is universal</h2>
-<figure class="vpk-exhibit">
+<h2 id="s06-different-players-win-on-different-b"><span class="vpk-sec">06</span>Different players win on different bases, and none of the advantages is universal</h2>
+<figure id="exhibit-4" class="vpk-exhibit">
   <figcaption><span>Exhibit 4</span>Competitor archetypes</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Archetype</th><th>Examples</th><th>Advantage</th><th>Vulnerability</th></tr></thead>
@@ -561,8 +563,8 @@ html{scroll-behavior:smooth;}
 <p>Evidence from the Amul filings, as summarised in the brief, supports the dairy-co-operative advantage. Amul reported ice-cream value growth above 40% in FY23 [18] and a 25% rise in ice-cream production in FY22 [19]. Its earlier AGM records show premium extensions such as Amul EPIC and Creme Rich [20], and the Chairman’s speech for 1999–2000 records a milk-first, affordability-led origin for the business [27]. Mother Dairy’s 2020 launch of an ice-cream chocolate format [22] shows category boundaries widening. Vadilal, Hatsun and Mother Dairy financials [13]–[17][21] are the first documents to pull when this paper is extended into a financial benchmark.</p>
 <p class="vpk-implication"><strong>Implication</strong>Strategy should start with which archetype a company can credibly be. Copying another archetype’s playbook without its economic base is a common failure.</p>
 
-<h2><span class="vpk-sec">07</span>Four states hold 41% of the market, but economics are decided at city level</h2>
-<figure class="vpk-exhibit">
+<h2 id="s07-four-states-hold-41-of-the-market-bu"><span class="vpk-sec">07</span>Four states hold 41% of the market, but economics are decided at city level</h2>
+<figure id="exhibit-5" class="vpk-exhibit">
   <figcaption><span>Exhibit 5</span>State share of the market, 2025 (IMARC)</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>State</th><th>Share</th><th>State</th><th>Share</th></tr></thead>
@@ -579,8 +581,8 @@ html{scroll-behavior:smooth;}
 <p>Fortune India, citing Tetra Pak, ranks Maharashtra, Uttar Pradesh, Karnataka and Gujarat as the largest organised markets, consistent with IMARC [2][5]. State shares are a useful shortlist. But outlet density, power reliability, distributor capability and competitive intensity vary widely within a state, and break-even depends on them.</p>
 <p class="vpk-implication"><strong>Implication</strong>Use state data to shortlist and city-level route economics to decide. A national plan is the sum of city-level plans.</p>
 
-<h2><span class="vpk-sec">08</span>Returns are decided by a handful of operating variables, not by category growth</h2>
-<figure class="vpk-exhibit">
+<h2 id="s08-returns-are-decided-by-a-handful-of-"><span class="vpk-sec">08</span>Returns are decided by a handful of operating variables, not by category growth</h2>
+<figure id="exhibit-6" class="vpk-exhibit">
   <figcaption><span>Exhibit 6</span>Where the economics are decided</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Driver</th><th>Why it matters</th></tr></thead>
@@ -598,11 +600,11 @@ html{scroll-behavior:smooth;}
 </figure>
 <p class="vpk-implication"><strong>Implication</strong>Value follows the few variables that shape unit economics. Brand spending that ignores them can buy volume the cold chain cannot profitably serve.</p>
 
-<h2><span class="vpk-sec">09</span>Dairy-fat ice cream and vegetable-fat frozen desserts are different businesses, and the primary regulation has not yet been pulled</h2>
+<h2 id="s09-dairy-fat-ice-cream-and-vegetable-fa"><span class="vpk-sec">09</span>Dairy-fat ice cream and vegetable-fat frozen desserts are different businesses, and the primary regulation has not yet been pulled</h2>
 <p>The category sources distinguish dairy-fat ice cream from vegetable-fat frozen desserts. IMARC’s description of Amul’s strategy, replacing vegetable-fat frozen desserts with 100% real-milk ice cream, shows that the distinction shapes positioning and sourcing [2]. The two can differ in input costs, price points and consumer perception. We have not retrieved FSSAI’s standards for ice cream, frozen desserts, labelling and claims. The primary FSSAI text should be the citation for any regulatory claim in a final report.</p>
 <p class="vpk-implication"><strong>Implication</strong>Whether to sell ice cream or frozen dessert is a regulatory and economic decision, not only a marketing one.</p>
 
-<h2><span class="vpk-sec">10</span>Public data cannot close the gaps that matter most</h2>
+<h2 id="s10-public-data-cannot-close-the-gaps-th"><span class="vpk-sec">10</span>Public data cannot close the gaps that matter most</h2>
 <ul>
   <li>Consumer segmentation by age, city tier, income, diet, occasion and channel (IMARC’s channel and price-point splits are paywalled)</li>
   <li>Price-pack architecture across ₹10, ₹20, ₹30, ₹50, ₹100+ and family packs</li>
@@ -615,7 +617,7 @@ html{scroll-behavior:smooth;}
 </ul>
 <p class="vpk-implication"><strong>Implication</strong>Secondary sources frame the question. The decision-grade answer comes from retail audits, expert interviews and company filings.</p>
 
-<h2>What leaders should ask</h2>
+<h2 id="s-what-leaders-should-ask">What leaders should ask</h2>
 <p>The common question is “how large can ice cream get in India?” A better one is: where, in which format and through which route can we serve consumers profitably?</p>
 <ul>
   <li>Which market definition applies to this decision?</li>
@@ -626,11 +628,11 @@ html{scroll-behavior:smooth;}
   <li>What would we stop doing if we could redesign our channel from scratch?</li>
 </ul>
 
-<h2>Our thesis</h2>
+<h2 id="s-our-thesis">Our thesis</h2>
 <p class="vpk-closing">India’s ice-cream consumers will keep growing in number and frequency. But the category will reward the businesses that master route density, freezer productivity, dairy sourcing and city-level price architecture, not those with the loudest national brand. The strategy is not to chase the headline market. It is to build a profitable operating model in each place where it can be served well.</p>
 <p class="vpk-note">This paper reflects our current thinking. Sources marked “Brief only” have not been independently verified.</p>
 
-<h2>Appendix A: Source register</h2>
+<h2 id="s-appendix-a-source-register">Appendix A: Source register</h2>
 <p>“Opened” means the page was retrieved and read for this paper. “Brief only” means the source is cited as summarised in the research brief and has not been opened or verified.</p>
 <figure class="vpk-exhibit vpk-exhibit--register">
   <div class="vpk-scroll"><table>
@@ -668,6 +670,60 @@ html{scroll-behavior:smooth;}
 </figure>
 <p class="vpk-note">FSSAI standards for ice cream and frozen desserts were not considered for the study.</p>
 </div>
+			<aside class="vpk-toc" aria-label="In this paper"><button class="vpk-toc-handle" type="button" aria-label="Open the paper index" aria-expanded="false"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Index</span></button><button class="vpk-toc-x" type="button" aria-label="Close the index"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><details open><summary>In this paper</summary><nav><ol><li data-id="s-executive-summary"><a href="#s-executive-summary"><span class="n n--dot"></span><span>Executive summary</span></a></li><li data-id="s01-published-market-sizes-differ-becaus"><a href="#s01-published-market-sizes-differ-becaus"><span class="n">01</span><span>Published market sizes differ because scope differs, so the first task is to define the market</span></a><ul><li><a href="#exhibit-1"><b>Exhibit 1</b>Published estimates of India’s ice-cream market</a></li></ul></li><li data-id="s02-growth-is-strong-and-per-capita-cons"><a href="#s02-growth-is-strong-and-per-capita-cons"><span class="n">02</span><span>Growth is strong and per-capita consumption is low, but sources disagree on pace</span></a><ul><li><a href="#exhibit-2"><b>Exhibit 2</b>Growth engines and what constrains each</a></li></ul></li><li data-id="s03-demand-is-impulse-led-and-single-ser"><a href="#s03-demand-is-impulse-led-and-single-ser"><span class="n">03</span><span>Demand is impulse-led and single-serve, which makes the freezer at the outlet the central asset</span></a><ul><li><a href="#exhibit-3"><b>Exhibit 3</b>Demand mix, 2025 (IMARC)</a></li></ul></li><li data-id="s04-cold-chain-and-seasonality-decide-wh"><a href="#s04-cold-chain-and-seasonality-decide-wh"><span class="n">04</span><span>Cold chain and seasonality decide where the category can grow profitably</span></a></li><li data-id="s05-ice-cream-is-structurally-different-"><a href="#s05-ice-cream-is-structurally-different-"><span class="n">05</span><span>Ice cream is structurally different from FMCG, and the Kwality Wall’s demerger is the clearest evidence</span></a></li><li data-id="s06-different-players-win-on-different-b"><a href="#s06-different-players-win-on-different-b"><span class="n">06</span><span>Different players win on different bases, and none of the advantages is universal</span></a><ul><li><a href="#exhibit-4"><b>Exhibit 4</b>Competitor archetypes</a></li></ul></li><li data-id="s07-four-states-hold-41-of-the-market-bu"><a href="#s07-four-states-hold-41-of-the-market-bu"><span class="n">07</span><span>Four states hold 41% of the market, but economics are decided at city level</span></a><ul><li><a href="#exhibit-5"><b>Exhibit 5</b>State share of the market, 2025 (IMARC)</a></li></ul></li><li data-id="s08-returns-are-decided-by-a-handful-of-"><a href="#s08-returns-are-decided-by-a-handful-of-"><span class="n">08</span><span>Returns are decided by a handful of operating variables, not by category growth</span></a><ul><li><a href="#exhibit-6"><b>Exhibit 6</b>Where the economics are decided</a></li></ul></li><li data-id="s09-dairy-fat-ice-cream-and-vegetable-fa"><a href="#s09-dairy-fat-ice-cream-and-vegetable-fa"><span class="n">09</span><span>Dairy-fat ice cream and vegetable-fat frozen desserts are different businesses, and the primary regulation has not yet been pulled</span></a></li><li data-id="s10-public-data-cannot-close-the-gaps-th"><a href="#s10-public-data-cannot-close-the-gaps-th"><span class="n">10</span><span>Public data cannot close the gaps that matter most</span></a></li><li data-id="s-what-leaders-should-ask"><a href="#s-what-leaders-should-ask"><span class="n n--dot"></span><span>What leaders should ask</span></a></li><li data-id="s-our-thesis"><a href="#s-our-thesis"><span class="n n--dot"></span><span>Our thesis</span></a></li><li data-id="s-appendix-a-source-register"><a href="#s-appendix-a-source-register"><span class="n n--dot"></span><span>Appendix A: Source register</span></a></li></ol></nav></details></aside>
+		</div><script>
+	(function () {
+		var toc = document.querySelector('.vpk-toc'); if (!toc) return;
+		var det = toc.querySelector('details'), nav = toc.querySelector('nav'), handle = toc.querySelector('.vpk-toc-handle'), xbtn = toc.querySelector('.vpk-toc-x'),
+			mq = window.matchMedia('(min-width:1024px)'), back = document.createElement('div');
+		det.open = true; back.className = 'vpk-toc-backdrop'; document.body.appendChild(back);
+
+		/* Phones and tablets: a side drawer. Tap the edge tab, or pull it out with a finger; pull it back, tap outside, or pick a section to close. */
+		function setOpen(o) { toc.classList.toggle('is-open', o); back.classList.toggle('is-open', o); handle.setAttribute('aria-expanded', o ? 'true' : 'false'); handle.setAttribute('aria-label', o ? 'Close the paper index' : 'Open the paper index'); }
+		var W = 0, sx = 0, sy = 0, st = 0, base = 0, curX = 0, active = false, moved = false, justDragged = false;
+		function begin(e) { if (mq.matches || e.touches.length !== 1) return; var t = e.touches[0]; sx = t.clientX; sy = t.clientY; st = Date.now(); W = toc.getBoundingClientRect().width; base = toc.classList.contains('is-open') ? 0 : W; curX = base; active = true; moved = false; }
+		function move(e) {
+			if (!active) return;
+			var t = e.touches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+			if (!moved) { if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return; if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } moved = true; toc.classList.add('is-dragging'); }
+			curX = Math.min(W, Math.max(0, base + dx));
+			toc.style.transform = 'translateX(' + curX + 'px)'; back.style.opacity = String(1 - curX / W); back.style.pointerEvents = 'auto';
+		}
+		function end(e) {
+			if (!active) return; active = false; if (!moved) return;
+			var dt = Math.max(1, Date.now() - st), v = (curX - base) / dt, open = Math.abs(v) > 0.4 ? v < 0 : curX < W / 2;
+			toc.classList.remove('is-dragging'); toc.style.transform = ''; back.style.opacity = ''; back.style.pointerEvents = '';
+			setOpen(open); justDragged = true; setTimeout(function () { justDragged = false; }, 80);
+		}
+		toc.addEventListener('touchstart', begin, { passive: true });
+		toc.addEventListener('touchmove', move, { passive: true });
+		toc.addEventListener('touchend', end); toc.addEventListener('touchcancel', end);
+		handle.addEventListener('click', function () { if (!justDragged) setOpen(!toc.classList.contains('is-open')); });
+		xbtn.addEventListener('click', function () { setOpen(false); });
+		back.addEventListener('click', function () { setOpen(false); });
+		toc.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) setOpen(false); });
+		document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+		if (mq.addEventListener) mq.addEventListener('change', function () { if (mq.matches) setOpen(false); });
+
+		/* Highlight where the reader is, and show that section's exhibits. */
+		var items = [].slice.call(toc.querySelectorAll('ol > li')), subs = [].slice.call(toc.querySelectorAll('ul a')),
+			heads = items.map(function (li) { return document.getElementById(li.getAttribute('data-id')); }).filter(Boolean), timer = 0;
+		function update() {
+			timer = 0;
+			var y = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vpk-stick')) || 96) + 100, cur = heads[0], best = -Infinity;
+			heads.forEach(function (h) { var t = h.getBoundingClientRect().top; if (t <= y && t > best) { best = t; cur = h; } });
+			items.forEach(function (li) { var on = li.getAttribute('data-id') === cur.id; li.classList.toggle('is-active', on); li.classList.toggle('is-open', on); });
+			var here = null;
+			subs.forEach(function (s) { s.classList.remove('is-here'); var f = document.getElementById(s.getAttribute('href').slice(1)); if (f && f.getBoundingClientRect().top <= y) here = s; });
+			if (here && here.closest('li[data-id]').classList.contains('is-active')) here.classList.add('is-here');
+			var act = toc.querySelector('li.is-active > a');
+			if (act && nav && (mq.matches || toc.classList.contains('is-open'))) { var r = act.getBoundingClientRect(), n = nav.getBoundingClientRect(); if (r.top < n.top || r.bottom > n.bottom) nav.scrollTop += r.top - n.top - 48; }
+		}
+		window.addEventListener('scroll', function () { if (!timer) timer = setTimeout(update, 60); }, { passive: true });
+		handle.addEventListener('click', update);
+		update();
+	})();
+	</script>
 		<aside class="vpk-cta" aria-label="Talk to us">
 			<h2>Have a decision to make?</h2>
 			<p>Bring us the question, the challenge or the opportunity. We’ll bring the experience and perspective to help you move forward with clarity.</p>
@@ -799,6 +855,34 @@ html{scroll-behavior:smooth;}
 				}).catch(function () { fail('We could not reach the server. Please try again.'); });
 			}
 		});
+	})();
+	</script><script>
+	(function () {
+		var toc = document.querySelector('.vpk-toc');
+		/* After the first scroll the edge tab shrinks to an arrow; a back-to-top button shows once the reader is well down the page. */
+		var top = document.createElement('button');
+		top.className = 'vpk-top'; top.type = 'button'; top.setAttribute('aria-label', 'Back to top');
+		top.innerHTML = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 10L8 5.5l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+		document.body.appendChild(top);
+		top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth' }); });
+		/* Secondary header: once the title block has scrolled away, a slim bar keeps the title, author and download in view. */
+		var hdrEl = document.querySelector('.elementor-location-header'), titleEl = document.querySelector('.vpk-h1'), bylineEl = document.querySelector('.vpk-byline'),
+			pic = bylineEl && bylineEl.querySelector('picture'), gate = document.querySelector('[data-gate]'), bar = document.createElement('div');
+		bar.className = 'vpk-sticky'; bar.setAttribute('aria-hidden', 'true');
+		bar.innerHTML = '<div class="vpk-sticky-in">' + (pic ? pic.outerHTML : '') + '<div class="vpk-sticky-text"><b></b><span></span></div>' + (gate ? '<button type="button" class="vpk-sticky-dl" tabindex="-1">Download<span> the paper</span></button>' : '') + '</div>';
+		bar.querySelector('b').textContent = titleEl ? titleEl.textContent : '';
+		var who = bylineEl && bylineEl.querySelector('.vpk-author'); bar.querySelector('.vpk-sticky-text span').textContent = who ? who.textContent.replace(/s+/g, ' ').trim() : '';
+		document.body.appendChild(bar);
+		var dl = bar.querySelector('.vpk-sticky-dl'); if (dl) dl.addEventListener('click', function () { gate.click(); });
+		function flags() {
+			var y = window.pageYOffset || document.documentElement.scrollTop, stick = hdrEl ? Math.max(0, Math.round(hdrEl.getBoundingClientRect().bottom)) : 96;
+			document.documentElement.style.setProperty('--vpk-stick', stick + 'px');
+			if (toc && y > 30) toc.classList.add('is-min');
+			top.classList.toggle('is-shown', y > 600);
+			bar.classList.toggle('is-shown', !!bylineEl && bylineEl.getBoundingClientRect().bottom < stick + 4);
+		}
+		window.addEventListener('scroll', flags, { passive: true }); window.addEventListener('resize', flags);
+		flags();
 	})();
 	</script>
 	<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"India’s ice-cream market: a portfolio of cold-chain micro-economies","datePublished":"2026-10-06","author":{"@type":"Person","name":"Varun Shenoy","jobTitle":"Managing Partner"},"publisher":{"@type":"Organization","name":"Varish Partners"}}</script>

@@ -245,6 +245,7 @@ html{scroll-behavior:smooth;}
 .vpk-sticky{position:fixed;left:0;right:0;top:var(--vpk-stick,96px);z-index:99980;height:64px;background:rgba(255,255,255,.97);border-bottom:1px solid #E4D9CB;box-shadow:0 8px 22px rgba(0,0,0,.08);transform:translateY(-110%);opacity:0;visibility:hidden;transition:transform .3s cubic-bezier(.22,.61,.36,1),opacity .25s ease,visibility .3s;}
 .vpk-sticky.is-shown{transform:none;opacity:1;visibility:visible;}
 .vpk-sticky-in{display:flex;align-items:center;gap:14px;box-sizing:border-box;width:min(1140px,100% - 40px);height:100%;margin:0 auto;padding-right:8px;}
+.vpk-sticky picture{display:flex;flex:0 0 auto;}
 .vpk-sticky img{flex:0 0 auto;width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:top center;background:#F3EBE1;}
 .vpk-sticky-text{display:flex;flex:1 1 auto;flex-direction:column;gap:1px;min-width:0;}
 .vpk-sticky-text b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Merriweather",Georgia,serif;font-size:16px;line-height:1.35;font-weight:700;color:#1F1F1F;}
@@ -451,7 +452,7 @@ html{scroll-behavior:smooth;}
 		</section>
 				</div>
 <main id="content" class="site-main vpk-main">
-	<article class="vpk-article">
+	<article class="vpk-article vpk-article--toc">
 		<header>
 			<nav class="vp-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/insights/">Our Thinking</a></li><li><span aria-current="page">Redesigning how Indian MSMEs operate</span></li></ol></nav><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.varishpartners.com/"},{"@type":"ListItem","position":2,"name":"Our Thinking","item":"https://www.varishpartners.com/insights/"},{"@type":"ListItem","position":3,"name":"Redesigning how Indian MSMEs operate","item":"https://www.varishpartners.com/redesigning-how-indian-msmes-operate/"}]}</script>
 			<p class="vpk-eyebrow">AI &amp; Operations</p>
@@ -465,8 +466,9 @@ html{scroll-behavior:smooth;}
 			</a>
 			</div>
 		</header>
-		<div class="vpk-body">
-<h2>Executive summary</h2>
+		<div class="vpk-layout">
+			<div class="vpk-body">
+<h2 id="s-executive-summary">Executive summary</h2>
 <ul>
   <li>Access to AI is no longer the constraint on MSME productivity. The constraint is organisational: how work, decisions and information are structured.</li>
   <li>As a business grows, the work needed to coordinate it can grow faster than the business itself. We call this the <strong>complexity tax</strong>.</li>
@@ -476,7 +478,7 @@ html{scroll-behavior:smooth;}
   <li>The high-performing MSMEs of the next decade will not necessarily have more technology. They will have better-designed organisations.</li>
 </ul>
 
-<h2><span class="vpk-sec">01</span>As MSMEs grow, coordination work outpaces revenue, creating a complexity tax that technology alone does not remove</h2>
+<h2 id="s01-as-msmes-grow-coordination-work-outp"><span class="vpk-sec">01</span>As MSMEs grow, coordination work outpaces revenue, creating a complexity tax that technology alone does not remove</h2>
 <p>Indian MSMEs have grown through entrepreneurial instinct, relationships, hard work and, increasingly, technology. That model works well in the early stages. Growth then adds complexity: more customers create more coordination, more employees create more management layers, more products create more inventory decisions, more transactions create more administration, and more locations create more information gaps.</p>
 <p>As a business grows, the work required to coordinate it can grow faster than the business itself.</p>
 <p>This is why a company can double revenue without doubling productivity. Staff spend more time on:</p>
@@ -492,9 +494,9 @@ html{scroll-behavior:smooth;}
 </ul>
 <p class="vpk-implication"><strong>Implication</strong>The next productivity opportunity for MSMEs comes less from adding technology than from removing unnecessary organisational work.</p>
 
-<h2><span class="vpk-sec">02</span>Digitisation has mostly reproduced old processes; transformation redesigns the work itself</h2>
+<h2 id="s02-digitisation-has-mostly-reproduced-o"><span class="vpk-sec">02</span>Digitisation has mostly reproduced old processes; transformation redesigns the work itself</h2>
 <p>Many MSMEs already use accounting software, ERP, CRM, spreadsheets, cloud applications, messaging platforms and dashboards. Yet digitisation often reproduces the old process in a new format.</p>
-<figure class="vpk-exhibit">
+<figure id="exhibit-1" class="vpk-exhibit">
   <figcaption><span>Exhibit 1</span>Digitisation changes the format, not the operating model</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Before</th><th>After digitisation</th></tr></thead>
@@ -509,10 +511,10 @@ html{scroll-behavior:smooth;}
 <p>Transformation asks a different question: if we were designing this business today, how would we run this process? The answer may be that an approval should not exist, a report need not be prepared, an employee should not enter the same data twice, a customer should not need to call, a manager should not have to ask for a number, or the system should detect the problem on its own.</p>
 <p class="vpk-implication"><strong>Implication</strong>Transformation begins when organisations redesign the work itself, not when they buy another technology product.</p>
 
-<h2><span class="vpk-sec">03</span>AI changes the economics of coordination by letting software interpret information and perform parts of knowledge work</h2>
+<h2 id="s03-ai-changes-the-economics-of-coordina"><span class="vpk-sec">03</span>AI changes the economics of coordination by letting software interpret information and perform parts of knowledge work</h2>
 <p>Earlier software helped people store, retrieve and process information. AI adds the ability to interpret information and carry out parts of knowledge work, which matters a great deal for MSMEs.</p>
 <p>The human does not disappear. The nature of the human’s work shifts from processing every transaction to managing exceptions, relationships and decisions.</p>
-<figure class="vpk-exhibit">
+<figure id="exhibit-2" class="vpk-exhibit">
   <figcaption><span>Exhibit 2</span>An AI-enabled process removes steps from the employee’s workload</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Stage</th><th>Traditional process</th><th>AI-enabled process</th></tr></thead>
@@ -526,9 +528,9 @@ html{scroll-behavior:smooth;}
 </figure>
 <p class="vpk-implication"><strong>Implication</strong>The most important economic impact of AI may not be replacing jobs. It may be reducing the amount of coordination required to run a business.</p>
 
-<h2><span class="vpk-sec">04</span>The organisation of the future is built around exceptions, not transactions</h2>
+<h2 id="s04-the-organisation-of-the-future-is-bu"><span class="vpk-sec">04</span>The organisation of the future is built around exceptions, not transactions</h2>
 <p>Traditional organisations are designed around a standard path: input, employee, decision, approval, output. Every transaction follows roughly the same route, even though most are routine and only a minority need human judgement. AI and automation allow this model to be inverted: instead of humans processing everything and escalating exceptions, systems process routine work and escalate exceptions to humans.</p>
-<figure class="vpk-exhibit">
+<figure id="exhibit-3" class="vpk-exhibit">
   <figcaption><span>Exhibit 3</span>Exception-based design applies across core functions</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Function</th><th>Today</th><th>Exception-based model</th></tr></thead>
@@ -541,11 +543,11 @@ html{scroll-behavior:smooth;}
 </figure>
 <p class="vpk-implication"><strong>Implication</strong>Organisations should be designed around exceptions rather than transactions.</p>
 
-<h2><span class="vpk-sec">05</span>Founder-centred decision-making becomes the most expensive bottleneck as the business scales</h2>
+<h2 id="s05-founder-centred-decision-making-beco"><span class="vpk-sec">05</span>Founder-centred decision-making becomes the most expensive bottleneck as the business scales</h2>
 <p>Founder involvement is a defining strength of successful MSMEs. The founder knows the customers, suppliers, pricing, employees, risks, exceptions and the history behind decisions. But if every important decision needs the founder, the company has built a system with one central processor. The founder becomes the escalation point for approvals, pricing, hiring, complaints, procurement, collections and operational problems, so growth raises the founder’s workload instead of organisational capacity.</p>
 <p class="vpk-implication"><strong>Implication</strong>The aim is not to remove the founder, but to remove the founder from decisions that no longer require one. The result is not less control. It is better control through systems, information and clearly defined decision rights.</p>
 
-<h2><span class="vpk-sec">06</span>Information should reach decision-makers before they have to ask for it</h2>
+<h2 id="s06-information-should-reach-decision-ma"><span class="vpk-sec">06</span>Information should reach decision-makers before they have to ask for it</h2>
 <p>Many organisations run on questions: can you send me the sales report, what happened to this order, has the customer paid, how much inventory do we have, which leads are pending, why did sales fall last week. The information often exists. It is not flowing to the person who needs it when they need it. A modern operating model reverses this, so that the system proactively surfaces what matters. For example:</p>
 <ul>
   <li>Sales are down 14% in Region A.</li>
@@ -556,14 +558,14 @@ html{scroll-behavior:smooth;}
 <p>(The figures above are illustrations of the kind of alert, not data.) This is more than a dashboard. It is a different management system.</p>
 <p class="vpk-implication"><strong>Implication</strong>The best information system is not the one with the most data. It is the one that surfaces the right decision at the right time.</p>
 
-<h2><span class="vpk-sec">07</span>AI investment should be prioritised by economic value, not enthusiasm</h2>
+<h2 id="s07-ai-investment-should-be-prioritised-"><span class="vpk-sec">07</span>AI investment should be prioritised by economic value, not enthusiasm</h2>
 <p>Not every process should be automated, not every problem needs AI, and not every AI implementation creates economic value. We use a simple screening lens.</p>
 <p class="vpk-formula"><strong>Value</strong> = Frequency × Time × Cost × Error × Strategic importance</p>
 <p>A process is particularly attractive when it happens frequently, consumes significant human time, has measurable costs, produces avoidable errors and affects an important business outcome. The question shifts from “where can we use AI?” to “where can AI create measurable economic value?”, which prevents spending on impressive technology that does not materially improve the business.</p>
 
-<h2><span class="vpk-sec">08</span>Transformation should start with the few activities that drive the business economics</h2>
+<h2 id="s08-transformation-should-start-with-the"><span class="vpk-sec">08</span>Transformation should start with the few activities that drive the business economics</h2>
 <p>Every business has a small number of activities that disproportionately shape its economics. Transformation should begin there, not with the easiest process to automate, the newest AI tool or the department most enthusiastic about technology.</p>
-<figure class="vpk-exhibit">
+<figure id="exhibit-4" class="vpk-exhibit">
   <figcaption><span>Exhibit 4</span>Value pools differ by business type</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Business type</th><th>Activities that drive economics</th></tr></thead>
@@ -576,15 +578,15 @@ html{scroll-behavior:smooth;}
 </figure>
 <p class="vpk-implication"><strong>Implication</strong>Technology investment should follow economic value, not the other way around.</p>
 
-<h2><span class="vpk-sec">09</span>Standardise before automating, or automation simply makes a poor process faster</h2>
+<h2 id="s09-standardise-before-automating-or-aut"><span class="vpk-sec">09</span>Standardise before automating, or automation simply makes a poor process faster</h2>
 <p>A common mistake in digital transformation is automating a bad process, which only speeds it up. If five employees perform the same task in five different ways, automating first can add complexity. The sequence should generally be:</p>
 <p class="vpk-flow"><span>Understand</span><span>Simplify</span><span>Standardise</span><span>Automate</span><span>Measure</span><span>Improve</span></p>
 <p>A growing MSME does not need hundreds of sophisticated workflows. It needs a small number of clear, repeatable, measurable ways of working.</p>
 <p class="vpk-implication"><strong>Implication</strong>The first step toward automation is often not technology. It is clarity.</p>
 
-<h2><span class="vpk-sec">10</span>The best transformation is invisible to the customer and felt by employees and management</h2>
+<h2 id="s10-the-best-transformation-is-invisible"><span class="vpk-sec">10</span>The best transformation is invisible to the customer and felt by employees and management</h2>
 <p>Customers do not care whether a company uses an AI agent. They care whether enquiries are answered quickly, orders arrive on time, invoices are correct, problems are resolved quickly, information is accurate and promises are kept. The best technology disappears into the experience.</p>
-<figure class="vpk-exhibit">
+<figure id="exhibit-5" class="vpk-exhibit">
   <figcaption><span>Exhibit 5</span>Transformation should be experienced differently by each stakeholder</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Stakeholder</th><th>What they experience</th></tr></thead>
@@ -596,8 +598,8 @@ html{scroll-behavior:smooth;}
   </table></div>
 </figure>
 
-<h2><span class="vpk-sec">11</span>The next generation of high-performing MSMEs will be operationally different, not more technological</h2>
-<figure class="vpk-exhibit">
+<h2 id="s11-the-next-generation-of-high-performi"><span class="vpk-sec">11</span>The next generation of high-performing MSMEs will be operationally different, not more technological</h2>
+<figure id="exhibit-6" class="vpk-exhibit">
   <figcaption><span>Exhibit 6</span>Six characteristics of the next generation of MSMEs</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Characteristic</th><th>What it means</th></tr></thead>
@@ -613,8 +615,8 @@ html{scroll-behavior:smooth;}
 </figure>
 <p>Importantly, these businesses will not necessarily have more technology. They will have better-designed organisations.</p>
 
-<h2><span class="vpk-sec">12</span>Eight principles guide how we approach transformation</h2>
-<figure class="vpk-exhibit">
+<h2 id="s12-eight-principles-guide-how-we-approa"><span class="vpk-sec">12</span>Eight principles guide how we approach transformation</h2>
+<figure id="exhibit-7" class="vpk-exhibit">
   <figcaption><span>Exhibit 7</span>Our transformation principles</figcaption>
   <div class="vpk-scroll"><table>
     <thead><tr><th>Principle</th><th>In practice</th></tr></thead>
@@ -631,7 +633,7 @@ html{scroll-behavior:smooth;}
   </table></div>
 </figure>
 
-<h2><span class="vpk-sec">13</span>Leaders should ask how they would redesign the business, not how they could use AI</h2>
+<h2 id="s13-leaders-should-ask-how-they-would-re"><span class="vpk-sec">13</span>Leaders should ask how they would redesign the business, not how they could use AI</h2>
 <p>The conversation is often framed as “how can my company use AI?” We think that is the wrong starting point. The better question is: if we could redesign the way our business operates from scratch, what would we change? From there, leaders can ask:</p>
 <ul>
   <li>What should people do?</li>
@@ -643,10 +645,64 @@ html{scroll-behavior:smooth;}
   <li>Where would these changes create the greatest economic value?</li>
 </ul>
 
-<h2>Our thesis</h2>
+<h2 id="s-our-thesis">Our thesis</h2>
 <p class="vpk-closing">India’s MSMEs spent the last decade becoming digital. The next decade will be about becoming intelligent, integrated and operationally scalable. AI is an important part of that transition, but it is not the strategy. The strategy is to build a better business, and the companies that understand this will hold an advantage that is difficult to replicate: not simply better technology, but a better way of operating.</p>
 <p class="vpk-note">This paper reflects our current thinking. Figures shown are illustrative.</p>
 </div>
+			<aside class="vpk-toc" aria-label="In this paper"><button class="vpk-toc-handle" type="button" aria-label="Open the paper index" aria-expanded="false"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Index</span></button><button class="vpk-toc-x" type="button" aria-label="Close the index"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><details open><summary>In this paper</summary><nav><ol><li data-id="s-executive-summary"><a href="#s-executive-summary"><span class="n n--dot"></span><span>Executive summary</span></a></li><li data-id="s01-as-msmes-grow-coordination-work-outp"><a href="#s01-as-msmes-grow-coordination-work-outp"><span class="n">01</span><span>As MSMEs grow, coordination work outpaces revenue, creating a complexity tax that technology alone does not remove</span></a></li><li data-id="s02-digitisation-has-mostly-reproduced-o"><a href="#s02-digitisation-has-mostly-reproduced-o"><span class="n">02</span><span>Digitisation has mostly reproduced old processes; transformation redesigns the work itself</span></a><ul><li><a href="#exhibit-1"><b>Exhibit 1</b>Digitisation changes the format, not the operating model</a></li></ul></li><li data-id="s03-ai-changes-the-economics-of-coordina"><a href="#s03-ai-changes-the-economics-of-coordina"><span class="n">03</span><span>AI changes the economics of coordination by letting software interpret information and perform parts of knowledge work</span></a><ul><li><a href="#exhibit-2"><b>Exhibit 2</b>An AI-enabled process removes steps from the employee’s workload</a></li></ul></li><li data-id="s04-the-organisation-of-the-future-is-bu"><a href="#s04-the-organisation-of-the-future-is-bu"><span class="n">04</span><span>The organisation of the future is built around exceptions, not transactions</span></a><ul><li><a href="#exhibit-3"><b>Exhibit 3</b>Exception-based design applies across core functions</a></li></ul></li><li data-id="s05-founder-centred-decision-making-beco"><a href="#s05-founder-centred-decision-making-beco"><span class="n">05</span><span>Founder-centred decision-making becomes the most expensive bottleneck as the business scales</span></a></li><li data-id="s06-information-should-reach-decision-ma"><a href="#s06-information-should-reach-decision-ma"><span class="n">06</span><span>Information should reach decision-makers before they have to ask for it</span></a></li><li data-id="s07-ai-investment-should-be-prioritised-"><a href="#s07-ai-investment-should-be-prioritised-"><span class="n">07</span><span>AI investment should be prioritised by economic value, not enthusiasm</span></a></li><li data-id="s08-transformation-should-start-with-the"><a href="#s08-transformation-should-start-with-the"><span class="n">08</span><span>Transformation should start with the few activities that drive the business economics</span></a><ul><li><a href="#exhibit-4"><b>Exhibit 4</b>Value pools differ by business type</a></li></ul></li><li data-id="s09-standardise-before-automating-or-aut"><a href="#s09-standardise-before-automating-or-aut"><span class="n">09</span><span>Standardise before automating, or automation simply makes a poor process faster</span></a></li><li data-id="s10-the-best-transformation-is-invisible"><a href="#s10-the-best-transformation-is-invisible"><span class="n">10</span><span>The best transformation is invisible to the customer and felt by employees and management</span></a><ul><li><a href="#exhibit-5"><b>Exhibit 5</b>Transformation should be experienced differently by each stakeholder</a></li></ul></li><li data-id="s11-the-next-generation-of-high-performi"><a href="#s11-the-next-generation-of-high-performi"><span class="n">11</span><span>The next generation of high-performing MSMEs will be operationally different, not more technological</span></a><ul><li><a href="#exhibit-6"><b>Exhibit 6</b>Six characteristics of the next generation of MSMEs</a></li></ul></li><li data-id="s12-eight-principles-guide-how-we-approa"><a href="#s12-eight-principles-guide-how-we-approa"><span class="n">12</span><span>Eight principles guide how we approach transformation</span></a><ul><li><a href="#exhibit-7"><b>Exhibit 7</b>Our transformation principles</a></li></ul></li><li data-id="s13-leaders-should-ask-how-they-would-re"><a href="#s13-leaders-should-ask-how-they-would-re"><span class="n">13</span><span>Leaders should ask how they would redesign the business, not how they could use AI</span></a></li><li data-id="s-our-thesis"><a href="#s-our-thesis"><span class="n n--dot"></span><span>Our thesis</span></a></li></ol></nav></details></aside>
+		</div><script>
+	(function () {
+		var toc = document.querySelector('.vpk-toc'); if (!toc) return;
+		var det = toc.querySelector('details'), nav = toc.querySelector('nav'), handle = toc.querySelector('.vpk-toc-handle'), xbtn = toc.querySelector('.vpk-toc-x'),
+			mq = window.matchMedia('(min-width:1024px)'), back = document.createElement('div');
+		det.open = true; back.className = 'vpk-toc-backdrop'; document.body.appendChild(back);
+
+		/* Phones and tablets: a side drawer. Tap the edge tab, or pull it out with a finger; pull it back, tap outside, or pick a section to close. */
+		function setOpen(o) { toc.classList.toggle('is-open', o); back.classList.toggle('is-open', o); handle.setAttribute('aria-expanded', o ? 'true' : 'false'); handle.setAttribute('aria-label', o ? 'Close the paper index' : 'Open the paper index'); }
+		var W = 0, sx = 0, sy = 0, st = 0, base = 0, curX = 0, active = false, moved = false, justDragged = false;
+		function begin(e) { if (mq.matches || e.touches.length !== 1) return; var t = e.touches[0]; sx = t.clientX; sy = t.clientY; st = Date.now(); W = toc.getBoundingClientRect().width; base = toc.classList.contains('is-open') ? 0 : W; curX = base; active = true; moved = false; }
+		function move(e) {
+			if (!active) return;
+			var t = e.touches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+			if (!moved) { if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return; if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } moved = true; toc.classList.add('is-dragging'); }
+			curX = Math.min(W, Math.max(0, base + dx));
+			toc.style.transform = 'translateX(' + curX + 'px)'; back.style.opacity = String(1 - curX / W); back.style.pointerEvents = 'auto';
+		}
+		function end(e) {
+			if (!active) return; active = false; if (!moved) return;
+			var dt = Math.max(1, Date.now() - st), v = (curX - base) / dt, open = Math.abs(v) > 0.4 ? v < 0 : curX < W / 2;
+			toc.classList.remove('is-dragging'); toc.style.transform = ''; back.style.opacity = ''; back.style.pointerEvents = '';
+			setOpen(open); justDragged = true; setTimeout(function () { justDragged = false; }, 80);
+		}
+		toc.addEventListener('touchstart', begin, { passive: true });
+		toc.addEventListener('touchmove', move, { passive: true });
+		toc.addEventListener('touchend', end); toc.addEventListener('touchcancel', end);
+		handle.addEventListener('click', function () { if (!justDragged) setOpen(!toc.classList.contains('is-open')); });
+		xbtn.addEventListener('click', function () { setOpen(false); });
+		back.addEventListener('click', function () { setOpen(false); });
+		toc.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) setOpen(false); });
+		document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+		if (mq.addEventListener) mq.addEventListener('change', function () { if (mq.matches) setOpen(false); });
+
+		/* Highlight where the reader is, and show that section's exhibits. */
+		var items = [].slice.call(toc.querySelectorAll('ol > li')), subs = [].slice.call(toc.querySelectorAll('ul a')),
+			heads = items.map(function (li) { return document.getElementById(li.getAttribute('data-id')); }).filter(Boolean), timer = 0;
+		function update() {
+			timer = 0;
+			var y = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vpk-stick')) || 96) + 100, cur = heads[0], best = -Infinity;
+			heads.forEach(function (h) { var t = h.getBoundingClientRect().top; if (t <= y && t > best) { best = t; cur = h; } });
+			items.forEach(function (li) { var on = li.getAttribute('data-id') === cur.id; li.classList.toggle('is-active', on); li.classList.toggle('is-open', on); });
+			var here = null;
+			subs.forEach(function (s) { s.classList.remove('is-here'); var f = document.getElementById(s.getAttribute('href').slice(1)); if (f && f.getBoundingClientRect().top <= y) here = s; });
+			if (here && here.closest('li[data-id]').classList.contains('is-active')) here.classList.add('is-here');
+			var act = toc.querySelector('li.is-active > a');
+			if (act && nav && (mq.matches || toc.classList.contains('is-open'))) { var r = act.getBoundingClientRect(), n = nav.getBoundingClientRect(); if (r.top < n.top || r.bottom > n.bottom) nav.scrollTop += r.top - n.top - 48; }
+		}
+		window.addEventListener('scroll', function () { if (!timer) timer = setTimeout(update, 60); }, { passive: true });
+		handle.addEventListener('click', update);
+		update();
+	})();
+	</script>
 		<aside class="vpk-cta" aria-label="Talk to us">
 			<h2>Have a decision to make?</h2>
 			<p>Bring us the question, the challenge or the opportunity. We’ll bring the experience and perspective to help you move forward with clarity.</p>
@@ -778,6 +834,34 @@ html{scroll-behavior:smooth;}
 				}).catch(function () { fail('We could not reach the server. Please try again.'); });
 			}
 		});
+	})();
+	</script><script>
+	(function () {
+		var toc = document.querySelector('.vpk-toc');
+		/* After the first scroll the edge tab shrinks to an arrow; a back-to-top button shows once the reader is well down the page. */
+		var top = document.createElement('button');
+		top.className = 'vpk-top'; top.type = 'button'; top.setAttribute('aria-label', 'Back to top');
+		top.innerHTML = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 10L8 5.5l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+		document.body.appendChild(top);
+		top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth' }); });
+		/* Secondary header: once the title block has scrolled away, a slim bar keeps the title, author and download in view. */
+		var hdrEl = document.querySelector('.elementor-location-header'), titleEl = document.querySelector('.vpk-h1'), bylineEl = document.querySelector('.vpk-byline'),
+			pic = bylineEl && bylineEl.querySelector('picture'), gate = document.querySelector('[data-gate]'), bar = document.createElement('div');
+		bar.className = 'vpk-sticky'; bar.setAttribute('aria-hidden', 'true');
+		bar.innerHTML = '<div class="vpk-sticky-in">' + (pic ? pic.outerHTML : '') + '<div class="vpk-sticky-text"><b></b><span></span></div>' + (gate ? '<button type="button" class="vpk-sticky-dl" tabindex="-1">Download<span> the paper</span></button>' : '') + '</div>';
+		bar.querySelector('b').textContent = titleEl ? titleEl.textContent : '';
+		var who = bylineEl && bylineEl.querySelector('.vpk-author'); bar.querySelector('.vpk-sticky-text span').textContent = who ? who.textContent.replace(/s+/g, ' ').trim() : '';
+		document.body.appendChild(bar);
+		var dl = bar.querySelector('.vpk-sticky-dl'); if (dl) dl.addEventListener('click', function () { gate.click(); });
+		function flags() {
+			var y = window.pageYOffset || document.documentElement.scrollTop, stick = hdrEl ? Math.max(0, Math.round(hdrEl.getBoundingClientRect().bottom)) : 96;
+			document.documentElement.style.setProperty('--vpk-stick', stick + 'px');
+			if (toc && y > 30) toc.classList.add('is-min');
+			top.classList.toggle('is-shown', y > 600);
+			bar.classList.toggle('is-shown', !!bylineEl && bylineEl.getBoundingClientRect().bottom < stick + 4);
+		}
+		window.addEventListener('scroll', flags, { passive: true }); window.addEventListener('resize', flags);
+		flags();
 	})();
 	</script>
 	<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Redesigning how Indian MSMEs operate","datePublished":"2026-10-03","author":{"@type":"Person","name":"Varun Shenoy","jobTitle":"Managing Partner"},"publisher":{"@type":"Organization","name":"Varish Partners"}}</script>

@@ -245,6 +245,7 @@ html{scroll-behavior:smooth;}
 .vpk-sticky{position:fixed;left:0;right:0;top:var(--vpk-stick,96px);z-index:99980;height:64px;background:rgba(255,255,255,.97);border-bottom:1px solid #E4D9CB;box-shadow:0 8px 22px rgba(0,0,0,.08);transform:translateY(-110%);opacity:0;visibility:hidden;transition:transform .3s cubic-bezier(.22,.61,.36,1),opacity .25s ease,visibility .3s;}
 .vpk-sticky.is-shown{transform:none;opacity:1;visibility:visible;}
 .vpk-sticky-in{display:flex;align-items:center;gap:14px;box-sizing:border-box;width:min(1140px,100% - 40px);height:100%;margin:0 auto;padding-right:8px;}
+.vpk-sticky picture{display:flex;flex:0 0 auto;}
 .vpk-sticky img{flex:0 0 auto;width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:top center;background:#F3EBE1;}
 .vpk-sticky-text{display:flex;flex:1 1 auto;flex-direction:column;gap:1px;min-width:0;}
 .vpk-sticky-text b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Merriweather",Georgia,serif;font-size:16px;line-height:1.35;font-weight:700;color:#1F1F1F;}
@@ -451,7 +452,7 @@ html{scroll-behavior:smooth;}
 		</section>
 				</div>
 <main id="content" class="site-main vpk-main">
-	<article class="vpk-article">
+	<article class="vpk-article vpk-article--toc">
 		<header>
 			<nav class="vp-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/insights/">Our Thinking</a></li><li><span aria-current="page">ODI Simplified: What Indian Founders Need to Know Before Investing Abroad</span></li></ol></nav><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.varishpartners.com/"},{"@type":"ListItem","position":2,"name":"Our Thinking","item":"https://www.varishpartners.com/insights/"},{"@type":"ListItem","position":3,"name":"ODI Simplified: What Indian Founders Need to Know Before Investing Abroad","item":"https://www.varishpartners.com/odi-simplified-guide-for-indian-founders/"}]}</script>
 			<p class="vpk-eyebrow">Cross-Border</p>
@@ -461,10 +462,11 @@ html{scroll-behavior:smooth;}
 				<div><span class="vpk-author">By <a href="/about-us/#varun-shenoy">Varun Shenoy</a><a class="vpk-li" href="https://www.linkedin.com/in/varun-shenoy-bb9058154/" target="_blank" rel="noopener" aria-label="Varun Shenoy on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg></a></span><span class="vpk-meta">Managing Partner · 22 September 2026 · 3 min read</span></div>
 			</div>
 		</header>
-		<div class="vpk-body">
+		<div class="vpk-layout">
+			<div class="vpk-body">
 <p>The moment an Indian company sets up a subsidiary in Singapore, invests in a Delaware holding entity, or takes equity in an overseas joint venture, it has made an Overseas Direct Investment (ODI), and a compliance clock starts immediately. Most founders only discover this clock exists when an AD bank flags a missing filing or an investor’s due diligence team raises a red flag mid-deal. Here’s what the framework actually requires.</p>
 
-<h2>The rules, in brief</h2>
+<h2 id="s-the-rules-in-brief">The rules, in brief</h2>
 <p>ODI is governed by a consolidated framework that has been in force since August 2022: the Overseas Investment Rules, the Overseas Investment Regulations, and the RBI’s Master Direction on Overseas Investment. Together they replaced an older, more fragmented 2004-era regime.</p>
 <p>Most outbound investment can proceed under the Automatic Route, no prior RBI approval needed, provided a few conditions are met:</p>
 <ul>
@@ -474,10 +476,10 @@ html{scroll-behavior:smooth;}
 </ul>
 <p>Step outside these boundaries, certain regulated sectors, structures involving multiple layers of overseas entities, or commitments beyond the 400% ceiling, and prior RBI approval becomes necessary.</p>
 
-<h2>Funding it correctly</h2>
+<h2 id="s-funding-it-correctly">Funding it correctly</h2>
 <p>Indian companies can fund overseas investments through internal accruals, fresh equity issuance, External Commercial Borrowings, or share swaps, among other routes. Each method carries its own documentation trail, and mixing them without proper structuring is one of the more common ways founders create reporting headaches later.</p>
 
-<h2>The part everyone underestimates: reporting</h2>
+<h2 id="s-the-part-everyone-underestimates-rep">The part everyone underestimates: reporting</h2>
 <p>Making the investment is only step one. Every ODI requires:</p>
 <ol>
   <li>Filing Form FC through an Authorised Dealer bank.</li>
@@ -486,10 +488,64 @@ html{scroll-behavior:smooth;}
 </ol>
 <p>Miss an APR, and the RBI doesn’t just levy a fine, it blocks any further financial commitment to that entity until the lapse is regularised. A Late Submission Fee (currently ₹7,500 per form) covers delays of up to three years. Beyond that, or for anything more substantive than a late filing, the matter moves into formal FEMA compounding, where penalties can run up to three times the contravention amount.</p>
 
-<h2>Why this matters before you sign anything</h2>
+<h2 id="s-why-this-matters-before-you-sign-any">Why this matters before you sign anything</h2>
 <p>The businesses that navigate ODI cleanly are the ones that treat it as part of deal structuring from day one, not paperwork to sort out after the wire transfer. This is exactly the kind of situation we work through with clients regularly. When one of our clients was preparing for a significant overseas investment, our role was to help them navigate the regulatory environment early, structure the investment correctly, and stay ahead of the reporting obligations that come with it, rather than reacting to them. That kind of preparation is what keeps an international expansion a strategic milestone instead of a compliance scramble.</p>
 <p class="vpk-closing">ODI isn’t complicated once it’s mapped out properly, but it rewards founders who plan for it before the first remittance leaves the country, not after.</p>
 </div>
+			<aside class="vpk-toc" aria-label="In this paper"><button class="vpk-toc-handle" type="button" aria-label="Open the paper index" aria-expanded="false"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Index</span></button><button class="vpk-toc-x" type="button" aria-label="Close the index"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><details open><summary>In this paper</summary><nav><ol><li data-id="s-the-rules-in-brief"><a href="#s-the-rules-in-brief"><span class="n n--dot"></span><span>The rules, in brief</span></a></li><li data-id="s-funding-it-correctly"><a href="#s-funding-it-correctly"><span class="n n--dot"></span><span>Funding it correctly</span></a></li><li data-id="s-the-part-everyone-underestimates-rep"><a href="#s-the-part-everyone-underestimates-rep"><span class="n n--dot"></span><span>The part everyone underestimates: reporting</span></a></li><li data-id="s-why-this-matters-before-you-sign-any"><a href="#s-why-this-matters-before-you-sign-any"><span class="n n--dot"></span><span>Why this matters before you sign anything</span></a></li></ol></nav></details></aside>
+		</div><script>
+	(function () {
+		var toc = document.querySelector('.vpk-toc'); if (!toc) return;
+		var det = toc.querySelector('details'), nav = toc.querySelector('nav'), handle = toc.querySelector('.vpk-toc-handle'), xbtn = toc.querySelector('.vpk-toc-x'),
+			mq = window.matchMedia('(min-width:1024px)'), back = document.createElement('div');
+		det.open = true; back.className = 'vpk-toc-backdrop'; document.body.appendChild(back);
+
+		/* Phones and tablets: a side drawer. Tap the edge tab, or pull it out with a finger; pull it back, tap outside, or pick a section to close. */
+		function setOpen(o) { toc.classList.toggle('is-open', o); back.classList.toggle('is-open', o); handle.setAttribute('aria-expanded', o ? 'true' : 'false'); handle.setAttribute('aria-label', o ? 'Close the paper index' : 'Open the paper index'); }
+		var W = 0, sx = 0, sy = 0, st = 0, base = 0, curX = 0, active = false, moved = false, justDragged = false;
+		function begin(e) { if (mq.matches || e.touches.length !== 1) return; var t = e.touches[0]; sx = t.clientX; sy = t.clientY; st = Date.now(); W = toc.getBoundingClientRect().width; base = toc.classList.contains('is-open') ? 0 : W; curX = base; active = true; moved = false; }
+		function move(e) {
+			if (!active) return;
+			var t = e.touches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+			if (!moved) { if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return; if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } moved = true; toc.classList.add('is-dragging'); }
+			curX = Math.min(W, Math.max(0, base + dx));
+			toc.style.transform = 'translateX(' + curX + 'px)'; back.style.opacity = String(1 - curX / W); back.style.pointerEvents = 'auto';
+		}
+		function end(e) {
+			if (!active) return; active = false; if (!moved) return;
+			var dt = Math.max(1, Date.now() - st), v = (curX - base) / dt, open = Math.abs(v) > 0.4 ? v < 0 : curX < W / 2;
+			toc.classList.remove('is-dragging'); toc.style.transform = ''; back.style.opacity = ''; back.style.pointerEvents = '';
+			setOpen(open); justDragged = true; setTimeout(function () { justDragged = false; }, 80);
+		}
+		toc.addEventListener('touchstart', begin, { passive: true });
+		toc.addEventListener('touchmove', move, { passive: true });
+		toc.addEventListener('touchend', end); toc.addEventListener('touchcancel', end);
+		handle.addEventListener('click', function () { if (!justDragged) setOpen(!toc.classList.contains('is-open')); });
+		xbtn.addEventListener('click', function () { setOpen(false); });
+		back.addEventListener('click', function () { setOpen(false); });
+		toc.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) setOpen(false); });
+		document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+		if (mq.addEventListener) mq.addEventListener('change', function () { if (mq.matches) setOpen(false); });
+
+		/* Highlight where the reader is, and show that section's exhibits. */
+		var items = [].slice.call(toc.querySelectorAll('ol > li')), subs = [].slice.call(toc.querySelectorAll('ul a')),
+			heads = items.map(function (li) { return document.getElementById(li.getAttribute('data-id')); }).filter(Boolean), timer = 0;
+		function update() {
+			timer = 0;
+			var y = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vpk-stick')) || 96) + 100, cur = heads[0], best = -Infinity;
+			heads.forEach(function (h) { var t = h.getBoundingClientRect().top; if (t <= y && t > best) { best = t; cur = h; } });
+			items.forEach(function (li) { var on = li.getAttribute('data-id') === cur.id; li.classList.toggle('is-active', on); li.classList.toggle('is-open', on); });
+			var here = null;
+			subs.forEach(function (s) { s.classList.remove('is-here'); var f = document.getElementById(s.getAttribute('href').slice(1)); if (f && f.getBoundingClientRect().top <= y) here = s; });
+			if (here && here.closest('li[data-id]').classList.contains('is-active')) here.classList.add('is-here');
+			var act = toc.querySelector('li.is-active > a');
+			if (act && nav && (mq.matches || toc.classList.contains('is-open'))) { var r = act.getBoundingClientRect(), n = nav.getBoundingClientRect(); if (r.top < n.top || r.bottom > n.bottom) nav.scrollTop += r.top - n.top - 48; }
+		}
+		window.addEventListener('scroll', function () { if (!timer) timer = setTimeout(update, 60); }, { passive: true });
+		handle.addEventListener('click', update);
+		update();
+	})();
+	</script>
 		<aside class="vpk-cta" aria-label="Talk to us">
 			<h2>Have a decision to make?</h2>
 			<p>Bring us the question, the challenge or the opportunity. We’ll bring the experience and perspective to help you move forward with clarity.</p>
@@ -498,7 +554,35 @@ html{scroll-behavior:smooth;}
 				<a class="vpk-btn vpk-btn--ghost" href="/insights/">More from Our Thinking</a>
 			</div>
 		</aside>
-	</article>
+	</article><script>
+	(function () {
+		var toc = document.querySelector('.vpk-toc');
+		/* After the first scroll the edge tab shrinks to an arrow; a back-to-top button shows once the reader is well down the page. */
+		var top = document.createElement('button');
+		top.className = 'vpk-top'; top.type = 'button'; top.setAttribute('aria-label', 'Back to top');
+		top.innerHTML = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 10L8 5.5l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+		document.body.appendChild(top);
+		top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth' }); });
+		/* Secondary header: once the title block has scrolled away, a slim bar keeps the title, author and download in view. */
+		var hdrEl = document.querySelector('.elementor-location-header'), titleEl = document.querySelector('.vpk-h1'), bylineEl = document.querySelector('.vpk-byline'),
+			pic = bylineEl && bylineEl.querySelector('picture'), gate = document.querySelector('[data-gate]'), bar = document.createElement('div');
+		bar.className = 'vpk-sticky'; bar.setAttribute('aria-hidden', 'true');
+		bar.innerHTML = '<div class="vpk-sticky-in">' + (pic ? pic.outerHTML : '') + '<div class="vpk-sticky-text"><b></b><span></span></div>' + (gate ? '<button type="button" class="vpk-sticky-dl" tabindex="-1">Download<span> the paper</span></button>' : '') + '</div>';
+		bar.querySelector('b').textContent = titleEl ? titleEl.textContent : '';
+		var who = bylineEl && bylineEl.querySelector('.vpk-author'); bar.querySelector('.vpk-sticky-text span').textContent = who ? who.textContent.replace(/s+/g, ' ').trim() : '';
+		document.body.appendChild(bar);
+		var dl = bar.querySelector('.vpk-sticky-dl'); if (dl) dl.addEventListener('click', function () { gate.click(); });
+		function flags() {
+			var y = window.pageYOffset || document.documentElement.scrollTop, stick = hdrEl ? Math.max(0, Math.round(hdrEl.getBoundingClientRect().bottom)) : 96;
+			document.documentElement.style.setProperty('--vpk-stick', stick + 'px');
+			if (toc && y > 30) toc.classList.add('is-min');
+			top.classList.toggle('is-shown', y > 600);
+			bar.classList.toggle('is-shown', !!bylineEl && bylineEl.getBoundingClientRect().bottom < stick + 4);
+		}
+		window.addEventListener('scroll', flags, { passive: true }); window.addEventListener('resize', flags);
+		flags();
+	})();
+	</script>
 	<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ODI Simplified: What Indian Founders Need to Know Before Investing Abroad","datePublished":"2026-09-22","author":{"@type":"Person","name":"Varun Shenoy","jobTitle":"Managing Partner"},"publisher":{"@type":"Organization","name":"Varish Partners"}}</script>
 </main>
 <div data-elementor-type="footer" data-elementor-id="51" class="elementor elementor-51 elementor-location-footer" data-elementor-post-type="elementor_library">

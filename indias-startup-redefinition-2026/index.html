@@ -245,6 +245,7 @@ html{scroll-behavior:smooth;}
 .vpk-sticky{position:fixed;left:0;right:0;top:var(--vpk-stick,96px);z-index:99980;height:64px;background:rgba(255,255,255,.97);border-bottom:1px solid #E4D9CB;box-shadow:0 8px 22px rgba(0,0,0,.08);transform:translateY(-110%);opacity:0;visibility:hidden;transition:transform .3s cubic-bezier(.22,.61,.36,1),opacity .25s ease,visibility .3s;}
 .vpk-sticky.is-shown{transform:none;opacity:1;visibility:visible;}
 .vpk-sticky-in{display:flex;align-items:center;gap:14px;box-sizing:border-box;width:min(1140px,100% - 40px);height:100%;margin:0 auto;padding-right:8px;}
+.vpk-sticky picture{display:flex;flex:0 0 auto;}
 .vpk-sticky img{flex:0 0 auto;width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:top center;background:#F3EBE1;}
 .vpk-sticky-text{display:flex;flex:1 1 auto;flex-direction:column;gap:1px;min-width:0;}
 .vpk-sticky-text b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Merriweather",Georgia,serif;font-size:16px;line-height:1.35;font-weight:700;color:#1F1F1F;}
@@ -489,7 +490,35 @@ html{scroll-behavior:smooth;}
 				<a class="vpk-btn vpk-btn--ghost" href="/insights/">More from Our Thinking</a>
 			</div>
 		</aside>
-	</article>
+	</article><script>
+	(function () {
+		var toc = document.querySelector('.vpk-toc');
+		/* After the first scroll the edge tab shrinks to an arrow; a back-to-top button shows once the reader is well down the page. */
+		var top = document.createElement('button');
+		top.className = 'vpk-top'; top.type = 'button'; top.setAttribute('aria-label', 'Back to top');
+		top.innerHTML = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 10L8 5.5l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+		document.body.appendChild(top);
+		top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth' }); });
+		/* Secondary header: once the title block has scrolled away, a slim bar keeps the title, author and download in view. */
+		var hdrEl = document.querySelector('.elementor-location-header'), titleEl = document.querySelector('.vpk-h1'), bylineEl = document.querySelector('.vpk-byline'),
+			pic = bylineEl && bylineEl.querySelector('picture'), gate = document.querySelector('[data-gate]'), bar = document.createElement('div');
+		bar.className = 'vpk-sticky'; bar.setAttribute('aria-hidden', 'true');
+		bar.innerHTML = '<div class="vpk-sticky-in">' + (pic ? pic.outerHTML : '') + '<div class="vpk-sticky-text"><b></b><span></span></div>' + (gate ? '<button type="button" class="vpk-sticky-dl" tabindex="-1">Download<span> the paper</span></button>' : '') + '</div>';
+		bar.querySelector('b').textContent = titleEl ? titleEl.textContent : '';
+		var who = bylineEl && bylineEl.querySelector('.vpk-author'); bar.querySelector('.vpk-sticky-text span').textContent = who ? who.textContent.replace(/s+/g, ' ').trim() : '';
+		document.body.appendChild(bar);
+		var dl = bar.querySelector('.vpk-sticky-dl'); if (dl) dl.addEventListener('click', function () { gate.click(); });
+		function flags() {
+			var y = window.pageYOffset || document.documentElement.scrollTop, stick = hdrEl ? Math.max(0, Math.round(hdrEl.getBoundingClientRect().bottom)) : 96;
+			document.documentElement.style.setProperty('--vpk-stick', stick + 'px');
+			if (toc && y > 30) toc.classList.add('is-min');
+			top.classList.toggle('is-shown', y > 600);
+			bar.classList.toggle('is-shown', !!bylineEl && bylineEl.getBoundingClientRect().bottom < stick + 4);
+		}
+		window.addEventListener('scroll', flags, { passive: true }); window.addEventListener('resize', flags);
+		flags();
+	})();
+	</script>
 	<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"India’s Startup Redefinition 2026: Are You Still a “Startup” Under the New Norms?","datePublished":"2026-09-21","author":{"@type":"Person","name":"Varun Shenoy","jobTitle":"Managing Partner"},"publisher":{"@type":"Organization","name":"Varish Partners"}}</script>
 </main>
 <div data-elementor-type="footer" data-elementor-id="51" class="elementor elementor-51 elementor-location-footer" data-elementor-post-type="elementor_library">
